@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             xmlns:sflist="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:local="clr-namespace:ScriptingMaui"
+             x:Class="ScriptingMaui.LearnPage" IconImageSource="learn_icon.png" Title="Learn">
+
+    <ContentPage.BindingContext>
+        <local:Context />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <x:Double x:Key="TransSize">42</x:Double>
+        <LayoutOptions x:Key="horzOptions" Alignment="Center" />
+        <LayoutOptions x:Key="vertOptions" Alignment="Center" />
+        <x:Double x:Key="MainSize">150</x:Double>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+        <HorizontalStackLayout x:Name="SearchPanel">
+        <ImageButton x:Name="BackBut" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Source="prev.png" Grid.Column="0" Margin = "1,4,4,4" Background="Transparent" />
+        <Entry x:Name="SearchEntry" Margin = "8,0,10,0" WidthRequest="300" Placeholder="Enter text" PlaceholderColor="LimeGreen" />
+        </HorizontalStackLayout>
+    <sflist:SfListView x:Name="ResultsView" HeightRequest="550"
+                   ItemsSource="{Binding ResultsInfo}"
+                   ItemSize="{StaticResource TransSize}">
+    <sflist:SfListView.ItemTemplate>
+        <DataTemplate>
+        <Grid Padding="4">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton Grid.Column="0" HorizontalOptions="Start" Source="{Binding TransFlag}"
+                    Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
+            <Label Grid.Column="1" Text="{Binding TransName}" HorizontalTextAlignment="Center"
+                   VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{Binding FontSize}" />
+        </Grid>
+        </DataTemplate>
+    </sflist:SfListView.ItemTemplate>
+    </sflist:SfListView>
+
+    <!-- <picker:SfPicker x:Name="Picker"  HeightRequest="200" Background="Transparent" VerticalOptions="Start" /> -->
+
+    <Grid x:Name="TopPanel">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition  Width="15*" />
+        <ColumnDefinition  Width="70*" />
+        <ColumnDefinition  Width="15*" />
+    </Grid.ColumnDefinitions>
+        <ImageButton x:Name="FindBut" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start"
+               Source="find.png" Margin = "4,2,0,0" Background="Transparent" />
+        <Picker x:Name="CategoryPicker"  Grid.Column="1"
+            Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            FontAttributes="Bold" HorizontalOptions="CenterAndExpand" FontSize="Header">
+        </Picker>
+        <Label x:Name="WordId" Grid.Column="2" Text="Palabra 1234/1500" HorizontalTextAlignment="End" HorizontalOptions="End"
+            Margin = "0,0,10,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="12" />
+
+    </Grid>
+
+    <Grid x:Name="TopMainPanel" Background="Transparent" Margin = "0,4,0,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="10*" />
+            <ColumnDefinition  Width="80*" />
+            <ColumnDefinition  Width="10*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButPlay" Grid.Column="0" HorizontalOptions="Start" ImageSource="play_but.png" Background="Transparent" />
+        <Label x:Name="MainWordLabel" Grid.Column="1" Text="{Binding MainWord}" HorizontalTextAlignment="Center"
+                  VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22" />
+        <Button x:Name="ButSpeak" Grid.Column="2" HorizontalOptions="Center" ImageSource="speaker.png" Margin = "-10,0,4,4" Background="Transparent" />
+	</Grid>
+
+	<Grid x:Name="MainPanel" Background="Transparent" Margin = "0,4,0,4" >
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="10*" />
+            <ColumnDefinition  Width="80*" />
+            <ColumnDefinition  Width="10*" />
+        </Grid.ColumnDefinitions>
+    <Button x:Name="PrevImg" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" ImageSource="prev.png" Grid.Column="0" Margin = "1,4,4,4" Background="Transparent" />
+    <Button x:Name="MainImgTxt" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"  Grid.Column="1" HorizontalOptions="Center"
+            BorderWidth="1" TextColor="Blue" FontSize="20" Background="Transparent" LineBreakMode="WordWrap" />
+    <ImageButton x:Name="MainImgImg" Grid.Column="1" VerticalOptions="Center" Source="vocabulary.png"
+        HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}" Margin = "4,4,1,4" />
+    <Button x:Name="NextImg" HeightRequest="100" WidthRequest="100"  HorizontalOptions="End" ImageSource="next.png"
+            Grid.Column="2" Margin = "4,4,1,4" Background="Transparent" />
+	</Grid>
+
+  <sflist:SfListView x:Name="TranslationView" HeightRequest="480"
+                   ItemsSource="{Binding TransInfo}"
+                   ItemSize="{StaticResource TransSize}">
+    <sflist:SfListView.ItemTemplate>
+        <DataTemplate>
+        <Grid Padding="4">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton Grid.Column="0" HorizontalOptions="Start" Source="{Binding TransFlag}"
+                    Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
+            <Label Grid.Column="1" Text="{Binding TransName}" HorizontalTextAlignment="Center"
+                   VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{Binding FontSize}" />
+        </Grid>
+        </DataTemplate>
+    </sflist:SfListView.ItemTemplate>
+  </sflist:SfListView>
+ </VerticalStackLayout>
+
+</ContentPage>
+

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             xmlns:local="clr-namespace:ScriptingMaui"
+             x:Class="ScriptingMaui.SettingsPage" IconImageSource="settings_icon.png" Title="Settings">
+
+    <ContentPage.BindingContext>
+        <local:SettingsInfo />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <x:Double x:Key="TransSize">20</x:Double>
+        <x:Double x:Key="MainSize">150</x:Double>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+
+	<Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="40*" />
+            <ColumnDefinition  Width="10*" />
+            <ColumnDefinition  Width="40*" />
+            <ColumnDefinition  Width="10*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="toLearn" Margin = "4,6,8,10" FontSize="16" TextColor="Blue" Grid.Column="0" Text="Language to Learn"
+               FontAttributes="Bold" HorizontalOptions="Start" />
+        <ImageButton x:Name="flagLearn" Margin = "2,4,2,2" HorizontalOptions="End" VerticalOptions="Start" Source="en_us" Grid.Column="1"
+            Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
+        <Label x:Name="myLanguage" Margin = "4,6,8,10" FontSize="16" TextColor="Blue" Grid.Column="2" Text="My Language" FontAttributes="Bold" HorizontalOptions="End" />
+        <ImageButton x:Name="flagMy" Margin = "2,4,2,2" Grid.Column="3" HorizontalOptions="End"  VerticalOptions="Start" Source="es_mx"
+            Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
+	</Grid>
+
+    <picker:SfPicker x:Name="Picker" HeightRequest="240" Background="Transparent" VerticalOptions="Start" />
+        <!-- 
+    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+    <Label x:Name="SpeechrateLab" Text="Speech Rate:" TextColor="Blue" WidthRequest="200" Margin = "10,20,0,0"
+            MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+    <Slider x:Name="SpeechSlider" WidthRequest="200" Minimum="10" Maximum="100" Value= "50" Margin = "0,20,0,0"
+                HorizontalOptions="End" VerticalOptions="StartAndExpand" />
+    </StackLayout> -->
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+    <Label x:Name="PlayrateLab" Text="Play Rate:" TextColor="Blue"  Margin = "10,30,0,0"
+            WidthRequest="140" HeightRequest="80" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+    <Slider x:Name="PlaySlider" Margin = "0,30,0,0" WidthRequest="200" Minimum="1" Maximum="10" Value= "5"
+            HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+    <Label x:Name="SoundLab" Text="Sound:" TextColor="Blue"  Margin = "10,0,0,0" WidthRequest="180"
+        HorizontalTextAlignment="Start"  HorizontalOptions="Start" VerticalOptions="Center"/>
+    <CheckBox x:Name="SoundCheck" Margin = "60,0,0,0" IsChecked="true" HorizontalOptions="End" VerticalOptions="Center" />
+    </StackLayout>
+  </VerticalStackLayout>
+
+</ContentPage>
