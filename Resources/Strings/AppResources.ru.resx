@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+<data name="Learn" xml:space="preserve">
+  <value>Учить</value>
+</data>
+<data name="Quiz" xml:space="preserve">
+  <value>Тест</value>
+</data>
+<data name="Settings" xml:space="preserve">
+  <value>Настройки</value>
+</data>
+<data name="Learn_wide" xml:space="preserve">
+  <value>Учить</value>
+</data>
+<data name="Quiz_wide" xml:space="preserve">
+  <value>Тест</value>
+</data>
+<data name="Settings_wide" xml:space="preserve">
+  <value>Настройки</value>
+</data>
+<data name="Word {0}/{1}" xml:space="preserve">
+  <value>Слово {0}/{1}</value>
+</data>
+<data name="Word:" xml:space="preserve">
+  <value>Слово:</value>
+</data>
+<data name="Words" xml:space="preserve">
+  <value>Слова</value>
+</data>
+<data name="Translate" xml:space="preserve">
+  <value>Перевести</value>
+</data>
+<data name="Word with {0} not found" xml:space="preserve">
+  <value>Нет слов, содержащих {0}</value>
+</data>
+<data name="Part of word or word id" xml:space="preserve">
+  <value>Часть слова или номер слова</value>
+</data>
+<data name="Please wait..." xml:space="preserve">
+  <value>Пожалуйста, подождите...</value>
+</data>
+<data name="Check your internet connection" xml:space="preserve">
+  <value>Проверьте подключение к Интернету</value>
+</data>
+<data name="Best score:" xml:space="preserve">
+  <value>Рекорд:</value>
+</data>
+<data name="Correct: {0}% ({1}/{2})" xml:space="preserve">
+  <value>Правильно: {0}% ({1}/{2})</value>
+</data>
+<data name="Correct:" xml:space="preserve">
+  <value>Правильно:</value>
+</data>
+<data name="Quiz Type:" xml:space="preserve">
+  <value>Тип теста:</value>
+</data>
+<data name="Quiz Mode:" xml:space="preserve">
+  <value>Режим теста:</value>
+</data>
+<data name="Quiz Words:" xml:space="preserve">
+  <value>Слов в тесте:</value>
+</data>
+<data name="Mode:" xml:space="preserve">
+  <value>Режим:</value>
+</data>
+<data name="Speech" xml:space="preserve">
+  <value>Речь</value>
+</data>
+<data name="You said:" xml:space="preserve">
+  <value>Вы сказали:</value>
+</data>
+<data name="Speak:" xml:space="preserve">
+  <value>Скажите:</value>
+</data>
+<data name="No speech was recognized" xml:space="preserve">
+  <value>Речь не распознана</value>
+</data>
+<data name="Excellent!" xml:space="preserve">
+  <value>Отлично!</value>
+</data>
+<data name="False" xml:space="preserve">
+  <value>Неправильно</value>
+</data>
+<data name="Finished" xml:space="preserve">
+  <value>Тест закончен</value>
+</data>
+<data name="yes" xml:space="preserve">
+  <value>правильно</value>
+</data>
+<data name="no" xml:space="preserve">
+  <value>нет</value>
+</data>
+<data name="Phrases" xml:space="preserve">
+  <value>Фразы</value>
+</data>
+<data name="Images" xml:space="preserve">
+  <value>Картинки</value>
+</data>
+<data name="Text" xml:space="preserve">
+  <value>Текст</value>
+</data>
+<data name="Language to learn:" xml:space="preserve">
+  <value>Изучаемый язык:</value>
+</data>
+<data name="Translate to:" xml:space="preserve">
+  <value>Язык перевода:</value>
+</data>
+<data name="Speech Rate:" xml:space="preserve">
+  <value>Скорость голоса:</value>
+</data>
+<data name="Play Rate:" xml:space="preserve">
+  <value>Скорость воспроизведения:</value>
+</data>
+<data name="Sound:" xml:space="preserve">
+  <value>Звук:</value>
+</data>
+<data name="Accent:" xml:space="preserve">
+  <value>Произношение:</value>
+</data>
+<data name="hello" xml:space="preserve">
+  <value>привет</value>
+</data>
+<data name="bye" xml:space="preserve">
+  <value>пока</value>
+</data>
+<data name="all" xml:space="preserve">
+  <value>все слова</value>
+</data>
+<data name="animal world" xml:space="preserve">
+  <value>животный мир</value>
+</data>
+<data name="body parts" xml:space="preserve">
+  <value>части тела</value>
+</data>
+<data name="colors, figures" xml:space="preserve">
+  <value>цвет, фигуры</value>
+</data>
+<data name="clothing" xml:space="preserve">
+  <value>одежда</value>
+</data>
+<data name="food and beverage" xml:space="preserve">
+  <value>еда и напитки</value>
+</data>
+<data name="fruits and vegetables" xml:space="preserve">
+  <value>фрукты и овощи</value>
+</data>
+<data name="numbers and math" xml:space="preserve">
+  <value>числа и математика</value>
+</data>
+<data name="sport" xml:space="preserve">
+  <value>спорт</value>
+</data>
+<data name="hobby, music, chess" xml:space="preserve">
+  <value>хобби, музыка, шахматы</value>
+</data>
+<data name="transport" xml:space="preserve">
+  <value>транспорт</value>
+</data>
+<data name="household" xml:space="preserve">
+  <value>дом</value>
+</data>
+<data name="kitchen" xml:space="preserve">
+  <value>кухня</value>
+</data>
+<data name="school and office" xml:space="preserve">
+  <value>школа и офис</value>
+</data>
+<data name="accesories" xml:space="preserve">
+  <value>личные вещи</value>
+</data>
+<data name="tools and appliances" xml:space="preserve">
+  <value>приборы и инструменты</value>
+</data>
+<data name="bed and bath" xml:space="preserve">
+  <value>спальня и ванна</value>
+</data>
+<data name="verbs" xml:space="preserve">
+  <value>глаголы</value>
+</data>
+<data name="adjectives" xml:space="preserve">
+  <value>прилагательные</value>
+</data>
+<data name="family and kids" xml:space="preserve">
+  <value>семья и дети</value>
+</data>
+<data name="profession" xml:space="preserve">
+  <value>профессии</value>
+</data>
+<data name="countries" xml:space="preserve">
+  <value>страны</value>
+</data>
+<data name="environment" xml:space="preserve">
+  <value>окружающая среда</value>
+</data>
+<data name="calendar, time" xml:space="preserve">
+  <value>календарь, время</value>
+</data>
+<data name="basic phrases" xml:space="preserve">
+  <value>базовые фразы</value>
+</data>
+<data name="phrases greetings" xml:space="preserve">
+  <value>фразы приветствия</value>
+</data>
+<data name="phrases traveling" xml:space="preserve">
+  <value>фразы путешествуя</value>
+</data>
+<data name="phrases in hotel" xml:space="preserve">
+  <value>фразы в гостинице</value>
+</data>
+<data name="phrases in restaurant" xml:space="preserve">
+  <value>фразы в ресторане</value>
+</data>
+<data name="flirting phrases" xml:space="preserve">
+  <value>фразы для флирта</value>
+</data>
+<data name="SelectCategory" xml:space="preserve">
+  <value>Выберите категорию</value>
+</data>
+</root>

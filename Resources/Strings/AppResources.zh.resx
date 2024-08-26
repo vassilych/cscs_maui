@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+<data name="Learn" xml:space="preserve">
+  <value>学习</value>
+</data>
+<data name="Quiz" xml:space="preserve">
+  <value>测试</value>
+</data>
+<data name="Settings" xml:space="preserve">
+  <value>设定</value>
+</data>
+<data name="Learn_wide" xml:space="preserve">
+  <value>学习</value>
+</data>
+<data name="Quiz_wide" xml:space="preserve">
+  <value>测试</value>
+</data>
+<data name="Settings_wide" xml:space="preserve">
+  <value>设定</value>
+</data>
+<data name="Word {0}/{1}" xml:space="preserve">
+  <value>单词 {0}/{1}</value>
+</data>
+<data name="Word:" xml:space="preserve">
+  <value>单词:</value>
+</data>
+<data name="Words" xml:space="preserve">
+  <value>测试单词</value>
+</data>
+<data name="Translate" xml:space="preserve">
+  <value>翻译</value>
+</data>
+<data name="Word with {0} not found" xml:space="preserve">
+  <value>未发现含有 {0} 词</value>
+</data>
+<data name="Part of word or word id" xml:space="preserve">
+  <value>字或数字ID的一部分</value>
+</data>
+<data name="Please wait..." xml:space="preserve">
+  <value>请稍候...</value>
+</data>
+<data name="Check your internet connection" xml:space="preserve">
+  <value>检查您的互联网连接</value>
+</data>
+<data name="Best score:" xml:space="preserve">
+  <value>最佳成绩:</value>
+</data>
+<data name="Correct: {0}% ({1}/{2})" xml:space="preserve">
+  <value>正确: {0}% ({1}/{2})</value>
+</data>
+<data name="Correct:" xml:space="preserve">
+  <value>正确:</value>
+</data>
+<data name="Quiz Type:" xml:space="preserve">
+  <value>测验类型:</value>
+</data>
+<data name="Quiz Mode:" xml:space="preserve">
+  <value>测验模式:</value>
+</data>
+<data name="Quiz Words:" xml:space="preserve">
+  <value>测试单词:</value>
+</data>
+<data name="Mode:" xml:space="preserve">
+  <value>模式:</value>
+</data>
+<data name="Speech" xml:space="preserve">
+  <value>言語</value>
+</data>
+<data name="You said:" xml:space="preserve">
+  <value>你說:</value>
+</data>
+<data name="Speak:" xml:space="preserve">
+  <value>说话:</value>
+</data>
+<data name="No speech was recognized" xml:space="preserve">
+  <value>没有发表言论</value>
+</data>
+<data name="Excellent!" xml:space="preserve">
+  <value>優秀!</value>
+</data>
+<data name="False" xml:space="preserve">
+  <value>假</value>
+</data>
+<data name="Finished" xml:space="preserve">
+  <value>完成</value>
+</data>
+<data name="yes" xml:space="preserve">
+  <value>正确</value>
+</data>
+<data name="no" xml:space="preserve">
+  <value>错误</value>
+</data>
+<data name="Phrases" xml:space="preserve">
+  <value>短语</value>
+</data>
+<data name="Images" xml:space="preserve">
+  <value>图片</value>
+</data>
+<data name="Text" xml:space="preserve">
+  <value>文本</value>
+</data>
+<data name="Language to learn:" xml:space="preserve">
+  <value>语言学习:</value>
+</data>
+<data name="Translate to:" xml:space="preserve">
+  <value>翻译:</value>
+</data>
+<data name="Sound:" xml:space="preserve">
+  <value>声音:</value>
+</data>
+<data name="Speech Rate:" xml:space="preserve">
+  <value>播放速度:</value>
+</data>
+<data name="Play Rate:" xml:space="preserve">
+  <value>播放率:</value>
+</data>
+<data name="Accent:" xml:space="preserve">
+  <value>口音:</value>
+</data>
+<data name="hello" xml:space="preserve">
+  <value>你好</value>
+</data>
+<data name="bye" xml:space="preserve">
+  <value>再见</value>
+</data>
+<data name="all" xml:space="preserve">
+  <value>所有</value>
+</data>
+<data name="animal world" xml:space="preserve">
+  <value>动物世界</value>
+</data>
+<data name="body parts" xml:space="preserve">
+  <value>身体部位</value>
+</data>
+<data name="clothing" xml:space="preserve">
+  <value>衣物</value>
+</data>
+<data name="colors, figures" xml:space="preserve">
+  <value>颜色，数字</value>
+</data>
+<data name="food and beverage" xml:space="preserve">
+  <value>食物和饮料</value>
+</data>
+<data name="fruits and vegetables" xml:space="preserve">
+  <value>水果和蔬菜</value>
+</data>
+<data name="numbers and math" xml:space="preserve">
+  <value>数字和数学</value>
+</data>
+<data name="sport" xml:space="preserve">
+  <value>体育</value>
+</data>
+<data name="hobby, music, chess" xml:space="preserve">
+  <value>爱好，音乐，棋</value>
+</data>
+<data name="transport" xml:space="preserve">
+  <value>运输</value>
+</data>
+<data name="household" xml:space="preserve">
+  <value>家庭日常的</value>
+</data>
+<data name="kitchen" xml:space="preserve">
+  <value>厨房</value>
+</data>
+<data name="school and office" xml:space="preserve">
+  <value>学校与办公室</value>
+</data>
+<data name="accesories" xml:space="preserve">
+  <value>配件、装饰</value>
+</data>
+<data name="tools and appliances" xml:space="preserve">
+  <value>工具和装置</value>
+</data>
+<data name="bed and bath" xml:space="preserve">
+  <value>卧室和浴室</value>
+</data>
+<data name="verbs" xml:space="preserve">
+  <value>动词</value>
+</data>
+<data name="adjectives" xml:space="preserve">
+  <value>形容词</value>
+</data>
+<data name="family and kids" xml:space="preserve">
+  <value>家庭和儿童</value>
+</data>
+<data name="profession" xml:space="preserve">
+  <value>行业</value>
+</data>
+<data name="countries" xml:space="preserve">
+  <value>国家</value>
+</data>
+<data name="environment" xml:space="preserve">
+  <value>环境</value>
+</data>
+<data name="calendar, time" xml:space="preserve">
+  <value>日历，时间</value>
+</data>
+<data name="basic phrases" xml:space="preserve">
+  <value>基本短语</value>
+</data>
+<data name="phrases greetings" xml:space="preserve">
+  <value>问候短语</value>
+</data>
+<data name="phrases traveling" xml:space="preserve">
+  <value>旅游短语</value>
+</data>
+<data name="phrases in hotel" xml:space="preserve">
+  <value>酒店短语</value>
+</data>
+<data name="phrases in restaurant" xml:space="preserve">
+  <value>餐厅短语</value>
+</data>
+<data name="flirting phrases" xml:space="preserve">
+  <value>调情短语</value>
+</data>
+<data name="SelectCategory" xml:space="preserve">
+  <value>选择类别</value>
+</data>
+</root>

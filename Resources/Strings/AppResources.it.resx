@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+<data name="Learn" xml:space="preserve">
+  <value>Impara</value>
+</data>
+<data name="Quiz" xml:space="preserve">
+  <value>Quiz</value>
+</data>
+<data name="Settings" xml:space="preserve">
+  <value>Impostazioni</value>
+</data>
+<data name="Learn_wide" xml:space="preserve">
+  <value>Impara</value>
+</data>
+<data name="Quiz_wide" xml:space="preserve">
+  <value>Quiz</value>
+</data>
+<data name="Settings_wide" xml:space="preserve">
+  <value>Impostazioni</value>
+</data>
+<data name="Word {0}/{1}" xml:space="preserve">
+  <value>Parola {0}/{1}</value>
+</data>
+<data name="Word:" xml:space="preserve">
+  <value>Parola:</value>
+</data>
+<data name="Words" xml:space="preserve">
+  <value>Parole</value>
+</data>
+<data name="Translate" xml:space="preserve">
+  <value>Traduci</value>
+</data>
+<data name="Word with {0} not found" xml:space="preserve">
+  <value>Parola con {0} non trovato</value>
+</data>
+<data name="Part of word or word id" xml:space="preserve">
+  <value>Parte della parola o id della parola</value>
+</data>
+<data name="Please wait..." xml:space="preserve">
+  <value>Attendere prego...</value>
+</data>
+<data name="Check your internet connection" xml:space="preserve">
+  <value>Check your internet connection</value>
+</data>
+<data name="Best score:" xml:space="preserve">
+  <value>Miglior punteggio:</value>
+</data>
+<data name="Correct: {0}% ({1}/{2})" xml:space="preserve">
+  <value>Corretto: {0}% ({1}/{2})</value>
+</data>
+<data name="Correct:" xml:space="preserve">
+  <value>Corretto:</value>
+</data>
+<data name="Quiz Type:" xml:space="preserve">
+  <value>Tipo di quiz:</value>
+</data>
+<data name="Quiz Mode:" xml:space="preserve">
+  <value>Modo di quiz:</value>
+</data>
+<data name="Quiz Words:" xml:space="preserve">
+  <value>Quiz sulle parole:</value>
+</data>
+<data name="Mode:" xml:space="preserve">
+  <value>Modo:</value>
+</data>
+<data name="Speech" xml:space="preserve">
+  <value>Discorso</value>
+</data>
+<data name="You said:" xml:space="preserve">
+  <value>Tu hai detto:</value>
+</data>
+<data name="Speak:" xml:space="preserve">
+  <value>Speak:</value>
+</data>
+<data name="No speech was recognized" xml:space="preserve">
+  <value>Nessun discorso è stato riconosciuto</value>
+</data>
+<data name="Excellent!" xml:space="preserve">
+  <value>Eccellente!</value>
+</data>
+<data name="False" xml:space="preserve">
+  <value>Sbagliato</value>
+</data>
+<data name="Finished" xml:space="preserve">
+  <value>Finito</value>
+</data>
+<data name="yes" xml:space="preserve">
+  <value>corretto</value>
+</data>
+<data name="no" xml:space="preserve">
+  <value>no</value>
+</data>
+<data name="Phrases" xml:space="preserve">
+  <value>Frasi</value>
+</data>
+<data name="Images" xml:space="preserve">
+  <value>Immagini</value>
+</data>
+<data name="Text" xml:space="preserve">
+  <value>Testo</value>
+</data>
+<data name="Language to learn:" xml:space="preserve">
+  <value>Lingua da imparare:</value>
+</data>
+<data name="Translate to:" xml:space="preserve">
+  <value>Traduci a:</value>
+</data>
+<data name="Sound:" xml:space="preserve">
+  <value>Suono:</value>
+</data>
+<data name="Speech Rate:" xml:space="preserve">
+  <value>Velocità della voce:</value>
+</data>
+<data name="Play Rate:" xml:space="preserve">
+  <value>Velocità di riproduzione:</value>
+</data>
+<data name="Accent:" xml:space="preserve">
+  <value>Accento:</value>
+</data>
+<data name="hello" xml:space="preserve">
+  <value>ciao</value>
+</data>
+<data name="bye" xml:space="preserve">
+  <value>arrivederci</value>
+</data>
+<data name="all" xml:space="preserve">
+  <value>tutte le parole</value>
+</data>
+<data name="animal world" xml:space="preserve">
+  <value>mondo animale</value>
+</data>
+<data name="body parts" xml:space="preserve">
+  <value>parti del corpo</value>
+</data>
+<data name="clothing" xml:space="preserve">
+  <value>abbigliamento</value>
+</data>
+<data name="colors, figures" xml:space="preserve">
+  <value>colori, figure</value>
+</data>
+<data name="food and beverage" xml:space="preserve">
+  <value>cibo e bevande</value>
+</data>
+<data name="fruits and vegetables" xml:space="preserve">
+  <value>frutta e verdura</value>
+</data>
+<data name="numbers and math" xml:space="preserve">
+  <value>numeri e la matematica</value>
+</data>
+<data name="sport" xml:space="preserve">
+  <value>sport</value>
+</data>
+<data name="hobby, music, chess" xml:space="preserve">
+  <value>hobby, musica, scacchi</value>
+</data>
+<data name="transport" xml:space="preserve">
+  <value>trasporto</value>
+</data>
+<data name="household" xml:space="preserve">
+  <value>in casa</value>
+</data>
+<data name="kitchen" xml:space="preserve">
+  <value>cucina</value>
+</data>
+<data name="school and office" xml:space="preserve">
+  <value>scuola e ufficio</value>
+</data>
+<data name="accesories" xml:space="preserve">
+  <value>accessori</value>
+</data>
+<data name="tools and appliances" xml:space="preserve">
+  <value>strumenti e apparecchi</value>
+</data>
+<data name="bed and bath" xml:space="preserve">
+  <value>letto e bagno</value>
+</data>
+<data name="verbs" xml:space="preserve">
+  <value>verbi</value>
+</data>
+<data name="adjectives" xml:space="preserve">
+  <value>aggettivi</value>
+</data>
+<data name="family and kids" xml:space="preserve">
+  <value>famiglia e bambini</value>
+</data>
+<data name="profession" xml:space="preserve">
+  <value>professioni</value>
+</data>
+<data name="countries" xml:space="preserve">
+  <value>paesi</value>
+</data>
+<data name="environment" xml:space="preserve">
+  <value>ambiente</value>
+</data>
+<data name="calendar, time" xml:space="preserve">
+  <value>calendario, tempo</value>
+</data>
+<data name="basic phrases" xml:space="preserve">
+  <value>frasi di base</value>
+</data>
+<data name="phrases greetings" xml:space="preserve">
+  <value>frasi saluti</value>
+</data>
+<data name="phrases traveling" xml:space="preserve">
+  <value>frasi viaggiano</value>
+</data>
+<data name="phrases in hotel" xml:space="preserve">
+  <value>frasi in hotel</value>
+</data>
+<data name="phrases in restaurant" xml:space="preserve">
+  <value>frasi in ristorante</value>
+</data>
+<data name="flirting phrases" xml:space="preserve">
+  <value>frasi per il rimorchio</value>
+</data>
+<data name="SelectCategory" xml:space="preserve">
+  <value>Seleziona la Categoria</value>
+</data>
+</root>
