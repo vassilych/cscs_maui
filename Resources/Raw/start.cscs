@@ -1,0 +1,3 @@
+﻿ImportFile("iLanguage.cscs");
+
+StartDebugger(13337, true, "*");
