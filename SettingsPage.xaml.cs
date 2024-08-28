@@ -64,6 +64,8 @@ public partial class SettingsPage : ContentPage
 
     public void Setup()
     {
+        Words.LoadWords();
+
         var mine = Preferences.Get(MyVoiceSet, "");
         var learn = Preferences.Get(ToLearnSet, "");
         var current = CultureInfo.CurrentUICulture;
@@ -144,6 +146,10 @@ public partial class SettingsPage : ContentPage
 
     void My_SelectionChanged(object? sender, PickerSelectionChangedEventArgs e)
     {
+        if (e.NewValue < 0)
+        {
+            return;
+        }
         if (e.ColumnIndex == 0)
         {
             VoiceLearn = Words.GetVoice(e.NewValue);

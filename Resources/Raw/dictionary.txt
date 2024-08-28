@@ -2,7 +2,7 @@ VOICE	en-US	en-GB	de-DE	de-CH	ru-RU	es-MX	es-ES	pt-BR	fr-FR	it-IT	he-IL	zh-CN	ja
 LANGUAGE	English US	English	Deutsch	Deutsch CH	Русский	Español MX	Español	Português BR	Français	Italiano	עִבְרִית	中文	日本語	العربية
 CODE	en	en	de	de	ru	es	es	pt	fr	it	he	zh-Hans	ja	ar
 COUNTRY	us	gb	de	ch	ru	mx	es	br	fr	it	il	cn	jp	ar
-ORDER	en-US	en-GB	de-DE	ru-RU	es-MX	pt-BR	fr-FR	it-IT	he-IL	ar-SA	es-ES	de-CH	ja-JP	zh-CN	Transcript-zh-CN
+ORDER	en-US	en-GB	de-DE	ru-RU	es-MX	pt-BR	fr-FR	it-IT	he-IL	es-ES	de-CH	ja-JP	ar-SA	zh-CN	Transcript-zh-CN
 all	vocabulary		der Wortschatz		словарный запас	el vocabulario		o vocabulário	le vocabulaire	il vocabolario	אוֹצָר מִילִים	词汇	語彙	مفردات اللغة	Cíhuì
 animal world	ant		die Ameise	Ameise	муравей	la hormiga		a formiga	la fourmi	la formica	נְמָלָה	蚂蚁	蟻	نملة	Mǎyǐ
 animal world	bat		die Fledermaus	Flädermuus	летучая мышь	el murciélago		o morcego	la chauve-souris	il pipistrello	בַּת	蝙蝠	コウモリ	خفاش	Biānfú
@@ -375,6 +375,7 @@ hobby, music, chess	ballet		das Ballet		балет	el ballet		o balé	la danse c
 hobby, music, chess	movies	cinema	das Kino		кинотеатр	el cine		o cinema	le cinéma	i film	סרטים	电影院	映画	أفلام	diànyǐngyuàn
 hobby, music, chess	theater	theatre	das Theater		театр	el teatro		o teatro	le théâtre	il teatro	תֵאַטרוֹן	戏剧院	劇場	مسرح	xìjù yuàn
 hobby, music, chess	circus		der Zirkus		цирк	el circo		o circo	le cirque	il circo	קִרקָס	马戏	サーカス	سيرك	mǎxì
+hobby, music, chess	museum		das Museum		музей	el museo		o museu	​le musée	​il museo	מוּזֵיאוֹן	博物馆	博物館	متحف	Bówùguǎn
 hobby, music, chess	juggling		das Jonglieren		жонглирование	el malabarismo		o malabarismo	la jonglerie	il gioco di destrezza	לַהֲטוּטָנוּת	戏法	ジャグリング	العاب الخفة	xìfǎ
 hobby, music, chess	accordion		die Harmonika, das Akkordeon		гармонь, аккордеон	el acordeón		o acordeão	l'accordéon	la fisarmonica	אַקוֹרדִיוֹן	手风琴	アコーディオン	أكورديون	shǒufēngqín
 hobby, music, chess	violin		die Geige		скрипка	el violín		o violino	le violon	il violino	כינור	小提琴	バイオリン	كمان	xiǎotíqín
@@ -1034,7 +1035,7 @@ countries	Syria		Syrien		Сирия	Siria		Síria	la Syrie	la Siria	סוּריָ
 countries	Taiwan		Taiwan		Тайвань	Taiwán		Taiwan	Taïwan	Taiwan	טייוואן	台湾	台湾	تايوان	táiwān
 countries	Tajikistan		Tadschikistan		Таджикистан	Tayikistán		Tajiquistão	le Tadjikistan	il Tagikistan	טג'יקיסטן	塔吉克斯坦	タジキスタン	طاجيكستان	tǎjíkè sītǎn
 countries	Thailand		Thailand		Таиланд	Tailandia		Tailândia	la Thaïlande	la Tailandia	תאילנד	泰國	タイ	تايلاند	tàiguó
-countries	Turkey		die Türkei		Турция	Turquía		Turquia	la Turquie	la Turchia	טוּרְקִיָה	土耳其	ターキー	تركيا	tǔ'ěrqí
+countries	Türkiye (Turkey)		die Türkei		Турция	Turquía		Turquia	la Turquie	la Turchia	טוּרְקִיָה	土耳其	ターキー	تركيا	tǔ'ěrqí
 countries	Turkmenistan		Turkmenistan		Туркмения	Turkmenistán		Turcomenistão	le Turkménistan	il Turkmenistan	טורקמניסטן	土库曼	トルクメニスタン	تركمانستان	tǔkùmàn
 countries	United Arab Emirates		Vereinigte Arabische Emirate		Объединённые Арабские Эмираты, ОАЭ	Emiratos Árabes Unidos		Emirados Árabes Unidos	les Émirats arabes unis	gli Emirati Arabi	איחוד האמירויות הערביות	阿联酋	アラブ首長国連邦	الإمارات العربية المتحدة	āliánqiú
 countries	Uzbekistan		Usbekistan		Узбекистан	Uzbekistán		Uzbequistão	l'Ouzbékistan	l'Uzbekistan	אוזבקיסטן	乌兹别克斯坦	ウズベキスタン	أوزبكستان	wūzībiékè sī tǎn
@@ -1393,7 +1394,7 @@ phrases greetings	See you tomorrow!		Bis morgen!	Bis morn	До завтра!	¡H
 phrases greetings	See you later		Bis später	Bis spöter	Увидимся!	Nos vemos		Até logo	À plus tard	Arrivederci	נתראה מאוחר יותר	回头见	じゃあまたね。	أراك لاحقاً	huítóu jiàn
 phrases greetings	I call you		Ich rufe dich an	Ich lüte dir aa	Я тебе позвоню	Te llamo		Eu te ligo	Je t'appellerai	Ti chiamerò	אני קורא לך	我会打电话给你	電話するね。	سأتصل بك	wǒ huì dǎ diànhuà gěi nǐ
 phrases greetings	Do you speak English?		Sprechen Sie Englisch?	Reded Sie Englisch?	Вы говорите по-английски?	¿Habla Usted inglés?		Você fala inglês?	Parlez-vous anglais?	Lei parla inglese?	האם אתה מדבר אנגלית?	你会说英语吗？	英語を話しますか？	هل تتحدث الانجليزية؟	nǐ huì shuō yīngyǔ ma?
-phrases greetings	I don't understand English		Ich verstehe kein Deutsch	Ich verstah kei Düütsch	Я не понимаю по-русски	No entiendo el español		Eu não entendo português	Je ne comprends pas le francais	Non capisco l'italiano	אני לא מבין אנגלית	我不明白中文	私は日本語がわからない	أنا لا أفهم العربية	Wǒ bù míngbái zhōngwén
+phrases greetings	I don't understand English		Ich verstehe kein Englisch	Ich verstah kei Englisch	Я не понимаю по-английски	No entiendo el inglés		Eu não entendo inglés	Je ne comprends pas l'anglais	Non capisco l'inglese	אני לא מבין אנגלית	我不懂英语	英語がわかりません	انا لا افهم الانجليزية	Wǒ bù dǒng yīngyǔ
 phrases greetings	I beg your pardon?		Wie bitte?		Прошу прощения, что Вы сказали?	¿Mande?	¿Perdón? ¿Me lo puede repetir?	O quê?	Pardon?	Chiedo scusa, che cosa ha detto?	אני מבקש סליחה?	能请你再说一遍吗？	もう一度お願いします。	عفوا	néng qǐng nǐ zàishuō yībiàn ma?
 phrases greetings	What did you say?		Was haben Sie gesagt?	Was händ Sie gseit?	Что Вы сказали?	¿Puede repetir, por favor?		O que você disse?	Qu'est-ce que vous avez dit?	Che cosa hai detto?	מה אמרת?	你刚刚说了什么？	何って言ったの？	ماذا قلت؟	Nǐ gānggāng shuōle shénme?
 phrases greetings	Can you please write it down?		Können Sie das bitte aufschreiben?	Chönted Sie mir das bitte ufschriibe?	Запишите это, пожалуйста	¿Puede escribirlo, por favor?		Pode anotar, por favor?	Pourriez-vous me l'écrire, s'il vous plait?	Può scriverlo, per favore?	אתה יכול בבקשה לרשום את זה?	麻煩你寫一下,好不好？	それを書き留めてくれますか？	أرجوك أكتبه في الاسفل	Máfan nǐ xiě yīxià, hǎobù hǎo?

@@ -45,7 +45,7 @@
     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
     <Label x:Name="PlayrateLab" Text="Play Rate:" TextColor="Blue"  Margin = "10,30,0,0"
             WidthRequest="140" HeightRequest="80" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    <Slider x:Name="PlaySlider" Margin = "0,30,0,0" WidthRequest="200" Minimum="1" Maximum="10" Value= "5"
+    <Slider x:Name="PlaySlider" Margin = "0,30,0,0" WidthRequest="200" Minimum="1" Maximum="6" Value= "3"
             HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
     </StackLayout>
     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">

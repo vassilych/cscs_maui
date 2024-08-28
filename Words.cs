@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Maui.Controls.Shapes;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using static UIKit.UIGestureRecognizer;
+//using static UIKit.UIGestureRecognizer;
 using System.Reflection;
 using System.IO;
 using System.Collections.Generic;
@@ -62,28 +62,43 @@ namespace ScriptingMaui
             return categories.ToArray();
         }
 
+        public static async Task<string> GetFileContents(string filename)
+        {
+#if ANDROID
+#elif IOS
+#endif
+            using Stream fileStream = await FileSystem.Current.OpenAppPackageFileAsync(filename);
+            //StreamReader reader = new StreamReader(fileStream);
+            using StreamReader reader = new StreamReader(fileStream);
+            return await reader.ReadToEndAsync();
+            //return reader;
+        }
         public static void LoadWords(string filename = "dictionary.txt")
         {
             if (Word.Default != null)
             {
                 return;
             }
-            var task = Task.Run(async () => await FileSystem.OpenAppPackageFileAsync(filename));
-            //using var resourceStream = await FileSystem.OpenAppPackageFileAsync(filename);
+            var taskA = Task.Run(async () => await GetFileContents(filename));
+            var fileData = taskA.Result;
+
+            /*var task = Task.Run(async () => await FileSystem.OpenAppPackageFileAsync(filename));
             using var resourceStream = task.Result;
             var fs = resourceStream as FileStream;
             if (fs == null)
             {
                 return;
             }
-
-            using StreamReader sr = new(resourceStream);
+            using StreamReader sr = new(resourceStream);*/
             var lineNr = 0;
             var wordCounter = 0;
+            var lines = fileData.Split('\n');
 
-            while (sr.Peek() >= 0)
+            foreach(var line in lines)
             {
-                var line = sr.ReadLine();
+            /*while (sr.Peek() >= 0)
+            {
+                var line = sr.ReadLine();*/
                 lineNr++;
                 var tokens = line?.Trim().Split('\t');
                 if (tokens == null || tokens.Length < 2)
@@ -171,7 +186,14 @@ public class Word
     }
     public string GetImage()
     {
-        var core = Name.ToLower().Replace("-", "_").Replace(" ", "_").Replace("'", "_").Replace(",", "_").Replace("(", "_").Replace(")", "_").
+        var name = Name.ToLower();
+        // special cases word files not permitted on Android:
+        if (name == "class" || name == "short" || name == "turkey")
+        { //"a__case.png"
+            return "a__" + name + ".png";
+        }
+        var core = name.Replace("-", "_").Replace(" ", "_").Replace("'", "_").Replace(",", "_").Replace("ü", "u").
+            Replace("(", "_").Replace(")", "_").
             Replace("é", "e");
         core = core.TrimStart('_').TrimEnd('_');
         return core + ".png";
@@ -179,7 +201,7 @@ public class Word
 }
 public class Category
 {
-    public int Index { get; private set; }
+    public int Index { get; set; }
     public string Name { get; private set; }
     public bool IsText { get; private set; }
     public List<Word> Words { get; private set; } = new List<Word>();

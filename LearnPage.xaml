@@ -18,10 +18,10 @@
     </ContentPage.Resources>
 
     <VerticalStackLayout>
-        <HorizontalStackLayout x:Name="SearchPanel">
+      <HorizontalStackLayout x:Name="SearchPanel">
         <ImageButton x:Name="BackBut" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Source="prev.png" Grid.Column="0" Margin = "1,4,4,4" Background="Transparent" />
         <Entry x:Name="SearchEntry" Margin = "8,0,10,0" WidthRequest="300" Placeholder="Enter text" PlaceholderColor="LimeGreen" />
-        </HorizontalStackLayout>
+      </HorizontalStackLayout>
     <sflist:SfListView x:Name="ResultsView" HeightRequest="550"
                    ItemsSource="{Binding ResultsInfo}"
                    ItemSize="{StaticResource TransSize}">
@@ -43,21 +43,20 @@
 
     <!-- <picker:SfPicker x:Name="Picker"  HeightRequest="200" Background="Transparent" VerticalOptions="Start" /> -->
 
-    <Grid x:Name="TopPanel">
+    <Grid x:Name="TopPanel" Margin = "0,20">
     <Grid.ColumnDefinitions>
-        <ColumnDefinition  Width="15*" />
-        <ColumnDefinition  Width="70*" />
-        <ColumnDefinition  Width="15*" />
+        <ColumnDefinition  Width="25*" />
+        <ColumnDefinition  Width="75*" />
     </Grid.ColumnDefinitions>
-        <ImageButton x:Name="FindBut" Grid.Column="0" HeightRequest="25" WidthRequest="25" HorizontalOptions="Start"
-               Source="find.png" Margin = "4,2,0,0" Background="Transparent" />
-        <Picker x:Name="CategoryPicker"  Grid.Column="1"
-            Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-            FontAttributes="Bold" HorizontalOptions="CenterAndExpand" FontSize="Header">
-        </Picker>
-        <Label x:Name="WordId" Grid.Column="2" Text="Palabra 1234/1500" HorizontalTextAlignment="End" HorizontalOptions="End"
-            Margin = "0,0,10,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="12" />
-
+        <Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1500" HorizontalTextAlignment="Start" HorizontalOptions="Start"
+            Margin = "10,0,10,0" WidthRequest="100" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="12" />
+        <Border Stroke="Blue" StrokeThickness="1" StrokeShape= "RoundRectangle 30,30,30,30" Margin = "2,10"
+                Background="Transparent" HorizontalOptions="StartAndExpand" Grid.Column="1" >
+            <Picker x:Name="CategoryPicker"  
+                Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Header">
+            </Picker>
+        </Border>
     </Grid>
 
     <Grid x:Name="TopMainPanel" Background="Transparent" Margin = "0,4,0,0" >
@@ -65,17 +64,15 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="10*" />
-            <ColumnDefinition  Width="80*" />
-            <ColumnDefinition  Width="10*" />
+            <ColumnDefinition  Width="20*" />
+            <ColumnDefinition  Width="60*" />
+            <ColumnDefinition  Width="20*" />
         </Grid.ColumnDefinitions>
-        <Button x:Name="ButPlay" Grid.Column="0" HorizontalOptions="Start" ImageSource="play_but.png" Background="Transparent" />
         <Label x:Name="MainWordLabel" Grid.Column="1" Text="{Binding MainWord}" HorizontalTextAlignment="Center"
                   VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22" />
-        <Button x:Name="ButSpeak" Grid.Column="2" HorizontalOptions="Center" ImageSource="speaker.png" Margin = "-10,0,4,4" Background="Transparent" />
 	</Grid>
 
-	<Grid x:Name="MainPanel" Background="Transparent" Margin = "0,4,0,4" >
+	<Grid x:Name="MainPanel" Background="Transparent" Margin = "0,4,0,0" >
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -93,6 +90,22 @@
             Grid.Column="2" Margin = "4,4,1,4" Background="Transparent" />
 	</Grid>
 
+  <HorizontalStackLayout x:Name="ButtonshPanel" HorizontalOptions="CenterAndExpand" Margin="0,0,0,1" >
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "20"
+            Background="Transparent" HorizontalOptions="Start">
+        <ImageButton x:Name="ButPlay"  Source="play_but.png" Margin = "6,6,6,6" Background="Transparent"/>
+    </Border>
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle "  Margin = "20"
+            Background="Transparent" HorizontalOptions="Start">
+      <ImageButton x:Name="FindBut" HeightRequest="30" WidthRequest="30" 
+            Source="find.png" Margin = "6,6,6,6" Background="Transparent" />
+    </Border>
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle "  Margin = "20"
+            Background="Transparent" HorizontalOptions="Start">
+    <ImageButton x:Name="ButSpeak" Margin = "6,6,6,6" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />
+    </Border>
+  </HorizontalStackLayout>
+
   <sflist:SfListView x:Name="TranslationView" HeightRequest="480"
                    ItemsSource="{Binding TransInfo}"
                    ItemSize="{StaticResource TransSize}">
@@ -103,9 +116,9 @@
             <ColumnDefinition Width="0.2*" />
             <ColumnDefinition Width="0.8*" />
             </Grid.ColumnDefinitions>
-            <ImageButton Grid.Column="0" HorizontalOptions="Start" Source="{Binding TransFlag}"
+            <ImageButton Grid.Column="0" Margin = "24" HorizontalOptions="Start" Source="{Binding TransFlag}"
                     Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
-            <Label Grid.Column="1" Text="{Binding TransName}" HorizontalTextAlignment="Center"
+            <Label Grid.Column="1" Text="{Binding TransName}" HorizontalTextAlignment="Start"
                    VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{Binding FontSize}" />
         </Grid>
         </DataTemplate>

@@ -10,6 +10,9 @@ namespace ScriptingMaui;
 public partial class QuizPage : ContentPage
 {
     const string CategorySet = "categoryQuiz";
+    const string WordsSet = "wordsQuiz";
+    const string StartBtn = "start.png";
+    const string StopBtn = "stop.png";
 
     Dictionary<string, View> m_views = new Dictionary<string, View>();
     List<string> m_words = new List<string>();
@@ -32,6 +35,8 @@ public partial class QuizPage : ContentPage
 	{
         InitializeComponent();
         Setup();
+        WordsStepper.Value = Preferences.Get(WordsSet, 5);
+        NbWords.Text = WordsStepper.Value.ToString();
         WordsStepper.ValueChanged += WordsStepper_ValueChanged;
         StartStopBtn.Clicked += StartStopBtn_Clicked;
 
@@ -57,16 +62,18 @@ public partial class QuizPage : ContentPage
         }
 
         m_category = Categories.SwitchCategory(chosen);
+        SetupRecords();
     }
 
     public void Localize()
     {
         CategoryPicker.Title = AppResources.SelectCategory;
         CategoryPicker.ItemsSource = Context.TranslatedCategories();
+        SetupRecords();
 
         WordsLabel.Text = AppResources.Quiz_Words_;
         var pct = m_currentQuizQuestion == 0 ? 0 :
-            (int)((double)m_correctInQuiz / (double)m_currentQuizQuestion);
+            (int)Math.Round(100.0 * (double)m_correctInQuiz / (double)m_currentQuizQuestion);
         Result.Text = string.Format(AppResources.Correct___0_____1___2__,
             pct, m_correctInQuiz, m_currentQuizQuestion);
 
@@ -127,9 +134,6 @@ public partial class QuizPage : ContentPage
         bool correct = (m_correctId == (id - 1));
         m_correctInQuiz += correct ? 1 : 0;
         var pct = (int)((double)m_correctInQuiz / (double)m_currentQuizQuestion);
-        var current = CultureInfo.CurrentUICulture;
-        var lol = CultureInfo.DefaultThreadCurrentCulture;
-        var lol2 = CultureInfo.DefaultThreadCurrentUICulture;
 
         Result.Text = string.Format(AppResources.Correct___0_____1___2__,
             pct, m_correctInQuiz, m_currentQuizQuestion);
@@ -153,15 +157,14 @@ public partial class QuizPage : ContentPage
     private async void StartStopBtn_Clicked(object? sender, EventArgs e)
     {
         m_playing = !m_playing;
-        StartStopBtn.Source = m_playing ? "stop.png" : "start.png";
+        StartStopBtn.Source = m_playing ? StopBtn : StartBtn;
 
         if (!m_playing)
         {
             return;
         }
 
-        var index = CategoryPicker.SelectedIndex;
-        m_category = Categories.GetCategory(index);
+        m_category = Categories.GetCategory(CategoryPicker.SelectedIndex);
         m_quizWords = (int)WordsStepper.Value;
         m_totalWords = m_category.GetTotalWords();
         m_currentQuizQuestion = 0;
@@ -177,6 +180,32 @@ public partial class QuizPage : ContentPage
         m_timer.Start();
     }
 
+    void SetupRecords(double newScore = 0.0, double newTime = 0.0)
+    {
+        m_category = Categories.GetCategory(CategoryPicker.SelectedIndex);
+        m_quizWords = (int)WordsStepper.Value;
+        var keyScore = string.Format("Record_{0}_{1}_{2}",
+            m_category.Name, m_quizWords, SettingsPage.VoiceLearn);
+        var keyDate = keyScore + "_dt";
+        var keyTime = keyScore + "_tm";
+
+        var score = Preferences.Get(keyScore, 0.0);
+        var time = Preferences.Get(keyTime, 0.0);
+        var date = Preferences.Get(keyDate, "");
+        var highest = Math.Max(score, newScore);
+        if (newScore > score || (score == newScore && score > 0 && newTime < time))
+        {
+            date = DateTime.Now.ToString("yyyy/MM/dd HH:mm").Replace(".", "/");
+            Preferences.Set(keyScore, highest);
+            Preferences.Set(keyDate, date);
+            Preferences.Set(keyTime, newTime);
+            time = newTime;
+        }
+        score = Math.Max(score, newScore);
+        this.Record.Text = score > 0 ? AppResources.Best_score_ + " " + highest + "% - " +
+                time + " sec - " + date : "    ";
+    }
+
     void Reset()
     {
         ImgBtn1.IsVisible = false; TxtBtn1.IsVisible = false; Lab1.IsVisible = false;
@@ -189,14 +218,22 @@ public partial class QuizPage : ContentPage
     }
     async Task StopQuiz(bool showResults = true)
     {
+        var finish = DateTime.Now;
         m_timer?.Stop();
         m_playing = false;
-        StartStopBtn.Source = "start.png";
+        StartStopBtn.Source = StartBtn;
 
         if (showResults)
         {
+            var time = Math.Round((finish - m_startQuiz).TotalSeconds, 1);
+            var pct = Math.Round(100.0 * (double)m_correctInQuiz / (double)m_quizWords);
+
             await DisplayAlert("Quiz Finished", string.Format("Correct {0}/{1}",
-                m_correctInQuiz, m_quizWords), "OK");
+                m_correctInQuiz, m_quizWords) + " " + pct + "%", "OK");
+            if (m_quizWords * m_correctInQuiz > 0)
+            {
+                SetupRecords(pct, time);
+            }
         }
     }
     private void OnPlayTimer()
@@ -216,14 +253,20 @@ public partial class QuizPage : ContentPage
     private void WordsStepper_ValueChanged(object? sender, ValueChangedEventArgs e)
     {
         NbWords.Text = e.NewValue.ToString();
+        Preferences.Set(WordsSet, (int)e.NewValue);
+        SetupRecords();
+    }
+    void TestWords()
+    {
+        var words = Categories.DefaultCategory.Words;
+        foreach (var w in words)
+        {
+            SetWord(w, 0);
+        }
     }
     async Task GetNewWords(bool speak = true)
     {
-        /*var words = Categories.DefaultCategory.Words;
-        foreach(var w in words)
-        {
-            SetWord(w, 0);
-        }*/
+        //TestWords();
         if (m_currentQuizQuestion >= m_quizWords)
         {
             await StopQuiz();

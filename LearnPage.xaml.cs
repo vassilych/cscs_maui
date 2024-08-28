@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using Microsoft.Maui;
-using ObjCRuntime;
+//using ObjCRuntime;
 using ScriptingMaui.Resources.Strings;
 using SplitAndMerge;
 using Syncfusion.Maui.ListView;
@@ -179,10 +179,12 @@ public partial class LearnPage : ContentPage
         SearchPanel.IsVisible = findMode;
         ResultsView.IsVisible = findMode;
         BackBut.IsVisible = findMode;
+        SearchEntry.IsEnabled = findMode;
 
         TopPanel.IsVisible = !findMode;
         TopMainPanel.IsVisible = !findMode;
         MainPanel.IsVisible = !findMode;
+        ButtonshPanel.IsVisible = !findMode;
         TranslationView.IsVisible = !findMode;
     }
 
@@ -199,7 +201,7 @@ public partial class LearnPage : ContentPage
         m_playing = !m_playing;
         if (m_playing)
         {
-            ButPlay.ImageSource = "stop_but.png";
+            ButPlay.Source = "stop_but.png";
             var word = m_category.GetNextWord();
             await SetWord(word);
             m_timer?.Stop();
@@ -218,7 +220,7 @@ public partial class LearnPage : ContentPage
     {
         m_playing = false;
         m_timer?.Stop();
-        ButPlay.ImageSource = "play_but.png";
+        ButPlay.Source = "play_but.png";
     }
     private void OnPlayTimer()
     {
@@ -248,6 +250,7 @@ public partial class LearnPage : ContentPage
             ind = 0;
         }
         var wordIndex = m_category.GetIndex(word);
+        m_category.Index = wordIndex;
         Preferences.Set(WordSet, wordIndex);
         Preferences.Set(CategorySet, ind);
         CategoryPicker.SelectedIndex = ind;
@@ -290,15 +293,7 @@ public partial class LearnPage : ContentPage
     {
         await TTS.Speak(Context.MainWord, SettingsPage.VoiceLearn, true);
     }
-    private async void SelectionChanged(object? sender, PickerSelectionChangedEventArgs e)
-    {
-        StopPlay();
-        var chosen = e.NewValue;
-        m_category = Categories.SwitchCategory(chosen);
 
-        var word = m_category.GetWord();
-        await SetWord(word);
-    }
     private async void CategorySelectionChanged(object? sender, EventArgs e)
     {
         StopPlay();
@@ -324,7 +319,7 @@ public partial class LearnPage : ContentPage
         }
 
         var index = TranslationView.DataSource?.DisplayItems.IndexOf(items[0]);
-        var voice = Words.GetVoiceOrd((int)index);
+        var voice = Context.GetVoice((int)index);
         var trans = Context.Word.GetTranslation(voice);
         await TTS.Speak(trans, voice);
     }
@@ -463,6 +458,7 @@ public class Context
     {
         transInfo.Clear();
         var voiceOrder = Words.VoiceOrder;
+
         foreach (var voice in voiceOrder)
         {
             var trans = word.Translation[voice];
@@ -471,10 +467,17 @@ public class Context
             {
                 filename = filename.Substring(11);
             }
-            transInfo.Add(new TranslationInfo() {
+            var item = new TranslationInfo() {
                 TransName = trans, TransFlag = filename, TransVoice = voice,
-                FontSize = LearnPage.GetFontSize(trans)
-            });
+                FontSize = LearnPage.GetFontSize(trans) };
+            if (voice == SettingsPage.MyVoice)
+            {
+                transInfo.Insert(0, item);
+            }
+            else
+            {
+                transInfo.Add(item);
+            }
         }
     }
     internal void GenerateSearchInfo(List<WordHint> results, string voice, bool clean = true)
