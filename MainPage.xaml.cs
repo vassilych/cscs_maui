@@ -1,6 +1,8 @@
 ﻿
 using System.Globalization;
 using Microsoft.Maui.Animations;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Internals;
 using ScriptingMaui.Resources.Strings;
 
 namespace ScriptingMaui;
@@ -9,7 +11,9 @@ public partial class MainPage : TabbedPage
 {
 	public static MainPage? Instance;
 	List<ContentPage> m_pages = new List<ContentPage>();
-	public MainPage()
+    public Scripting Scripting { get; private set; } = new Scripting();
+
+    public MainPage()
 	{
         Instance = this;
         InitializeComponent();
@@ -22,8 +26,9 @@ public partial class MainPage : TabbedPage
                 m_pages.Add(contentPage);
             }
         }
-        Scripting.Start();
+
         SetLanguage(SettingsPage.LangCode);
+        Scripting.Init(m_pages);
 
         var firstTime = Preferences.Get("firstTime", true);
         if (firstTime)
@@ -32,7 +37,18 @@ public partial class MainPage : TabbedPage
             CurrentPage = Children.Last();
         }
 
+        this.PropertyChanged += MainPage_PropertyChanged;
+
         this.Loaded += MainPage_Loaded;
+    }
+
+    private void MainPage_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+        if (!string.IsNullOrWhiteSpace(e.PropertyName) &&
+            e.PropertyName.Equals("CurrentPage", StringComparison.OrdinalIgnoreCase))
+        {
+            LearnPage.Instance.StopPlay();
+        }
     }
 
     private async void MainPage_Loaded(object? sender, EventArgs e)
@@ -42,6 +58,8 @@ public partial class MainPage : TabbedPage
 
         var indLearn = Words.Voices.IndexOf(SettingsPage.VoiceLearn);
         MainPage.Instance?.SetBackground(indLearn);
+
+        await Scripting.StartAsync();
     }
 
     public void SetupLanguage()

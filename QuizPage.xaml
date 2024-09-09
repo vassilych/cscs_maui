@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:local="clr-namespace:ScriptingMaui"
+			 xmlns:local="clr-namespace:ScriptingMaui" x:Name="QuizTabPage"
 			 x:Class="ScriptingMaui.QuizPage" IconImageSource="quiz_icon.png" Title="Quiz">
 
 	<ContentPage.Resources>
@@ -17,10 +17,13 @@
         </Grid.RowDefinitions>
 
 	<VerticalStackLayout Grid.Row="0" >
-    <Picker x:Name="CategoryPicker"
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
+                Background="Transparent" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
+      <Picker x:Name="QuizCategoryPicker"
         Title="Select word category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
         FontAttributes="Bold" FontSize="Header">
-    </Picker>
+      </Picker>
+    </Border>
 
 	<Grid Background="Transparent" Margin = "0,4,0,4" >
         <Grid.RowDefinitions>
@@ -29,44 +32,70 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.1*" />
         </Grid.ColumnDefinitions>
-			<ImageButton x:Name="ImgBtn1" Grid.Row="0" Grid.Column="0" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+            <ImageButton x:Name="speak1" Margin = "8" Grid.Column="0" HorizontalOptions="FillAndExpand" Source="speaker.png" Background="Transparent" />
+			<ImageButton x:Name="ImgBtn1" Grid.Row="0" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
 				HorizontalOptions="Center" Source="airport.png" Margin = "20,2,4,2" BindingContext="img1" Background="Transparent" />
-			<ImageButton x:Name="ImgBtn2"  Grid.Row="0" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+			<ImageButton x:Name="ImgBtn2"  Grid.Row="0" Grid.Column="2" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
 				HorizontalOptions="Center" Source="airplane.png" Margin="4,2,20,2" BindingContext="img2" Background="Transparent"/>
-			<Button x:Name="TxtBtn1" Grid.Row="0" Grid.Column="0" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
-				BorderWidth="1" HorizontalOptions="Center" Margin = "20,2,4,2" BindingContext="txt1" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
-			<Button x:Name="TxtBtn2" Grid.Row="0" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
-				BorderWidth="1" HorizontalOptions="Center" Margin = "4,2,20,2"  BindingContext="txt2" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
-			<Label x:Name="Lab1" Grid.Row="0" Grid.Column="0" FontSize="80" FontAttributes="Bold" TextColor="Green" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
-			<Label x:Name="Lab2" Grid.Row="0" Grid.Column="1" FontSize="80" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<Border x:Name="Border1" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" IsVisible="False"
+					Background="Transparent" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+				<Button x:Name="TxtBtn1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+					BorderWidth="1" HorizontalOptions="Center" BindingContext="txt1" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap" />
+			</Border>
+			<Border x:Name="Border2" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" IsVisible="False"
+					Background="Transparent" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center">
+				<Button x:Name="TxtBtn2" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+					BorderWidth="1" HorizontalOptions="Center"  BindingContext="txt2" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap" />
+			</Border>
+			<Label x:Name="Lab1" Grid.Row="0" Grid.Column="1" FontSize="80" FontAttributes="Bold" TextColor="Green" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<Label x:Name="Lab2" Grid.Row="0" Grid.Column="2" FontSize="80" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <ImageButton x:Name="speak2" Margin="8" Grid.Column="3" HorizontalOptions="FillAndExpand" Source="speaker.png" Background="Transparent" />
 
-			<ImageButton x:Name="ImgBtn3" Grid.Row="1" Grid.Column="0" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+            <ImageButton x:Name="speak3" Margin="8" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" Source="speaker.png" Background="Transparent" />
+			<ImageButton x:Name="ImgBtn3" Grid.Row="1" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
 				HorizontalOptions="Center" Source="abdomen.png" Margin = "20,2,4,2" BindingContext="img3" Background="Transparent" />
-			<ImageButton x:Name="ImgBtn4" Grid.Row="1" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+			<ImageButton x:Name="ImgBtn4" Grid.Row="1" Grid.Column="2" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
 				HorizontalOptions="Center" Source="actor.png" Margin="4,2,20,2" BindingContext="img4" Background="Transparent"/>
-			<Button x:Name="TxtBtn3" Grid.Row="1" Grid.Column="0" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
-				BorderWidth="1" HorizontalOptions="Center" Margin = "20,2,4,2"  BindingContext="txt3" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
-			<Button x:Name="TxtBtn4" Grid.Row="1" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
-				BorderWidth="1" HorizontalOptions="Center" Margin = "4,2,20,2"  BindingContext="txt4" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
-			<Label x:Name="Lab3" Grid.Row="1" Grid.Column="0" FontSize="80" FontAttributes="Bold" TextColor="Green" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
-			<Label x:Name="Lab4" Grid.Row="1" Grid.Column="1" FontSize="80" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<Border x:Name="Border3" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" IsVisible="False"
+					Background="Transparent" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
+				<Button x:Name="TxtBtn3" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+					BorderWidth="1" HorizontalOptions="Center" BindingContext="txt3" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
+			</Border>
+			<Border x:Name="Border4" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" IsVisible="False"
+					Background="Transparent" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center">
+				<Button x:Name="TxtBtn4" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+					BorderWidth="1" HorizontalOptions="Center" BindingContext="txt4" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
+			</Border>
+			<Label x:Name="Lab3" Grid.Row="1" Grid.Column="1" FontSize="80" FontAttributes="Bold" TextColor="Green" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<Label x:Name="Lab4" Grid.Row="1" Grid.Column="2" FontSize="80" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <ImageButton x:Name="speak4" Margin="8" Grid.Row="1" Grid.Column="3" HorizontalOptions="FillAndExpand" Source="speaker.png" Background="Transparent" />
 
-			<ImageButton x:Name="ImgBtn5" Grid.Row="2" Grid.Column="0" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+            <ImageButton x:Name="speak5" Margin="8" Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" Source="speaker.png" Background="Transparent" />
+			<ImageButton x:Name="ImgBtn5" Grid.Row="2" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
 				HorizontalOptions="Center" Source="salt.png" Margin = "20,2,4,2" BindingContext="img5" Background="Transparent" />
-			<ImageButton x:Name="ImgBtn6" Grid.Row="2" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+			<ImageButton x:Name="ImgBtn6" Grid.Row="2" Grid.Column="2" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
 				HorizontalOptions="Center" Source="classroom.png" Margin="4,2,20,2" BindingContext="img6" Background="Transparent"/>
-			<Button x:Name="TxtBtn5" Grid.Row="2" Grid.Column="0" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
-				BorderWidth="1" HorizontalOptions="Center" Margin = "20,2,4,2"  BindingContext="txt5" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
-			<Button x:Name="TxtBtn6" Grid.Row="2" Grid.Column="1" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
-				BorderWidth="1" HorizontalOptions="Center" Margin = "4,2,20,2"  BindingContext="txt6" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
-			<Label x:Name="Lab5" Grid.Row="2" Grid.Column="0" FontSize="80" FontAttributes="Bold" TextColor="Green" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
-			<Label x:Name="Lab6" Grid.Row="2" Grid.Column="1" FontSize="80" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<Border x:Name="Border5" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" IsVisible="False"
+					Background="Transparent" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center">
+				<Button x:Name="TxtBtn5" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+					BorderWidth="1" HorizontalOptions="Center" BindingContext="txt5" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
+			</Border>
+			<Border x:Name="Border6" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" IsVisible="False"
+					Background="Transparent"  Grid.Row="2" Grid.Column="2" HorizontalOptions="Center">
+				<Button x:Name="TxtBtn6" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"
+					BorderWidth="1" HorizontalOptions="Center" BindingContext="txt6" TextColor="Blue" FontSize="18" Background="Transparent" LineBreakMode="WordWrap"  IsVisible="False" />
+			</Border>
+			<Label x:Name="Lab5" Grid.Row="2" Grid.Column="1" FontSize="80" FontAttributes="Bold" TextColor="Green" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<Label x:Name="Lab6" Grid.Row="2" Grid.Column="2" FontSize="80" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <ImageButton x:Name="speak6" Margin="8" Grid.Row="2" Grid.Column="3" HorizontalOptions="FillAndExpand" Source="speaker.png" Background="Transparent" />
 		</Grid>
 
-    <Label x:Name="WordId" Text="" HorizontalTextAlignment="Center" HorizontalOptions="Center"
+    <Button x:Name="QuizWordId" Text="" HorizontalOptions="Center" Background="Transparent"
             VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="20" />
 
 	</VerticalStackLayout>
@@ -78,20 +107,20 @@
         </Grid.RowDefinitions>
 		<Grid Margin="0,12">
 			<Label x:Name="WordsLabel" Text="Quiz Words:" HorizontalTextAlignment="Start" HorizontalOptions="Start"
-				Margin="4" VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="14" />
+				Margin="4" VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="14" />
 			<Stepper x:Name="WordsStepper" HorizontalOptions="Center" VerticalOptions="Center"
-			   Minimum="3" Maximum="20" Value="5" />
+			   Minimum="3" Maximum="25" Value="5" />
 			<Label x:Name="NbWords" Text="5" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Center"
-				Margin="30,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="24" />
+				Margin="30,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="24" />
 		</Grid>
         <Label x:Name="Record"  Grid.Row="1" Grid.ColumnSpan="3" Text="Best Score: 100% - " HorizontalTextAlignment="Center" HorizontalOptions="Center"
-            VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="14" />
+            VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="14" />
         <Label x:Name="Result" Grid.Row="2" Grid.Column="0"  Text="Correct: 0/0" HorizontalTextAlignment="Start" HorizontalOptions="Start"
-            Margin="4"    VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{StaticResource FontSize}" />
+            Margin="4"    VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="{StaticResource FontSize}" />
 		<ImageButton x:Name="StartStopBtn" Grid.Row="2" Grid.Column="1" HeightRequest="{StaticResource StartStopSize}" WidthRequest="{StaticResource StartStopSize}"
 			Source="start.png" HorizontalOptions="Center" Margin = "0,4" Background="Transparent" />
         <Label x:Name="Timer" Grid.Row="2" Grid.Column="2" Text="00:00.000" HorizontalTextAlignment="End" HorizontalOptions="End"
-            Margin="6" VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{StaticResource FontSize}" />
+            Margin="6" VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="{StaticResource FontSize}" />
 	</Grid>
    </Grid>
 </ContentPage>

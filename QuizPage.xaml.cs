@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using ScriptingMaui.Resources.Strings;
 using SplitAndMerge;
 using System;
@@ -15,12 +16,15 @@ public partial class QuizPage : ContentPage
     const string StopBtn = "stop.png";
 
     Dictionary<string, View> m_views = new Dictionary<string, View>();
-    List<string> m_words = new List<string>();
+    List<string> m_shown = new List<string>();
+    List<Word> m_words = new List<Word>();
     const int m_timeoutms = 250;
     const int m_quizChoices = 6;
 
     bool m_playing;
     Category m_category = Categories.DefaultCategory;
+    List<int> m_usedWords = new List<int>();
+    List<int> m_randomChoices = new List<int>();
     int m_totalWords; // total category words
     int m_quizWords;  // total words in the quiz
     int m_currentQuizQuestion; // current question (0 - m_quizWords)
@@ -43,13 +47,13 @@ public partial class QuizPage : ContentPage
         Localize();
 
         int index = Preferences.Get(CategorySet, 0);
-        CategoryPicker.SelectedIndex = index;
-        CategoryPicker.SelectedIndexChanged += CategorySelectionChanged;
+        QuizCategoryPicker.SelectedIndex = index;
+        QuizCategoryPicker.SelectedIndexChanged += CategorySelectionChanged;
     }
 
     private async void CategorySelectionChanged(object? sender, EventArgs e)
     {
-        var chosen = CategoryPicker.SelectedIndex;
+        var chosen = QuizCategoryPicker.SelectedIndex;
         if (chosen < 0)
         {
             return;
@@ -67,8 +71,8 @@ public partial class QuizPage : ContentPage
 
     public void Localize()
     {
-        CategoryPicker.Title = AppResources.SelectCategory;
-        CategoryPicker.ItemsSource = Context.TranslatedCategories();
+        QuizCategoryPicker.Title = AppResources.SelectCategory;
+        QuizCategoryPicker.ItemsSource = Context.TranslatedCategories();
         SetupRecords();
 
         WordsLabel.Text = AppResources.Quiz_Words_;
@@ -81,39 +85,54 @@ public partial class QuizPage : ContentPage
     }
     public void Setup()
     {
-        m_views[(string)ImgBtn1.BindingContext] = ImgBtn1;
-        m_views[(string)ImgBtn2.BindingContext] = ImgBtn2;
-        m_views[(string)ImgBtn3.BindingContext] = ImgBtn3;
-        m_views[(string)ImgBtn4.BindingContext] = ImgBtn4;
-        m_views[(string)ImgBtn5.BindingContext] = ImgBtn5;
-        m_views[(string)ImgBtn6.BindingContext] = ImgBtn6;
-        m_views[(string)TxtBtn1.BindingContext] = TxtBtn1;
-        m_views[(string)TxtBtn2.BindingContext] = TxtBtn2;
-        m_views[(string)TxtBtn3.BindingContext] = TxtBtn3;
-        m_views[(string)TxtBtn4.BindingContext] = TxtBtn4;
-        m_views[(string)TxtBtn5.BindingContext] = TxtBtn5;
-        m_views[(string)TxtBtn6.BindingContext] = TxtBtn6;
+        m_views[ImgBtn1.StyleId] = ImgBtn1; m_views[ImgBtn2.StyleId] = ImgBtn2;
+        m_views[ImgBtn3.StyleId] = ImgBtn3; m_views[ImgBtn4.StyleId] = ImgBtn4;
+        m_views[ImgBtn5.StyleId] = ImgBtn5; m_views[ImgBtn6.StyleId] = ImgBtn6;
+        m_views[TxtBtn1.StyleId] = TxtBtn1; m_views[TxtBtn2.StyleId] = TxtBtn2;
+        m_views[TxtBtn3.StyleId] = TxtBtn3; m_views[TxtBtn4.StyleId] = TxtBtn4;
+        m_views[TxtBtn5.StyleId] = TxtBtn5; m_views[TxtBtn6.StyleId] = TxtBtn6;
+        m_views[Border1.StyleId] = Border1; m_views[Border2.StyleId] = Border2;
+        m_views[Border3.StyleId] = Border3; m_views[Border4.StyleId] = Border4;
+        m_views[Border5.StyleId] = Border5; m_views[Border6.StyleId] = Border6;
         m_views["1"] = Lab1; m_views["2"] = Lab2; m_views["3"] = Lab3;
         m_views["4"] = Lab4; m_views["5"] = Lab5; m_views["6"] = Lab6;
-        ImgBtn1.Clicked += Btn_Clicked;
-        ImgBtn2.Clicked += Btn_Clicked;
-        ImgBtn3.Clicked += Btn_Clicked;
-        ImgBtn4.Clicked += Btn_Clicked;
-        ImgBtn5.Clicked += Btn_Clicked;
-        ImgBtn6.Clicked += Btn_Clicked;
-        TxtBtn1.Clicked += Btn_Clicked;
-        TxtBtn2.Clicked += Btn_Clicked;
-        TxtBtn3.Clicked += Btn_Clicked;
-        TxtBtn4.Clicked += Btn_Clicked;
-        TxtBtn5.Clicked += Btn_Clicked;
-        TxtBtn6.Clicked += Btn_Clicked;
+
+        ImgBtn1.Clicked += Btn_Clicked; ImgBtn2.Clicked += Btn_Clicked;
+        ImgBtn3.Clicked += Btn_Clicked; ImgBtn4.Clicked += Btn_Clicked;
+        ImgBtn5.Clicked += Btn_Clicked; ImgBtn6.Clicked += Btn_Clicked;
+        TxtBtn1.Clicked += Btn_Clicked; TxtBtn2.Clicked += Btn_Clicked;
+        TxtBtn3.Clicked += Btn_Clicked; TxtBtn4.Clicked += Btn_Clicked;
+        TxtBtn5.Clicked += Btn_Clicked; TxtBtn6.Clicked += Btn_Clicked;
+        speak1.Clicked += Speak_Clicked; speak2.Clicked += Speak_Clicked;
+        speak3.Clicked += Speak_Clicked; speak4.Clicked += Speak_Clicked;
+        speak5.Clicked += Speak_Clicked; speak6.Clicked += Speak_Clicked;
+        speak1.IsVisible = speak2.IsVisible = speak3.IsVisible = false;
+        speak4.IsVisible = speak5.IsVisible = speak6.IsVisible = false;
+        QuizWordId.Clicked += QuizWordId_Clicked;
         Reset();
+    }
+
+    async void QuizWordId_Clicked(object? sender, EventArgs e)
+    {
+        await TTS.Speak(QuizWordId.Text, SettingsPage.VoiceLearn);
+    }
+
+    async void Speak_Clicked(object? sender, EventArgs e)
+    {
+        if (! (sender is ImageButton btn) || string.IsNullOrWhiteSpace(btn.StyleId))
+        {
+            return;
+        }
+        var strId = "" + btn.StyleId[btn.StyleId.Length - 1];
+        if (!int.TryParse(strId, out int id) || id < 0 || id > m_quizChoices)
+        {
+            return;
+        }
+        await TTS.Speak(m_words[id - 1].GetTranslation(SettingsPage.MyVoice), SettingsPage.MyVoice);
     }
 
     private async void Btn_Clicked(object? sender, EventArgs e)
     {
-        View btn = sender is Button ? (sender as Button) :
-            (sender as ImageButton);
         var context = (sender is Button ? (sender as Button).BindingContext :
             (sender as ImageButton).BindingContext) as string;
         if (string.IsNullOrWhiteSpace(context))
@@ -127,13 +146,14 @@ public partial class QuizPage : ContentPage
         }
         if (!m_playing)
         {
-            await TTS.Speak(m_words[id-1], SettingsPage.VoiceLearn);
+            await TTS.Speak(m_words[id - 1].GetTranslation(SettingsPage.MyVoice), SettingsPage.MyVoice);
             return;
         }
 
         bool correct = (m_correctId == (id - 1));
         m_correctInQuiz += correct ? 1 : 0;
-        var pct = (int)((double)m_correctInQuiz / (double)m_currentQuizQuestion);
+        var pct = m_currentQuizQuestion == 0 ? 0 :
+            (int)Math.Round(100.0 * (double)m_correctInQuiz / (double)m_currentQuizQuestion);
 
         Result.Text = string.Format(AppResources.Correct___0_____1___2__,
             pct, m_correctInQuiz, m_currentQuizQuestion);
@@ -164,11 +184,15 @@ public partial class QuizPage : ContentPage
             return;
         }
 
-        m_category = Categories.GetCategory(CategoryPicker.SelectedIndex);
+        m_category = Categories.GetCategory(QuizCategoryPicker.SelectedIndex);
         m_quizWords = (int)WordsStepper.Value;
         m_totalWords = m_category.GetTotalWords();
+        m_usedWords.Clear();
         m_currentQuizQuestion = 0;
         m_correctInQuiz = 0;
+
+        speak1.IsVisible = speak2.IsVisible = speak3.IsVisible = true;
+        speak4.IsVisible = speak5.IsVisible = speak6.IsVisible = true;
 
         await GetNewWords();
         m_startQuiz = DateTime.Now;
@@ -182,7 +206,7 @@ public partial class QuizPage : ContentPage
 
     void SetupRecords(double newScore = 0.0, double newTime = 0.0)
     {
-        m_category = Categories.GetCategory(CategoryPicker.SelectedIndex);
+        m_category = Categories.GetCategory(QuizCategoryPicker.SelectedIndex);
         m_quizWords = (int)WordsStepper.Value;
         var keyScore = string.Format("Record_{0}_{1}_{2}",
             m_category.Name, m_quizWords, SettingsPage.VoiceLearn);
@@ -208,13 +232,13 @@ public partial class QuizPage : ContentPage
 
     void Reset()
     {
-        ImgBtn1.IsVisible = false; TxtBtn1.IsVisible = false; Lab1.IsVisible = false;
-        ImgBtn2.IsVisible = false; TxtBtn2.IsVisible = false; Lab2.IsVisible = false;
-        ImgBtn3.IsVisible = false; TxtBtn3.IsVisible = false; Lab3.IsVisible = false;
-        ImgBtn4.IsVisible = false; TxtBtn4.IsVisible = false; Lab4.IsVisible = false;
-        ImgBtn5.IsVisible = false; TxtBtn5.IsVisible = false; Lab5.IsVisible = false;
-        ImgBtn6.IsVisible = false; TxtBtn6.IsVisible = false; Lab6.IsVisible = false;
-        m_words.Clear();
+        ImgBtn1.IsVisible = TxtBtn1.IsVisible = Lab1.IsVisible = false;
+        ImgBtn2.IsVisible = TxtBtn2.IsVisible = Lab2.IsVisible = false;
+        ImgBtn3.IsVisible = TxtBtn3.IsVisible = Lab3.IsVisible = false;
+        ImgBtn4.IsVisible = TxtBtn4.IsVisible = Lab4.IsVisible = false;
+        ImgBtn5.IsVisible = TxtBtn5.IsVisible = Lab5.IsVisible = false;
+        ImgBtn6.IsVisible = TxtBtn6.IsVisible = Lab6.IsVisible = false;
+        m_shown.Clear(); m_words.Clear();
     }
     async Task StopQuiz(bool showResults = true)
     {
@@ -274,28 +298,40 @@ public partial class QuizPage : ContentPage
         }
 
         Reset();
-        var randomInt = GetRandom(m_quizChoices, m_totalWords);
-        for (int i = 0; i < randomInt.Count; i++)
+        for (int i = 0; i < 10; i++)
         {
-            var word = m_category.GetWord(randomInt[i]);
-            SetWord(word, i);
-            m_words.Add(word.GetTranslation(SettingsPage.VoiceLearn));
+            m_randomChoices = GetRandom(m_quizChoices, m_totalWords);
+            m_correctId = GetRandom(1, m_quizChoices).First(); // 0 to 5
+            if (!m_usedWords.Contains(m_randomChoices[m_correctId]))
+            {
+                break;
+            }
         }
-        m_correctId = GetRandom(1, m_quizChoices).First(); // 0 to 5
-        m_correctWord = m_category.GetWord(randomInt[m_correctId]);
+        m_correctWord = m_category.GetWord(m_randomChoices[m_correctId]);
+        m_usedWords.Add(m_randomChoices[m_correctId]);
 
-        WordId.Text = m_correctWord.GetTranslation(SettingsPage.VoiceLearn);
+        for (int i = 0; i < m_randomChoices.Count; i++)
+        {
+            var word = m_category.GetWord(m_randomChoices[i]);
+            SetWord(word, i);
+            m_words.Add(word);
+            m_shown.Add(word.GetTranslation(SettingsPage.VoiceLearn));
+        }
+
+        QuizWordId.Text = m_correctWord.GetTranslation(SettingsPage.VoiceLearn);
         m_currentQuizQuestion++;
         if (speak)
         {
-            await TTS.Speak(WordId.Text, SettingsPage.VoiceLearn);
+            await TTS.Speak(QuizWordId.Text, SettingsPage.VoiceLearn);
         }
     }
     void SetWord(Word word, int index)
     {
-        var key = word.Category.IsText ? "txt" + (index + 1) : "img" + (index + 1);
+        var key = word.Category.IsText ? "TxtBtn" + (index + 1) : "ImgBtn" + (index + 1);
+        m_views.TryGetValue("Border" + (index + 1), out View? borderWidget);
         if (m_views.TryGetValue(key, out View? widget))
         {
+            borderWidget.IsVisible = !(widget is ImageButton);
             if (widget is ImageButton)
             {
                 ((ImageButton)widget).IsVisible = true;
@@ -306,7 +342,9 @@ public partial class QuizPage : ContentPage
             else
             {
                 ((Button)widget).IsVisible = true;
-                ((Button)widget).Text = word.GetTranslation(SettingsPage.VoiceLearn);
+                ((Button)widget).BorderWidth = 1;
+                ((Button)widget).Text = word.GetTranslation(SettingsPage.MyVoice);
+                ((Button)widget).FontSize = LearnPage.GetFontSize(((Button)widget).Text);
             }
         }
         else

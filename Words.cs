@@ -184,6 +184,15 @@ public class Word
         }
         return Name;
     }
+    public static string GetFlag(string voice)
+    {
+        var filename = voice.Replace("-", "_").ToLower() + ".png";
+        if (filename.StartsWith("transcript_"))
+        {
+            filename = filename.Substring(11);
+        }
+        return filename;
+    }
     public string GetImage()
     {
         var name = Name.ToLower();

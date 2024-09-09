@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
              xmlns:sflist="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:local="clr-namespace:ScriptingMaui"
+             xmlns:local="clr-namespace:ScriptingMaui" x:Name="LearnTabPage"
              x:Class="ScriptingMaui.LearnPage" IconImageSource="learn_icon.png" Title="Learn">
 
     <ContentPage.BindingContext>
@@ -41,25 +41,26 @@
     </sflist:SfListView.ItemTemplate>
     </sflist:SfListView>
 
-    <!-- <picker:SfPicker x:Name="Picker"  HeightRequest="200" Background="Transparent" VerticalOptions="Start" /> -->
+    <!-- <picker:SfPicker x:Name="Picker" HeightRequest="200" Background="Transparent" VerticalOptions="Start" /> -->
 
-    <Grid x:Name="TopPanel" Margin = "0,20">
+    <Grid x:Name="TopPanel" Margin = "0,4">
     <Grid.ColumnDefinitions>
-        <ColumnDefinition  Width="25*" />
-        <ColumnDefinition  Width="75*" />
+        <ColumnDefinition  Width="15*" />
+        <ColumnDefinition  Width="70*" />
+        <ColumnDefinition  Width="15*" />
     </Grid.ColumnDefinitions>
-        <Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1500" HorizontalTextAlignment="Start" HorizontalOptions="Start"
-            Margin = "10,0,10,0" WidthRequest="100" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="12" />
-        <Border Stroke="Blue" StrokeThickness="1" StrokeShape= "RoundRectangle 30,30,30,30" Margin = "2,10"
-                Background="Transparent" HorizontalOptions="StartAndExpand" Grid.Column="1" >
+        <Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1580" HorizontalTextAlignment="Start" HorizontalOptions="Start"
+            Margin = "10,0,2,0" WidthRequest="80" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="11" />
+        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
+                Background="Transparent" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
             <Picker x:Name="CategoryPicker"  
                 Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Header">
+                FontAttributes="Bold" HorizontalOptions="Center" FontSize="Header">
             </Picker>
         </Border>
     </Grid>
 
-    <Grid x:Name="TopMainPanel" Background="Transparent" Margin = "0,4,0,0" >
+    <Grid x:Name="TopMainPanel" Background="Transparent" Margin = "0,0,0,0" >
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -72,7 +73,7 @@
                   VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22" />
 	</Grid>
 
-	<Grid x:Name="MainPanel" Background="Transparent" Margin = "0,4,0,0" >
+	<Grid x:Name="MainPanel" Background="Transparent" Margin = "0,2,0,0" >
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -81,42 +82,57 @@
             <ColumnDefinition  Width="80*" />
             <ColumnDefinition  Width="10*" />
         </Grid.ColumnDefinitions>
-    <Button x:Name="PrevImg" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" ImageSource="prev.png" Grid.Column="0" Margin = "1,4,4,4" Background="Transparent" />
-    <Button x:Name="MainImgTxt" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"  Grid.Column="1" HorizontalOptions="Center"
-            BorderWidth="1" TextColor="Blue" FontSize="20" Background="Transparent" LineBreakMode="WordWrap" />
+    <Button x:Name="PrevImg" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" ImageSource="prev.png" Grid.Column="0" Margin = "1,2,4,2" Background="Transparent" />
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "4"
+            Background="Transparent" Grid.Column="1" HorizontalOptions="Center">
+    <Button x:Name="MainImgTxt" HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}"  HorizontalOptions="Center"
+            TextColor="Blue" FontSize="20" Background="Transparent" LineBreakMode="WordWrap" />
+    </Border>
     <ImageButton x:Name="MainImgImg" Grid.Column="1" VerticalOptions="Center" Source="vocabulary.png"
         HeightRequest="{StaticResource MainSize}" WidthRequest="{StaticResource MainSize}" Margin = "4,4,1,4" />
     <Button x:Name="NextImg" HeightRequest="100" WidthRequest="100"  HorizontalOptions="End" ImageSource="next.png"
             Grid.Column="2" Margin = "4,4,1,4" Background="Transparent" />
 	</Grid>
 
-  <HorizontalStackLayout x:Name="ButtonshPanel" HorizontalOptions="CenterAndExpand" Margin="0,0,0,1" >
-    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "20"
+    <Grid Padding="0">
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0.1*" />
+        <ColumnDefinition Width="0.8*" />
+        <ColumnDefinition Width="0.1*" />
+        </Grid.ColumnDefinitions>
+        <ImageButton x:Name="TranslationFlag" Grid.Column="0" HorizontalOptions="Start" Source="es_mx"
+         Margin="8,0,0,0" Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
+        <Button x:Name="TranslationBtn" Grid.Column="1" WidthRequest="320" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
+          HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="{Binding FontSize}" />
+    </Grid>
+
+  <HorizontalStackLayout x:Name="ButtonsPanel" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" >
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "20"
             Background="Transparent" HorizontalOptions="Start">
-        <ImageButton x:Name="ButPlay"  Source="play_but.png" Margin = "6,6,6,6" Background="Transparent"/>
+        <ImageButton x:Name="ButPlay"  Source="play_but.png" Margin = "4,4,4,4" Background="Transparent"/>
     </Border>
-    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle "  Margin = "20"
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "20"
             Background="Transparent" HorizontalOptions="Start">
       <ImageButton x:Name="FindBut" HeightRequest="30" WidthRequest="30" 
-            Source="find.png" Margin = "6,6,6,6" Background="Transparent" />
+            Source="find.png" Margin = "4,4,4,4" Background="Transparent" />
     </Border>
-    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle "  Margin = "20"
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "20"
             Background="Transparent" HorizontalOptions="Start">
-    <ImageButton x:Name="ButSpeak" Margin = "6,6,6,6" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />
+    <ImageButton x:Name="ButSpeak" Margin = "4,4,4,4" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />
     </Border>
   </HorizontalStackLayout>
 
-  <sflist:SfListView x:Name="TranslationView" HeightRequest="480"
+  <sflist:SfListView x:Name="TranslationView" HeightRequest="420"
                    ItemsSource="{Binding TransInfo}"
                    ItemSize="{StaticResource TransSize}">
     <sflist:SfListView.ItemTemplate>
         <DataTemplate>
-        <Grid Padding="4">
+        <Grid Padding="2">
             <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*" />
             <ColumnDefinition Width="0.8*" />
             </Grid.ColumnDefinitions>
-            <ImageButton Grid.Column="0" Margin = "24" HorizontalOptions="Start" Source="{Binding TransFlag}"
+            <ImageButton Grid.Column="0" Margin = "8,0,0,0" HorizontalOptions="Start" Source="{Binding TransFlag}"
                     Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
             <Label Grid.Column="1" Text="{Binding TransName}" HorizontalTextAlignment="Start"
                    VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{Binding FontSize}" />
@@ -127,4 +143,3 @@
  </VerticalStackLayout>
 
 </ContentPage>
-

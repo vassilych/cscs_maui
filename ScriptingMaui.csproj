@@ -54,12 +54,12 @@
 	  <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	  <DebugSymbols>true</DebugSymbols>
-	  <DebugType>full</DebugType>
+	  <DebugSymbols>false</DebugSymbols>
+	  <DebugType>None</DebugType>
 	  <Optimize>false</Optimize>
 	  <WarningLevel>4</WarningLevel>
 	  <PlatformTarget>anycpu</PlatformTarget>
-	  <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+	  <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	  <WarningLevel>4</WarningLevel>
@@ -67,6 +67,12 @@
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
 	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidSigningKeyStore>/Users/vass/Library/Developer/Xamarin/Keystore/androidMaui/androidMaui.keystore</AndroidSigningKeyStore>
+	  <AndroidSigningStorePass>Obninsk71.</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>maui</AndroidSigningKeyAlias>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
@@ -86,8 +92,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.80" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.80" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.82" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.82" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Syncfusion.Maui.Picker" Version="26.2.9" />
 		<PackageReference Include="Syncfusion.Maui.Popup" Version="26.2.9" />
@@ -1951,6 +1957,15 @@
 	  <BundleResource Include="Resources\Images\il_bg.png" />
 	  <BundleResource Include="Resources\Images\museum.png" />
 	  <BundleResource Include="Resources\Images\turkey.png" />
+	  <BundleResource Include="Resources\Raw\test.cscs" />
+	  <BundleResource Include="Resources\Images\to_create.png" />
+	  <BundleResource Include="Resources\Images\badminton.png" />
+	  <BundleResource Include="Resources\Images\handstand.png" />
+	  <BundleResource Include="Resources\Images\to_take_out.png" />
+	  <BundleResource Include="Resources\Images\oven.png" />
+	  <BundleResource Include="Resources\Images\tennis.png" />
+	  <BundleResource Include="Resources\Images\dish_detergent.png" />
+	  <BundleResource Include="Resources\Images\to_put.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2047,5 +2062,21 @@
 	  <Compile Update="Resources\Strings\AppResources.he.Designer.cs">
 	    <DependentUpon>AppResources.he.resx</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Resources\Raw\test.cscs" />
+	  <None Remove="Resources\Images\create.png" />
+	  <None Remove="Resources\Images\badminton.png" />
+	  <None Remove="Resources\Images\handstand.png" />
+	  <None Remove="Resources\Images\to_take_out.png" />
+	  <None Remove="Resources\Images\oven.png" />
+	  <None Remove="Resources\Images\tennis.png" />
+	  <None Remove="Resources\Images\detergent.png" />
+	  <None Remove="Resources\Images\to_put.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\test.cscs">
+	    <LogicalName>test.cscs</LogicalName>
+	  </MauiAsset>
 	</ItemGroup>
 </Project>

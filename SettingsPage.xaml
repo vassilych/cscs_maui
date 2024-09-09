@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-             xmlns:local="clr-namespace:ScriptingMaui"
+             xmlns:local="clr-namespace:ScriptingMaui" x:Name="SettingsTabPage"
              x:Class="ScriptingMaui.SettingsPage" IconImageSource="settings_icon.png" Title="Settings">
 
     <ContentPage.BindingContext>
@@ -34,7 +34,7 @@
             Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
 	</Grid>
 
-    <picker:SfPicker x:Name="Picker" HeightRequest="240" Background="Transparent" VerticalOptions="Start" />
+    <picker:SfPicker x:Name="LanguagePicker" HeightRequest="240" Background="Transparent" VerticalOptions="Start" />
         <!-- 
     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
     <Label x:Name="SpeechrateLab" Text="Speech Rate:" TextColor="Blue" WidthRequest="200" Margin = "10,20,0,0"
@@ -45,8 +45,10 @@
     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
     <Label x:Name="PlayrateLab" Text="Play Rate:" TextColor="Blue"  Margin = "10,30,0,0"
             WidthRequest="140" HeightRequest="80" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    <Slider x:Name="PlaySlider" Margin = "0,30,0,0" WidthRequest="200" Minimum="1" Maximum="6" Value= "3"
+    <Slider x:Name="PlaySlider" Margin = "0,30,0,0" WidthRequest="180" Minimum="1" Maximum="6" Value= "2.5"
             HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
+    <Label x:Name="PlayrateSec" Text="3.5s" TextColor="Blue"  Margin = "10,30,0,0"
+            WidthRequest="140" HeightRequest="80" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
     </StackLayout>
     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
     <Label x:Name="SoundLab" Text="Sound:" TextColor="Blue"  Margin = "10,0,0,0" WidthRequest="180"

@@ -19,6 +19,7 @@ public partial class SettingsPage : ContentPage
     const string PlaySet = "playrate";
     const string SpeechSet = "speechrate";
     const string SoundSet = "sound";
+    const string PlaySecFormat = "{0}s";
 
     public static SettingsPage? Instance;
 
@@ -26,7 +27,7 @@ public partial class SettingsPage : ContentPage
     public static string MyVoice { get; set; } = MyDefaultVoice;
     public static string LangCode { get; set; } = DefaultCode;
 
-    public static double PlayRate { get; set; } = 2.5;
+    public static double PlayRate { get; set; } = 3.0;
     //public static double SpeechRate { get; set; } = 50;
     public static bool Sound { get; set; } = true;
 
@@ -51,9 +52,9 @@ public partial class SettingsPage : ContentPage
             SelectedIndex = 0,
         };
 
-        Picker.Columns.Add(m_col1);
-        Picker.Columns.Add(m_col2);
-        Picker.SelectionChanged += My_SelectionChanged;
+        LanguagePicker.Columns.Add(m_col1);
+        LanguagePicker.Columns.Add(m_col2);
+        LanguagePicker.SelectionChanged += My_SelectionChanged;
 
         PlaySlider.ValueChanged += PlaySlider_ValueChanged;
         //SpeechSlider.ValueChanged += SpeechSlider_ValueChanged;
@@ -118,6 +119,7 @@ public partial class SettingsPage : ContentPage
         SoundLab.Text = AppResources.Sound_;
         //SpeechrateLab.Text = AppResources.Speech_Rate_;
         PlayrateLab.Text = AppResources.Play_Rate_;
+        PlayrateSec.Text = string.Format(PlaySecFormat, PlayRate);
         Title = AppResources.Settings;
     }
 
@@ -128,15 +130,17 @@ public partial class SettingsPage : ContentPage
     }*/
     private void PlaySlider_ValueChanged(object? sender, ValueChangedEventArgs e)
     {
-        PlayRate = e.NewValue;
+        PlayRate = Math.Round(e.NewValue, 1);
         Preferences.Set(PlaySet, PlayRate);
+        PlayrateSec.Text = string.Format(PlaySecFormat, PlayRate);
     }
 
     public double GetPlayInterval()
     {
-        var minmax = PlaySlider.Minimum + PlaySlider.Maximum;
-        var result = minmax - PlaySlider.Value;
-        return result;
+        //var minmax = PlaySlider.Minimum + PlaySlider.Maximum;
+        //var result = minmax - PlaySlider.Value;
+        //return result;
+        return PlaySlider.Value;
     }
     private void SoundCheck_CheckedChanged(object? sender, CheckedChangedEventArgs e)
     {

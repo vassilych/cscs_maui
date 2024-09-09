@@ -14,7 +14,7 @@ public partial class LearnPage : ContentPage
 {
     const string CategorySet = "categoryLearn";
     const string WordSet = "wordLearn";
-    const int MaxSearchResults = 6;
+    int MaxSearchResults = 6;
     Category m_category;
     bool m_settingWord;
 
@@ -22,6 +22,7 @@ public partial class LearnPage : ContentPage
 
     bool m_playing;
     IDispatcherTimer? m_timer;
+    static public LearnPage Instance;
 
     public static Context Context {
         get;
@@ -29,6 +30,7 @@ public partial class LearnPage : ContentPage
 
     public LearnPage()
     {
+        Instance = this;
         InitializeComponent();
 
         Context = Context == null ? new Context() : Context;
@@ -43,32 +45,46 @@ public partial class LearnPage : ContentPage
         NextImg.Clicked += NextImgClick;
         MainImgImg.Clicked += NextImgClick;
         MainImgTxt.Clicked += NextImgClick;
-        TranslationView.SelectionChanged += Trans_SelectionChanged;
         ButSpeak.Clicked += SpeakerClick;
         ButPlay.Clicked += PlayClick;
 
         FindBut.Clicked += FindBut_Clicked;
-        ResultsView.SelectionChanged += ResultsView_SelectionChanged;
         SearchEntry.TextChanged += SearchEntry_TextChanged;
         SearchEntry.Completed += BackBut_Clicked;
         BackBut.Clicked += BackBut_Clicked;
 
+        TranslationView.ItemTapped += TranslationView_ItemTapped;
+        ResultsView.ItemTapped += ResultsView_ItemTapped;
+
+        TranslationBtn.Clicked += TranslationBtn_Clicked;
+        TranslationFlag.Clicked += TranslationBtn_Clicked;
         //this.Loaded += LearnPage_Loaded;
     }
 
-    private async void ResultsView_SelectionChanged(object? sender, ItemSelectionChangedEventArgs e)
+    async void ResultsView_ItemTapped(object? sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
     {
-        var items = e.AddedItems;
-        if (items == null || items.Count == 0 || !(items[0] is TranslationInfo))
+        var item = e.DataItem as TranslationInfo;
+        if (item == null)
         {
             return;
         }
-        var item = items[0] as TranslationInfo;
         var id = item.Id;
         var word = Categories.DefaultCategory.Words[id];
         m_category = word.Category;
         SetMode(false);
-        await SetWord(word);       
+        await SetWord(word);
+    }
+
+    async void TranslationView_ItemTapped(object? sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
+    {
+        var item = e.DataItem as TranslationInfo;
+        if (item == null )
+        {
+            return;
+        }
+        var voice = item.TransVoice;
+        var trans = Context.Word.GetTranslation(voice);
+        await TTS.Speak(trans, voice);
     }
 
     public static int GetFontSize(string text)
@@ -100,12 +116,19 @@ public partial class LearnPage : ContentPage
         return 12;
     }
 
+    async void TranslationBtn_Clicked(object? sender, EventArgs e)
+    {
+        var trans = TranslationBtn.Text;
+        await TTS.Speak(trans, SettingsPage.MyVoice);
+    }
+
     private void BackBut_Clicked(object? sender, EventArgs e)
     {
         SetMode(false);
     }
     private void FindBut_Clicked(object? sender, EventArgs e)
     {
+        StopPlay();
         SearchEntry.Text = string.Empty;
         Context.ResultsInfo.Clear();
         SetMode(true);
@@ -184,8 +207,10 @@ public partial class LearnPage : ContentPage
         TopPanel.IsVisible = !findMode;
         TopMainPanel.IsVisible = !findMode;
         MainPanel.IsVisible = !findMode;
-        ButtonshPanel.IsVisible = !findMode;
+        ButtonsPanel.IsVisible = !findMode;
         TranslationView.IsVisible = !findMode;
+        TranslationBtn.IsVisible = !findMode;
+        TranslationFlag.IsVisible = !findMode;
     }
 
     public void Localize()
@@ -216,7 +241,7 @@ public partial class LearnPage : ContentPage
             StopPlay();
         }
     }
-    private void StopPlay()
+    public void StopPlay()
     {
         m_playing = false;
         m_timer?.Stop();
@@ -269,11 +294,15 @@ public partial class LearnPage : ContentPage
             MainImgTxt.IsVisible = false;
             MainWordLabel.Text = Context.MainWord;
         }
+        WordId.Text = string.Format(AppResources.Word__0___1_, (m_category.Index+1), m_category.GetTotalWords());
+        TranslationFlag.Source = Word.GetFlag(SettingsPage.MyVoice);
+        TranslationBtn.Text = word.GetTranslation(SettingsPage.MyVoice);
+        TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
+
         if (speak)
         {
             await TTS.Speak(Context.MainWord, SettingsPage.VoiceLearn);
         }
-        WordId.Text = string.Format(AppResources.Word__0___1_, (m_category.Index+1), m_category.GetTotalWords());
         m_settingWord = false;
     }
 
@@ -309,20 +338,6 @@ public partial class LearnPage : ContentPage
         var word = m_category.GetWord();
         await SetWord(word);
     }
-
-    private async void Trans_SelectionChanged(object? sender, ItemSelectionChangedEventArgs e)
-    {
-        var items = e.AddedItems;
-        if (items == null || items.Count == 0)
-        {
-            return;
-        }
-
-        var index = TranslationView.DataSource?.DisplayItems.IndexOf(items[0]);
-        var voice = Context.GetVoice((int)index);
-        var trans = Context.Word.GetTranslation(voice);
-        await TTS.Speak(trans, voice);
-    }
 }
 
 public class TranslationInfo : INotifyPropertyChanged
@@ -342,6 +357,11 @@ public class TranslationInfo : INotifyPropertyChanged
             OnPropertyChanged("TransName");
         }
     }
+    public override string ToString()
+    {
+        return transName + " " + transVoice;
+    }
+
     public string TransFlag
     {
         get { return transFlag; }
@@ -373,8 +393,8 @@ public class TranslationInfo : INotifyPropertyChanged
 public class Context
 {
     private ObservableCollection<string> categоries = new ObservableCollection<string>();
-    private ObservableCollection<TranslationInfo> transInfo = new ObservableCollection<TranslationInfo>();
-    private ObservableCollection<TranslationInfo> resultsInfo = new ObservableCollection<TranslationInfo>();
+    private ObservableCollection<object> transInfo = new ObservableCollection<object>();
+    private ObservableCollection<object> resultsInfo = new ObservableCollection<object>();
     public Word Word { get; set; }
 
     public string MainWord { get; set; } = "";
@@ -432,19 +452,19 @@ public class Context
         LearnPage.Context = this;
         Word = Word.Default;
     }
-    public ObservableCollection<TranslationInfo> TransInfo
+    public ObservableCollection<object> TransInfo
     {
         get { return transInfo; }
         set { this.transInfo = value; }
     }
-    public ObservableCollection<TranslationInfo> ResultsInfo
+    public ObservableCollection<object> ResultsInfo
     {
         get { return resultsInfo; }
         set { this.resultsInfo = value; }
     }
     public string GetVoice(int index)
     {
-        return transInfo[index].TransVoice;
+        return ((TranslationInfo)transInfo[index]).TransVoice;
     }
 
     internal void SetWord(Word word)
@@ -452,6 +472,13 @@ public class Context
         GenerateTransInfo(word);
         Word = word;
         MainWord = word.GetTranslation(SettingsPage.VoiceLearn);
+
+        Variable data = new Variable(Variable.VarType.ARRAY);
+        data.Tuple.Add(new Variable("lol"));
+        data.Tuple.Add(new Variable("lala"));
+
+        MainPage.Instance.Scripting.UpdateValue(nameof(LearnPage.Context.TransInfo), data);
+
     }
 
     internal void GenerateTransInfo(Word word)
@@ -462,17 +489,14 @@ public class Context
         foreach (var voice in voiceOrder)
         {
             var trans = word.Translation[voice];
-            var filename = voice.Replace("-", "_").ToLower() + ".png";
-            if (filename.StartsWith("transcript_"))
-            {
-                filename = filename.Substring(11);
-            }
+            var filename = Word.GetFlag(voice);
             var item = new TranslationInfo() {
                 TransName = trans, TransFlag = filename, TransVoice = voice,
                 FontSize = LearnPage.GetFontSize(trans) };
             if (voice == SettingsPage.MyVoice)
             {
-                transInfo.Insert(0, item);
+                //transInfo.Insert(0, item);
+                continue;
             }
             else
             {

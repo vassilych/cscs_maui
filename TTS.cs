@@ -51,9 +51,29 @@ namespace ScriptingMaui
 				{
 					key = "es-us";
 				}
+                else if (key.StartsWith("de"))
+                {
+                    key = "de-de";
+                }
+                else if (key.StartsWith("fr"))
+                {
+                    key = "fr-fr";
+                }
+                else if (key.StartsWith("it"))
+                {
+                    key = "it-it";
+                }
+                else if (key.StartsWith("ru"))
+                {
+                    key = "ru-ru";
+                }
+                else if (key.StartsWith("he"))
+                {
+                    key = "he-il";
+                }
                 else if (key.StartsWith("ar"))
                 {
-                    key = "ar-";
+                    key = "ar-001";
                 }
                 else
                 {
