@@ -2,7 +2,7 @@ VOICE	en-US	en-GB	de-DE	de-CH	ru-RU	es-MX	es-ES	pt-BR	fr-FR	it-IT	he-IL	zh-CN	ja
 LANGUAGE	English US	English	Deutsch	Deutsch CH	Русский	Español MX	Español	Português BR	Français	Italiano	עִבְרִית	中文	日本語	العربية
 CODE	en	en	de	de	ru	es	es	pt	fr	it	he	zh-Hans	ja	ar
 COUNTRY	us	gb	de	ch	ru	mx	es	br	fr	it	il	cn	jp	ar
-ORDER	en-US	en-GB	de-DE	ru-RU	es-MX	pt-BR	fr-FR	it-IT	he-IL	es-ES	de-CH	ja-JP	ar-SA	zh-CN	Transcript-zh-CN
+ORDER	en-US	en-GB	de-DE	ru-RU	es-MX	es-ES	pt-BR	fr-FR	it-IT	he-IL	de-CH	ja-JP	ar-SA	zh-CN	Transcript-zh-CN
 all	vocabulary		der Wortschatz		словарный запас	el vocabulario		o vocabulário	le vocabulaire	il vocabolario	אוֹצָר מִילִים	词汇	語彙	مفردات اللغة	Cíhuì
 animal world	ant		die Ameise	Ameise	муравей	la hormiga		a formiga	la fourmi	la formica	נְמָלָה	蚂蚁	蟻	نملة	Mǎyǐ
 animal world	bat		die Fledermaus	Flädermuus	летучая мышь	el murciélago		o morcego	la chauve-souris	il pipistrello	בַּת	蝙蝠	コウモリ	خفاش	Biānfú
@@ -365,8 +365,15 @@ sport	world champion		der Weltmeister		чемпион мира	el campeón del m
 sport	victory		der Sieg		победа	la victoria		a vitória	la victoire	la vittoria	נִצָחוֹן	胜利	勝利	فوز	shènglì
 sport	defeat		die Niederlage		поражение	la derrota		a derrota	la défaite	la sconfitta	לִהַבִיס	败	敗北	هزيمة	bài
 sport	draw		das Unentschieden		ничья	el empate		o empate	le match nul	il pareggio	לִמְשׁוֹך	平局	ドロー、引き分け	تعادل	píngjú
-sport	pull-up		der Klimmzug		подтягивание	la pullup, la dominada	la dominada	о flexão, o pull-up	la traction	la trazione alla sbarra	משיכה	拉起	引き上げ	العقلة	lā qǐ
+sport	player		der Spieler, die Spielerin		игрок	el jugador, la jugadora		o jogador, a jogadora	le joueur, la joueuse	il giocatore, la giocatrice	נַגָן	玩家	プレーヤー	لاعب	Wánjiā
+sport	pull-up		der Klimmzug, die Klimmzüge		подтягивание	la pullup, la dominada	la dominada	о flexão, o pull-up	la traction	la trazione alla sbarra	משיכה	拉起	引き上げ	العقلة	lā qǐ
 sport	push-up	press-up	der Liegestütz		отжимание	las lagartijas	la flexión de brazos 	a flexão	la pompe	il piegamento, la flessione	שכיבות סמיכה	俯卧撑	押し上げる	تمرين الضغط	fǔwòchēng
+sport	bench press		das Bankdrücken		жим лёжа	еl press de banca	 	o supino	le développé couché	la distensione su panca	לחיצת ספסל	卧推	ベンチプレス	اللاعب	Wò tuī
+sport	deadlift		das Kreuzheben		становая тяга	el peso muerto		o levantamento terra	le soulevé de terre	lo stacco da terra	דדליפט	硬拉	デッドリフト	رفع الأثقال	Yìng lā
+sport	squat		die Kniebeuge		приседание со штангой	la sentadilla		o agachamento	la flexion sur jambes	il piegamento sulle gambe	שָׁפוּף	蹲	しゃがむ	القرفصاء	Dūn
+sport	dumbbells	dumb-bells	die Hanteln		гантели	las mancuernas		os halteres	les haltères	i manubri	משקולות	哑铃	ダンベル	الدمبل	Yǎlíng
+sport	barbell		die Langhantel		штанга	la barra	la haltera	a barra	la barre à disques	il bilanciere	משקולת	杠铃	バーベル	قضيب حديدي	Gànglíng
+sport	barbell disk, weight plate		die Langhantelscheibe, die Gewichtsplatte		диск для штанги	la placa de peso		a placa de peso	la plaque de poids	il disco de peso	לוחית משקל	重量板	ウェイトプレート	قرص للحديد 	Zhòngliàng bǎn
 sport	handstand		der Handstand		стойка на руках	la parada de manos	el pino, el paro de manos 	a parada de mãos	l'équilibre sur les mains	a verticale	 עמידת ידיים	手倒立	逆立ち	الوقوف على اليدين 	Shǒu dàolì
 hobby, music, chess	fishing		das Angeln	Angle	рыбная ловля, рыбалка	la pesca		a pescaria	la pêche (poisson)	la pesca	דַיִג	钓鱼	釣り	صيد السمك	diàoyú
 hobby, music, chess	fishing rod		die Angel		удочка	la caña de pescar		a vara de pesca	la canne à pêche	la canna da pesca	חכה	钓竿	釣り竿	صنارة	diàogān

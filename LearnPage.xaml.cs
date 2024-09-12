@@ -413,37 +413,39 @@ public class Context
     }
     public static List<string> TranslatedCategories()
     {
-        List<string> cat = new List<string>();
-        cat.Add(AppResources.all);
-        cat.Add(AppResources.animal_world);
-        cat.Add(AppResources.body_parts);
-        cat.Add(AppResources.numbers_and_math);
-        cat.Add(AppResources.calendar__time);
-        cat.Add(AppResources.transport);
-        cat.Add(AppResources.sport);
-        cat.Add(AppResources.hobby__music__chess);
-        cat.Add(AppResources.fruits_and_vegetables);
-        cat.Add(AppResources.food_and_beverage);
-        cat.Add(AppResources.household);
-        cat.Add(AppResources.bed_and_bath);
-        cat.Add(AppResources.tools_and_appliances);
-        cat.Add(AppResources.kitchen);
-        cat.Add(AppResources.clothing);
-        cat.Add(AppResources.school_and_office);
-        cat.Add(AppResources.colors__figures);
-        cat.Add(AppResources.accesories);
-        cat.Add(AppResources.family_and_kids);
-        cat.Add(AppResources.profession);
-        cat.Add(AppResources.countries);
-        cat.Add(AppResources.environment);
-        cat.Add(AppResources.verbs);
-        cat.Add(AppResources.adjectives);
-        cat.Add(AppResources.phrases_greetings);
-        cat.Add(AppResources.basic_phrases);
-        cat.Add(AppResources.phrases_traveling);
-        cat.Add(AppResources.phrases_in_hotel);
-        cat.Add(AppResources.phrases_in_restaurant);
-        cat.Add(AppResources.flirting_phrases);
+        List<string> cat = new List<string>
+        {
+            AppResources.all,
+            AppResources.animal_world,
+            AppResources.body_parts,
+            AppResources.numbers_and_math,
+            AppResources.calendar__time,
+            AppResources.transport,
+            AppResources.sport,
+            AppResources.hobby__music__chess,
+            AppResources.fruits_and_vegetables,
+            AppResources.food_and_beverage,
+            AppResources.household,
+            AppResources.bed_and_bath,
+            AppResources.tools_and_appliances,
+            AppResources.kitchen,
+            AppResources.clothing,
+            AppResources.school_and_office,
+            AppResources.colors__figures,
+            AppResources.accesories,
+            AppResources.family_and_kids,
+            AppResources.profession,
+            AppResources.countries,
+            AppResources.environment,
+            AppResources.verbs,
+            AppResources.adjectives,
+            AppResources.phrases_greetings,
+            AppResources.basic_phrases,
+            AppResources.phrases_traveling,
+            AppResources.phrases_in_hotel,
+            AppResources.phrases_in_restaurant,
+            AppResources.flirting_phrases
+        };
         return cat;
     }
 

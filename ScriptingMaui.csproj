@@ -1966,6 +1966,13 @@
 	  <BundleResource Include="Resources\Images\tennis.png" />
 	  <BundleResource Include="Resources\Images\dish_detergent.png" />
 	  <BundleResource Include="Resources\Images\to_put.png" />
+	  <BundleResource Include="Resources\Images\dumbbells.png" />
+	  <BundleResource Include="Resources\Images\player.png" />
+	  <BundleResource Include="Resources\Images\barbell.png" />
+	  <BundleResource Include="Resources\Images\squat.png" />
+	  <BundleResource Include="Resources\Images\deadlift.png" />
+	  <BundleResource Include="Resources\Images\bench_press.png" />
+	  <BundleResource Include="Resources\Images\barbell_disk__weight_plate.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2073,6 +2080,13 @@
 	  <None Remove="Resources\Images\tennis.png" />
 	  <None Remove="Resources\Images\detergent.png" />
 	  <None Remove="Resources\Images\to_put.png" />
+	  <None Remove="Resources\Images\dumbbells.png" />
+	  <None Remove="Resources\Images\player.png" />
+	  <None Remove="Resources\Images\barbell.png" />
+	  <None Remove="Resources\Images\squat.png" />
+	  <None Remove="Resources\Images\deadlift.png" />
+	  <None Remove="Resources\Images\bench_press.png" />
+	  <None Remove="Resources\Images\barbell_disk__weight_plate.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">
