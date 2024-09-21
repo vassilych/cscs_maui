@@ -1,0 +1,155 @@
+to argue,argue, argued, arguing, argue,argue,argues, argued,argued,argued
+to quarrel,quarrel, quarrelled, quarrelling, quarrel,quarrel,quarrels, quarrelled,quarrelled,quarrelled
+to discuss,discuss, discussed, discussing, discuss,discuss,discusses, discussed,discussed,discussed
+to talk over,talk over, talked over, talking over, talk over,talk over,talks over, talked over,talked over,talked over
+to ask,ask, asked, asking, ask,ask,asks, asked,asked,asked
+to bark,bark, barked, barking, bark,bark,barks, barked,barked,barked
+to be,be, been, being, am,are,is, was,were,was
+to exist,exist, existed, existing, exist,exist,exists, existed,existed,existed
+to stay,stay, stayed, staying, stay,stay,stays, stayed,stayed,stayed
+to be,be, been, being, am,are,is, was,were,was
+to become,become, become, becoming, become,become,becomes, became,became,became
+to be born,be born, been born, being born, am born,are born,is born, was born,were born,was born
+to beg,beg, begged, begging, beg,beg,begs, begged,begged,begged
+to believe,believe, believed, believing, believe,believe,believes, believed,believed,believed
+to build,build, built, building, build,build,builds, built,built,built
+to buy,buy, bought, buying, buy,buy,buys, bought,bought,bought
+to sell,sell, sold, selling, sell,sell,sells, sold,sold,sold
+to calculate,calculate, calculated, calculating, calculate,calculate,calculates, calculated,calculated,calculated
+to call,call, called, calling, call,call,calls, called,called,called
+to carry,carry, carried, carrying, carry,carry,carries, carried,carried,carried
+to catch,catch, caught, catching, catch,catch,catches, caught,caught,caught
+to change,change, changed, changing, change,change,changes, changed,changed,changed
+to chat,chat, chatted, chatting, chat,chat,chats, chatted,chatted,chatted
+to chop,chop, chopped, chopping, chop,chop,chops, chopped,chopped,chopped
+to clean,clean, cleaned, cleaning, clean,clean,cleans, cleaned,cleaned,cleaned
+to climb,climb, climbed, climbing, climb,climb,climbs, climbed,climbed,climbed
+to close,close, closed, closing, close,close,closes, closed,closed,closed
+to open,open, opened, opening, open,open,opens, opened,opened,opened
+to cook,cook, cooked, cooking, cook,cook,cooks, cooked,cooked,cooked
+to comb,comb, combed, combing, comb,comb,combs, combed,combed,combed
+to brush,brush, brushed, brushing, brush,brush,brushes, brushed,brushed,brushed
+to count,count, counted, counting, count,count,counts, counted,counted,counted
+to crawl,crawl, crawled, crawling, crawl,crawl,crawls, crawled,crawled,crawled
+to cry,cry, cried, crying, cry,cry,cries, cried,cried,cried
+to cut,cut, cut, cutting, cut,cut,cuts, cut,cut,cut
+to dance,dance, danced, dancing, dance,dance,dances, danced,danced,danced
+to decide,decide, decided, deciding, decide,decide,decides, decided,decided,decided
+to dig,dig, dug, digging, dig,dig,digs, dug,dug,dug
+to do laundry,do laundry, done laundry, doing laundry, do laundry,do laundry,does laundry, did laundry,did laundry,did laundry
+to draw,draw, drawn, drawing, draw,draw,draws, drew,drew,drew
+to dream,dream, dreamed, dreaming, dream,dream,dreams, dreamed/dreamt,dreamed/dreamt,dreamed/dreamt
+to drink,drink, drunk, drinking, drink,drink,drinks, drank,drank,drank
+to eat,eat, eaten, eating, eat,eat,eats, ate,ate,ate
+to evolve,evolve, evolved, evolving, evolve,evolve,evolves, evolved,evolved,evolved
+to exchange,exchange, exchanged, exchanging, exchange,exchange,exchanges, exchanged,exchanged,exchanged
+to fall down,fall down, fallen down, falling down, fall down,fall down,falls down, fell down,fell down,fell down
+to fight,fight, fought, fighting, fight,fight,fights, fought,fought,fought
+to fly,fly, flown, flying, fly,fly,flies, flew,flew,flew
+to frighten,frighten, frightened, frightening, frighten,frighten,frightens, frightened,frightened,frightened
+to give,give, given, giving, give,give,gives, gave,gave,gave
+to hate,hate, hated, hating, hate,hate,hates, hated,hated,hated
+to help,help, helped, helping, help,help,helps, helped,helped,helped
+to hug,hug, hugged, hugging, hug,hug,hugs, hugged,hugged,hugged
+to hunt,hunt, hunted, hunting, hunt,hunt,hunts, hunted,hunted,hunted
+to increase,increase, increased, increasing, increase,increase,increases, increased,increased,increased
+to decrease,decrease, decreased, decreasing, decrease,decrease,decreases, decreased,decreased,decreased
+to jump,jump, jumped, jumping, jump,jump,jumps, jumped,jumped,jumped
+to grow up,grow up, grown up, growing up, grow up,grow up,grows up, grew up,grew up,grew up
+to harvest,harvest, harvested, harvesting, harvest,harvest,harvests, harvested,harvested,harvested
+to keep silence,keep, kept, keeping, keep,keep,keeps, kept,kept,kept
+to kick,kick, kicked, kicking, kick,kick,kicks, kicked,kicked,kicked
+to kiss,kiss, kissed, kissing, kiss,kiss,kisses, kissed,kissed,kissed
+to knock,knock, knocked, knocking, knock,knock,knocks, knocked,knocked,knocked
+to laugh,laugh, laughed, laughing, laugh,laugh,laughs, laughed,laughed,laughed
+to learn,learn, learned/learnt, learning, learn,learn,learns, learned/learnt,learned/learnt,learned/learnt
+to lie,lie, lain, lying, lie,lie,lies, lay,lay,lay
+to lie down,lie down, lain down, lying down, lie down,lie down,lies down, lay down,lay down,lay down
+to lift,lift, lifted, lifting, lift,lift,lifts, lifted,lifted,lifted
+to listen,listen, listened, listening, listen,listen,listens, listened,listened,listened
+to look for,look for, looked for, looking for, look for,look for,looks for, looked for,looked for,looked for
+to love,love, loved, loving, love,love,loves, loved,loved,loved
+to do,do, done, doing, do,do,does, did,did,did
+to make,make, made, making, make,make,makes, made,made,made
+to have,have, had, having, have,have,has, had,had,had
+to mix,mix, mixed, mixing, mix,mix,mixes, mixed,mixed,mixed
+to paint,paint, painted, painting, paint,paint,paints, painted,painted,painted
+to plant,plant, planted, planting, plant,plant,plants, planted,planted,planted
+to play,play, played, playing, play,play,plays, played,played,played
+to pray,pray, prayed, praying, pray,pray,prays, prayed,prayed,prayed
+to pull,pull, pulled, pulling, pull,pull,pulls, pulled,pulled,pulled
+to push,push, pushed, pushing, push,push,pushes, pushed,pushed,pushed
+to put,put, put, putting, put,put,puts, put,put,put
+to read,read, read, reading, read,read,reads, read,read,read
+to shine,shine, shoneed, shining, shine,shine,shines, shoneed,shoneed,shoneed
+to write,write, written, writing, write,write,writes, wrote,wrote,wrote
+to relax,relax, relaxed, relaxing, relax,relax,relaxes, relaxed,relaxed,relaxed
+to run,run, run, running, run,run,runs, ran,ran,ran
+to see,see, seen, seeing, see,see,sees, saw,saw,saw
+to shake hands,shake, shaken, shaking, shake,shake,shakes, shook,shook,shook
+to share,share, shared, sharing, share,share,shares, shared,shared,shared
+to show,show, shown, showing, show,show,shows, showed,showed,showed
+to sing,sing, sung, singing, sing,sing,sings, sang,sang,sang
+to sit,sit, sat, sitting, sit,sit,sits, sat,sat,sat
+to sit down,sit down, sat down, sitting down, sit down,sit down,sits down, sat down,sat down,sat down
+to sleep,sleep, slept, sleeping, sleep,sleep,sleeps, slept,slept,slept
+to smile,smile, smiled, smiling, smile,smile,smiles, smiled,smiled,smiled
+to sow,sow, sown, sowing, sow,sow,sows, sowed,sowed,sowed
+to squint,squint, squinted, squinting, squint,squint,squints, squinted,squinted,squinted
+to stand,stand, stood, standing, stand,stand,stands, stood,stood,stood
+to stroke,stroke, stroked, stroking, stroke,stroke,strokes, stroked,stroked,stroked
+to sunbathe,sunbathe, sunbathed, sunbathing, sunbathe,sunbathe,sunbathes, sunbathed,sunbathed,sunbathed
+to take,take, taken, taking, take,take,takes, took,took,took
+to talk,talk, talked, talking, talk,talk,talks, talked,talked,talked
+to think,think, thought, thinking, think,think,thinks, thought,thought,thought
+to throw,throw, thrown, throwing, throw,throw,throws, threw,threw,threw
+to tie,tie, tied, tying, tie,tie,ties, tied,tied,tied
+to touch,touch, touched, touching, touch,touch,touches, touched,touched,touched
+to travel,travel, travelled, travelling, travel,travel,travels, travelled,travelled,travelled
+to turn on,turn on, turned on, turning on, turn on,turn on,turns on, turned on,turned on,turned on
+to turn off,turn off, turned off, turning off, turn off,turn off,turns off, turned off,turned off,turned off
+to vote,vote, voted, voting, vote,vote,votes, voted,voted,voted
+to wait,wait, waited, waiting, wait,wait,waits, waited,waited,waited
+to walk,walk, walked, walking, walk,walk,walks, walked,walked,walked
+to want,want, wanted, wanting, want,want,wants, wanted,wanted,wanted
+to wash,wash, washed, washing, wash,wash,washes, washed,washed,washed
+to watch TV,watch TV, watched TV, watching TV, watch TV,watch TV,watches TV, watched TV,watched TV,watched TV
+to work,work, worked, working, work,work,works, worked,worked,worked
+to yawn,yawn, yawned, yawning, yawn,yawn,yawns, yawned,yawned,yawned
+to maintain,maintain, maintained, maintaining, maintain,maintain,maintains, maintained,maintained,maintained
+to dive,dive, dived, diving, dive,dive,dives, dived/dove,dived/dove,dived/dove
+to creep,creep, crept, creeping, creep,creep,creeps, crept,crept,crept
+to cross,cross, crossed, crossing, cross,cross,crosses, crossed,crossed,crossed
+to leave,leave, left, leaving, leave,leave,leaves, left,left,left
+to abandon,abandon, abandoned, abandoning, abandon,abandon,abandons, abandoned,abandoned,abandoned
+to take down,take, taken, taking, take,take,takes, took,took,took
+to pick up,pick up, picked up, picking up, pick up,pick up,picks up, picked up,picked up,picked up
+to take out,take out, taken out, taking out, take out,take out,takes out, took out,took out,took out
+to hang up,hang up, hung up, hanging up, hang up,hang up,hangs up, hung up,hung up,hung up
+to escape,escape, escaped, escaping, escape,escape,escapes, escaped,escaped,escaped
+to flow,flow, flowed, flowing, flow,flow,flows, flowed,flowed,flowed
+to arrive,arrive, arrived, arriving, arrive,arrive,arrives, arrived,arrived,arrived
+to come,come, come, coming, come,come,comes, came,came,came
+to need,need, needed, needing, need,need,needs, needed,needed,needed
+to hear,hear, heard, hearing, hear,hear,hears, heard,heard,heard
+to pay,pay, paid, paying, pay,pay,pays, paid,paid,paid
+to appear,appear, appeared, appearing, appear,appear,appears, appeared,appeared,appeared
+to lose,lose, lost, losing, lose,lose,loses, lost,lost,lost
+to win,win, won, winning, win,win,wins, won,won,won
+to allow,allow, allowed, allowing, allow,allow,allows, allowed,allowed,allowed
+to forbid,forbid, forbidden, forbiding, forbid,forbid,forbids, forbade,forbade,forbade
+to stroll,stroll, strolled, strolling, stroll,stroll,strolls, strolled,strolled,strolled
+to belong,belong, belonged, belonging, belong,belong,belongs, belonged,belonged,belonged
+to step on,step on, stepped on, stepping on, step on,step on,steps on, stepped on,stepped on,stepped on
+to carry out,carry out, carried out, carrying out, carry out,carry out,carries out, carried out,carried out,carried out
+to accomplish,accomplish, accomplished, accomplishing, accomplish,accomplish,accomplishes, accomplished,accomplished,accomplished
+to feel,feel, felt, feeling, feel,feel,feels, felt,felt,felt
+to bring,bring, brought, bringing, bring,bring,brings, brought,brought,brought
+to treat,treat, treated, treating, treat,treat,treats, treated,treated,treated
+to handle,handle, handled, handling, handle,handle,handles, handled,handled,handled
+to be in a hurry,be in a hurry, been in a hurry, being in a hurry, am in a hurry,are in a hurry,is in a hurry, was in a hurry,were in a hurry,was in a hurry
+to return,return, returned, returning, return,return,returns, returned,returned,returned
+to come back,come, come, coming, come,come,comes, came,came,came
+to get,get, got/gotten, getting, get,get,gets, got,got,got
+to create,create, created, creating, create,create,creates, created,created,created
+to understand,understand, understood, understanding, understand,understand,understands, understood,understood,understood

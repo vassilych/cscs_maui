@@ -20,6 +20,7 @@ namespace ScriptingMaui
         public static List<string> Codes { get; set; } = new List<string>();
         public static List<string> VoiceOrder { get; set; } = new List<string>();
         public static Categories Categories { get; set; } = new Categories();
+        public static Dictionary<string, string> Verbs { get; set; } = new Dictionary<string, string>();
 
         static int s_startWords = 5;
 
@@ -73,12 +74,39 @@ namespace ScriptingMaui
             return await reader.ReadToEndAsync();
             //return reader;
         }
-        public static void LoadWords(string filename = "dictionary.txt")
+
+        public static void LoadVerbs(string lang = "en", string filename = "en_verbs.txt")
+        {
+            var taskA = Task.Run(async () => await GetFileContents(filename));
+            var fileData = taskA.Result;
+            var lineNr = 0;
+            var lines = fileData.Split('\n');
+
+            foreach (var line in lines)
+            {
+                lineNr++;
+                var tokens = line?.Trim().Split(',');
+                if (tokens == null || tokens.Length < 5)
+                {
+                    return;
+                }
+                Verbs[lang + "_" + tokens[0]] = line;
+            }
+            Console.WriteLine("Loaded {0} verbs from {1}.", lineNr, filename);
+        }
+        public static void LoadData()
         {
             if (Word.Default != null)
             {
                 return;
             }
+            LoadWords();
+            LoadVerbs("en", "en_verbs.txt");
+            LoadVerbs("es", "es_verbs.txt");
+            LoadVerbs("de", "de_verbs.txt");
+        }
+        public static void LoadWords(string filename = "dictionary.txt")
+        {
             var taskA = Task.Run(async () => await GetFileContents(filename));
             var fileData = taskA.Result;
 
@@ -149,6 +177,7 @@ namespace ScriptingMaui
             Console.WriteLine("Loaded {0} words and {1} categories.", wordCounter, Categories.GetTotal());
         }
     }
+
 }
 
 public class Word
@@ -223,8 +252,16 @@ public class Category
     }
     public void AddWord(Word word)
     {
+        if (Words.Contains(word))
+        {
+            return;
+        }
         Words.Add(word);
         WordMap[word.Name] = Words.Count - 1;
+        //if (Name == "verbs" &&  Words.Count % 100 == 0)
+        //{
+        //    int i = 0;
+        //}
     }
     public Word GetWord(int ind = 0)
     {
@@ -319,7 +356,7 @@ public class Categories
     {
         if (CategoryList.Count == 0)
         {
-            Words.LoadWords();
+            Words.LoadData();
         }
         var name = index < 0 || index >= CategoryList.Count ? DefaultCategory.Name :
                    CategoryList[index];
@@ -329,7 +366,7 @@ public class Categories
     {
         if (CategoryList.Count == 0)
         {
-            Words.LoadWords();
+            Words.LoadData();
         }
         if (!s_categMap.TryGetValue(name, out Category? cat))
         {
@@ -341,7 +378,7 @@ public class Categories
     {
         if (CategoryList.Count == 0)
         {
-            Words.LoadWords();
+            Words.LoadData();
         }
         if (index < 0 || index >= CategoryList.Count)
         {

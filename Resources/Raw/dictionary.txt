@@ -587,6 +587,8 @@ bed and bath	bed linen		die Bettwäsche	Bettwösch	постельное бель
 bed and bath	pillow		das Kissen	Chüssi	подушка	la almohada		o travesseiro	l'oreiller	il cuscino	כָּרִית	枕头	枕	وسادة	zhěntou
 bed and bath	blanket		die Bettdecke		одеяло	la cobija	la manta	o cobertor	le duvet	la coperta	שְׂמִיכָה	毛毯	毛布	بطانية	máotǎn
 bed and bath	bed sheet		das Bettlaken		простыня	la sábana		o lençol	le drap de lit	il lenzuolo	סדין	床单	ベッドシーツ	غطاء السرير	chuángdān
+bed and bath	duvet cover		der Bettdeckenbezug, der Bettbezug		пододеяльник	la funda nórdica		а capa de edredão	le housse de couette	il copripiumino	כיסוי שמיכת פוך	被套	掛け布団カバー	غطاء لحاف 	Bèitào
+bed and bath	pillowcase		der Kissenbezug		наволочка	la funda de almohada		a fronha de travesseiro	la taie d'oreiller	la federa	סדין	枕套	枕カバー	غطاء الوسادة 	Zhěntào
 bed and bath	bedside-table		der Nachttisch		тумбочка	la mesita de noche		a mesa de cabeceira	la table de nuit	il comodino	שולחן ליד המיטה	床头柜	ベッドサイドテーブル	طاولة سرير جانبية	chuángtóuguì
 bed and bath	night-light		das Nachtlicht	Nachtliecht	ночник	la lampa de noche	la lamparilla	a luminária	la veilleuse	la luce notturna	מנורת לילה	夜明灯	終夜灯	ضوء الليل	yè míngdēng
 bed and bath	candle		die Kerze		свечка	la vela		a vela	la bougie	la candela	נֵר	蜡烛	キャンドル	شمعة	làzhú
@@ -1037,6 +1039,7 @@ countries	Mongolia		die Mongolei		Монголия	Mongolia		Mongólia	la Mongol
 countries	Nepal		Nepal		Непал	Nepal		Nepal	le Népal	Il Nepal	נפאל	尼泊尔	ネパール	نيبال	níbó'ěr
 countries	North Korea		Nordkorea		Северная Корея	Corea del Norte		Coreia do Norte	la Corée du Nord	la Corea del Nord	צפון קוריאה	北韩, 北朝鲜	北朝鮮	كوريا الشمالية	běihán, běi cháoxiǎn
 countries	Pakistan		Pakistan		Пакистан	Pakistán		Paquistão	le Pakistan	il Pakistan	פקיסטן	巴基斯坦	パキスタン	باكستان	bājīsītǎn
+countries	State of Palestine		Staat Palästina		Государство Палестина	Estado de Palestina		Estado de Palestina	le État de Palestine	Stato di Palestina	מדינת פלסטין	巴勒斯坦国	パレスチナ国	دولة فلسطين	Bālèsītǎn guó
 countries	Philippines		die Philippinen		Филиппины	Filipinas		Filipinas	les Philippines	le Filippine	פיליפינים	菲律賓	フィリピン	الفلبين	fēilǜbīn
 countries	Qatar		Katar		Катар	Catar		Catar	le Qatar	il Qatar	קטאר	卡塔尔	カタール	دولة قطر	kǎtǎ'ěr
 countries	Saudi Arabia		Saudi-Arabien		Саудовская Аравия	Arabia Saudita		Arábia Saudita	l'Arabie saoudite	l'Arabia Saudita	ערב הסעודית	沙烏地阿拉伯	サウジアラビア	المملكة العربية السعودية	shā wū dì ālābó
@@ -1090,7 +1093,7 @@ countries	North America		Nordamerika		Северная Америка	América d
 countries	Canada		Kanada		Канада	Canadá		Canadá	le Canada	il Canada	קנדה	加拿大	カナダ	كندا	jiānádà
 countries	Mexico		Mexiko		Мексика	México		México	le Mexique	il Messico	מקסיקו	墨西哥	メキシコ	المكسيك	mòxīgē
 countries	United States, USA		Vereinigte Staaten, die USA		Соединённые Штаты Америки, США	Estados Unidos, EE. UU.		Estados Unidos, EUA	les États-Unis, USA	gli Stati Uniti, gli USA	ארצות הברית, ארה""ב	美國	米国	الولايات المتحدة الأمريكية، الولايات المتحدة الأمريكية	měiguó
-countries	Central America		Mittelamerika		Центральная Америка	Centroamérica		América Central	l'Amérique Centrale	l'America Centrale	מרכז אמריקה	中美洲	中央アメリカ	أمريكا الوسطى	zhōng měizhōu
+countries	Central America		Mittelamerika		Центральная Америка	Centroamérica	América Central	América Central	l'Amérique Centrale	l'America Centrale	מרכז אמריקה	中美洲	中央アメリカ	أمريكا الوسطى	zhōng měizhōu
 countries	Cayman Islands		die Cayman Islands, Kaimaninseln		Каймановы Острова	Islas Caimán		Ilhas Cayman	les îles Caïmans	le Isole Cayman	איי קיימן	开曼群岛	ケイマン諸島	جزر كايمان	kāi màn qúndǎo
 countries	Costa Rica		Costa Rica		Коста-Рика	Costa Rica		Costa Rica	le Costa Rica	la Costa Rica	קוסטה ריקה	哥斯达黎加	コスタリカ	كوستا ريكا	gēsīdálíjiā
 countries	Cuba		Kuba		Куба	Cuba		Cuba	Cuba	Cuba	קובה	古巴	キューバ	كوبا	gǔbā
@@ -1102,6 +1105,7 @@ countries	Honduras		Honduras		Гондурас	Honduras		Honduras	l'Honduras	l'H
 countries	Jamaica		Jamaika		Ямайка	Jamaica		Jamaica	la Jamaïque	La Giamaica	ג'מייקה	牙买加	ジャマイカ	جامايكا	yámǎijiā
 countries	Nicaragua		Nicaragua		Никарагуа	Nicaragua		Nicarágua	le Nicaragua	il Nicaragua	ניקרגואה	尼加拉瓜	ニカラグア	نيكاراغوا	níjiālāguā
 countries	Panama		Panama		Панама	Panamá		Panamá	le Panama	Panama	פנמה	巴拿马	パナマ	بناما	bānámǎ
+countries	Saint Kitts and Nevis		St. Kitts und Nevis		Сент-Китс и Невис	San Cristóbal y Nieves		São Cristóvão e Neves	Saint-Christophe-et-Niévès	Saint Kitts e Nevis	סנט קיטס ונוויס		圣基茨和尼维斯	セントクリストファー・ネイビス	سانت كيتس ونيفيس	Shèng jī cí hé ní wéi sī
 countries	The Bahamas		Bahamas		Багамы	Bahamas		As Bahamas	les Bahamas	le Bahamas	איי בהאמה	巴哈马	バハマ	جزر البهاما	bāhāmǎ
 countries	South America		Südamerika		Южная Америка	América del Sur		América do Sul	l'Amérique du Sud	il Sud America	דרום אמריקה	南美洲	南アメリカ	امريكا الجنوبية	nán měizhōu
 countries	Argentina		Argentinien		Аргентина	Argentina		Argentina	l'Argentine	l'Argentina	ארגנטינה	阿根廷	アルゼンチン	الأرجنتين	āgēntíng
@@ -1112,6 +1116,7 @@ countries	Colombia		Kolumbien		Колумбия	Colombia		Colômbia	la Colombie	
 countries	Ecuador		Ecuador		Эквадор	Ecuador		Equador	l'Équateur	L'Equador	אקוודור	厄瓜多尔	エクアドル	الإكوادور	èguāduō'ěr
 countries	Paraguay		Paraguay		Парагвай	Paraguay		Paraguai	le Paraguay	il Paraguay	פרגוואי	巴拉圭	パラグアイ	باراغواي	bālāguī
 countries	Peru		Peru		Перу	Perú		Peru	le Pérou	il Perù	פרו	秘鲁	ペルー	بيرو	bìlǔ
+countries	Republic of Suriname		Republik Suriname		Республика Суринам	República de Surinam		República do Suriname	République du Suriname	Repubblica del Suriname	הרפובליקה של סורינאם	苏里南共和国	スリナム共和国	جمهورية سورينام	Sūlǐnán gònghéguó
 countries	Trinidad and Tobago		Trinidad und Tobago		Тринидад и Тобаго	Trinidad y Tobago		Trinidad e Tobago	la Trinité-et-Tobago	Trinidad e Tobago	טרינידד וטובגו	特立尼达和多巴哥	トリニダード・トバゴ	ترينداد وتوباغو	tè lì ní dá hé duō bā gē
 countries	Uruguay		Uruguay		Уругвай	Uruguay		Uruguai	l'Uruguay	l'Uruguay	אורוגוואי	乌拉圭	ウルグアイ	أوروغواي	wūlāguī
 countries	Venezuela		Venezuela		Венесуэла	Venezuela		Venezuela	le Venezuela	il Venezuela	ונצואלה	委內瑞拉	ベネズエラ	فنزويلا	wěinèiruìlā
@@ -1121,6 +1126,8 @@ countries	Fiji		Fidschi		Фиджи	Fiyi		Fiji	les Fidji	le Fiji	פיג'י	斐�
 countries	French Polynesia		Französisch-Polynesie		Французская Полинезия	Polinesia Francesa		Polinésia Francesa	la Polynésie Française	la Polinesia Francese	פולינזיה הצרפתית	法属波利尼西亚	フランス領ポリネシア	بولينيزيا الفرنسية	fà zhǔ bōlìníxīyà
 countries	New Zealand		Neuseeland		Новая Зеландия	Nueva Zelanda		Nova Zelândia	la Nouvelle-Zélande	la Nuova Zelanda	ניו זילנד	新西兰	ニュージーランド	نيوزيلندا	xīnxīlán
 countries	Papua New Guinea		Papua-Neuguinea		Папуа — Новая Гвинея	Papúa Nueva Guinea		Papua Nova Guiné	la Papouasie-Nouvelle-Guinée	la Papua Nuova Guinea	פפואה גינאה החדשה	巴布亚新几内亚	パプアニューギニア	بابوا غينيا الجديدة	bābùyǎ xīn jǐnèiyǎ
+countries	Samoa		Samoa		Самоа	Samoa		Samoa	Samoa	Samoa	סמואה	萨摩亚	サモア	ساموا	Sàmó yǎ
+countries	Solomon Islands		Salomonen		Соломоновы Острова	Islas Salomón		Ilhas Salomão	Îles Salomon	Isole Salomone	איי שלמה	所罗门群岛	ソロモン諸島	جزر سليمان	Suǒluómén qúndǎo
 countries	Tonga		Tonga		Тонга	Tonga		Tonga	les Tonga	Tonga	טונגה	東加	トンガ	تونغا	dōng jiā
 countries	Antarctica		Antarktika		Антарктика	Antártida		Antártica	l'Antarctique	l'Antartide	אנטארקטיקה	南极洲	南極大陸	القارة القطبية الجنوبية	nánjízhōu
 environment	universe		das Universum		вселенная	el universo		o universo	l'univers	l'universo	עוֹלָם	宇宙	宇宙	الكون	yǔzhòu
@@ -1195,6 +1202,10 @@ verbs	to argue, to quarrel		streiten, argumentieren	striite	спорить, ру
 verbs	to discuss, to talk over		diskutieren, besprechen		обсуждать, дискутировать	discutir, hablar de		discutir, conversar	discuter, débattre	discutere di, parlare di	לדון, לדבר	讨论	話し合う	يناقش	tǎolùn
 verbs	to ask		fragen		спрашивать	preguntar		perguntar	poser une question 	chiedere	לשאול	问，告诉	訊ねる	يسأل	wèn, gàosù
 verbs	to bark		bellen		лаять	ladrar		latir	aboyer	abbaiare	לנבוח	狗吠	吠える	ينبح	gǒu fèi
+verbs	to be		sein		быть	ser		ser	être	essere	לִהיוֹת	是	有る	يكون	Shì
+verbs	to exist		existieren		существовать	existir		existir	exister	esistere	לְהִתְקַיֵם	存在	存在する	يخرج	Cúnzài
+verbs	to stay, to be		sich befinden, sein		быть, находиться	estar		situar-se, estar	situar-se	se sentir, être situé	trovarsi, essere	להיות, להישאר	找到自己	なれ	أن تكون، تبقى	Zhǎodào zìjǐ
+verbs	to become		werden		стать, становиться	convertirse en, hacerse		tornar-se	devenir	diventare	להפוך,לִהיוֹת	成为	なる	لتصبح	Chéngwéi
 verbs	to be born		auf die Welt kommen	uf dWelt cho	родиться	nacer		nascer	naître	nascere	להיוולד	出生	生まれる	يولد	chūshēng
 verbs	to beg		bitten		просить	pedir		implorar	demander	supplicare	להתחנן	请求	物乞いする	يتسول	qǐngqiú
 verbs	to believe		glauben		верить	creer		acreditar	croire	credere	להאמין	相信	信じる	يعتقد	xiāngxìn
@@ -1205,7 +1216,7 @@ verbs	to calculate		rechnen		считать, вычислять	calcular		calcul
 verbs	to call		anrufen	aalüte	звонить	llamar		chamar	téléphoner, appeler	telefonare	להתקשר	打电话	呼び出す	يتصل	dǎ diànhuà
 verbs	to carry		tragen		нести, тaщить	llevar		carregar	porter	trasportare	לשאת	携带	運ぶ	يحمل	xiédài
 verbs	to catch		fangen		поймать, ловить	cachar, atrapar	coger	pegar	attraper	raggiunge, acchiappare	לתפוס	抓住	捕まえる	يمسك	zhuā zhù
-verbs	to change		sich verändern		измениться	cambiarse		mudar	se changer	cambiare	לשנות	改变	変わる	يغير	gǎibiàn
+verbs	to change		sich verändern		измениться, переодеваться	cambiarse		mudar	se changer	cambiare	לשנות	改变	変わる	يغير	gǎibiàn
 verbs	to chat		schwatzen, quatschen		болтать	chatear	charlar	conversar	tchatcher, bavarder	cianciare, chiacchierare	לשוחח	聊天	喋る、チャットする	يدردش	liáotiān
 verbs	to chop		hauen, hacken		рубить	talar		picar	trancher	tagliare a pezzi	לקצוץ	砍、劈	切り刻む	يقطع	kǎn, pī
 verbs	to clean		putzen		убираться	limpiar		limpar	nettoyer	pulire	לנקות	打扫，清洁	きれいにする	ينظف	dǎsǎo, qīngjié
@@ -1254,7 +1265,9 @@ verbs	to lift		heben		поднимать	levantar		levantar	lever, soulever	alza
 verbs	to listen		hören	lose	слушать	escuchar		ouvir	écouter	ascoltare	להקשיב	听	聞く	يستمع	tīng
 verbs	to look for		suchen		искать	buscar		procurar	chercher	cercare	לחפש	搜索 	探す	يبحث	sōusuǒ
 verbs	to love		lieben		любить	amar		amar	aimer	amare	לאהוב	爱	愛する	يحب	ài
-verbs	to make		machen		делать	hacer		fazer	faire	fare	לעשות	制造	作る	يصنع	zhìzào
+verbs	to do		machen, tun		делать	hacer, realizar		fazer	faire	fare	לעשות	要做	する	لفعل	Yào zuò
+verbs	to make		machen, herstellen, schaffen		сделать, создать	hacer, crear		fazer, fabricar	faire, fabriquer	fare, fabbricare, creare	לעשות,ליצור	制造	作る	يصنع	zhìzào
+verbs	to have		haben		иметь	tener		ter	avoir	avere	להחזיק	拥有	持つ	ملك	Yǒngyǒu
 verbs	to mix		mischen, vermischen		мешать, смешивать	mezclar		misturar	mélanger	mescolare, impastare	לערבב	混合	混ぜる	يخلط	hùnhé
 verbs	to paint		malen		красить	pintar		pintar	peindre	colorare	לצייר	涂饰	塗る	يصبغ	túshì
 verbs	to plant		pflanzen		сажать (растение)	plantar		plantar	planter	piantare	לשתול	种植	植える	يزرع	zhòngzhí

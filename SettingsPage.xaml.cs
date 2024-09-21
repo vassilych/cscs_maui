@@ -65,8 +65,6 @@ public partial class SettingsPage : ContentPage
 
     public void Setup()
     {
-        Words.LoadWords();
-
         var mine = Preferences.Get(MyVoiceSet, "");
         var learn = Preferences.Get(ToLearnSet, "");
         var current = CultureInfo.CurrentUICulture;

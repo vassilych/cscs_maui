@@ -94,7 +94,6 @@ public partial class MainPage : TabbedPage
 
     public void SetBackground(int index)
 	{
-        Words.LoadWords();
         var countryImg = Words.Countries[index] + "_bg.png";
         foreach (var page in m_pages)
         {

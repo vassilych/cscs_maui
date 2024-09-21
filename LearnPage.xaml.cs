@@ -2,11 +2,14 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using Microsoft.Maui;
-//using ObjCRuntime;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using Microsoft.Maui.Controls.Shapes;
 using ScriptingMaui.Resources.Strings;
 using SplitAndMerge;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.Picker;
+//using ObjCRuntime;
+//using static ObjCRuntime.Dlfcn;
 
 namespace ScriptingMaui;
 
@@ -14,7 +17,7 @@ public partial class LearnPage : ContentPage
 {
     const string CategorySet = "categoryLearn";
     const string WordSet = "wordLearn";
-    int MaxSearchResults = 6;
+    int MaxSearchResults = 7;
     Category m_category;
     bool m_settingWord;
 
@@ -58,6 +61,9 @@ public partial class LearnPage : ContentPage
 
         TranslationBtn.Clicked += TranslationBtn_Clicked;
         TranslationFlag.Clicked += TranslationBtn_Clicked;
+
+        ButInfo.Clicked += InfoData_Clicked;
+        SetMode();
         //this.Loaded += LearnPage_Loaded;
     }
 
@@ -87,6 +93,16 @@ public partial class LearnPage : ContentPage
         await TTS.Speak(trans, voice);
     }
 
+    public static void SetFontSize(Label l, double delta = -6)
+    {
+        var curr = GetFontSize(l.Text);
+        l.FontSize = curr + delta;
+    }
+    public static void SetFontSize(Button btn, double delta = 0)
+    {
+        var curr = GetFontSize(btn.Text);
+        btn.FontSize = curr + delta;
+    }
     public static int GetFontSize(string text)
     {
         if (text.Length < 16)
@@ -197,20 +213,329 @@ public partial class LearnPage : ContentPage
         CategoryPicker.SelectedIndex = categoryIndex;
     }
 
-    void SetMode(bool findMode = false)
+    void SetMode(bool findMode = false, bool infoMode = false)
     {
-        SearchPanel.IsVisible = findMode;
-        ResultsView.IsVisible = findMode;
-        BackBut.IsVisible = findMode;
-        SearchEntry.IsEnabled = findMode;
+        SearchPanel.IsVisible = findMode || infoMode;
+        BackBut.IsVisible = findMode || infoMode;
+        ResultsView.IsVisible = findMode && !infoMode;
+        SearchEntry.IsEnabled = SearchEntry.IsVisible = findMode;
+        WordName.IsVisible = infoMode;
+        WordDetails.IsVisible = infoMode;
 
-        TopPanel.IsVisible = !findMode;
-        TopMainPanel.IsVisible = !findMode;
-        MainPanel.IsVisible = !findMode;
-        ButtonsPanel.IsVisible = !findMode;
-        TranslationView.IsVisible = !findMode;
-        TranslationBtn.IsVisible = !findMode;
-        TranslationFlag.IsVisible = !findMode;
+        TopPanel.IsVisible = !findMode && !infoMode;
+        TopMainPanel.IsVisible = !findMode && !infoMode;
+        MainPanel.IsVisible = !findMode && !infoMode;
+        ButtonsPanel.IsVisible = !findMode && !infoMode;
+        TranslationView.IsVisible = !findMode && !infoMode;
+        TranslationBtn.IsVisible = !findMode && !infoMode;
+        TranslationFlag.IsVisible = !findMode && !infoMode;
+
+        InfoPanel.IsVisible = infoMode;
+        VerbInfoH1.IsVisible = VerbInfoH2.IsVisible = VerbInfoH3.IsVisible = infoMode;
+        VerbInfo11.IsVisible = VerbInfo21.IsVisible = VerbInfo31.IsVisible = infoMode;
+    }
+
+    string GetWordData(string langPrefix, string candidate)
+    {
+        var ww = candidate.Split(new char[] { ' ' }, (StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries));
+        string key = //prefix1.StartsWith("en") ? "en_" + ww[0] + " " + ww[1] :
+                     langPrefix.StartsWith("es") ? "es_" + ww[0] :
+                     langPrefix + "_" + candidate;
+        if (!Words.Verbs.TryGetValue(key, out string? data) || string.IsNullOrWhiteSpace(data))
+        {
+            var newKey = langPrefix + "_" + ww[ww.Length - 1];
+            if (!Words.Verbs.TryGetValue(newKey, out data) || string.IsNullOrWhiteSpace(data))
+            {
+                var newKey2 = langPrefix + "_" + ww[0].Substring(0, ww[0].Length - 2);
+                if (!Words.Verbs.TryGetValue(newKey2, out data) || string.IsNullOrWhiteSpace(data))
+                {
+                    return "";
+                }
+            }
+        }
+        return data;
+    }
+
+    async void InfoData_Clicked(object? sender, EventArgs e)
+    {
+        StopPlay();
+        var prefix1 = SettingsPage.VoiceLearn.Substring(0, 2);
+        var prefix2 = SettingsPage.MyVoice.Substring(0, 2);
+        var words = Context.Word.GetTranslation(SettingsPage.VoiceLearn);
+        var tok = words.Split(",", StringSplitOptions.TrimEntries);
+        foreach (var candidate in tok)
+        {
+            var data = GetWordData(prefix1, candidate);
+            if (string.IsNullOrWhiteSpace(data))
+            {
+                if (SettingsPage.VoiceLearn == "de-CH")
+                {
+                    words = Context.Word.GetTranslation("de-DE");
+                    var t = words.Split(",", StringSplitOptions.TrimEntries);
+                    data = GetWordData(prefix1, t.First());
+                }
+                if (string.IsNullOrWhiteSpace(data))
+                {
+                    await DisplayAlert(AppResources.verbs, string.Format(AppResources.Word_with__0__not_found, candidate), "OK");
+                    continue;
+                }
+            }
+            SetMode(false, true);
+            var tokens = data.Trim().Split(new char[] { ',' }, (StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries));
+            if (prefix1.StartsWith("en"))
+            {
+                LoadEnVerbs(tokens);
+            }
+            else if (prefix1.StartsWith("es"))
+            {
+                LoadEsVerbs(tokens);
+            }
+            else if (prefix1.StartsWith("de"))
+            {
+                LoadDeVerbs(tokens);
+            }
+            break;
+        }
+        SetFontSize(VerbInfoH1); SetFontSize(VerbInfoH2); SetFontSize(VerbInfoH3); SetFontSize(VerbInfoH4); SetFontSize(VerbInfoH5); SetFontSize(VerbInfoH6);
+        SetFontSize(VerbInfoH7); SetFontSize(VerbInfoH8); SetFontSize(VerbInfoH9);
+        SetFontSize(VerbInfo11); SetFontSize(VerbInfo21); SetFontSize(VerbInfo31); SetFontSize(VerbInfo41); SetFontSize(VerbInfo51); SetFontSize(VerbInfo61);
+        SetFontSize(VerbInfo12); SetFontSize(VerbInfo22); SetFontSize(VerbInfo32); SetFontSize(VerbInfo42); SetFontSize(VerbInfo52); SetFontSize(VerbInfo62);
+        SetFontSize(VerbInfo13); SetFontSize(VerbInfo23); SetFontSize(VerbInfo33); SetFontSize(VerbInfo43); SetFontSize(VerbInfo53); SetFontSize(VerbInfo63);
+        SetFontSize(VerbInfo71); SetFontSize(VerbInfo81); SetFontSize(VerbInfo91); SetFontSize(VerbInfo101); SetFontSize(VerbInfo111); SetFontSize(VerbInfo121);
+    }
+    void LoadEnVerbs(string[] tokens)
+    {
+        WordName.Text = tokens[0];
+        Participle.Text = "Particip: " + tokens[2];
+        Gerund.Text = "Gerund: " + tokens[3];
+        // to be, be, been, being, am, are, is, was, were, was
+        VerbInfoH1.Text = "Present";
+        VerbInfo11.Text = "I " + tokens[4];
+        VerbInfo21.Text = "you " + tokens[5];
+        VerbInfo31.Text = "she " + tokens[6];
+        VerbInfo41.Text = "we " + tokens[5];
+        VerbInfo51.Text = "you " + tokens[5];
+        VerbInfo61.Text = "they " + tokens[5];
+
+        VerbInfoH2.Text = "Past";
+        VerbInfo12.Text = "I " + tokens[7];
+        VerbInfo22.Text = "you " + tokens[8];
+        VerbInfo32.Text = "she " + tokens[9];
+        VerbInfo42.Text = "we " + tokens[7];
+        VerbInfo52.Text = "you " + tokens[7];
+        VerbInfo62.Text = "they " + tokens[7];
+
+        VerbInfoH3.Text = "Future";
+        VerbInfo13.Text = "I will " + tokens[1];
+        VerbInfo23.Text = "you will " + tokens[1];
+        VerbInfo33.Text = "she will " + tokens[1];
+        VerbInfo43.Text = "we will " + tokens[1];
+        VerbInfo53.Text = "you will " + tokens[1];
+        VerbInfo63.Text = "they will " + tokens[1];
+
+        VerbInfoH4.Text = "Continuous";
+        VerbInfo71.Text = "I'm " + tokens[3];
+        VerbInfo81.Text = "you're " + tokens[3];
+        VerbInfo91.Text = "she's " + tokens[3];
+        VerbInfo101.Text = "we're " + tokens[3];
+        VerbInfo111.Text = "you're " + tokens[3];
+        VerbInfo121.Text = "they're " + tokens[3];
+
+        VerbInfoH5.Text = "Perfect";
+        VerbInfo72.Text = "have " + tokens[2];
+        VerbInfo82.Text = "have " + tokens[2];
+        VerbInfo92.Text = "has " + tokens[2];
+        VerbInfo102.Text = VerbInfo112.Text = VerbInfo122.Text = "have " + tokens[2];
+
+        VerbInfoH6.Text = "Conditional";
+        VerbInfo73.Text = VerbInfo83.Text = VerbInfo93.Text =
+            VerbInfo103.Text = VerbInfo113.Text = VerbInfo123.Text = "would " + tokens[1];
+        ShowRow3(false);
+    }
+
+    void LoadEsVerbs(string[] tokens)
+    {
+        WordName.Text = tokens[0];
+        Participle.Text = "Participio: " + tokens[1];
+        Gerund.Text = "Gerundio: " + tokens[2];
+        /* hacer, hecho, haciendo, hago,haces,hace,hacemos,hacéis,hacen,  hacía,hacías,hacía,hacíamos,hacíais,hacían,
+         15 hice,hiciste,hizo,hicimos,hicisteis,hicieron, haré,harás,hará,haremos,haréis,harán,
+         27 hecho,haría,harías,haría,haríamos,haríais,harían */
+        VerbInfoH1.Text = "Presente";
+        VerbInfo11.Text = "Yo " + tokens[3];
+        VerbInfo21.Text = "Tú " + tokens[4];
+        VerbInfo31.Text = "Él/Ella/Ud " + tokens[5];
+        VerbInfo41.Text = "Nosotros " + tokens[6];
+        VerbInfo51.Text = "Vosotros " + tokens[7];
+        VerbInfo61.Text = "Ellas/Ustedes " + tokens[8];
+
+        VerbInfoH2.Text = "Pret Imperfecto";
+        VerbInfo12.Text = tokens[9];
+        VerbInfo22.Text = tokens[10];
+        VerbInfo32.Text = tokens[11];
+        VerbInfo42.Text = tokens[12];
+        VerbInfo52.Text = tokens[13];
+        VerbInfo62.Text = tokens[14];
+
+        VerbInfoH3.Text = "Pret indefinido";
+        VerbInfo13.Text = tokens[15];
+        VerbInfo23.Text = tokens[16];
+        VerbInfo33.Text = tokens[17];
+        VerbInfo43.Text = tokens[18];
+        VerbInfo53.Text = tokens[19];
+        VerbInfo63.Text = tokens[20];
+
+        VerbInfoH4.Text = "Futuro";
+        VerbInfo71.Text = tokens[21];
+        VerbInfo81.Text = tokens[22];
+        VerbInfo91.Text = tokens[23];
+        VerbInfo101.Text = tokens[24];
+        VerbInfo111.Text = tokens[25];
+        VerbInfo121.Text = tokens[26];
+
+        VerbInfoH5.Text = "Pretérito perfecto";
+        VerbInfo72.Text = "he " + tokens[1];
+        VerbInfo82.Text = "has " + tokens[1];
+        VerbInfo92.Text = "ha " + tokens[1];
+        VerbInfo102.Text = "hemos " + tokens[1];
+        VerbInfo112.Text = "habéis " + tokens[1];
+        VerbInfo122.Text = "han " + tokens[1];
+
+        VerbInfoH6.Text = "Condicional";
+        VerbInfo73.Text = tokens[27];
+        VerbInfo83.Text = tokens[28];
+        VerbInfo93.Text = tokens[29];
+        VerbInfo103.Text = tokens[30];
+        VerbInfo113.Text = tokens[31];
+        VerbInfo123.Text = tokens[32];
+
+        ShowRow3(true);
+        VerbInfoH7.Text = "Pluscuamperfecto";
+        VerbInfo131.Text = "había " + tokens[1];
+        VerbInfo141.Text = "habías " + tokens[1];
+        VerbInfo151.Text = "había " + tokens[1];
+        VerbInfo161.Text = "habíamos " + tokens[1];
+        VerbInfo171.Text = "habíais " + tokens[1];
+        VerbInfo181.Text = "habían " + tokens[1];
+
+        VerbInfoH8.Text = "Presente continuo";
+        VerbInfo132.Text = "estoy " + tokens[2];
+        VerbInfo142.Text = "estás " + tokens[2];
+        VerbInfo152.Text = "está " + tokens[2];
+        VerbInfo162.Text = "estamos " + tokens[2];
+        VerbInfo172.Text = "estáis " + tokens[2];
+        VerbInfo182.Text = "están " + tokens[2];
+
+        VerbInfoH9.Text = "Futuro próximo";
+        VerbInfo133.Text = "voy a " + tokens[0];
+        VerbInfo143.Text = "vas a " + tokens[0];
+        VerbInfo153.Text = "va a " + tokens[0];
+        VerbInfo163.Text = "vamos a " + tokens[0];
+        VerbInfo173.Text = "vais a " + tokens[0];
+        VerbInfo183.Text = "van a " + tokens[0];
+    }
+    void LoadDeVerbs(string[] tokens)
+    {
+        WordName.Text = tokens[0];
+        Participle.Text = "Partizip: " + tokens[1];
+        Gerund.Text = "Gerundium: " + tokens[2];
+        /* sein, gewesen, seiend, Präsens bin,bist,ist,sind,seid,sind,
+         * Perfekt 9 bin gewesen,bist gewesen,ist gewesen,sind gewesen,seid gewesen,sind gewesen,
+         * Plusquamperfekt 15 war gewesen,warst gewesen,war gewesen,waren gewesen,wart gewesen,waren gewesen,
+         * Präteritum 21 war,warst,war,waren,wart,waren,
+         * Präsens I 27 sei,seist,sei,seien,seiet,seien,
+         * Präteritum II 33 wäre,wärest,wäre,wären,wäret,wären,
+         * Imperative 39 Sei,Seien,Seid,Seien */
+        VerbInfoH1.Text = "Präsens";
+        VerbInfo11.Text = "ich " + tokens[3];
+        VerbInfo21.Text = "du " + tokens[4];
+        VerbInfo31.Text = "er/sie/es " + tokens[5];
+        VerbInfo41.Text = "wir " + tokens[6];
+        VerbInfo51.Text = "ihr " + tokens[7];
+        VerbInfo61.Text = "sie/Sie " + tokens[8];
+
+        VerbInfoH2.Text = "Perfekt";
+        VerbInfo12.Text = tokens[9];
+        VerbInfo22.Text = tokens[10];
+        VerbInfo32.Text = tokens[11];
+        VerbInfo42.Text = tokens[12];
+        VerbInfo52.Text = tokens[13];
+        VerbInfo62.Text = tokens[14];
+                
+        VerbInfoH3.Text = "Präteritum";
+        VerbInfo13.Text = tokens[21];
+        VerbInfo23.Text = tokens[22];
+        VerbInfo33.Text = tokens[23];
+        VerbInfo43.Text = tokens[24];
+        VerbInfo53.Text = tokens[25];
+        VerbInfo63.Text = tokens[26];
+                
+        VerbInfoH4.Text = "Plusquamperfekt";
+        VerbInfo71.Text = tokens[15];
+        VerbInfo81.Text = tokens[16];
+        VerbInfo91.Text = tokens[17];
+        VerbInfo101.Text = tokens[18];
+        VerbInfo111.Text = tokens[19];
+        VerbInfo121.Text = tokens[20];
+
+        VerbInfoH5.Text = "Futur I";
+        VerbInfo72.Text = "werde " + tokens[1];
+        VerbInfo82.Text = "wirst " + tokens[1];
+        VerbInfo92.Text = "wird " + tokens[1];
+        VerbInfo102.Text = "werden " + tokens[1];
+        VerbInfo112.Text = "werdet " + tokens[1];
+        VerbInfo122.Text = "werden " + tokens[1];
+
+        VerbInfoH6.Text = "Imperativ";
+        VerbInfo73.Text = "";
+        VerbInfo83.Text = tokens[39].Contains(" du") || tokens[39] == "-" ? tokens[39] : tokens[39] + " (du)!";
+        VerbInfo93.Text = "";
+        VerbInfo103.Text = tokens[40].Contains(" wir") || tokens[40] == "-" ? tokens[40] : tokens[40] + " wir!";
+        VerbInfo113.Text = tokens[41].Contains(" ihr") || tokens[41] == "-" ? tokens[41] : tokens[41] + " ihr!";
+        VerbInfo123.Text = tokens[42].Contains(" Sie") || tokens[42] == "-" ? tokens[42] : tokens[42] + " Sie!";
+        ShowRow3(false);
+        VerbInfoH7.Text = "Konj Präsens I";
+        VerbInfo131.Text = tokens[27];
+        VerbInfo141.Text = tokens[28];
+        VerbInfo151.Text = tokens[29];
+        VerbInfo161.Text = tokens[30];
+        VerbInfo171.Text = tokens[31];
+        VerbInfo181.Text = tokens[32];
+
+        VerbInfoH8.Text = "Konj Präter II";
+        VerbInfo132.Text = tokens[33];
+        VerbInfo142.Text = tokens[34];
+        VerbInfo152.Text = tokens[35];
+        VerbInfo162.Text = tokens[36];
+        VerbInfo172.Text = tokens[37];
+        VerbInfo182.Text = tokens[38];
+
+        VerbInfoH9.Text = "Konj Futur II";
+        VerbInfo133.Text = "würde " + tokens[0];
+        VerbInfo143.Text = "würdest " + tokens[0];
+        VerbInfo153.Text = "würde " + tokens[0];
+        VerbInfo163.Text = "würden " + tokens[0];
+        VerbInfo173.Text = "würdet " + tokens[0];
+        VerbInfo183.Text = "würden " + tokens[0];
+    }
+
+    void ShowRow3(bool isVisible = true)
+    {
+        VerbInfoH7.IsVisible = VerbInfoH8.IsVisible = VerbInfoH9.IsVisible =
+            Border31.IsVisible = Border32.IsVisible = Border33.IsVisible = isVisible;
+        VerbInfo131.IsVisible = VerbInfo141.IsVisible = VerbInfo151.IsVisible = VerbInfo161.IsVisible = VerbInfo171.IsVisible = VerbInfo181.IsVisible = isVisible;
+        VerbInfo132.IsVisible = VerbInfo142.IsVisible = VerbInfo152.IsVisible = VerbInfo162.IsVisible = VerbInfo172.IsVisible = VerbInfo182.IsVisible = isVisible;
+        VerbInfo133.IsVisible = VerbInfo143.IsVisible = VerbInfo153.IsVisible = VerbInfo163.IsVisible = VerbInfo173.IsVisible = VerbInfo183.IsVisible = isVisible;
+        Border131.IsVisible = Border141.IsVisible = Border151.IsVisible = Border161.IsVisible = Border171.IsVisible = Border181.IsVisible = isVisible;
+        Border132.IsVisible = Border142.IsVisible = Border152.IsVisible = Border162.IsVisible = Border172.IsVisible = Border182.IsVisible = isVisible;
+        Border133.IsVisible = Border143.IsVisible = Border153.IsVisible = Border163.IsVisible = Border173.IsVisible = Border183.IsVisible = isVisible;
+        if (!isVisible)
+        {
+            VerbInfoH7.Text = VerbInfoH8.Text = VerbInfoH9.Text = "";
+            VerbInfo131.Text = VerbInfo141.Text = VerbInfo151.Text = VerbInfo161.Text = VerbInfo171.Text = VerbInfo181.Text = "";
+            VerbInfo132.Text = VerbInfo142.Text = VerbInfo152.Text = VerbInfo162.Text = VerbInfo172.Text = VerbInfo182.Text = "";
+            VerbInfo133.Text = VerbInfo143.Text = VerbInfo153.Text = VerbInfo163.Text = VerbInfo173.Text = VerbInfo183.Text = "";
+        }
     }
 
     public void Localize()
@@ -229,17 +554,21 @@ public partial class LearnPage : ContentPage
             ButPlay.Source = "stop_but.png";
             var word = m_category.GetNextWord();
             await SetWord(word);
-            m_timer?.Stop();
-            m_timer = Application.Current?.Dispatcher.CreateTimer();
-            m_timer.Interval = TimeSpan.FromSeconds(SettingsPage.Instance.GetPlayInterval());
-            m_timer.IsRepeating = true;
-            m_timer.Tick += (s, e) => OnPlayTimer();
-            m_timer.Start();
+            ResetTimer();
         }
         else
         {
             StopPlay();
         }
+    }
+    void ResetTimer()
+    {
+        m_timer?.Stop();
+        m_timer = Application.Current?.Dispatcher.CreateTimer();
+        m_timer.Interval = TimeSpan.FromSeconds(SettingsPage.Instance.GetPlayInterval());
+        //m_timer.IsRepeating = true;
+        m_timer.Tick += (s, e) => OnPlayTimer();
+        m_timer.Start();
     }
     public void StopPlay()
     {
@@ -257,14 +586,19 @@ public partial class LearnPage : ContentPage
         {
             var word = m_category.GetNextWord();
             await SetWord(word);
+            ResetTimer();
         });
     }
 
     async Task SetWord(Word word, bool speak = true)
     {
-        if (m_settingWord)
+        for (int i = 0; i < 1; i++)
         {
-            return;
+            if (!m_settingWord)
+            {
+                break;
+            }
+            await Task.Delay(600);
         }
         m_settingWord = true;
         Context.SetWord(word);
@@ -298,6 +632,7 @@ public partial class LearnPage : ContentPage
         TranslationFlag.Source = Word.GetFlag(SettingsPage.MyVoice);
         TranslationBtn.Text = word.GetTranslation(SettingsPage.MyVoice);
         TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
+        ButInfoBorder.IsVisible = ButInfo.IsVisible = (m_category.Name == "verbs");
 
         if (speak)
         {
@@ -321,13 +656,21 @@ public partial class LearnPage : ContentPage
     private async void SpeakerClick(object? sender, EventArgs e)
     {
         await TTS.Speak(Context.MainWord, SettingsPage.VoiceLearn, true);
+        /*var categ = Categories.GetCategory("verbs");
+        var words = categ.Words;
+        foreach (var word in words)
+        {
+            Context.SetWord(word);
+            InfoData_Clicked(null, EventArgs.Empty);
+        }
+        int i = 0;*/
     }
 
     private async void CategorySelectionChanged(object? sender, EventArgs e)
     {
         StopPlay();
         var chosen = CategoryPicker.SelectedIndex;
-        if (chosen < 0)
+        if (chosen < 0 || m_settingWord)
         {
             return;
         }

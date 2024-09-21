@@ -1973,6 +1973,24 @@
 	  <BundleResource Include="Resources\Images\deadlift.png" />
 	  <BundleResource Include="Resources\Images\bench_press.png" />
 	  <BundleResource Include="Resources\Images\barbell_disk__weight_plate.png" />
+	  <BundleResource Include="Resources\Images\pillowcase.png" />
+	  <BundleResource Include="Resources\Images\duvet_cover.png" />
+	  <BundleResource Include="Resources\Images\to_have.png" />
+	  <BundleResource Include="Resources\Images\to_do.png" />
+	  <BundleResource Include="Resources\Images\to_stay__to_be.png" />
+	  <BundleResource Include="Resources\Images\to_exist.png" />
+	  <BundleResource Include="Resources\Images\to_become.png" />
+	  <BundleResource Include="Resources\Images\to_be.png" />
+	  <BundleResource Include="Resources\Images\republic_of_suriname.png" />
+	  <BundleResource Include="Resources\Images\samoa.png" />
+	  <BundleResource Include="Resources\Images\solomon_islands.png" />
+	  <BundleResource Include="Resources\Images\state_of_palestine.png" />
+	  <BundleResource Include="Resources\Images\saint_kitts_and_nevis.png" />
+	  <BundleResource Include="Resources\Raw\en_verbs.txt" />
+	  <BundleResource Include="Resources\Raw\es_verbs.txt" />
+	  <BundleResource Include="Resources\Raw\es_verbs.txt">
+	    <LogicalName>es_verbs.txt</LogicalName>
+	  </BundleResource>
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2087,6 +2105,21 @@
 	  <None Remove="Resources\Images\deadlift.png" />
 	  <None Remove="Resources\Images\bench_press.png" />
 	  <None Remove="Resources\Images\barbell_disk__weight_plate.png" />
+	  <None Remove="Resources\Images\pillowcase.png" />
+	  <None Remove="Resources\Images\duvet_cover.png" />
+	  <None Remove="Resources\Images\to_have.png" />
+	  <None Remove="Resources\Images\to_do.png" />
+	  <None Remove="Resources\Images\to_stay__to_be.png" />
+	  <None Remove="Resources\Images\to_exist.png" />
+	  <None Remove="Resources\Images\to_become.png" />
+	  <None Remove="Resources\Images\to_be.png" />
+	  <None Remove="Resources\Images\republic_of_suriname.png" />
+	  <None Remove="Resources\Images\samoa.png" />
+	  <None Remove="Resources\Images\solomon_islands.png" />
+	  <None Remove="Resources\Images\state_of_palestine.png" />
+	  <None Remove="Resources\Images\saint_kitts_and_nevis.png" />
+	  <None Remove="Resources\Raw\en_verbs.txt" />
+	  <None Remove="Resources\Raw\es_verbs.txt" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

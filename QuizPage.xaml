@@ -109,7 +109,7 @@
 			<Label x:Name="WordsLabel" Text="Quiz Words:" HorizontalTextAlignment="Start" HorizontalOptions="Start"
 				Margin="4" VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="14" />
 			<Stepper x:Name="WordsStepper" HorizontalOptions="Center" VerticalOptions="Center"
-			   Minimum="3" Maximum="25" Value="5" />
+			   Minimum="3" Maximum="30" Value="5" />
 			<Label x:Name="NbWords" Text="5" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Center"
 				Margin="30,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="24" />
 		</Grid>
