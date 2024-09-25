@@ -59,8 +59,54 @@ public partial class SettingsPage : ContentPage
         PlaySlider.ValueChanged += PlaySlider_ValueChanged;
         //SpeechSlider.ValueChanged += SpeechSlider_ValueChanged;
         SoundCheck.CheckedChanged += SoundCheck_CheckedChanged;
+        AboutBtn.Clicked += AboutBtn_Clicked;
 
         Setup();
+    }
+
+    async void AboutBtn_Clicked(object? sender, EventArgs e)
+    {
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+        var platform = DeviceInfo.Current.Platform == DevicePlatform.iOS ? "iOS" :
+            DeviceInfo.Current.Platform == DevicePlatform.Android ? "Android" : "macOS";
+        var refresh = Math.Round(DeviceDisplay.Current.MainDisplayInfo.RefreshRate, 0);
+
+        sb.AppendLine($"Version: {AppInfo.Current.VersionString}");
+        sb.AppendLine("");
+        sb.AppendLine($"Device: {DeviceInfo.Current.Manufacturer} {DeviceInfo.Current.Name}");
+        sb.AppendLine($"OS: {platform} {DeviceInfo.Current.VersionString}");
+        sb.AppendLine($"Size: {DeviceDisplay.Current.MainDisplayInfo.Width} x {DeviceDisplay.Current.MainDisplayInfo.Height}");
+        sb.AppendLine($"Refresh Rate: {refresh}");
+        sb.AppendLine("");
+        sb.AppendLine("Developed by Vassili iLanguage.ch");
+
+        await DisplayAlert(AppInfo.Current.Name, sb.ToString(), "OK");
+    }
+
+    public void SetSize()
+    {
+        var width = DeviceDisplay.Current.MainDisplayInfo.Width;
+        if (width <= 750)
+        {
+            PlaySlider.WidthRequest = 120;
+        }
+        else if (width <= 900)
+        {
+            PlaySlider.WidthRequest = 130;
+        }
+        else if (width <= 1000)
+        {
+            PlaySlider.WidthRequest = 150;
+        }
+        else if (width <= 1200)
+        {
+            PlaySlider.WidthRequest = 165;
+        }
+        else
+        {
+            PlaySlider.WidthRequest = 180;
+        }
     }
 
     public void Setup()
@@ -107,6 +153,11 @@ public partial class SettingsPage : ContentPage
         PlaySlider.Value = PlayRate;
         //SpeechSlider.Value = SpeechRate;
         SoundCheck.IsChecked = Sound;
+
+        VoiceLearn = learn;
+        MyVoice = mine;
+
+        SetSize();
     }
     public void Localize()
     {

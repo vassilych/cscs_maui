@@ -13,24 +13,30 @@
         <x:Double x:Key="MainSize">150</x:Double>
     </ContentPage.Resources>
 
-    <VerticalStackLayout>
+<Grid Margin="20,35,20,20"> 
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="60" />
+    </Grid.RowDefinitions>
+
+    <VerticalStackLayout Grid.Row="0">
 
 	<Grid Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="40*" />
-            <ColumnDefinition  Width="10*" />
-            <ColumnDefinition  Width="40*" />
-            <ColumnDefinition  Width="10*" />
+            <ColumnDefinition  Width="38*" />
+            <ColumnDefinition  Width="12*" />
+            <ColumnDefinition  Width="38*" />
+            <ColumnDefinition  Width="12*" />
         </Grid.ColumnDefinitions>
-        <Label x:Name="toLearn" Margin = "4,6,8,10" FontSize="16" TextColor="Blue" Grid.Column="0" Text="Language to Learn"
+        <Label x:Name="toLearn" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="0" Text="Language to Learn"
                FontAttributes="Bold" HorizontalOptions="Start" />
-        <ImageButton x:Name="flagLearn" Margin = "2,4,2,2" HorizontalOptions="End" VerticalOptions="Start" Source="en_us" Grid.Column="1"
+        <ImageButton x:Name="flagLearn" Margin = "4,4,2,2" HorizontalOptions="End" VerticalOptions="Start" Source="en_us" Grid.Column="1"
             Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
-        <Label x:Name="myLanguage" Margin = "4,6,8,10" FontSize="16" TextColor="Blue" Grid.Column="2" Text="My Language" FontAttributes="Bold" HorizontalOptions="End" />
-        <ImageButton x:Name="flagMy" Margin = "2,4,2,2" Grid.Column="3" HorizontalOptions="End"  VerticalOptions="Start" Source="es_mx"
+        <Label x:Name="myLanguage" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="2" Text="My Language" FontAttributes="Bold" HorizontalOptions="End" />
+        <ImageButton x:Name="flagMy" Margin = "4,4,2,2" Grid.Column="3" HorizontalOptions="End"  VerticalOptions="Start" Source="es_mx"
             Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
 	</Grid>
 
@@ -43,18 +49,24 @@
                 HorizontalOptions="End" VerticalOptions="StartAndExpand" />
     </StackLayout> -->
     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-    <Label x:Name="PlayrateLab" Text="Play Rate:" TextColor="Blue"  Margin = "10,30,0,0"
-            WidthRequest="140" HeightRequest="80" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    <Slider x:Name="PlaySlider" Margin = "0,30,0,0" WidthRequest="180" Minimum="1" Maximum="6" Value= "2.5"
+    <Label x:Name="PlayrateLab" Text="Play Rate:" TextColor="Blue"  Margin = "4,20,0,0"
+            WidthRequest="140" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+    <Slider x:Name="PlaySlider" Margin = "-6,30,0,0" WidthRequest="180" Minimum="1" Maximum="6" Value= "3.5"
             HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
-    <Label x:Name="PlayrateSec" Text="3.5s" TextColor="Blue"  Margin = "10,30,0,0"
-            WidthRequest="140" HeightRequest="80" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+    <Label x:Name="PlayrateSec" Text="3.5s" TextColor="Blue"  Margin = "4,36,0,0"
+            WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
     </StackLayout>
-    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-    <Label x:Name="SoundLab" Text="Sound:" TextColor="Blue"  Margin = "10,0,0,0" WidthRequest="180"
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+    <Label x:Name="SoundLab" Text="Sound:" TextColor="Blue"  Margin = "10,-10,0,0" WidthRequest="180"
         HorizontalTextAlignment="Start"  HorizontalOptions="Start" VerticalOptions="Center"/>
-    <CheckBox x:Name="SoundCheck" Margin = "60,0,0,0" IsChecked="true" HorizontalOptions="End" VerticalOptions="Center" />
+    <CheckBox x:Name="SoundCheck" Margin = "30,-10,0,0" IsChecked="true" HorizontalOptions="End" VerticalOptions="Center" />
     </StackLayout>
-  </VerticalStackLayout>
 
+  </VerticalStackLayout>
+    <VerticalStackLayout Grid.Row="1" VerticalOptions="End" HorizontalOptions="End" >
+        <ImageButton x:Name="AboutBtn" Margin = "20,4,0,20"  Source="info.png" 
+        Background="Transparent" WidthRequest="50" HeightRequest="50" />
+    </VerticalStackLayout>
+
+</Grid>
 </ContentPage>

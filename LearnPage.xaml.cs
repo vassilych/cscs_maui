@@ -54,7 +54,7 @@ public partial class LearnPage : ContentPage
         FindBut.Clicked += FindBut_Clicked;
         SearchEntry.TextChanged += SearchEntry_TextChanged;
         SearchEntry.Completed += BackBut_Clicked;
-        BackBut.Clicked += BackBut_Clicked;
+        ButOk.Clicked += BackBut_Clicked;
 
         TranslationView.ItemTapped += TranslationView_ItemTapped;
         ResultsView.ItemTapped += ResultsView_ItemTapped;
@@ -93,12 +93,40 @@ public partial class LearnPage : ContentPage
         await TTS.Speak(trans, voice);
     }
 
-    public static void SetFontSize(Label l, double delta = -6)
+    public static void SetSize(Label l, bool isHeader = false)
     {
-        var curr = GetFontSize(l.Text);
-        l.FontSize = curr + delta;
+        //var curr = GetFontSize(l.Text);
+        //l.FontSize = curr + delta;
+        l.FontSize = isHeader && l.Text.Length >= 15 ? 13 : 14;
+       // l.LineHeight = l.Text.Length >= 15 ? 2 : 1;
+
+        var width = DeviceDisplay.Current.MainDisplayInfo.Width;
+        if (width <= 650)
+        {
+            l.WidthRequest = 96;
+        }
+        else if (width <= 750)
+        {
+            l.WidthRequest = 110;
+        }
+        else if (width <= 900)
+        {
+            l.WidthRequest = 112;
+        }
+        else if (width <= 1000)
+        {
+            l.WidthRequest = 114;
+        }
+        else if (width <= 1200)
+        {
+            l.WidthRequest = 116;
+        }
+        else
+        {
+            l.WidthRequest = 125;
+        }
     }
-    public static void SetFontSize(Button btn, double delta = 0)
+    public static void SetSize(Button btn, double delta = 0)
     {
         var curr = GetFontSize(btn.Text);
         btn.FontSize = curr + delta;
@@ -216,7 +244,7 @@ public partial class LearnPage : ContentPage
     void SetMode(bool findMode = false, bool infoMode = false)
     {
         SearchPanel.IsVisible = findMode || infoMode;
-        BackBut.IsVisible = findMode || infoMode;
+        ButOk.IsVisible = findMode || infoMode;
         ResultsView.IsVisible = findMode && !infoMode;
         SearchEntry.IsEnabled = SearchEntry.IsVisible = findMode;
         WordName.IsVisible = infoMode;
@@ -296,12 +324,30 @@ public partial class LearnPage : ContentPage
             }
             break;
         }
-        SetFontSize(VerbInfoH1); SetFontSize(VerbInfoH2); SetFontSize(VerbInfoH3); SetFontSize(VerbInfoH4); SetFontSize(VerbInfoH5); SetFontSize(VerbInfoH6);
-        SetFontSize(VerbInfoH7); SetFontSize(VerbInfoH8); SetFontSize(VerbInfoH9);
-        SetFontSize(VerbInfo11); SetFontSize(VerbInfo21); SetFontSize(VerbInfo31); SetFontSize(VerbInfo41); SetFontSize(VerbInfo51); SetFontSize(VerbInfo61);
-        SetFontSize(VerbInfo12); SetFontSize(VerbInfo22); SetFontSize(VerbInfo32); SetFontSize(VerbInfo42); SetFontSize(VerbInfo52); SetFontSize(VerbInfo62);
-        SetFontSize(VerbInfo13); SetFontSize(VerbInfo23); SetFontSize(VerbInfo33); SetFontSize(VerbInfo43); SetFontSize(VerbInfo53); SetFontSize(VerbInfo63);
-        SetFontSize(VerbInfo71); SetFontSize(VerbInfo81); SetFontSize(VerbInfo91); SetFontSize(VerbInfo101); SetFontSize(VerbInfo111); SetFontSize(VerbInfo121);
+        SetSize(VerbInfoH1, true); SetSize(VerbInfoH2, true); SetSize(VerbInfoH3, true);
+        SetSize(VerbInfoH4, true); SetSize(VerbInfoH5, true); SetSize(VerbInfoH6, true);
+        SetSize(VerbInfoH7, true); SetSize(VerbInfoH8, true); SetSize(VerbInfoH9, true);
+
+        SetSize(VerbInfo11); SetSize(VerbInfo21); SetSize(VerbInfo31);
+        SetSize(VerbInfo12); SetSize(VerbInfo22); SetSize(VerbInfo32);
+        SetSize(VerbInfo13); SetSize(VerbInfo23); SetSize(VerbInfo33);
+        SetSize(VerbInfo41); SetSize(VerbInfo51); SetSize(VerbInfo61);
+        SetSize(VerbInfo42); SetSize(VerbInfo52); SetSize(VerbInfo62);
+        SetSize(VerbInfo43); SetSize(VerbInfo53); SetSize(VerbInfo63);
+
+        SetSize(VerbInfo71); SetSize(VerbInfo81); SetSize(VerbInfo91);
+        SetSize(VerbInfo72); SetSize(VerbInfo82); SetSize(VerbInfo92);
+        SetSize(VerbInfo73); SetSize(VerbInfo83); SetSize(VerbInfo93);
+        SetSize(VerbInfo101); SetSize(VerbInfo111); SetSize(VerbInfo121);
+        SetSize(VerbInfo102); SetSize(VerbInfo112); SetSize(VerbInfo122);
+        SetSize(VerbInfo103); SetSize(VerbInfo113); SetSize(VerbInfo123);
+
+        SetSize(VerbInfo131); SetSize(VerbInfo141); SetSize(VerbInfo151);
+        SetSize(VerbInfo132); SetSize(VerbInfo142); SetSize(VerbInfo152);
+        SetSize(VerbInfo133); SetSize(VerbInfo143); SetSize(VerbInfo153);
+        SetSize(VerbInfo161); SetSize(VerbInfo171); SetSize(VerbInfo181);
+        SetSize(VerbInfo162); SetSize(VerbInfo172); SetSize(VerbInfo182);
+        SetSize(VerbInfo163); SetSize(VerbInfo173); SetSize(VerbInfo183);
     }
     void LoadEnVerbs(string[] tokens)
     {
@@ -317,7 +363,7 @@ public partial class LearnPage : ContentPage
         VerbInfo51.Text = "you " + tokens[5];
         VerbInfo61.Text = "they " + tokens[5];
 
-        VerbInfoH2.Text = "Past";
+        VerbInfoH2.Text = "Simple Past";
         VerbInfo12.Text = "I " + tokens[7];
         VerbInfo22.Text = "you " + tokens[8];
         VerbInfo32.Text = "she " + tokens[9];
@@ -333,7 +379,7 @@ public partial class LearnPage : ContentPage
         VerbInfo53.Text = "you will " + tokens[1];
         VerbInfo63.Text = "they will " + tokens[1];
 
-        VerbInfoH4.Text = "Continuous";
+        VerbInfoH4.Text = "Pres. Cont.";
         VerbInfo71.Text = "I'm " + tokens[3];
         VerbInfo81.Text = "you're " + tokens[3];
         VerbInfo91.Text = "she's " + tokens[3];
@@ -341,7 +387,7 @@ public partial class LearnPage : ContentPage
         VerbInfo111.Text = "you're " + tokens[3];
         VerbInfo121.Text = "they're " + tokens[3];
 
-        VerbInfoH5.Text = "Perfect";
+        VerbInfoH5.Text = "Pres. Perfect";
         VerbInfo72.Text = "have " + tokens[2];
         VerbInfo82.Text = "have " + tokens[2];
         VerbInfo92.Text = "has " + tokens[2];
@@ -350,7 +396,29 @@ public partial class LearnPage : ContentPage
         VerbInfoH6.Text = "Conditional";
         VerbInfo73.Text = VerbInfo83.Text = VerbInfo93.Text =
             VerbInfo103.Text = VerbInfo113.Text = VerbInfo123.Text = "would " + tokens[1];
-        ShowRow3(false);
+
+        ShowRow3(true);
+        VerbInfoH7.Text = "Past Cont.";
+        VerbInfo131.Text = "I was " + tokens[3];
+        VerbInfo141.Text = "you were " + tokens[3];
+        VerbInfo151.Text = "she was " + tokens[3];
+        VerbInfo161.Text = "we were " + tokens[3];
+        VerbInfo171.Text = "you were " + tokens[3];
+        VerbInfo181.Text = "they were " + tokens[3];
+
+        VerbInfoH8.Text = "Past Perfect";
+        VerbInfo132.Text = "had " + tokens[2];
+        VerbInfo142.Text = "had " + tokens[2];
+        VerbInfo152.Text = "had " + tokens[2];
+        VerbInfo162.Text = VerbInfo172.Text = VerbInfo182.Text = "had " + tokens[2];
+
+        VerbInfoH9.Text = "Pres. Emphatic";
+        VerbInfo133.Text = "do " + tokens[1];
+        VerbInfo143.Text = "do " + tokens[1];
+        VerbInfo153.Text = "does " + tokens[1];
+        VerbInfo163.Text = "do " + tokens[1];
+        VerbInfo173.Text = "do " + tokens[1];
+        VerbInfo183.Text = "do " + tokens[1];
     }
 
     void LoadEsVerbs(string[] tokens)
@@ -377,7 +445,7 @@ public partial class LearnPage : ContentPage
         VerbInfo52.Text = tokens[13];
         VerbInfo62.Text = tokens[14];
 
-        VerbInfoH3.Text = "Pret indefinido";
+        VerbInfoH3.Text = "Pret Indefinido";
         VerbInfo13.Text = tokens[15];
         VerbInfo23.Text = tokens[16];
         VerbInfo33.Text = tokens[17];
@@ -393,7 +461,7 @@ public partial class LearnPage : ContentPage
         VerbInfo111.Text = tokens[25];
         VerbInfo121.Text = tokens[26];
 
-        VerbInfoH5.Text = "Pretérito perfecto";
+        VerbInfoH5.Text = "Pret Perfecto";
         VerbInfo72.Text = "he " + tokens[1];
         VerbInfo82.Text = "has " + tokens[1];
         VerbInfo92.Text = "ha " + tokens[1];
@@ -418,7 +486,7 @@ public partial class LearnPage : ContentPage
         VerbInfo171.Text = "habíais " + tokens[1];
         VerbInfo181.Text = "habían " + tokens[1];
 
-        VerbInfoH8.Text = "Presente continuo";
+        VerbInfoH8.Text = "Pres continuo";
         VerbInfo132.Text = "estoy " + tokens[2];
         VerbInfo142.Text = "estás " + tokens[2];
         VerbInfo152.Text = "está " + tokens[2];
@@ -493,14 +561,14 @@ public partial class LearnPage : ContentPage
         VerbInfo103.Text = tokens[40].Contains(" wir") || tokens[40] == "-" ? tokens[40] : tokens[40] + " wir!";
         VerbInfo113.Text = tokens[41].Contains(" ihr") || tokens[41] == "-" ? tokens[41] : tokens[41] + " ihr!";
         VerbInfo123.Text = tokens[42].Contains(" Sie") || tokens[42] == "-" ? tokens[42] : tokens[42] + " Sie!";
-        ShowRow3(false);
+        ShowRow3(true);
         VerbInfoH7.Text = "Konj Präsens I";
-        VerbInfo131.Text = tokens[27];
-        VerbInfo141.Text = tokens[28];
-        VerbInfo151.Text = tokens[29];
-        VerbInfo161.Text = tokens[30];
-        VerbInfo171.Text = tokens[31];
-        VerbInfo181.Text = tokens[32];
+        VerbInfo131.Text = "ich " + tokens[27];
+        VerbInfo141.Text = "du " + tokens[28];
+        VerbInfo151.Text = "er/sie/es " + tokens[29];
+        VerbInfo161.Text = "wir " + tokens[30];
+        VerbInfo171.Text = "ihr " + tokens[31];
+        VerbInfo181.Text = "sie/Sie " + tokens[32];
 
         VerbInfoH8.Text = "Konj Präter II";
         VerbInfo132.Text = tokens[33];
@@ -598,7 +666,7 @@ public partial class LearnPage : ContentPage
             {
                 break;
             }
-            await Task.Delay(600);
+            await Task.Delay(800);
         }
         m_settingWord = true;
         Context.SetWord(word);
