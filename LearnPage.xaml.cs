@@ -44,6 +44,7 @@ public partial class LearnPage : ContentPage
         CategoryPicker.SelectedIndexChanged += CategorySelectionChanged;
 
         m_category = Categories.GetCategory(index);
+        //SetCategory(m_category, true);
         PrevImg.Clicked += PrevImgClick;
         NextImg.Clicked += NextImgClick;
         MainImgImg.Clicked += NextImgClick;
@@ -304,6 +305,12 @@ public partial class LearnPage : ContentPage
                 }
                 if (string.IsNullOrWhiteSpace(data))
                 {
+                    var c = candidate.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                    var cand2 = c.First();
+                    data = GetWordData(prefix1, cand2);
+                }
+                if (string.IsNullOrWhiteSpace(data))
+                {
                     await DisplayAlert(AppResources.verbs, string.Format(AppResources.Word_with__0__not_found, candidate), "OK");
                     continue;
                 }
@@ -321,6 +328,10 @@ public partial class LearnPage : ContentPage
             else if (prefix1.StartsWith("de"))
             {
                 LoadDeVerbs(tokens);
+            }
+            else if (prefix1.StartsWith("ru"))
+            {
+                LoadRuVerbs(tokens);
             }
             break;
         }
@@ -587,6 +598,68 @@ public partial class LearnPage : ContentPage
         VerbInfo183.Text = "würden " + tokens[0];
     }
 
+    void LoadRuVerbs(string[] tokens)
+    {
+        WordName.Text = tokens[0];
+        Participle.Text = "Причастие: " + tokens[1];
+        Gerund.Text = "Деепричастие: " + tokens[2];
+        /* спорить, спорящий, споря, 
+         * НАСТ 3 спорю,споришь,спорит,спорим,спорите,спорят,
+         * ПРОШ 9 спорил/спорила,спорил/спорила,спорил/спорила,спорили,спорили,спорили, 
+         * БУД 15 буду спорить,будешь спорить,будет спорить,будем спорить,будете спорить,будут спорить, 
+         * УСЛ 21 бы спорил / спорила,бы спорил / спорила,бы спорил / спорила,бы спорили,бы спорили,бы спорили,
+         * ПОВ 27 спорь,спорьте
+ */
+        VerbInfoH1.Text = "Настоящее время";
+        VerbInfo11.Text = "Я " + tokens[3];
+        VerbInfo21.Text = "Ты " + tokens[4];
+        VerbInfo31.Text = "Он/она " + tokens[5];
+        VerbInfo41.Text = "Мы " + tokens[6];
+        VerbInfo51.Text = "Вы " + tokens[7];
+        VerbInfo61.Text = "Они " + tokens[8];
+
+        VerbInfoH2.Text = "Прошедшее Муж.";
+        VerbInfo12.Text = tokens[9].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
+        VerbInfo22.Text = tokens[10].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
+        VerbInfo32.Text = tokens[11].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
+        VerbInfo42.Text = tokens[12].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
+        VerbInfo52.Text = tokens[13].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
+        VerbInfo62.Text = tokens[14].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
+
+        VerbInfoH3.Text = "Прошедшее Жен.";
+        VerbInfo13.Text = tokens[9].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
+        VerbInfo23.Text = tokens[10].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
+        VerbInfo33.Text = tokens[11].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
+        VerbInfo43.Text = tokens[12].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
+        VerbInfo53.Text = tokens[13].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
+        VerbInfo63.Text = tokens[14].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
+
+        VerbInfoH4.Text = "Будущее время";
+        VerbInfo71.Text = "Я " + tokens[15];
+        VerbInfo81.Text = "Ты " + tokens[16];
+        VerbInfo91.Text = "Он/она " + tokens[17];
+        VerbInfo101.Text = "Мы " + tokens[18];
+        VerbInfo111.Text = "Вы " + tokens[19];
+        VerbInfo121.Text = "Они " + tokens[20];
+
+        VerbInfoH5.Text = "Сослагательное";
+        VerbInfo72.Text = tokens[21];
+        VerbInfo82.Text = tokens[22];
+        VerbInfo92.Text = tokens[23];
+        VerbInfo102.Text = tokens[24];
+        VerbInfo112.Text = tokens[25];
+        VerbInfo122.Text = tokens[26];
+
+        VerbInfoH6.Text = "Повелительное";
+        VerbInfo73.Text = "";
+        VerbInfo83.Text = tokens[27];
+        VerbInfo93.Text = "";
+        VerbInfo103.Text = "";
+        VerbInfo113.Text = tokens[28];
+        VerbInfo123.Text = "";
+        ShowRow3(false);
+    }
+
     void ShowRow3(bool isVisible = true)
     {
         VerbInfoH7.IsVisible = VerbInfoH8.IsVisible = VerbInfoH9.IsVisible =
@@ -658,6 +731,20 @@ public partial class LearnPage : ContentPage
         });
     }
 
+    void SetCategory(Category cat, bool force = false)
+    {
+        if (!force && (m_category == Categories.DefaultCategory || cat == m_category))
+        {
+            return;
+        }
+        m_category = cat;
+        if (cat == Categories.DefaultCategory)
+        {
+            var rnd = QuizPage.GetRandom(100, 100);
+            var i = 0;
+        }
+    }
+
     async Task SetWord(Word word, bool speak = true)
     {
         for (int i = 0; i < 1; i++)
@@ -670,7 +757,7 @@ public partial class LearnPage : ContentPage
         }
         m_settingWord = true;
         Context.SetWord(word);
-        m_category = word.Category;
+        m_category = m_category == Categories.DefaultCategory ? m_category : word.Category;
         var ind = Categories.GetCategoryIndex(m_category.Name);
         if (ind < 0)
         {
@@ -681,7 +768,7 @@ public partial class LearnPage : ContentPage
         Preferences.Set(WordSet, wordIndex);
         Preferences.Set(CategorySet, ind);
         CategoryPicker.SelectedIndex = ind;
-        if (m_category.IsText)
+        if (word.Category.IsText)
         {
             MainImgTxt.Text = Context.MainWord;
             MainImgTxt.IsVisible = true;
@@ -700,7 +787,7 @@ public partial class LearnPage : ContentPage
         TranslationFlag.Source = Word.GetFlag(SettingsPage.MyVoice);
         TranslationBtn.Text = word.GetTranslation(SettingsPage.MyVoice);
         TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
-        ButInfoBorder.IsVisible = ButInfo.IsVisible = (m_category.Name == "verbs");
+        ButInfoBorder.IsVisible = ButInfo.IsVisible = (word.Category.Name == "verbs");
 
         if (speak)
         {
@@ -745,6 +832,7 @@ public partial class LearnPage : ContentPage
         Preferences.Set(CategorySet, chosen);
 
         m_category = Categories.SwitchCategory(chosen);
+        //SetCategory(m_category, true);
 
         var word = m_category.GetWord();
         await SetWord(word);
@@ -849,6 +937,7 @@ public class Context
             AppResources.countries,
             AppResources.environment,
             AppResources.verbs,
+            AppResources.prepositions,
             AppResources.adjectives,
             AppResources.phrases_greetings,
             AppResources.basic_phrases,
@@ -886,11 +975,11 @@ public class Context
         Word = word;
         MainWord = word.GetTranslation(SettingsPage.VoiceLearn);
 
-        Variable data = new Variable(Variable.VarType.ARRAY);
+        /*Variable data = new Variable(Variable.VarType.ARRAY);
         data.Tuple.Add(new Variable("lol"));
         data.Tuple.Add(new Variable("lala"));
 
-        MainPage.Instance.Scripting.UpdateValue(nameof(LearnPage.Context.TransInfo), data);
+        MainPage.Instance.Scripting.UpdateValue(nameof(LearnPage.Context.TransInfo), data);*/
 
     }
 

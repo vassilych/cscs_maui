@@ -192,6 +192,9 @@
 <data name="adjectives" xml:space="preserve">
   <value>الصفات</value>
 </data>
+<data name="prepositions" xml:space="preserve">
+  <value>حرف جر</value>
+</data>
 <data name="family and kids" xml:space="preserve">
   <value>العائلة والاطفال</value>
 </data>

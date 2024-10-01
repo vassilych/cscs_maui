@@ -189,6 +189,9 @@
 <data name="adjectives" xml:space="preserve">
   <value>形容詞</value>
 </data>
+<data name="prepositions" xml:space="preserve">
+  <value>前置詞</value>
+</data>
 <data name="family and kids" xml:space="preserve">
   <value>家族・子供</value>
 </data>

@@ -192,6 +192,9 @@
 <data name="adjectives" xml:space="preserve">
   <value>aggettivi</value>
 </data>
+<data name="prepositions" xml:space="preserve">
+  <value>preposizioni</value>
+</data>
 <data name="family and kids" xml:space="preserve">
   <value>famiglia e bambini</value>
 </data>

@@ -47,8 +47,8 @@
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
-	  <CodesignProvision>iLanguage DistrDev</CodesignProvision>
-	  <CodesignKey>iPhone Developer</CodesignKey>
+	  <CodesignProvision>iLanguageDistrAppStoreNew</CodesignProvision>
+	  <CodesignKey>Apple Distribution: Vassili Kaplan (TSJNANF679)</CodesignKey>
 	  <BuildIpa>true</BuildIpa>
 	  <MtouchDebug>true</MtouchDebug>
 	  <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -182,7 +182,7 @@
 	  <BundleResource Include="Resources\Images\us_bg.png" />
 	  <BundleResource Include="Resources\Images\universe.png" />
 	  <BundleResource Include="Resources\Images\unemployed.png" />
-	  <BundleResource Include="Resources\Images\underwear.png" />
+	  <BundleResource Include="Resources\Images\underwear__underpants.png" />
 	  <BundleResource Include="Resources\Images\underground.png" />
 	  <BundleResource Include="Resources\Images\uncle.png" />
 	  <BundleResource Include="Resources\Images\umbrella.png" />
@@ -211,7 +211,7 @@
 	  <BundleResource Include="Resources\Images\trunk.png" />
 	  <BundleResource Include="Resources\Images\trumpet.png" />
 	  <BundleResource Include="Resources\Images\truck.png" />
-	  <BundleResource Include="Resources\Images\trousers.png" />
+	  <BundleResource Include="Resources\Images\pants.png" />
 	  <BundleResource Include="Resources\Images\trombone.png" />
 	  <BundleResource Include="Resources\Images\triceps.png" />
 	  <BundleResource Include="Resources\Images\triangle.png" />
@@ -1991,6 +1991,33 @@
 	  <BundleResource Include="Resources\Raw\es_verbs.txt">
 	    <LogicalName>es_verbs.txt</LogicalName>
 	  </BundleResource>
+	  <BundleResource Include="Resources\Raw\ru_verbs.txt" />
+	  <BundleResource Include="Resources\Images\mango.png" />
+	  <BundleResource Include="Resources\Images\vinegar.png" />
+	  <BundleResource Include="Resources\Images\chips.png" />
+	  <BundleResource Include="Resources\Images\jelly.png" />
+	  <BundleResource Include="Resources\Images\jello.png" />
+	  <BundleResource Include="Resources\Images\cilantro.png" />
+	  <BundleResource Include="Resources\Images\fish_sticks.png" />
+	  <BundleResource Include="Resources\Images\arugula.png" />
+	  <BundleResource Include="Resources\Images\through.png" />
+	  <BundleResource Include="Resources\Images\at.png" />
+	  <BundleResource Include="Resources\Images\in.png" />
+	  <BundleResource Include="Resources\Images\under.png" />
+	  <BundleResource Include="Resources\Images\beside.png" />
+	  <BundleResource Include="Resources\Images\above.png" />
+	  <BundleResource Include="Resources\Images\below.png" />
+	  <BundleResource Include="Resources\Images\behind.png" />
+	  <BundleResource Include="Resources\Images\in_front_of.png" />
+	  <BundleResource Include="Resources\Images\on.png" />
+	  <BundleResource Include="Resources\Images\date__fruit.png" />
+	  <BundleResource Include="Resources\Images\blueberry.png" />
+	  <BundleResource Include="Resources\Images\pomegranate.png" />
+	  <BundleResource Include="Resources\Images\date__fruit.png" />
+	  <BundleResource Include="Resources\Images\blueberry.png" />
+	  <BundleResource Include="Resources\Images\pomegranate.png" />
+	  <BundleResource Include="Resources\Images\blackberry.png" />
+	  <BundleResource Include="Resources\Images\redberry__red_currant.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2120,6 +2147,30 @@
 	  <None Remove="Resources\Images\saint_kitts_and_nevis.png" />
 	  <None Remove="Resources\Raw\en_verbs.txt" />
 	  <None Remove="Resources\Raw\es_verbs.txt" />
+	  <None Remove="Resources\Raw\ru_verbs.txt" />
+	  <None Remove="Resources\Images\mango.png" />
+	  <None Remove="Resources\Images\vinegar.png" />
+	  <None Remove="Resources\Images\chips.png" />
+	  <None Remove="Resources\Images\jelly.png" />
+	  <None Remove="Resources\Images\jello.png" />
+	  <None Remove="Resources\Images\cilantro.png" />
+	  <None Remove="Resources\Images\fish_sticks.png" />
+	  <None Remove="Resources\Images\arugula.png" />
+	  <None Remove="Resources\Images\through.png" />
+	  <None Remove="Resources\Images\at.png" />
+	  <None Remove="Resources\Images\in.png" />
+	  <None Remove="Resources\Images\under.png" />
+	  <None Remove="Resources\Images\beside.png" />
+	  <None Remove="Resources\Images\above.png" />
+	  <None Remove="Resources\Images\below.png" />
+	  <None Remove="Resources\Images\behind.png" />
+	  <None Remove="Resources\Images\in_front_of.png" />
+	  <None Remove="Resources\Images\on.png" />
+	  <None Remove="Resources\Images\date__fruit.png" />
+	  <None Remove="Resources\Images\blueberry.png" />
+	  <None Remove="Resources\Images\pomegranate.png" />
+	  <None Remove="Resources\Images\blackberry.png" />
+	  <None Remove="Resources\Images\redberry.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

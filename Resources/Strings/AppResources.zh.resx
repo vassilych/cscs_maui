@@ -192,6 +192,9 @@
 <data name="adjectives" xml:space="preserve">
   <value>形容词</value>
 </data>
+<data name="prepositions" xml:space="preserve">
+  <value>介词</value>
+</data>
 <data name="family and kids" xml:space="preserve">
   <value>家庭和儿童</value>
 </data>

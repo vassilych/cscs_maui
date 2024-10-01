@@ -417,17 +417,18 @@ fruits and vegetables	banana		die Banane		банан	el plátano		a banana	la ba
 fruits and vegetables	beet	beetroot	die rote Beete		свекла	la betabel	la remolacha	a beterraba	la betterave	la barbabietola	סֶלֶק	甜菜	カブ	بنجر	tiáncài
 fruits and vegetables	cabbage		der Kohl	Chohl	капуста	el col		o repolho	le chou	il cavolo	כְּרוּב	卷心菜	キャベツ	الكرنب	juǎnxīncài
 fruits and vegetables	carrot		die Karotte	Rüebli	морковь	la zanahoria		a cenoura	la carotte	la carota	גֶזֶר	胡萝卜	ニンジン	جزر	húluóbo
-fruits and vegetables	cauliflower		der Blumenkohl	Bluemechohl	цветная капуста	el brócoli	el coliflor	o couve-flor	le chou-fleur	il cavolfiore	כְּרוּבִית	花椰菜	カリフラワー	قرنبيط	huāyēcài
+fruits and vegetables	cauliflower		der Blumenkohl	Bluemechohl	цветная капуста	la coliflor		o couve-flor	le chou-fleur	il cavolfiore	כְּרוּבִית	花椰菜	カリフラワー	قرنبيط	huāyēcài
+fruits and vegetables	broccoli		der Brokkoli		брокколи	el brócoli		os brócolis	le brocoli	il broccolo	בְּרוֹקוֹלִי	西兰花	ブロッコリー	بروكلي	Xī lánhuā
 fruits and vegetables	cherry		die Kirsche	Chriesi	вишня	la cereza		a cereja	la cerise	la ciliegia	דוּבדְבָן	樱桃	チェリー	الكرز	yīngtáo
 fruits and vegetables	chestnut		die Kastanie	Marone	каштан	la castaña		a castanha	la châtaigne	la castagna	עַרמוֹן	板栗	栗	كستناء	bǎnlì
 fruits and vegetables	coconut		die Kokosnuss		кокосовый орех	el coco		o coco	la noix de coco	la noce di cocco	קוֹקוּס	椰子	ココナッツ	جوزة الهند	yēzi
 fruits and vegetables	coffee bean		die Kaffeebohne	Kafibohne	кофейное зерно	el grano de café		o grão de café	le grain de café	il chicco di caffè	פולי קפה	咖啡豆	コー​​ヒー豆	حبوب القهوة	kāfēi dòu
 fruits and vegetables	corn	maize	der Mais		кукуруза	el elote	el maíz	o milho	le maïs	il mais	תִירָס	玉米	トウモロコシ	حبوب ذرة	yùmǐ
 fruits and vegetables	cucumber		die Gurke		огурец	el pepino		o pepino	le concombre	il cetriolo	מְלָפְפוֹן	黄瓜	キュウリ	خيار	huángguā
-fruits and vegetables	egg		das Ei		яйцо	el huevo 		o ovo	l'œuf	l'uovo	בֵּיצָה	鸡蛋	卵	بيضة	jīdàn
 fruits and vegetables	eggplant	aubergine	die Aubergine		баклажан	la berenjena		a berinjela	l'aubergine	la melanzana	חָצִיל	茄子	ナス	الباذنجان	qiézi
 fruits and vegetables	garlic		der Knoblauch		чеснок	el ajo		o alho	l'ail	l'aglio	שׁוּם	大蒜	ニンニク	ثوم	dàsuàn
 fruits and vegetables	grapefruit		die Grapefruit		грейпфрут	la toronja	el pomelo	a toranja	le pamplemousse	il pompelmo	אֶשׁכּוֹלִיוֹת	葡萄柚	グレープフルーツ	جريب فروت	pútáo yòu
+fruits and vegetables	pomegranate		der Granatapfel		гранат	la granada	a romã	la grenade	la melagrana	רִמוֹן	石榴	ザクロ	 رمان	Shíliú
 fruits and vegetables	grapes		die Traube	Truube	виноград	la uva		as uvas	le raisin	l'uva	ענבים	葡萄	葡萄	عنب	pútáo
 fruits and vegetables	hazelnut		die Haselnuss		фундук, лесной орех	la avellana		a avelã	la noisette	la nocciola	אֱגוֹזֵי לוּז	榛子	ヘーゼルナッツ	بندق	zhēnzi
 fruits and vegetables	kidney bean		die Kidney Bohne	roti Bohne	фасоль	el frijol		o Feijão	l'haricot rouge	il fagiolone	שעועית כליות	四季豆	インゲン豆	فاصوليا ذات الشكل الكلوي	sìjì dòu
@@ -442,6 +443,7 @@ fruits and vegetables	pea		die Erbse		горох	el chícharo	el guisante	a ervi
 fruits and vegetables	peanut		die Erdnuss		арахис, земляной орех	el cacahuate	el cacahuete, el maní	o amendoim	la cacahuète	l'arachide	בֹּטֶן	花生	ピーナッツ	الفول السوداني	huāshēng
 fruits and vegetables	pear		die Birne	Bire	груша	la pera		a pêra	la poire	la pera	אַגָס	梨子	梨	كمثرى	lízi
 fruits and vegetables	pineapple		die Ananas		ананас	la piña		o abacaxi	l'ananas	l'ananas	אֲנָנָס	菠萝	パイナップル	أناناس	bōluó
+fruits and vegetables	mango		​die Mango		манго	el mango		​a manga	​la mangue	​il mango	מַנגוֹ	芒果	マンゴー	مانجو	Mángguǒ
 fruits and vegetables	pistachio		die Pistazie		фисташка	el pistache	el pistacho	o pistache	la pistache	il pistacchio	פיסטוק	开心果	ピスタチオ	فستق	kāixīn guǒ
 fruits and vegetables	plum		die Pflaume	Pflume	слива	la ciruela		a ameixa	la prune	la prugna	שָׁזִיף	李子，梅子	梅	برقوق	lǐzǐ, méizi
 fruits and vegetables	potato		die Kartoffel	Herdöpfel	картофель	las papas	las patatas	a batata	les pommes de terre	la patata	תַפּוּחַ אַדֲמָה	土豆	ポテト	البطاطس	tǔdòu
@@ -449,24 +451,32 @@ fruits and vegetables	pumpkin		der Kürbis		тыква	la calabaza		a abóbora	l
 fruits and vegetables	radish		das Radieschen	Radiesli	редис	el rábano		o rabanete	le radis	il ravanello	צְנוֹן	萝卜	大根	فجل	luóbo
 fruits and vegetables	raspberry		die Himbeere		малина	la frambuesa		a framboesa	la framboise	il lampone	פֶּטֶל	覆盆子	ラズベリー	توت العُليق	fù pénzi
 fruits and vegetables	strawberry		die Erdbeere		клубника	la fresa		o morango	la fraise	la fragola	תּוּת	草莓	イチゴ	الفراولة	cǎoméi
+fruits and vegetables	blueberry		die Blaubeere		черника	​la mora azul	​el arándano	​o mirtilo	​la myrtille	​il mirtillo	אוּכמָנִית	蓝莓	ブルーベリー	.توت 	Lánméi
+fruits and vegetables	blackberry		die Brombeere 		чёрная смородина	​la zarzamora		a amora	la mûre	la mora	אוכמן	黑莓	ブラックベリー	التوت الأسود 	Hēiméi
+fruits and vegetables	redberry, red currant		die Johannisbeere		красная смородина	​la grosella roja		a groselha vermelha	​la groseille rouge	​il ribes rosso	דומדמניות אדומות	红醋栗	レッドカラント	الكشمش الأحمر	Hóng cù lì
+fruits and vegetables	date (fruit)		die Dattel		финик	der dátil		​a tâmara	la datte	​il dattero	פרי תמר	枣	(果実)	ナツメヤシ、デーツ 名		تمر 	zǎo
 fruits and vegetables	sweet pepper		der Paprika	Pepperoni	сладкий перец	el pimiento morrón		o pimentão	le paprika	il peperone	פלפל מתוק	甜椒	ピーマン	فلفل حلو	tián jiāo
 fruits and vegetables	tomato		die Tomate		помидор	el jitomate	el tomate	o tomate	la tomate	il pomodoro	עַגְבָנִיָה	西红柿，番茄	トマト	طماطم	xīhóngshì, fānqié
 fruits and vegetables	walnut		die Walnuss		грецкий орех	la nuez		a noz	la noix	la noce	אֱגוֹז	核桃	クルミ	الجوز	hétáo
 fruits and vegetables	watermelon		die Wassermelone		арбуз	la sandía		a melancia	la pastèque	l'anguria	אֲבַטִיחַ	西瓜	スイカ	بطيخ	xīguā
 fruits and vegetables	zucchini	courgette	die Zucchini		кабачок	la calabacita	el calabacín	a abobrinha	la courgette	lo zucchino	קִשׁוּא	绿皮西葫芦	ズッキーニ	كوسة	lǜ pí xīhúlu
+fruits and vegetables	arugula	rocket plant	die Rucola		руккола	la rúcola		a rucola	la roquette	la rucola	ארוגולה	芝麻菜	ルッコラ	جرجير	Zhīma cài
+fruits and vegetables	cilantro	coriander	der Koriander		киндза, кориандр	el cilantro		o coentro	la coriandre	il coriandolo	כוסברה	香菜	コリアンダー	الكزبرة	Xiāngcài
 food and beverage	salad		der Gartensalat		салат	la ensalada		a salada	la salade	l'insalata	סָלָט	沙拉	サラダ	سلطة	shālā
 food and beverage	butter		die Butter		масло	la mantequilla		a manteiga	le beurre	il burro	חֶמאָה	黄油	バター	زبدة	huángyóu
 food and beverage	bread		das Brot		хлеб	el pan		o pão	le pain	il pane	לֶחֶם	面包	パン	خبز	miànbāo
 food and beverage	bun	bap	das Brötchen	Brötli	булка	el bolillo	el bollo	o pão	le petit-pain	la ciambella	לַחמָנִיָה	小圆面包	菓子パン	الخبز الصغير	xiǎo yuán miànbāo
 food and beverage	bacon		der Speck		сало	el tocino		o bacon	le bacon	il bacon	בְּשַׂר חֲזִיר	熏肉，培根	ベーコン	لحم خنزير مقدد	xūn ròu, péigēn
+food and beverage	egg		das Ei		яйцо	el huevo 		o ovo	l'œuf	l'uovo	בֵּיצָה	鸡蛋	卵	بيضة	jīdàn
 food and beverage	sunny side up	fried egg	das Spiegelei		яичница глазунья	el huevo estrellado	el huevo frito	o ovo frito com a gema mole	l'œuf au plat	l'uovo sodo	צד שמש למעלה	只煎一面的荷包蛋	目玉焼き	بيض مقلي	zhǐ jiān yīmiàn de hébāodàn
 food and beverage	omelet	omelette	das Omelett		яичница омлет	el omelet	la tortilla	o omelete	l'omelette	la frittata	חֲבִיתָה	煎蛋卷	オムレツ	عجة البيض	jiān dàn juǎn
 food and beverage	burger		der Hamburger		гамбургер	la hamburguesa		o hambúrguer	le hamburger	gli hamburger	המבורגר	汉堡包	バーガー	برغر	hànbǎobāo
 food and beverage	hot dog		das Hotdog		хот дог, бутерброд с горячей сосиской	el hot dog	el perrito caliente, el pancho	o cachorro quente	le hot-dog, le chien-chaud	di hot-dog	נַקנִיקִיָה	热狗	ホットドッグ	نقانق	règǒu
 food and beverage	french fries	chips	die Pommes frites		картофель фри	las papas a la francesa	las patatas fritas a la francesa	as batatas fritas	les frites	le patatine fritte	צִ'יפּס	薯条	フライドポテト	بطاطس مقلية	shǔ tiáo
+food and beverage	chips	crisps	die Kartoffelchips		чипсы	chips, las papas fritas	chips, las patatas fritas	as batatas chips	​les chips	chips, le patatine fritte	צ'יפס פריך	薯片	チップス	رقائق البطاطس 	Shǔ piàn
 food and beverage	hash browns		die Bratkartoffeln	Rösti	жареная картошка	las papas fritas	las patatas fritas	Hash brown; batata frita, batata frita tipo hash brown	les pommes de terre sautées	la patata fritta	חום חשיש	土豆煎饼	ハッシュブラウン	عجة بطاطا مبشورة	tǔdòu jiānbing
 food and beverage	mashed potato		das Kartoffelpüree	Herföpfelstock	картофельное пюре	el puré de papas	el puré de patatas	o purê de batata	la purée	il purè	פירה	土豆泥	マッシュポテト	بطاطا مهروسة	tǔdòu ní
-food and beverage	pickles		die Essiggurke		соленый огурец	el pepinillo	el pepinillo encurtido	o picles	le cornichon	i sottaceti	חֲמוּצִים	咸菜，泡菜	ピクルス	مخللات	xiáncài, pàocài
+food and beverage	pickles	gherkin	die Essiggurke		соленый огурец	el pepinillo	el pepinillo encurtido	o picles	le cornichon	i sottaceti	חֲמוּצִים	咸菜，泡菜	ピクルス	مخللات	xiáncài, pàocài
 food and beverage	ham		der Schinken		ветчина	el jamón		o presunto	le jambon	il prosciutto	בְּשַׂר חֲזִיר	火腿	ハム	لحم خنزير	huǒtuǐ
 food and beverage	smoked ham		der Rohschinken		прошутто, копчёный окорок	el jamón serrano		o presunto defumado	le jambon cru	il prosciutto crudo	חזיר מעושן	熏火腿	薫製ハム	لحم خنزير مدخن	xūn huǒtuǐ
 food and beverage	bologna		die Fleischkäse	Lyoner	варёная колбаса	la mortadela		a mortadela	la saucisse de Lyon	la mortadella	בולוניה	意式肉肠	モルタデッラ	صلصة بولونيا	yì shì ròu cháng
@@ -480,6 +490,7 @@ food and beverage	steak		das Steak		бифштекс	el filete	el bistec	o bife	
 food and beverage	roasted beef		das gebratene Fleisch	Brate	жареная говядина	la carne asada		o bife assado	le rôti de boeuf	il manzo arrosto	בקר צלוי	烤牛肉	ローストビーフ	لحم البقر المشوي	kǎo niúròu
 food and beverage	skewer		der Bratspieß		шашлык, шампур	la broqueta		o espeto	la broche	il spiedo	לְשַׁפֵּד	串	串	سيخ	chuàn
 food and beverage	fish and fries	fish and chips	die Fisch und Chips		рыба с картошкой	el pescado con papas	el pescado con patatas	o Peixe com fritas	le poisson avec des frites	il pesce e le patatine fritte	דגים וצ'יפס	炸鱼和薯条	魚とフライドポテト	السمك والبطاطا المقلية	zhà yú hé shǔ tiáo
+food and beverage	fish sticks	fish fingers	das Fischstäbchen		рыбные палочки	los palitos de pescado		os palitos de peixe	le bâtonnet de poisson	il bastoncino di pesce	מקלות דגים	鱼条	フィッシュスティック	أعواد السمك	Yú tiáo
 food and beverage	meatball		das Hackfleischbällchen	Hackfleischbölle	фрикаделька	la albóndiga		a almôndega	la boulette de viande	la polpetta	כַּדוּר בָּשָׂר	肉球	ミートボール	كرة لحم	ròu qiú
 food and beverage	dumplings		die Ravioli		пельмени	los ravioles		a guioza	les raviolis	i ravioli	כופתאות	饺子	餃子	الزلابية	jiǎozi
 food and beverage	rice		der Reis		рис	el arroz		o arroz	le riz	il riso	אוֹרֶז	米饭	米	الأرز	mǐfàn
@@ -494,7 +505,9 @@ food and beverage	oatmeal	porridge	der Brei		каша	la harina de avena		a avei
 food and beverage	dough		der Teig		тесто	la masa		a massa	la pâte	la pasta	בָּצֵק	生面团	（パンなどの）生地	عجينة	shēng miàntuán
 food and beverage	cake		der Kuchen	Chueche	торт	el pastel		o bolo	le gâteau	la torta	עוּגָה	蛋糕	ケーキ	كعكة	dàngāo
 food and beverage	cookie	biscuit	der Keks		печенье	la galleta		o biscoito	le biscuit	il biscotto	עוּגִיָה	曲奇饼	クッキー	بسكوت	qū qí bǐng
-food and beverage	candy	sweet	die Süßigkeiten		конфета	el dulce		o doce	le bonbon	la caramella	סוּכַּרִיוֹת	糖果	キャンディ	حلوى	tángguǒ
+food and beverage	candy	sweets	die Süßigkeiten		конфета	el dulce		o doce	le bonbon	la caramella	סוּכַּרִיוֹת	糖果	キャンディ	حلوى	tángguǒ
+food and beverage	jelly	jam	die Marmelade	die Konfitüre	мармелад, варенье	la mermelada		a geléia	le bonbon	la marmellata	לִדחוֹס	果酱	マーマレード	مربى البرتقال	tángguǒ
+food and beverage	jello	jelly	dер Wackelpeter		желатин	​la gelatina		a gelatina	la gelée	il dolce di gelatina	ג'לטינה	明胶	ゼラチン	الجيلاتين	Míngjiāo
 food and beverage	chocolate		die Schokolade	Schoggi	шоколад	el chocolate		o chocolate	le chocolat	i fiocchi di latte	שׁוֹקוֹלַד	巧克力	チョコレート	شوكولاتة	qiǎokèlì
 food and beverage	jam		die Konfitüre	Konfi	варенье	la mermelada		a geléia	la confiture	la marmellata	לִדחוֹס	果酱	ジャム	مربى	guǒjiàng
 food and beverage	honey		der Honig		мёд	la miel		o mel	le miel	il miele	דְבַשׁ	蜂蜜	蜂蜜	عسل	fēngmì
@@ -504,6 +517,7 @@ food and beverage	sugar		der Zucker		сахар	el azúcar		o açúcar	le sucre	
 food and beverage	salt		das Salz		соль	el salero		o sal	le sel	il sale	מֶלַח	食盐	塩	ملح	shíyán
 food and beverage	pepper		der Pfeffer		перец	la pimienta		a pimenta	le poivre	il pepe	פִּלְפֵּל	胡椒	コショウ	فلفل	hújiāo
 food and beverage	olive oil		das Olivenöl		оливковое масло	el aceite de oliva		o azeite de oliva	l'huile d'olive	l'olio d'oliva	שֶׁמֶן זַיִת	橄榄油	オリーブオイル	زيت الزيتون	gǎnlǎn yóu
+food and beverage	vinegar		der Essig		уксус	​el vinagre		o vinagre	​le vinaigre	​il aceto חוֹמֶץ	醋	酢	خل 	Cù
 food and beverage	water		das Wasser		вода	el agua		a água	l'eau	l'acqua	מַיִם	水	水	ماء	shuǐ
 food and beverage	sparkling water		das Wasser mit Kohlensäure		газированная вода	el agua con gas		a água com gás	l'eau pétillante	l'acqua minerale gassata	מַיִם מוּגָזים	苏打水	スパークリングウォーター	ماء فوار	sūdǎ shuǐ
 food and beverage	juice		der Saft		сок	el jugo	el zumo	o suco	le jus	il succo	מִיץ	果汁	ジュース	عصير	guǒzhī
@@ -714,12 +728,12 @@ clothing	t-shirt		das T-Shirt		футболка	la playera	la camiseta	a camiset
 clothing	sweater	jumper	der Pullover		свитер	el suéter		o suéter	le sweat	il maglione	סווֶדֶר	毛衣	セーター	سترة	máoyī
 clothing	bra		der BH		лифчик	el brasier	el sostén	o sutiã	le soutien-gorge	il reggiseno	חֲזִיָה	文胸	ブラジャー	حمالة صدر	wénxiōng
 clothing	panties	knickers	das Höschen	Hösli, Slip	женские трусы	las pantaletas	las bragas	a calcinha	la culotte	le mutandine	תחתונים	女士短裤	パンティー	سراويل	nǚshì duǎnkù
-clothing	underwear		die Unterhose		трусы	el calzón	los calzoncillos	a roupa íntima	le caleçon	l'abbigliamento intimo	תַחתוֹנִים	内衣物	下着	ثياب داخلية	nèiyī wù
+clothing	underwear, underpants	pants	die Unterhose		трусы	el calzón	los calzoncillos	a roupa íntima	le caleçon	l'abbigliamento intimo	תַחתוֹנִים	内衣物	下着	ثياب داخلية	nèiyī wù
 clothing	swimming trunks		die Badehose	Badhose	плавки	el traje de baño	el bañador	o short de banho	le slip de bain	il costume da bagno	בגד שחייה	泳裤	海パン	سروال سباحة	yǒng kù
 clothing	swimsuit	swimming costume, bikini	der Badeanzug	Badkleid	купальник	el bikini	el traje de baño	a roupa de banho	le maillot de bain	il bikini	בגד ים	女式游泳衣	水着	ملابس السباحة	nǚshì yóuyǒng yī
 clothing	pantyhose	tights	die Strumpfhose		колготки	los pantis		a meia calça	les collants	le collant	גַרבִּיוֹנִים	连裤袜	パンスト	جوارب طويلة	lián kù wà
 clothing	stockings		der Strumpf		чулки	las medias		as meias	les bas	le calze da donna	גרביים	长袜，丝袜	ストッキング	جوارب	cháng wà, sīwà
-clothing	trousers		die Hose		брюки	los pantalones		as calças (plural); 	le pantalon	i pantaloni	מִכְנָסַיִים	长裤	ズボン	بنطال	cháng kù
+clothing	pants	trousers	die Hose		брюки	los pantalones		as calças (plural); 	le pantalon	i pantaloni	מִכְנָסַיִים	长裤	ズボン	بنطال	cháng kù
 clothing	jeans		die Jeans		джинсы	los pantalones de mezclilla	los vaqueros	a calça jeans	le jeans	i jeans	גִ'ינס	牛仔裤	ジーンズ	جينز	niúzǎikù
 clothing	shorts		die kurze Hose		шорты	los shorts		o calção	le short 	i pantloncini corti	מִכְנָסַיִים קְצָרִים	短裤	ショートパンツ	السراويل القصيرة	duǎnkù
 clothing	skirt		der Rock		юбка	la falda		a saia	la jupe	la gonna	חֲצָאִית	短裙	スカート	تنورة	duǎn qún
@@ -1344,7 +1358,17 @@ verbs	to return, to come back		zurückkommen, zurückkehren		вернуться	
 verbs	to get		bekommen, erreichen		получить, достигать	conseguir, obtener		conseguir	obtenir	conseguire	להשיג	获得、得到	得る	يحقق	dǎ hāqian
 verbs	to create		erstellen, schaffen		творить, создавать	crear		criar	créer	creare, construire	לִיצוֹר	创造	作成する	يخلق	Chuàngzào
 verbs	to understand		verstehen		понимать	entender		entender	comprendre	comprendere	להבין	懂、明白	理解する	يفهم	dǎ hāqian
-adjectives	angry		ärgerlich, wütend		сердитый	enojado, furioso		chateado	furieux	arrabbiato	כּוֹעֵס	愤怒	怒って	غضبان	fènnù
+prepositions	above		über		над, вне	arriba, encima de		acima	au-dessus de	sopra	מֵעַל	多于	その上	فوق	Duō yú
+prepositions	below		unten		ниже, под	abajo de	debajo de	abaixo de	ci-dessous	sotto, giù	לְהַלָן	以下	下に	أقل	Yǐxià
+prepositions	at		an, bei		у, в, на	a, en		no, em	à, de	a, in	בְּ-	在	で	في	Zài
+prepositions	behind		hinter		за, сзади	atrás de	detrás de	atrás de	derrière	dietro	מֵאָחוֹר	在后面	後ろに	خلف	Zài hòumiàn
+prepositions	beside		neben		рядом, близ	junto, al lado de		ao lado de	à côté de	accanto	לְיַד	旁	それ以外	بجانب	Páng
+prepositions	in		in, hinein		в, внутри	en		em	dans, en	in, a	ב	在	で	في	Zài
+prepositions	in front of		vor		перед, снаружи	enfrente de	delante de	em frente de	en tête de	di fronte a	מוּל	在...前面	の前に	امام	Zài... Qiánmiàn
+prepositions	on		auf		на, над	sobre		sobre, em	sur, dans	su	עַל	在	の上	غضبان	Zài
+prepositions	through		durch		через, сквозь	a través de, por		através	à travers	attraverso	בְּאֶמצָעוּת	通过	を通して	غضبان	Tōngguò
+prepositions	under		unter		под	bajo, debajo de		sob	sous	sotto	לְפִי	在下面	下	تحت	Zài xiàmiàn
+adjectives	angry		ärgerlich, wütend		сердитый	enojado, furioso		chateado	furieux	arrabbiato	כּוֹעֵס	愤怒	怒って	خلال	fènnù
 adjectives	quiet		still, ruhig		спокойный, тихий	tranquilo		quieto	calme, silencieux	tranquillo	שֶׁקֶט	静	静か	هادئ	jìng
 adjectives	loud		laut		громкий	alto, ruidoso		alto	bruyant, fort	alto, rumoroso	בְּקוֹל רָם	响	大声で	مرتفع	xiǎng
 adjectives	bright		hell		яркий	claro, luminoso		claro, brilhoso	brillant, lumineux	intenso, luminoso	בָּהִיר	光亮	鮮やか	لامع	guāngliàng

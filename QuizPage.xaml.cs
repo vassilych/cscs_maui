@@ -33,7 +33,7 @@ public partial class QuizPage : ContentPage
     Word? m_correctWord = Word.Default;
     IDispatcherTimer? m_timer = Application.Current?.Dispatcher.CreateTimer();
     DateTime m_startQuiz = DateTime.Now;
-    Random m_random = new Random();
+    static Random s_random = new Random();
 
     public QuizPage()
 	{
@@ -353,14 +353,14 @@ public partial class QuizPage : ContentPage
         }
     }
 
-    List<int> GetRandom(int numberRandoms, int total)
+    public static List<int> GetRandom(int numberRandoms, int total)
     {
         List<int> result = new List<int>();
         List<int> available = Enumerable.Range(0, total).ToList();
 
         for (int i = 0; i < numberRandoms && available.Count > 0; i++)
         {
-            int nextRandom = m_random.Next(0, available.Count);
+            int nextRandom = s_random.Next(0, available.Count);
             result.Add(available[nextRandom]);
             available.RemoveAt(nextRandom);
         }

@@ -104,6 +104,7 @@ namespace ScriptingMaui
             LoadVerbs("en", "en_verbs.txt");
             LoadVerbs("es", "es_verbs.txt");
             LoadVerbs("de", "de_verbs.txt");
+            LoadVerbs("ru", "ru_verbs.txt");
         }
         public static void LoadWords(string filename = "dictionary.txt")
         {
@@ -175,9 +176,11 @@ namespace ScriptingMaui
                 wordCounter++;
             }
             Console.WriteLine("Loaded {0} words and {1} categories.", wordCounter, Categories.GetTotal());
+
+            var randomWords = QuizPage.GetRandom(Categories.DefaultCategory.GetTotalWords(), Categories.DefaultCategory.GetTotalWords());
+            Categories.DefaultCategory.SetIndices(randomWords);
         }
     }
-
 }
 
 public class Word
@@ -244,11 +247,32 @@ public class Category
     public bool IsText { get; private set; }
     public List<Word> Words { get; private set; } = new List<Word>();
     Dictionary<string, int> WordMap = new Dictionary<string, int>();
+    List<int>? Indices { get; set; }
+    List<int>? IndicesReverse { get; set; }
 
     public Category(string _id)
     {
         Name = _id;
         IsText = _id.ToLower().Contains("phrases");
+    }
+    public void SetIndices(List<int> indices)
+    {
+        Indices = indices;
+        IndicesReverse = Enumerable.Range(0, indices.Count).ToList();//new List<int>(indices.Count);
+        for (int i = 0; i < indices.Count; i++)
+        {
+            if (indices[i] == 0 && i != 0)
+            { // must be the first word
+                indices[i] = indices[0];
+                IndicesReverse[indices[0]] = indices[i];
+                indices[0] = 0;
+                IndicesReverse[0] = 0;
+            }
+            else
+            {
+                IndicesReverse[indices[i]] = i;
+            }
+        }
     }
     public void AddWord(Word word)
     {
@@ -258,10 +282,6 @@ public class Category
         }
         Words.Add(word);
         WordMap[word.Name] = Words.Count - 1;
-        //if (Name == "verbs" &&  Words.Count % 100 == 0)
-        //{
-        //    int i = 0;
-        //}
     }
     public Word GetWord(int ind = 0)
     {
@@ -273,7 +293,8 @@ public class Category
         {
             ind = Words.Count - 1;
         }
-        return Words[ind];
+        var wordIndex = Indices == null ? ind : Indices[ind];
+        return Words[wordIndex];
     }
     public int GetIndex(Word word)
     {
@@ -282,7 +303,7 @@ public class Category
             return -1;
         }
 
-        return index;
+        return IndicesReverse == null ? index : IndicesReverse[index];
     }
 
     public Word GetNextWord()
@@ -292,7 +313,8 @@ public class Category
         {
             Index = 0;
         }
-        return Words[Index];
+        var wordIndex = Indices == null ? Index : Indices[Index];
+        return Words[wordIndex];
     }
     public Word GetPrevWord()
     {
@@ -301,7 +323,8 @@ public class Category
         {
             Index = Words.Count - 1;
         }
-        return Words[Index];
+        var wordIndex = Indices == null ? Index : Indices[Index];
+        return Words[wordIndex];
     }
     public int GetTotalWords()
     {

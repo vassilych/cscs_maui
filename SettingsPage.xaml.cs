@@ -20,6 +20,7 @@ public partial class SettingsPage : ContentPage
     const string SpeechSet = "speechrate";
     const string SoundSet = "sound";
     const string PlaySecFormat = "{0}s";
+    readonly CultureInfo OrigCulture = CultureInfo.CurrentUICulture;
 
     public static SettingsPage? Instance;
 
@@ -35,14 +36,14 @@ public partial class SettingsPage : ContentPage
     PickerColumn m_col2;
 
     public SettingsPage()
-	{
+    {
         Instance = this;
         InitializeComponent();
         var itemInfo = new SettingsInfo();
         //this.Picker.ItemTemplate = itemInfo.customView;
 
         m_col1 = new PickerColumn()
-        {            
+        {
             ItemsSource = itemInfo.DataSourceStudy,
             SelectedIndex = 0,
         };
@@ -75,11 +76,17 @@ public partial class SettingsPage : ContentPage
         sb.AppendLine($"Version: {AppInfo.Current.VersionString}");
         sb.AppendLine("");
         sb.AppendLine($"Device: {DeviceInfo.Current.Manufacturer} {DeviceInfo.Current.Name}");
+#if IOS
+        var model = MauiUtils.GetiPhoneModel();
+        sb.AppendLine($"{model}");
+#endif
         sb.AppendLine($"OS: {platform} {DeviceInfo.Current.VersionString}");
         sb.AppendLine($"Size: {DeviceDisplay.Current.MainDisplayInfo.Width} x {DeviceDisplay.Current.MainDisplayInfo.Height}");
+        sb.AppendLine($"Culture: {OrigCulture.Name}");
+        sb.AppendLine($"Learning: {VoiceLearn} --> {MyVoice}");
         sb.AppendLine($"Refresh Rate: {refresh}");
         sb.AppendLine("");
-        sb.AppendLine("Developed by Vassili iLanguage.ch");
+        sb.AppendLine("Developed by Vassili - iLanguage.ch");
 
         await DisplayAlert(AppInfo.Current.Name, sb.ToString(), "OK");
     }

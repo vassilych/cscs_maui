@@ -463,6 +463,15 @@ namespace ScriptingMaui.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to מִלַת יַחַס.
+        /// </summary>
+        internal static string prepositions {
+            get {
+                return ResourceManager.GetString("prepositions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to מקצועות.
         /// </summary>
         internal static string profession {

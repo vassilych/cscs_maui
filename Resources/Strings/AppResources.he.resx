@@ -195,6 +195,9 @@
 <data name="adjectives" xml:space="preserve">
   <value>שמות תואר</value>
 </data>
+<data name="prepositions" xml:space="preserve">
+  <value>מִלַת יַחַס</value>
+</data>
 <data name="family and kids" xml:space="preserve">
   <value>משפחה וילדים</value>
 </data>

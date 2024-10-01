@@ -18,10 +18,10 @@
 
 	<VerticalStackLayout Grid.Row="0" >
     <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
-                Background="Transparent" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
+                Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
       <Picker x:Name="QuizCategoryPicker"
         Title="Select word category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-        FontAttributes="Bold" FontSize="Header">
+        FontAttributes="Bold" TextColor="Black" FontSize="Header">
       </Picker>
     </Border>
 

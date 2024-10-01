@@ -192,6 +192,9 @@
 <data name="adjectives" xml:space="preserve">
   <value>прилагательные</value>
 </data>
+<data name="prepositions" xml:space="preserve">
+  <value>предлоги</value>
+</data>
 <data name="family and kids" xml:space="preserve">
   <value>семья и дети</value>
 </data>
