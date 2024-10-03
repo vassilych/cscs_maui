@@ -153,3 +153,5 @@ to come back,come, come, coming, come,come,comes, came,came,came
 to get,get, got/gotten, getting, get,get,gets, got,got,got
 to create,create, created, creating, create,create,creates, created,created,created
 to understand,understand, understood, understanding, understand,understand,understands, understood,understood,understood
+to disturb, disturb,  disturbed, disturbing, disturb,disturb,disturbs, disturbed,disturbed,disturbed
+to annoy, annoy,  annoyed, annoying, annoy,annoy,annoys, annoyed,annoyed,annoyed

@@ -524,7 +524,14 @@ public partial class LearnPage : ContentPage
          * Präteritum 21 war,warst,war,waren,wart,waren,
          * Präsens I 27 sei,seist,sei,seien,seiet,seien,
          * Präteritum II 33 wäre,wärest,wäre,wären,wäret,wären,
-         * Imperative 39 Sei,Seien,Seid,Seien */
+         * Imperative 39 Sei,Seien,Seid,Seien 
+         sein, gewesen, seiend, bin,bist,ist,sind,seid,sind,
+        bin gewesen,bist gewesen,ist gewesen,sind gewesen,seid gewesen,sind gewesen,
+        war gewesen,warst gewesen,war gewesen,waren gewesen,wart gewesen,waren gewesen,
+        war,warst,war,waren,wart,waren,
+        sei,seist,sei,seien,seiet,seien,
+        wäre,wärest,wäre,wären,wäret,wären,
+        Sei, Seien, Seid, Seien*/
         VerbInfoH1.Text = "Präsens";
         VerbInfo11.Text = "ich " + tokens[3];
         VerbInfo21.Text = "du " + tokens[4];

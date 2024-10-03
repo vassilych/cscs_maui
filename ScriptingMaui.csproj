@@ -2018,6 +2018,11 @@
 	  <BundleResource Include="Resources\Images\pomegranate.png" />
 	  <BundleResource Include="Resources\Images\blackberry.png" />
 	  <BundleResource Include="Resources\Images\redberry__red_currant.png" />
+	  <BundleResource Include="Resources\Images\fig.png" />
+	  <BundleResource Include="Resources\Images\belly.png" />
+	  <BundleResource Include="Resources\Images\to_disturb__to_annoy.png" />
+	  <BundleResource Include="Resources\Images\abdomen__abs.png" />
+	  <BundleResource Include="Resources\Images\black_currant.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2171,6 +2176,11 @@
 	  <None Remove="Resources\Images\pomegranate.png" />
 	  <None Remove="Resources\Images\blackberry.png" />
 	  <None Remove="Resources\Images\redberry.png" />
+	  <None Remove="Resources\Images\fig.png" />
+	  <None Remove="Resources\Images\belly.png" />
+	  <None Remove="Resources\Images\to_disturb__to_annoy.png" />
+	  <None Remove="Resources\Images\abdomen__abs.png" />
+	  <None Remove="Resources\Images\black_currant.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

@@ -77,11 +77,13 @@ animal world	wolf		der Wolf	Wolf	волк	el lobo		o Lobo	le loup	il lupo	זְא
 animal world	woodpecker		der Specht	Späächt	дятел	el pájaro carpintero		o Pica pau	le pivers	il picchio	נַקָר	啄木鸟	キツツキ	نقار الخشب	zhuómùniǎo
 animal world	worm		der Wurm	Wurm	червь	el gusano		a Minhoca	le ver	il verme	תוֹלַעַת	蠕虫	ミミズ	دودة	rúchóng
 animal world	zebra		das Zebra	Zebra	зебра	la cebra		a zebra	le zèbre	la zebra	זֶבּרָה	斑马	シマウマ	حمار الوحشي	bānmǎ
-body parts	abdomen		das Abdomen, der Bauch	Buuch	живот, пресс	el vientre, el abdomen		o abdômen	le ventre, l’abdomen	il ventre, l'addome	בֶּטֶן	腹部	腹部	بطن	fùbù
+body parts	abdomen, abs		das Abdomen, die Bauchmuskeln		пресс	el abdomen		o abdômen	l’abdomen	l'addome	בטן שרירי הבטן	腹部 腹肌	腹部腹筋	البطن والبطن	Fùbù fù jī
+body parts	belly		der Bauch	Buuch	живот	la panza, el vientre	la barriga	a barriga	le ventre	il ventre	כֶּרֶס	腹部	腹部	بطن	fùbù
+body parts	stomach		der Magen		желудок	el estómago		o estômago	l'estomac	lo stomaco	בֶּטֶן	胃	胃	معدة	wèi
+body parts	belly button		der Bauchnabel	Buchnabel	пупок	el ombligo		o umbigo	le nombril	l'ombelico	טבור	肚脐	へそ	السرة	dùqí
 body parts	arm		der Arm		рука	el brazo		o braço	le bras	il braccio	זְרוֹעַ	手臂	腕	ذراع	shǒubì
 body parts	back		der Rücken	Rugge	спина	la espalda		as costas	le dos	la schiena	בְּחֲזָרָה	背	背中	ظهر	bèi
 body parts	beard		der Bart		борода	la barba		a barba	la barbe	la barba	זָקָן	胡子	髭	لحية	húzi
-body parts	belly button		der Bauchnabel	Buchnabel	пупок	el ombligo		o umbigo	le nombril	l'ombelico	טבור	肚脐	へそ	السرة	dùqí
 body parts	body		der Körper		тело	el cuerpo		o corpo	le corps	il corpo	גוּף	身体	体	الجسم	shēntǐ
 body parts	braid	plait	der Zopf		коса	la trenza		a trança	la tresse	la treccia	לִקְלוֹעַ	辫子	三つ編み	جديلة	biànzi
 body parts	breast		die Brust	Bruscht	грудь	el pecho		o peito	la poitrine	il seno	חָזֶה	胸部	胸	الصدر	xiōngbù
@@ -132,7 +134,6 @@ body parts	triceps		der Trizeps		трицепс	el tríceps		os Tríceps	le tric
 body parts	blood		das Blut	Bluet	кровь	la sangre		o sangue	le sang	il sangue	דָם	血液	血、血液	دم	xiěyè
 body parts	heart		das Herz		сердце	el corazón		o coração	le cœur	il cuore	לֵב	心脏	心臓	قلب	xīnzàng
 body parts	lungs		die Lunge		лёгкие	los pulmones		os pulmões	le poumon	i polmoni	ריאות	肺	肺	الرئتين	fèi
-body parts	stomach		der Magen		желудок	el estómago		o estômago	l'estomac	lo stomaco	בֶּטֶן	胃	胃	معدة	wèi
 body parts	liver		die Leber		печень	el hígado		o fígado	le foie	il fegato	כָּבֵד	肝脏	肝臓	كبد	gānzàng
 body parts	brain		das Gehirn		мозг	el cerebro		o cérebro	le cerveau	il cervello	מוֹחַ	头脑	脳	دماغ	tóunǎo
 body parts	sawdust		das Sägemehl		опилки	el serrín		a serragem	la sciure	la segatura	נְסוֹרֶת	木屑	…のぼろをさらけ出す	نشارة الخشب	mùxiè
@@ -428,7 +429,7 @@ fruits and vegetables	cucumber		die Gurke		огурец	el pepino		o pepino	le c
 fruits and vegetables	eggplant	aubergine	die Aubergine		баклажан	la berenjena		a berinjela	l'aubergine	la melanzana	חָצִיל	茄子	ナス	الباذنجان	qiézi
 fruits and vegetables	garlic		der Knoblauch		чеснок	el ajo		o alho	l'ail	l'aglio	שׁוּם	大蒜	ニンニク	ثوم	dàsuàn
 fruits and vegetables	grapefruit		die Grapefruit		грейпфрут	la toronja	el pomelo	a toranja	le pamplemousse	il pompelmo	אֶשׁכּוֹלִיוֹת	葡萄柚	グレープフルーツ	جريب فروت	pútáo yòu
-fruits and vegetables	pomegranate		der Granatapfel		гранат	la granada	a romã	la grenade	la melagrana	רִמוֹן	石榴	ザクロ	 رمان	Shíliú
+fruits and vegetables	pomegranate		der Granatapfel		гранат	la granada		a romã	la grenade	la melagrana	רִמוֹן	石榴	ザクロ	 رمان	Shíliú
 fruits and vegetables	grapes		die Traube	Truube	виноград	la uva		as uvas	le raisin	l'uva	ענבים	葡萄	葡萄	عنب	pútáo
 fruits and vegetables	hazelnut		die Haselnuss		фундук, лесной орех	la avellana		a avelã	la noisette	la nocciola	אֱגוֹזֵי לוּז	榛子	ヘーゼルナッツ	بندق	zhēnzi
 fruits and vegetables	kidney bean		die Kidney Bohne	roti Bohne	фасоль	el frijol		o Feijão	l'haricot rouge	il fagiolone	שעועית כליות	四季豆	インゲン豆	فاصوليا ذات الشكل الكلوي	sìjì dòu
@@ -452,9 +453,11 @@ fruits and vegetables	radish		das Radieschen	Radiesli	редис	el rábano		o r
 fruits and vegetables	raspberry		die Himbeere		малина	la frambuesa		a framboesa	la framboise	il lampone	פֶּטֶל	覆盆子	ラズベリー	توت العُليق	fù pénzi
 fruits and vegetables	strawberry		die Erdbeere		клубника	la fresa		o morango	la fraise	la fragola	תּוּת	草莓	イチゴ	الفراولة	cǎoméi
 fruits and vegetables	blueberry		die Blaubeere		черника	​la mora azul	​el arándano	​o mirtilo	​la myrtille	​il mirtillo	אוּכמָנִית	蓝莓	ブルーベリー	.توت 	Lánméi
-fruits and vegetables	blackberry		die Brombeere 		чёрная смородина	​la zarzamora		a amora	la mûre	la mora	אוכמן	黑莓	ブラックベリー	التوت الأسود 	Hēiméi
+fruits and vegetables	blackberry		die Brombeere 		ежевика	​la zarzamora		a amora	la mûre	la mora	אוכמן	黑莓	ブラックベリー	التوت الأسود 	Hēiméi
+fruits and vegetables	black currant		die Schwarze Johannisbeere 		чёрная смородина	​la grosella negra		a groselha preta, o cassis	le cassis	il ribes nero	דומדמניות שחורות	黑醋栗	ブラックカラント	الكشمش الأسود	Hēi cù lì
 fruits and vegetables	redberry, red currant		die Johannisbeere		красная смородина	​la grosella roja		a groselha vermelha	​la groseille rouge	​il ribes rosso	דומדמניות אדומות	红醋栗	レッドカラント	الكشمش الأحمر	Hóng cù lì
-fruits and vegetables	date (fruit)		die Dattel		финик	der dátil		​a tâmara	la datte	​il dattero	פרי תמר	枣	(果実)	ナツメヤシ、デーツ 名		تمر 	zǎo
+fruits and vegetables	date (fruit)		die Dattel		финик	el dátil		​a tâmara	la datte	​il dattero	פרי תמר	枣	(果実) ナツメヤシ、デーツ 名		تمر 	zǎo
+fruits and vegetables	fig		die Feige		инжир	el higo		o figo	la figue	il fico	תְאֵנָה	如图	イチジク	تين	Rú tú
 fruits and vegetables	sweet pepper		der Paprika	Pepperoni	сладкий перец	el pimiento morrón		o pimentão	le paprika	il peperone	פלפל מתוק	甜椒	ピーマン	فلفل حلو	tián jiāo
 fruits and vegetables	tomato		die Tomate		помидор	el jitomate	el tomate	o tomate	la tomate	il pomodoro	עַגְבָנִיָה	西红柿，番茄	トマト	طماطم	xīhóngshì, fānqié
 fruits and vegetables	walnut		die Walnuss		грецкий орех	la nuez		a noz	la noix	la noce	אֱגוֹז	核桃	クルミ	الجوز	hétáo
@@ -506,10 +509,9 @@ food and beverage	dough		der Teig		тесто	la masa		a massa	la pâte	la pasta
 food and beverage	cake		der Kuchen	Chueche	торт	el pastel		o bolo	le gâteau	la torta	עוּגָה	蛋糕	ケーキ	كعكة	dàngāo
 food and beverage	cookie	biscuit	der Keks		печенье	la galleta		o biscoito	le biscuit	il biscotto	עוּגִיָה	曲奇饼	クッキー	بسكوت	qū qí bǐng
 food and beverage	candy	sweets	die Süßigkeiten		конфета	el dulce		o doce	le bonbon	la caramella	סוּכַּרִיוֹת	糖果	キャンディ	حلوى	tángguǒ
-food and beverage	jelly	jam	die Marmelade	die Konfitüre	мармелад, варенье	la mermelada		a geléia	le bonbon	la marmellata	לִדחוֹס	果酱	マーマレード	مربى البرتقال	tángguǒ
+food and beverage	jelly	jam	die Marmelade	die Konfitüre	мармелад, варенье	la mermelada		a geléia	la confiture, le bonbon	la marmellata	לִדחוֹס	果酱	マーマレード	مربى البرتقال	tángguǒ
 food and beverage	jello	jelly	dер Wackelpeter		желатин	​la gelatina		a gelatina	la gelée	il dolce di gelatina	ג'לטינה	明胶	ゼラチン	الجيلاتين	Míngjiāo
 food and beverage	chocolate		die Schokolade	Schoggi	шоколад	el chocolate		o chocolate	le chocolat	i fiocchi di latte	שׁוֹקוֹלַד	巧克力	チョコレート	شوكولاتة	qiǎokèlì
-food and beverage	jam		die Konfitüre	Konfi	варенье	la mermelada		a geléia	la confiture	la marmellata	לִדחוֹס	果酱	ジャム	مربى	guǒjiàng
 food and beverage	honey		der Honig		мёд	la miel		o mel	le miel	il miele	דְבַשׁ	蜂蜜	蜂蜜	عسل	fēngmì
 food and beverage	icecream		das Eis	Glacé	мороженое	el helado		o sorvete	la glace 	il gelato	גלידה	冰激凌	アイスクリーム	بوظة	Bīngjīlíng
 food and beverage	gummy bear		das Gummibärchen	Gummibärli	мармеладный мишка	el osito de goma		o urso de goma	l'ourson en bonbon	l'orsetto gommoso	דוב גומי	橡胶熊	くまグミ	حلوى الدب المطاطي	xiàngjiāo xióng
@@ -517,9 +519,9 @@ food and beverage	sugar		der Zucker		сахар	el azúcar		o açúcar	le sucre	
 food and beverage	salt		das Salz		соль	el salero		o sal	le sel	il sale	מֶלַח	食盐	塩	ملح	shíyán
 food and beverage	pepper		der Pfeffer		перец	la pimienta		a pimenta	le poivre	il pepe	פִּלְפֵּל	胡椒	コショウ	فلفل	hújiāo
 food and beverage	olive oil		das Olivenöl		оливковое масло	el aceite de oliva		o azeite de oliva	l'huile d'olive	l'olio d'oliva	שֶׁמֶן זַיִת	橄榄油	オリーブオイル	زيت الزيتون	gǎnlǎn yóu
-food and beverage	vinegar		der Essig		уксус	​el vinagre		o vinagre	​le vinaigre	​il aceto חוֹמֶץ	醋	酢	خل 	Cù
+food and beverage	vinegar		der Essig		уксус	​el vinagre		o vinagre	​le vinaigre	​il aceto	​חוֹמֶץ	醋	酢	خل 	Cù
 food and beverage	water		das Wasser		вода	el agua		a água	l'eau	l'acqua	מַיִם	水	水	ماء	shuǐ
-food and beverage	sparkling water		das Wasser mit Kohlensäure		газированная вода	el agua con gas		a água com gás	l'eau pétillante	l'acqua minerale gassata	מַיִם מוּגָזים	苏打水	スパークリングウォーター	ماء فوار	sūdǎ shuǐ
+food and beverage	sparkling water		das Mineralwasser, das Wasser mit Kohlensäure		газированная вода	el agua con gas		a água com gás, l'eau gazeuse	l'eau gazeuse, l'eau pétillante	l'acqua minerale gassata	מַיִם מוּגָזים	苏打水	スパークリングウォーター	ماء فوار	sūdǎ shuǐ
 food and beverage	juice		der Saft		сок	el jugo	el zumo	o suco	le jus	il succo	מִיץ	果汁	ジュース	عصير	guǒzhī
 food and beverage	milk		die Milch		молоко	la leche		o leite	le lait	il latte	חָלָב	牛奶	ミルク	حليب	niúnǎi
 food and beverage	tea		der Tee		чай	el té		o chá	le thé	il tè	תֵה	茶	お茶	شاي	chá
@@ -649,7 +651,7 @@ tools and appliances	power plug		der Stecker		штепсель	el macho de enchu
 tools and appliances	power strip	extension lead	das Verlängerungskabel		удлинитель	la extensión	el cable alargador	o cabo de extensão 	la ralonge	la ciabatta	פס חשמל	延长线	電源コード	موصل التيار	yáncháng xiàn
 tools and appliances	TV	TV set	der Fernseher		телевизор	la tele		a televisão	la télé	la tv	טֵלֶוִיזִיָה	电视	テレビ	التلفزيون	diànshì
 tools and appliances	hammer		der Hammer		молоток	el martillo		o martelo	le marteau	il martello	פַּטִישׁ	铁锤	ハンマー	المطرقة	tiě chuí
-tools and appliances	nail		der Nagel		гвоздь	el clavo		a unha	le clou	il chiodo	מַסְמֵר	钉子	ネイル	مسمار	dīngzi
+tools and appliances	nail		der Nagel		гвоздь	el clavo		o prego	le clou	il chiodo	מסמר	指甲	釘	مسمار	Zhǐjiǎ
 tools and appliances	drill		die Bohrmaschine		дрель	el taladro		a broca	la perçeuse	il trapano	לִקְדוֹחַ	钻孔机	ドリル	حفار , مثقاب	zuǎn kǒng jī
 tools and appliances	screwdriver		der Schraubenzieher	Schruubezieher	отвертка	el desarmador	el destornillador	a chave de fenda	le tournevis	il cacciavite	מַברֵג	螺丝刀	ねじ回し	مفك براغي	luósīdāo
 tools and appliances	screw		die Schraube	Schruube	винт	el tornillo		o parafuso	le vis	la vite	לִדפּוֹק	螺丝钉	ネジ	برغي	luósīdīng
@@ -1246,6 +1248,7 @@ verbs	to cut		schneiden		резать	cortar		cortar	trancher	tagliare, ferire	�
 verbs	to dance		tanzen		танцевать	bailar		dançar	danser	ballare	לרקוד	跳舞	ダンスする	يرقص	tiàowǔ
 verbs	to decide		entscheiden		решать	decidir		decidir	décider, prendre une décision	decidere, prendere una decisione	להחליט	决定	決める	يقرر	juédìng
 verbs	to dig		graben		копать	cavar		cavar	creuser	scavare	לחפור	挖	掘る	يحفر	wā
+verbs	to disturb, to annoy		stören		беспокоить, мешать	molestar, estorbar		perturbar, incomodar	déranger	disturbare	לְהַפְרִיעַ	打扰	乱す	يزعج	Dǎrǎo
 verbs	to do laundry		waschen		стирать	lavar la ropa		lavar roupa	faire la lessive	fare il bucato	לעשות כביסה	洗衣服	洗濯をする	يغسل الملابس	xǐ yīfú
 verbs	to draw		zeichnen		рисовать	dibujar		desenhar	dessiner	disegnare, elaborare	לצייר	画；拉；打成平局	描く、引き出す	يرسم	huà; lā; dǎ chéng píngjú
 verbs	to dream		träumen		мечтать	soñar		sonhar	rêver	sognare	לחלום	做梦	夢見る	يحلم	zuòmèng

@@ -54,23 +54,23 @@
     </sflist:SfListView.ItemTemplate>
     </sflist:SfListView>
 
-    <Grid x:Name="WordDetails" Margin = "0,0,0,4">
+    <Grid x:Name="WordDetails" Margin = "0,0,0,4" HorizontalOptions="Center" VerticalOptions="StartAndExpand" >
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-        <ColumnDefinition  />
-        <ColumnDefinition  />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto"  />
     </Grid.ColumnDefinitions>
-        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "0,2"
+        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "2,1"
                 Background="Transparent" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="0" >
         <Label x:Name="Gerund" Text="gerund" HorizontalTextAlignment="Start" HorizontalOptions="Start" Background="WhiteSmoke"
-            Margin = "2,0,2,0" WidthRequest="145" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
+            Margin = "2,0,2,0" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
         </Border>
-        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "0,2"
+        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "2,1"
                 Background="Transparent" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
         <Label x:Name="Participle" Text="participle" HorizontalTextAlignment="Start" HorizontalOptions="Start" Background="WhiteSmoke"
-            Margin = "2,0,2,0" WidthRequest="145" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
+            Margin = "2,0,2,0" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
         </Border>
     </Grid>
 	<Grid x:Name="InfoPanel" Background="Transparent" Margin = "2,0,2,0" IsVisible = "False" >
@@ -304,7 +304,7 @@
         <ColumnDefinition  Width="15*" />
     </Grid.ColumnDefinitions>
         <Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1580" HorizontalTextAlignment="Start" HorizontalOptions="Start"
-            Margin = "10,0,2,0" WidthRequest="80" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />
+            Margin = "2,0,2,0" WidthRequest="80" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />
         <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
                 Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
             <Picker x:Name="CategoryPicker"  
