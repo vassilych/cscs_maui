@@ -7,6 +7,7 @@ using Microsoft.Maui.Controls.Shapes;
 using ScriptingMaui.Resources.Strings;
 using SplitAndMerge;
 using Syncfusion.Maui.ListView;
+using Syncfusion.Maui.ListView.Helpers;
 using Syncfusion.Maui.Picker;
 //using ObjCRuntime;
 //using static ObjCRuntime.Dlfcn;
@@ -17,9 +18,14 @@ public partial class LearnPage : ContentPage
 {
     const string CategorySet = "categoryLearn";
     const string WordSet = "wordLearn";
+    const string CategoryWord = "word_";
+
     int MaxSearchResults = 7;
+    double m_trasnlationViewY = -1;
     Category m_category;
     bool m_settingWord;
+
+    List<string> m_conjVerbs = new List<string>();
 
     Dictionary<string, List<string>> m_words = new Dictionary<string, List<string>>();
 
@@ -77,6 +83,7 @@ public partial class LearnPage : ContentPage
         }
         var id = item.Id;
         var word = Categories.DefaultCategory.Words[id];
+        //var word = Categories.DefaultCategory.GetWord(id);
         m_category = word.Category;
         SetMode(false);
         await SetWord(word);
@@ -167,9 +174,13 @@ public partial class LearnPage : ContentPage
         await TTS.Speak(trans, SettingsPage.MyVoice);
     }
 
-    private void BackBut_Clicked(object? sender, EventArgs e)
+    async void BackBut_Clicked(object? sender, EventArgs e)
     {
-        SetMode(false);
+        var isDone = await Conjugate();
+        if (isDone)
+        {
+            SetMode(false);
+        }
     }
     private void FindBut_Clicked(object? sender, EventArgs e)
     {
@@ -288,53 +299,66 @@ public partial class LearnPage : ContentPage
     async void InfoData_Clicked(object? sender, EventArgs e)
     {
         StopPlay();
-        var prefix1 = SettingsPage.VoiceLearn.Substring(0, 2);
-        var prefix2 = SettingsPage.MyVoice.Substring(0, 2);
         var words = Context.Word.GetTranslation(SettingsPage.VoiceLearn);
         var tok = words.Split(",", StringSplitOptions.TrimEntries);
-        foreach (var candidate in tok)
+        m_conjVerbs = tok.ToList();
+        await Conjugate();
+    }
+
+    async Task<bool> Conjugate()
+    {
+        if (m_conjVerbs.Count == 0)
         {
-            var data = GetWordData(prefix1, candidate);
+            return true;
+        }
+        var prefix1 = SettingsPage.VoiceLearn.Substring(0, 2);
+        var prefix2 = SettingsPage.MyVoice.Substring(0, 2);
+
+        var verb = m_conjVerbs.First();
+        m_conjVerbs.RemoveAt(0);
+
+        var data = GetWordData(prefix1, verb);
+        if (string.IsNullOrWhiteSpace(data))
+        {
+            if (SettingsPage.VoiceLearn == "de-CH")
+            {
+                var words = Context.Word.GetTranslation("de-DE");
+                var t = words.Split(",", StringSplitOptions.TrimEntries);
+                data = GetWordData(prefix1, t.First());
+            }
             if (string.IsNullOrWhiteSpace(data))
             {
-                if (SettingsPage.VoiceLearn == "de-CH")
-                {
-                    words = Context.Word.GetTranslation("de-DE");
-                    var t = words.Split(",", StringSplitOptions.TrimEntries);
-                    data = GetWordData(prefix1, t.First());
-                }
-                if (string.IsNullOrWhiteSpace(data))
-                {
-                    var c = candidate.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-                    var cand2 = c.First();
-                    data = GetWordData(prefix1, cand2);
-                }
-                if (string.IsNullOrWhiteSpace(data))
-                {
-                    await DisplayAlert(AppResources.verbs, string.Format(AppResources.Word_with__0__not_found, candidate), "OK");
-                    continue;
-                }
+                var c = verb.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                var cand2 = c.First();
+                data = GetWordData(prefix1, cand2);
             }
-            SetMode(false, true);
-            var tokens = data.Trim().Split(new char[] { ',' }, (StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries));
-            if (prefix1.StartsWith("en"))
+            if (string.IsNullOrWhiteSpace(data))
             {
-                LoadEnVerbs(tokens);
+                await DisplayAlert(AppResources.verbs, string.Format(AppResources.Word_with__0__not_found, verb), "OK");
+                m_conjVerbs.Remove(verb);
+                return m_conjVerbs.Count == 0;
             }
-            else if (prefix1.StartsWith("es"))
-            {
-                LoadEsVerbs(tokens);
-            }
-            else if (prefix1.StartsWith("de"))
-            {
-                LoadDeVerbs(tokens);
-            }
-            else if (prefix1.StartsWith("ru"))
-            {
-                LoadRuVerbs(tokens);
-            }
-            break;
         }
+        SetMode(false, true);
+        m_conjVerbs.Remove(verb);
+        var tokens = data.Trim().Split(new char[] { ',' }, (StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries));
+        if (prefix1.StartsWith("en"))
+        {
+            LoadEnVerbs(tokens);
+        }
+        else if (prefix1.StartsWith("es"))
+        {
+            LoadEsVerbs(tokens);
+        }
+        else if (prefix1.StartsWith("de"))
+        {
+            LoadDeVerbs(tokens);
+        }
+        else if (prefix1.StartsWith("ru"))
+        {
+            LoadRuVerbs(tokens);
+        }
+
         SetSize(VerbInfoH1, true); SetSize(VerbInfoH2, true); SetSize(VerbInfoH3, true);
         SetSize(VerbInfoH4, true); SetSize(VerbInfoH5, true); SetSize(VerbInfoH6, true);
         SetSize(VerbInfoH7, true); SetSize(VerbInfoH8, true); SetSize(VerbInfoH9, true);
@@ -359,6 +383,8 @@ public partial class LearnPage : ContentPage
         SetSize(VerbInfo161); SetSize(VerbInfo171); SetSize(VerbInfo181);
         SetSize(VerbInfo162); SetSize(VerbInfo172); SetSize(VerbInfo182);
         SetSize(VerbInfo163); SetSize(VerbInfo173); SetSize(VerbInfo183);
+
+        return false;
     }
     void LoadEnVerbs(string[] tokens)
     {
@@ -762,6 +788,9 @@ public partial class LearnPage : ContentPage
             }
             await Task.Delay(800);
         }
+        var v = TranslationView.GetScrollView();
+        m_trasnlationViewY = v.ScrollY;
+
         m_settingWord = true;
         Context.SetWord(word);
         m_category = m_category == Categories.DefaultCategory ? m_category : word.Category;
@@ -774,6 +803,8 @@ public partial class LearnPage : ContentPage
         m_category.Index = wordIndex;
         Preferences.Set(WordSet, wordIndex);
         Preferences.Set(CategorySet, ind);
+        Preferences.Set(CategoryWord + m_category.Name, wordIndex);
+
         CategoryPicker.SelectedIndex = ind;
         if (word.Category.IsText)
         {
@@ -791,9 +822,16 @@ public partial class LearnPage : ContentPage
             MainWordLabel.Text = Context.MainWord;
         }
         WordId.Text = string.Format(AppResources.Word__0___1_, (m_category.Index+1), m_category.GetTotalWords());
+
         TranslationFlag.Source = Word.GetFlag(SettingsPage.MyVoice);
         TranslationBtn.Text = word.GetTranslation(SettingsPage.MyVoice);
         TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
+        try
+        {
+            TranslationView.ScrollTo(m_trasnlationViewY);
+        }
+        catch (Exception) { }
+
         ButInfoBorder.IsVisible = ButInfo.IsVisible = (word.Category.Name == "verbs");
 
         if (speak)
@@ -841,7 +879,9 @@ public partial class LearnPage : ContentPage
         m_category = Categories.SwitchCategory(chosen);
         //SetCategory(m_category, true);
 
-        var word = m_category.GetWord();
+        var index = Preferences.Get(CategoryWord + m_category.Name, 0);
+        var word = m_category.GetWord(index);
+
         await SetWord(word);
     }
 }
@@ -987,7 +1027,6 @@ public class Context
         data.Tuple.Add(new Variable("lala"));
 
         MainPage.Instance.Scripting.UpdateValue(nameof(LearnPage.Context.TransInfo), data);*/
-
     }
 
     internal void GenerateTransInfo(Word word)

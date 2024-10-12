@@ -285,7 +285,7 @@ public class Category
     }
     public Word GetWord(int ind = 0)
     {
-        if (ind > Words.Count)
+        if (ind >= Words.Count)
         {
             ind = 0;
         }

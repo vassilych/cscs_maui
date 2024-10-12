@@ -31,12 +31,12 @@
             <ColumnDefinition  Width="38*" />
             <ColumnDefinition  Width="12*" />
         </Grid.ColumnDefinitions>
-        <Label x:Name="toLearn" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="0" Text="Language to Learn"
-               FontAttributes="Bold" HorizontalOptions="Start" />
-        <ImageButton x:Name="flagLearn" Margin = "4,4,2,2" HorizontalOptions="End" VerticalOptions="Start" Source="en_us" Grid.Column="1"
+        <Label x:Name="myLanguage" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="0" Text="My Language" FontAttributes="Bold" HorizontalOptions="End" />
+        <ImageButton x:Name="flagMy" Margin = "4,4,2,2" Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Start" Source="es_mx"
             Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
-        <Label x:Name="myLanguage" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="2" Text="My Language" FontAttributes="Bold" HorizontalOptions="End" />
-        <ImageButton x:Name="flagMy" Margin = "4,4,2,2" Grid.Column="3" HorizontalOptions="End"  VerticalOptions="Start" Source="es_mx"
+        <Label x:Name="toLearn" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="2" Text="Language to Learn"
+               FontAttributes="Bold" HorizontalOptions="Start" />
+        <ImageButton x:Name="flagLearn" Margin = "4,4,2,2" HorizontalOptions="End" VerticalOptions="Start" Source="en_us" Grid.Column="3"
             Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
 	</Grid>
 

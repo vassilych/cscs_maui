@@ -2,3 +2,7 @@
 
 // 26.2.9
 InitSyncfusion("MzQzMTk4NUAzMjM2MmUzMDJlMzBXSDViRm1qTnZ3UTUrek9SR2orMlFJVDVPUWk0LzNHRFhqNno1eXZEOTI0PQ==");
+
+function CategoryPicker@clicked(arg) {
+  PrintConsole("Lala: " + arg);
+}

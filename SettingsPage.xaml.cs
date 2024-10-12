@@ -53,8 +53,8 @@ public partial class SettingsPage : ContentPage
             SelectedIndex = 0,
         };
 
-        LanguagePicker.Columns.Add(m_col1);
         LanguagePicker.Columns.Add(m_col2);
+        LanguagePicker.Columns.Add(m_col1);
         LanguagePicker.SelectionChanged += My_SelectionChanged;
 
         PlaySlider.ValueChanged += PlaySlider_ValueChanged;
@@ -210,7 +210,7 @@ public partial class SettingsPage : ContentPage
         {
             return;
         }
-        if (e.ColumnIndex == 0)
+        if (e.ColumnIndex == 1)
         {
             VoiceLearn = Words.GetVoice(e.NewValue);
             MainPage.Instance?.SetBackground(e.NewValue);
@@ -224,7 +224,6 @@ public partial class SettingsPage : ContentPage
             MainPage.Instance?.SetLanguage(LangCode);
             Preferences.Set(MyVoiceSet, MyVoice);
             flagMy.Source = Words.GetFlag(MyVoice);
-            //await TTS.Speak("Hello lol. Como estas?", voice);
         }
     }
 }

@@ -1,0 +1,43 @@
+SetValue("WordId", "Lala");
+SetValue("MainImgImg", "angry.png");
+SetValue("SearchEntry", "Lol");
+txt = GetValue("SearchEntry");
+curr = GetValue("MainImgImg");
+
+Show("LearnTabPage");
+Show("QuizTabPage");
+Show("SettingsTabPage");
+Hide("SearchPanel");
+
+Hide("ImgBtn1");Hide("ImgBtn2");Hide("ImgBtn3"); Hide("ImgBtn4");Hide("ImgBtn5");Hide("ImgBtn6");
+Show("ImgBtn1");Show("ImgBtn2");Show("ImgBtn3"); Show("ImgBtn4");Show("ImgBtn5");Show("ImgBtn6");
+Hide("WordId");  Show("WordId");
+p=GetValue("LanguagePicker");
+lang = {1,3};
+SetValue("LanguagePicker", {4,5});
+ll = GetValue("ResultsView");
+ll = GetValue("TranslationView");
+ll = GetValue("CategoryPicker");
+ll[0].name
+
+function TimeOut(sender, arg) {
+  printConsole("On timeout: " + timestamp);
+}
+
+Timeout("","");
+Schedule(1000, "timer_timeout", "", true);
+CancelSchedule(2);
+function timer_timeout(sender, arg) {
+  printConsole("sender: " + sender, ", arg=" + arg);
+  printConsole("On timer_timeout: " + timestamp);
+}
+
+class TestScope
+{
+    testValue = 0;
+    TestScope(v) { testValue = v; }
+    function getValue() { return testValue; }
+}
+ 
+t = new TestScope(5);
+print(t);

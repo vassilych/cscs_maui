@@ -328,7 +328,7 @@ namespace ScriptingMaui.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to שפה ללמוד:.
+        ///   Looks up a localized string similar to שפה ללמוד.
         /// </summary>
         internal static string Language_to_learn_ {
             get {
@@ -634,7 +634,7 @@ namespace ScriptingMaui.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to תרגם ל:.
+        ///   Looks up a localized string similar to השפה שלי.
         /// </summary>
         internal static string Translate_to_ {
             get {

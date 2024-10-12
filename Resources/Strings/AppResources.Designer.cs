@@ -634,7 +634,7 @@ namespace ScriptingMaui.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Translate to:.
+        ///   Looks up a localized string similar to My language:.
         /// </summary>
         internal static string Translate_to_ {
             get {

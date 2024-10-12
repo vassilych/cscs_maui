@@ -75,6 +75,9 @@
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\to_deliver.png" />
+	</ItemGroup>
+	<ItemGroup>
 		<!-- App Icon -->
 		<!-- <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" /> -->
 		<MauiIcon Include="Resources\AppIcon\appicon.png" />
@@ -1419,7 +1422,6 @@
 	  <BundleResource Include="Resources\Images\bathrobe.png" />
 	  <BundleResource Include="Resources\Images\bat.png" />
 	  <BundleResource Include="Resources\Images\basketball_hoop.png" />
-	  <BundleResource Include="Resources\Images\bark.png" />
 	  <BundleResource Include="Resources\Images\banana.png" />
 	  <BundleResource Include="Resources\Images\ballet.png" />
 	  <BundleResource Include="Resources\Images\ball.png" />
@@ -1927,7 +1929,7 @@
 	  <BundleResource Include="Resources\Images\to_get.png" />
 	  <BundleResource Include="Resources\Images\to_return__to_come_back.png" />
 	  <BundleResource Include="Resources\Images\to_come.png" />
-	  <BundleResource Include="Resources\Images\to_be_in_a_hurry.png" />
+	  <BundleResource Include="Resources\Images\to_be_in_a_hurry__to_hurry__to_rush.png" />
 	  <BundleResource Include="Resources\Images\to_treat__to_handle.png" />
 	  <BundleResource Include="Resources\Images\to_bring.png" />
 	  <BundleResource Include="Resources\Images\to_feel.png" />
@@ -2023,6 +2025,29 @@
 	  <BundleResource Include="Resources\Images\to_disturb__to_annoy.png" />
 	  <BundleResource Include="Resources\Images\abdomen__abs.png" />
 	  <BundleResource Include="Resources\Images\black_currant.png" />
+	  <BundleResource Include="Resources\Images\out_of.png" />
+	  <BundleResource Include="Resources\Images\into.png" />
+	  <BundleResource Include="Resources\Images\along.png" />
+	  <BundleResource Include="Resources\Images\across.png" />
+	  <BundleResource Include="Resources\Images\up.png" />
+	  <BundleResource Include="Resources\Images\down.png" />
+	  <BundleResource Include="Resources\Images\over.png" />
+	  <BundleResource Include="Resources\Images\towards.png" />
+	  <BundleResource Include="Resources\Images\around.png" />
+	  <BundleResource Include="Resources\Images\between.png" />
+	  <BundleResource Include="Resources\Images\among.png" />
+	  <BundleResource Include="Resources\Images\near__next_to__by.png" />
+	  <BundleResource Include="Resources\Images\gooseberry.png" />
+	  <BundleResource Include="Resources\Images\sea_buckthorn.png" />
+	  <BundleResource Include="Resources\Images\kitchen_sink.png" />
+	  <BundleResource Include="Resources\Images\tree__bark.png" />
+	  <BundleResource Include="Resources\Images\to_study.png" />
+	  <BundleResource Include="Resources\Images\to_deliver__to_offer.png" />
+	  <BundleResource Include="Resources\Images\to_try.png" />
+	  <BundleResource Include="Resources\Images\to_be_in_a_hurry__to_hurry__to_rush.png" />
+	  <BundleResource Include="Resources\Images\to_offer.png" />
+	  <BundleResource Include="Resources\Images\to_deliver.png" />
+	  <BundleResource Include="Resources\Images\spare_ribs.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2181,6 +2206,28 @@
 	  <None Remove="Resources\Images\to_disturb__to_annoy.png" />
 	  <None Remove="Resources\Images\abdomen__abs.png" />
 	  <None Remove="Resources\Images\black_currant.png" />
+	  <None Remove="Resources\Images\out_of.png" />
+	  <None Remove="Resources\Images\into.png" />
+	  <None Remove="Resources\Images\along.png" />
+	  <None Remove="Resources\Images\across.png" />
+	  <None Remove="Resources\Images\up.png" />
+	  <None Remove="Resources\Images\down.png" />
+	  <None Remove="Resources\Images\over.png" />
+	  <None Remove="Resources\Images\towards.png" />
+	  <None Remove="Resources\Images\around.png" />
+	  <None Remove="Resources\Images\between.png" />
+	  <None Remove="Resources\Images\among.png" />
+	  <None Remove="Resources\Images\near__next_to__by.png" />
+	  <None Remove="Resources\Images\gooseberry.png" />
+	  <None Remove="Resources\Images\sea_buckthorn.png" />
+	  <None Remove="Resources\Images\kitchen_sink.png" />
+	  <None Remove="Resources\Images\tree__bark.png" />
+	  <None Remove="Resources\Images\to_study.png" />
+	  <None Remove="Resources\Images\to_deliver.png" />
+	  <None Remove="Resources\Images\to_try.png" />
+	  <None Remove="Resources\Images\to_be_in_a_hurry__to_hurry__to_rush.png" />
+	  <None Remove="Resources\Images\to_offer.png" />
+	  <None Remove="Resources\Images\spare_ribs.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

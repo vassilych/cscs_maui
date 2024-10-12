@@ -155,3 +155,10 @@ to create,create, created, creating, create,create,creates, created,created,crea
 to understand,understand, understood, understanding, understand,understand,understands, understood,understood,understood
 to disturb, disturb,  disturbed, disturbing, disturb,disturb,disturbs, disturbed,disturbed,disturbed
 to annoy, annoy,  annoyed, annoying, annoy,annoy,annoys, annoyed,annoyed,annoyed
+to break, break,  broken, breaking, break,break,breaks, broke,broke,broke
+to deliver, deliver,  delivered, delivering, deliver,deliver,delivers, delivered,delivered,delivered
+to offer, offer,  offered, offering, offer,offer,offers, offered,offered,offered
+to study, study,  studied, studying, study,study,studies, studied,studied,studied
+to try, try,  tried, trying, try,try,tries, tried,tried,tried
+to hurry, hurry,  hurried, hurrying, hurry,hurry,hurries, hurried,hurried,hurried
+to rush, rush,  rushed, rushing, rush,rush,rushes, rushed,rushed,rushed

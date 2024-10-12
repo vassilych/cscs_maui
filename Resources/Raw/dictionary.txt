@@ -456,6 +456,8 @@ fruits and vegetables	blueberry		die Blaubeere		черника	​la mora azul	�
 fruits and vegetables	blackberry		die Brombeere 		ежевика	​la zarzamora		a amora	la mûre	la mora	אוכמן	黑莓	ブラックベリー	التوت الأسود 	Hēiméi
 fruits and vegetables	black currant		die Schwarze Johannisbeere 		чёрная смородина	​la grosella negra		a groselha preta, o cassis	le cassis	il ribes nero	דומדמניות שחורות	黑醋栗	ブラックカラント	الكشمش الأسود	Hēi cù lì
 fruits and vegetables	redberry, red currant		die Johannisbeere		красная смородина	​la grosella roja		a groselha vermelha	​la groseille rouge	​il ribes rosso	דומדמניות אדומות	红醋栗	レッドカラント	الكشمش الأحمر	Hóng cù lì
+fruits and vegetables	gooseberry		die Stachelbeere		крыжовник	la uva crespa	la uva espina	a groselha	la groseille à maquereau	l'uva spina	דוּמדְמָנִית	醋栗	グーズベリー	عنب الثعلب	Cù lì
+fruits and vegetables	sea buckthorn		der Sanddorn		облепиха	el espino amarillo		o espinheiro-marítimo	l'argousier 	il olivello spinoso	אשחר ים	沙棘	シーバックソーン	نبق البحر	Shājí
 fruits and vegetables	date (fruit)		die Dattel		финик	el dátil		​a tâmara	la datte	​il dattero	פרי תמר	枣	(果実) ナツメヤシ、デーツ 名		تمر 	zǎo
 fruits and vegetables	fig		die Feige		инжир	el higo		o figo	la figue	il fico	תְאֵנָה	如图	イチジク	تين	Rú tú
 fruits and vegetables	sweet pepper		der Paprika	Pepperoni	сладкий перец	el pimiento morrón		o pimentão	le paprika	il peperone	פלפל מתוק	甜椒	ピーマン	فلفل حلو	tián jiāo
@@ -485,11 +487,12 @@ food and beverage	smoked ham		der Rohschinken		прошутто, копчёны�
 food and beverage	bologna		die Fleischkäse	Lyoner	варёная колбаса	la mortadela		a mortadela	la saucisse de Lyon	la mortadella	בולוניה	意式肉肠	モルタデッラ	صلصة بولونيا	yì shì ròu cháng
 food and beverage	sausage		die Wurst		сосиска	la salchicha		a linguiça	la saucisse	la salsiccia	נַקנִיק	香肠	ソーセージ	سجق	xiāngcháng
 food and beverage	chicken leg		die Hähnchenkeule	Pouletschenkel	куриная ножка	la pierna de pollo		a coxa de frango	la cuisse de poulet	la coscia di pollo	רגל עוף	鸡腿	鶏の足	فخذ الدجاج	jītuǐ
+food and beverage	spare ribs		die Spareribs, die Schweinerippchen		свиные рёбрышки	las costillas de cerdo		a costela de porco	le travers de porc	le costolette di maiale	צלעות רזרביות 	排骨	スペアリブ	فخذ الدجاج	Páigǔ
 food and beverage	prawn, shrimp	shrimp	die Garnele	Crevette	креветка	el camarón	la gamba	o camarão	la crevette	il gamberetto	סרטנים, שרימפס	虾	クルマエビ、エビ	الجمبري والروبيان	xiā
 food and beverage	liver pate		die Leberpastete		печёнка	el paté de hígado		o patê de fígado	le patê de foie	il patè di fegato	פטה כבד	烤肝	レバーパテ	مورتديلا الكبد	kǎo gān
 food and beverage	goose liver		die Gänseleber		гусиная печёнка	el foie-gras		o fígado de ganso	le foie gras	il fegato d'oca	כבד אווז	鹅肝	ガチョウの肝臓	كبد الإوز	é gān
 food and beverage	cutlet		die Schnitzel		котлета	la chuleta		a bisteca	l'escalope	la cotoletta	שׁנִיצֶל	肉片	カツレツ	كستلاتة	ròupiàn
-food and beverage	steak		das Steak		бифштекс	el filete	el bistec	o bife	le bifteck	la bistecca	סטֵייק	牛排	ステーキ	شريحة لحم	niúpái
+food and beverage	steak		das Steak, das Rinderfilet		бифштекс	el filete de res	el solomillo de ternera	o bife	le bifteck	la bistecca	סטֵייק	牛排	ステーキ	شريحة لحم	niúpái
 food and beverage	roasted beef		das gebratene Fleisch	Brate	жареная говядина	la carne asada		o bife assado	le rôti de boeuf	il manzo arrosto	בקר צלוי	烤牛肉	ローストビーフ	لحم البقر المشوي	kǎo niúròu
 food and beverage	skewer		der Bratspieß		шашлык, шампур	la broqueta		o espeto	la broche	il spiedo	לְשַׁפֵּד	串	串	سيخ	chuàn
 food and beverage	fish and fries	fish and chips	die Fisch und Chips		рыба с картошкой	el pescado con papas	el pescado con patatas	o Peixe com fritas	le poisson avec des frites	il pesce e le patatine fritte	דגים וצ'יפס	炸鱼和薯条	魚とフライドポテト	السمك والبطاطا المقلية	zhà yú hé shǔ tiáo
@@ -544,7 +547,7 @@ household	couch		das Sofa		диван	el sofá		o sofá	le canapé	il divano	ס�
 household	kitchen		die Küche	Chuchi	кухня	la cocina		a cozinha	la cuisine	la cucina	מִטְבָּח	厨房	キッチン	مطبخ	chúfáng
 household	floor		der Fußboden	Fuessbode	пол	el piso	el suelo	o chão	le sol	il pavimento	קוֹמָה	地板	フロア	أرضية	dìbǎn
 household	ceiling		die Decke	Decki	потолок	el techo		o teto	le plafond	il soffitto	תִקרָה	天花板	天井	سقف	tiānhuābǎn
-household	curtain		der Vorhang		занавеска	la cortina		a cortina	le rideau	la tenda	וִילוֹן	窗帘	カーテン	ستارة	chuānglián
+household	curtain		der Vorhang		занавеска, штора	la cortina		a cortina	le rideau	la tenda	וִילוֹן	窗帘	カーテン	ستارة	chuānglián
 household	blinds		der Fensterladen	Feischterlade	жалюзи	las persianas		a persiana	les fenêtres persiennes	le persiane	תריסים	百叶窗	ブラインド	الستائر	bǎiyèchuāng
 household	stairs		die Treppe	Stege	лестница	la escalera		a escada	l'escalier	la scala	מדרגות	楼梯，梯级	階段	درج	lóutī, tījí
 household	elevator	lift	der Fahrstuhl	Lift	лифт	el elevador	el ascensor	o elevador	l'ascenseur	l'ascensore	מַעֲלִית	电梯	エレベーター	المصعد الكهربائي	diàntī
@@ -616,7 +619,7 @@ bed and bath	toilet		das WC		унитаз	el excusado	el inodoro	o banheiro, o t
 bed and bath	toilet seat		der Toilettensitz	WC Sitz	туалетное сидение	el asiento de tocador	el asiento de baño	o assento da privada	le siège de toilette	il sedile del water	מושב אסלה	马桶座圈	便座	مقعد المرحاض	mǎtǒng zuò quān
 bed and bath	toilet paper		das Toilettenpapier	WC Papier	туалетная бумага	el papel de baño	el papel higiénico	o papel higiênico	le papier toilette	la carta igienica	נייר טואלט	厕所纸	トイレットペーパー	ورق التواليت	cèsuǒ zhǐ
 bed and bath	tap		der (Wasser) Hahn		кран	la llave de agua	el grifo	a torneira	le robinet	il rubinetto	בֶּרֶז	水龙头	蛇口	صنبور	shuǐlóngtóu
-bed and bath	sink	hand basin	das Waschbecken	Waschbecki	раковина	el lavabo		a pía 	le lavabo	il lavello	כִּיוֹר	水槽	シンク	بالوعة	shuǐcáo
+bed and bath	sink	hand basin	das Waschbecken	Waschbecki	раковина	el lavabo		a pía 	le lavabo	il lavello	כִּיוֹר	下沉	シンク	حوض	Xià chén
 bed and bath	towel		das Badetuch		полотенце	la toalla		a toalha	la serviette (de bain)	l'asciugamano	מַגֶבֶת	毛巾	タオル	منشفة	máojīn
 bed and bath	face tissue, Kleenex		das Kosmetiktuch		бумажный платок	el pañuelo, el kleenex	el pañuelo de papel	o lenço de papel, Kleenex	le mouchoir en papier 	il fazzoletto di carta	רקמת פנים, קלינקס	薄纸	ティシュペーパー、クリネックス	منديل، كلينيكس	bó zhǐ
 bed and bath	soap		die Seife		мыло	el jabón		o sabonete	le savon	il sapone	סַבּוֹן	肥皂	せっけん	صابون	féizào
@@ -705,6 +708,7 @@ kitchen	microwave oven		die Mikrowelle		микроволновая печь	el m
 kitchen	fridge		der Kühlschrank	Chüelschrank	холодильник	el refrigerador	la nevera	a geladeira	le frigo	il frigorifero	מְקָרֵר	电冰箱	冷蔵庫	ثلاجة	diàn bīngxiāng
 kitchen	freezer		der Tiefkühlschrank	Gfrierfach	морозилка	la congeladora	el congelador	o congelador	le congélateur	il freezer	מַקפִּיא	冷冻库	冷凍庫	مجمد , فريزر	lěngdòng kù
 kitchen	dishwasher		die Geschirrspülmaschine		посудомоечная машина	el lavatrastes	el lavaplatos, el lavavajillas	a lava-louça	le lave-vaisselle	la lavastoviglie	מַדִיחַ כֵּלִים	洗碗机	食器洗い機	جلاية صحون	xǐ wǎn jī
+kitchen	kitchen sink	basin	die Küchenspüle, das Waschbecken	das Lavabo	кухнная раковина	el fregadero	el cuenco, el tazón	a pía, a bacia	l'évier	il lavandino della cucina	כִּיוֹכִּיוֹרר	水槽	シンク	بالوعة	shuǐcáo
 kitchen	corkscrew		der Korkenzieher		штопор	el sacacorchos		o saca rolhas	le tire-bouchon	il cavatappi	חוֹלֵץ	螺丝锥	コルクスクリュー	المفتاح	luósī zhuī
 kitchen	can opener	tin opener	der Dosenöffner		открывашка	el abrelatas		o abridor de lata	l'ouvre-boîte	l'apriscatole	פּוֹתחָן קוּפסָאוֹת	开罐器	缶切り	فتاحة علب	kāi guàn qì
 kitchen	peeler		der Schäler		картофелечистка	el pelador		o descascador	l'économe	il pelapatate	קוֹלְפָּן	削皮器	ピーラー	مقشرة	xiāo pí qì
@@ -1186,7 +1190,7 @@ environment	forest		der Wald		лес	el bosque		a floresta	la forêt	la foresta	
 environment	tree		der Baum		дерево	el árbol		a árvore	l'arbre	l'arbero	עֵץ	树	木	شجرة	shù
 environment	root		die Wurzel	Wurzle	корень	la raíz		a raiz	la racine	la radice	שׁוֹרֶשׁ	根	根	جذر	gēn
 environment	branch		der Ast		ветка, сук	la rama		o galho	la branche	il ramo	עָנָף	枝	枝	فرع	zhī
-environment	bark		die Rinde		кора	la corteza		o latido	l'écorce	la corteccia	לִנְבּוּחַ	吠	樹皮	لحاء	fèi
+environment	(tree) bark		die Rinde		кора	la corteza		o latido	l'écorce	la corteccia	לִנְבּוּחַ	吠	樹皮	لحاء	fèi
 environment	leaf		das Blatt		лист, листок	la hoja		a folha	la feuille	la foglia	עָלֶה	树叶	葉	ورقة الشجر	shùyè
 environment	stump		der Baumstumpf		пень	el tocón		o toco	la souche	il ceppo	גֶדֶם	树墩	切り株	قرمة	shùdūn
 environment	wood		das Holz		древесина, дерево	la madera		a madeira	le bois	il legno	עֵץ	木	木材	خشب	mù
@@ -1223,14 +1227,15 @@ verbs	to exist		existieren		существовать	existir		existir	exister	es
 verbs	to stay, to be		sich befinden, sein		быть, находиться	estar		situar-se, estar	situar-se	se sentir, être situé	trovarsi, essere	להיות, להישאר	找到自己	なれ	أن تكون، تبقى	Zhǎodào zìjǐ
 verbs	to become		werden		стать, становиться	convertirse en, hacerse		tornar-se	devenir	diventare	להפוך,לִהיוֹת	成为	なる	لتصبح	Chéngwéi
 verbs	to be born		auf die Welt kommen	uf dWelt cho	родиться	nacer		nascer	naître	nascere	להיוולד	出生	生まれる	يولد	chūshēng
-verbs	to beg		bitten		просить	pedir		implorar	demander	supplicare	להתחנן	请求	物乞いする	يتسول	qǐngqiú
+verbs	to beg		bitten		просить	pedir		implorar	demander	supplicare	לבקש	请求	物乞いする	يتسول	qǐngqiú
+verbs	to break		brechen, zerbrechen		сломать	romper		romper	rompre	rompre	רומפר	连身衣	ロンパース	رومبير	Lián shēn yī
 verbs	to believe		glauben		верить	creer		acreditar	croire	credere	להאמין	相信	信じる	يعتقد	xiāngxìn
 verbs	to build		bauen	baue	строить	construir		construir	construire	costruire	לבנות	建造	建てる	يبني	jiànzào
 verbs	to buy		kaufen	chaufe	купить	comprar		comprar	acheter	acquistare	לקנות	购买	買う	يشتري	gòumǎi
 verbs	to sell		verkaufen	verchaufe	продать	vender		vender	vendre	vendere	למכור	卖	売る	يبيع	mài
 verbs	to calculate		rechnen		считать, вычислять	calcular		calcular	calculer	calcolare	לחשב	算	計算する	يحسب	suàn
 verbs	to call		anrufen	aalüte	звонить	llamar		chamar	téléphoner, appeler	telefonare	להתקשר	打电话	呼び出す	يتصل	dǎ diànhuà
-verbs	to carry		tragen		нести, тaщить	llevar		carregar	porter	trasportare	לשאת	携带	運ぶ	يحمل	xiédài
+verbs	to carry		tragen		нести, тaщить	llevar		carregar	porter	trasportare	לשנות	携带	運ぶ	يحمل	xiédài
 verbs	to catch		fangen		поймать, ловить	cachar, atrapar	coger	pegar	attraper	raggiunge, acchiappare	לתפוס	抓住	捕まえる	يمسك	zhuā zhù
 verbs	to change		sich verändern		измениться, переодеваться	cambiarse		mudar	se changer	cambiare	לשנות	改变	変わる	يغير	gǎibiàn
 verbs	to chat		schwatzen, quatschen		болтать	chatear	charlar	conversar	tchatcher, bavarder	cianciare, chiacchierare	לשוחח	聊天	喋る、チャットする	يدردش	liáotiān
@@ -1240,7 +1245,7 @@ verbs	to climb		klettern	chlettere	лазить, перелезать	escalar		e
 verbs	to close		schließen	schlüüsse	закрыть	cerrar		fechar	fermer	chiudere	לסגור	关闭	閉じる	يغلق	guānbì
 verbs	to open		öffnen		открыть	abrir		abrir	ouvrir	aprire	לפתוח	打开	開ける	يفتح	dǎkāi
 verbs	to cook		kochen		готовить	cocinar		cozinhar	cuisiner	cucinare	לבשל	烹调、煮	料理する	يطهو/يطبخ	pēngtiáo, zhǔ
-verbs	to comb, to brush		sich kämmen		причёсываться	peinarse		pentear, escovar	se peigner, se coiffer	pettinare, spazzolare	לסרק, לצחצח	刷, 梳	（櫛で）とかす	يمشط	shuā, shū
+verbs	to comb, to brush		sich kämmen		причёсываться	peinarse		pentear, escovar	se peigner, se coiffer	pettinare, spazzolare	להסתרק	刷, 梳	（櫛で）とかす	يمشط	shuā, shū
 verbs	to count		zählen		считать	contar		contar	compter	calcolare	לספור	计数	数える	يعد	jìshù
 verbs	to crawl		krabbeln		ползать	gatear		rastejar	marcher à quatre pattes, ramper	strisciare	לזחול	爬行	這う	يحبو	páxíng
 verbs	to cry		weinen	hüüle	плакать	llorar		chorar	pleurer	piangere	לבכות	哭泣	泣く	يبكي	kūqì
@@ -1256,11 +1261,13 @@ verbs	to drink		trinken	trinkche, suufe	пить	beber		beber	boire	bere	לשת�
 verbs	to eat		essen	ässe	есть	comer		comer	manger	mangiare	לאכול	吃	食べる	يأكل	chī
 verbs	to evolve		sich entwickeln		развиваться, эволюционировать	desarrollarse, evolucionar		evoluir	évoluer	sviluppare	להתפתח	（使）逐步发展	進化する	يتطور	(shǐ) zhúbù fāzhǎn
 verbs	to exchange		umtauschen	umtuusche	меняться	intercambiar		trocar	échanger	scambiare	להחליף	交换	交換する	يتبادل	jiāohuàn
-verbs	to fall down		fallen	gheie	падать	caer		cair	tomber	cadere	ליפול למטה	跌倒，掉下	落下する	يسقط	diédǎo, diào xià
-verbs	to fight		kämpfen	chämpfe	драться	pelearse		lutar	se battre	combattere	להילחם	打架，斗争	戦う	يحارب	dǎjià, dòuzhēng
+verbs	to fall down		fallen	gheie	падать	caer		cair	tomber	cadere	ליפול	跌倒，掉下	落下する	يسقط	diédǎo, diào xià
+verbs	to fight		kämpfen	chämpfe	драться	pelearse, luchar		lutar	se battre	combattere	להילחם	打架，斗争	戦う	يحارب	dǎjià, dòuzhēng
 verbs	to fly		fliegen	flüüge 	летать	volar		voar	voler	volare	לעוף	飞	飛ぶ	يطير	fēi
 verbs	to frighten		erschrecken		пугать	asustar		assustar	effrayer	atterrire	להפחיד	吓唬	怖がらせる	يرعب	xiàhǔ
 verbs	to give		geben	gäh	дать	dar		dar	donner	dare	לתת	给	与える	يعطي	gěi
+verbs	to deliver		etwas zustellen		доставить	entregar		entregar	distribuer	consegnare	למסור	传递	届ける	لتسليم	Chuándì
+verbs	to offer		offerieren, anbieten		предложить	ofrecer		ofertar	offrir	offrire	לְהַצִיעַ	提供	提供する	عرض	Tígōng
 verbs	to hate		hassen		ненавидеть	odiar		odiar	détester	odiare	לשנוא	恨	嫌う	يكره	hèn
 verbs	to help		helfen		помогать	ayudar		ajudar	aider	aiutare	לעזור	帮助	助ける	يساعد	bāngzhù
 verbs	to hug		umarmen		обнимать	abrazar		abraçar	embrasser	abbracciare	לחבק	拥抱	抱擁する	يعانق	yǒngbào
@@ -1271,12 +1278,13 @@ verbs	to jump		springen	gumpe	прыгать	saltar		saltar	sauter	saltare	לק�
 verbs	to grow up		erwachsen werden, aufwachsen		вырастать, взрослеть	crecer		crescer	grandir	crescere	להתבגר	长大	育つ	يكبر	zhǎng dà
 verbs	to harvest		ernten		собирать урожай	cosechar		colher	récolter, moissonner	raccogliere, mietere	לקצור	收割	～を収穫する	يحصد	shōugē
 verbs	to keep silence		schweigen	schwige	молчать	callar		silenciar	se taire	tacere	לשמור על שתיקה	保持安静	沈黙を保つ	يسكت	bǎochí ānjìng
-verbs	to kick		treten	gingge	ударить ногой	dar patadas		chutar	donner un coup de pied	calciare	לבעוט	踢	キックする、蹴る	يركل	tī
+verbs	to kick		treten	gingge	ударить ногой	patear		chutar	donner un coup de pied	calciare	לבעוט	踢	キックする、蹴る	يركل	tī
 verbs	to kiss		küssen		целоваться	besar		Beijar	donner un baiser	baciare	לנשק	亲吻	キスする	يقبل	qīnwěn
-verbs	to knock		klopfen		стучать	tocar a la puerta	llamar a la puerta	Bater	frapper	bussare, colpire	לדפוק	敲	叩く	يضرب	qiāo
+verbs	to knock		klopfen		стучать	tocar la puerta		Bater	frapper	bussare, colpire	לדפוק	敲	叩く	يضرب	qiāo
 verbs	to laugh		lachen		смеяться	reírse		rir	rire	ridere	לצחוק	大笑	笑う	يضحك	dà xiào
-verbs	to learn		lernen		учиться	estudiar, aprender		aprender	apprendre	apprendere	ללמוד	学习	学ぶ	يتعلم	xuéxí
-verbs	to lie		liegen	ligge	лежать	estar acostado		mentir	être couché	mentire	לשקר	躺	横たわる	يكذب	tǎng
+verbs	to learn		lernen		учиться	aprender		aprender	apprendre	apprendere	ללמוד	学习	学ぶ	يتعلم	xuéxí
+verbs	to study		studieren		обучаться, изучать	estudiar		estudar	étudier	studiare	לַחקוֹר	研究	勉強する	للدراسة	Xuéxí
+verbs	to lie		liegen	ligge	лежать	estar acostado, estar		mentir	être couché	mentire	לשקר	躺	横たわる	يكذب	tǎng
 verbs	to lie down		sich hinlegen	aneligge	ложиться	acostarse		deitar-se	se coucher	stendersi	לשכב	躺下	横になる	يستلقي	tǎng xià
 verbs	to lift		heben		поднимать	levantar		levantar	lever, soulever	alzare	להרים	抬	持ち上げる	يرفع	tái
 verbs	to listen		hören	lose	слушать	escuchar		ouvir	écouter	ascoltare	להקשיב	听	聞く	يستمع	tīng
@@ -1300,7 +1308,7 @@ verbs	to relax		entspannen		расслабляться	relajarse		relaxar	se rel
 verbs	to run		rennen	ränne	бежать	correr		correr	courir	correre	לרוץ	跑	走る	يجري	pǎo
 verbs	to see		sehen	luege, gseh	смотреть	mirar		ver	regarder	vedere	לראות	看	見る	يرى	kàn
 verbs	to shake hands		die Hände schütteln	Händ schüttle	пожать руки	estrecharse las manos		apertar as mãos	serrer la main	stringere la mano	ללחוץ ידיים	握手	握手する	يصافح	wòshǒu
-verbs	to share		teilen		делить	compartir		compartilhar	partager	condividere	לשתף	分享	共有する	يشارك	fēnxiǎng
+verbs	to share		teilen		делить, разделить	compartir		compartilhar	partager	condividere	לשתף	分享	共有する	يشارك	fēnxiǎng
 verbs	to show		zeigen		показывать	mostrar		mostrar	montrer	mostrare	להראות	展示	見せる	يشاهد	zhǎnshì
 verbs	to sing		singen		петь	cantar		cantar	chanter	cantare	לשיר	唱	歌う	يغني	chàng
 verbs	to sit		sitzen		сидеть	estar sentado		sentar	être assis	sedere	לשבת	坐	座っている	يجلس	zuò
@@ -1346,7 +1354,7 @@ verbs	to hear		hören		слышать	oír		ouvir	entendre	sentire, ascoltare	ל
 verbs	to pay		bezahlen		платить	pagar		pagar	payer	pagare	לשלם	支付	支払う	دفع	dǎ hāqian
 verbs	to appear		erscheinen		появляться, казаться	aparecer		aparecer	apparaître	apparire	להופיע	出现	現れる	يظهر	dǎ hāqian
 verbs	to lose		verlieren		проиграть, потерять	perder		perder	perdre	perdere	להפסיד	失败	失う	يفقد	dǎ hāqian
-verbs	to win		gewinnen		победить, выйграть	ganar		ganhar	gagner	vincere	לנצח	获胜	勝つ	فاز	dǎ hāqian
+verbs	to win		gewinnen		победить, выиграть	ganar		ganhar	gagner	vincere	לנצח	获胜	勝つ	فاز	dǎ hāqian
 verbs	to allow		erlauben, zulassen		разрешить	permitir		permitir	permettre	permettere	לאפשר	允许	許可する	يسمح	dǎ hāqian
 verbs	to forbid		verbieten		запретить	prohibir		proibir	interdire	proibire	לאסור	禁止	禁止する	ممنوع	dǎ hāqian
 verbs	to walk, to stroll		spazieren gehen		гулять, прогуливаться	pasear		passear	se promener	passeggiare	ללכת, לטייל	散步	散歩する	تنزه	dǎ hāqian
@@ -1356,7 +1364,8 @@ verbs	to carry out, to accomplish		durchführen, verwirklichen		выполнит
 verbs	to feel		fühlen		чувствовать	sentir		sentir	sentir	sentire, sentirsi	להרגיש	感觉	感じる	شعر	dǎ hāqian
 verbs	to bring		bringen		принести	traer		trazer	apporter	portare	להביא	带来	もたらす	جلب	dǎ hāqian
 verbs	to treat, to handle		behandeln, umgehen		обращаться, иметь дело	tratar		tratar	traiter	trattare	לטפל, לטפל	治疗	治療する	لعلاج	dǎ hāqian
-verbs	to be in a hurry		in Eile sein		торопиться	tener prisa		estar com pressa	être pressé	avere fretta	למהר	着急	急いでいる	كن في عجلة من امرنا	dǎ hāqian
+verbs	to try		versuchen		пытаться	intentar, probar		tentar	tenter	provare	לְנַסוֹת	试	試す	يحاول	Shì
+verbs	to be in a hurry, to hurry, to rush		in Eile sein, eilen		торопиться, спешить	tener prisa, apresurarse		estar com pressa	être pressé	avere fretta	למהר	着急	急いでいる	كن في عجلة من امرنا	dǎ hāqian
 verbs	to return, to come back		zurückkommen, zurückkehren		вернуться	volver, regresar		regressar	rentrer	ritornare	לחזור, לחזור	返回	戻る	يعود	dǎ hāqian
 verbs	to get		bekommen, erreichen		получить, достигать	conseguir, obtener		conseguir	obtenir	conseguire	להשיג	获得、得到	得る	يحقق	dǎ hāqian
 verbs	to create		erstellen, schaffen		творить, создавать	crear		criar	créer	creare, construire	לִיצוֹר	创造	作成する	يخلق	Chuàngzào
@@ -1368,9 +1377,21 @@ prepositions	behind		hinter		за, сзади	atrás de	detrás de	atrás de	der
 prepositions	beside		neben		рядом, близ	junto, al lado de		ao lado de	à côté de	accanto	לְיַד	旁	それ以外	بجانب	Páng
 prepositions	in		in, hinein		в, внутри	en		em	dans, en	in, a	ב	在	で	في	Zài
 prepositions	in front of		vor		перед, снаружи	enfrente de	delante de	em frente de	en tête de	di fronte a	מוּל	在...前面	の前に	امام	Zài... Qiánmiàn
-prepositions	on		auf		на, над	sobre		sobre, em	sur, dans	su	עַל	在	の上	غضبان	Zài
+prepositions	on		auf		на, над	sobre		sobre, em	sur, dans	a, su	עַל	在	の上	غضبان	Zài
 prepositions	through		durch		через, сквозь	a través de, por		através	à travers	attraverso	בְּאֶמצָעוּת	通过	を通して	غضبان	Tōngguò
 prepositions	under		unter		под	bajo, debajo de		sob	sous	sotto	לְפִי	在下面	下	تحت	Zài xiàmiàn
+prepositions	near, next to, by		neben, nächst, bei		рядом, около	junto a, al lado de		ao lado de, próximo de	près de, à côté de	accanto a, adiacente a	לְיַד	旁边	の隣に	بجوار	Pángbiān
+prepositions	between		dazwischen		между	entre		enter	entre	tra, fra, nel mezzo	בֵּין	之间	間	بين	Zhī jiān
+prepositions	among	amongst	inmitten, zwischen, bei		среди	en medio de, entre		no meio de, entre	parmi, entre	tra, fra, in mezzo 	בֵּין	之中	の間で	ضمن	Zhī zhōng
+prepositions	around		herum, um		вокруг	alrededor de		ao redor	autour	attorno a, intorno a	סְבִיב	大约	その周り	حول	Dàyuē
+prepositions	towards		entgegen, am		в сторону, по направлению	hacia		em direção a, para	en direction de, vers	in direzione, verso	לִקרַאת	向	に向かって	تجاه	Xiàng
+prepositions	up		nach oben, hinauf		вверх	arriba		acima	en haut	su	לְמַעלָה	向上	上	أعلى	Xiàngshàng
+prepositions	down		unten, herunter		вниз	abajo		abaixo	en bas, vers le bas	giù	לְמַטָה	向下	下	تحت	Xiàng xià
+prepositions	over		vorüber, herüber		над, свыше	encima, por encima		por cima, superior	sur, par-dessus	su, sopra	מֵעַל	超过	以上	زيادة	Chāoguò
+prepositions	across		darüber, quer durch		через, поперёк	a través, al otro lado de		através de, sobre	à travers, au-dessus de	attraverso	לְרוֹחָב	穿过	横切って	عير	Chuānguò
+prepositions	along		entlang		вдоль	a lo largo de, al lado de, junto		ao longo, junto	le long de, dans	lungo, nel, attraverso	לְאוֹרֶך	沿着	平行	على امتداد	Yánzhe
+prepositions	into		in etwas		в, к	a, hacia		em, dentro	en, dans, dedans	in, dentro	לְתוֹך	进入	の中へ	داخل	Jìnrù
+prepositions	out of		aus etwas		из	fuera de		fora de	hors de	fuori da	מִתוֹך	出	から	خارج من	Zài Chū
 adjectives	angry		ärgerlich, wütend		сердитый	enojado, furioso		chateado	furieux	arrabbiato	כּוֹעֵס	愤怒	怒って	خلال	fènnù
 adjectives	quiet		still, ruhig		спокойный, тихий	tranquilo		quieto	calme, silencieux	tranquillo	שֶׁקֶט	静	静か	هادئ	jìng
 adjectives	loud		laut		громкий	alto, ruidoso		alto	bruyant, fort	alto, rumoroso	בְּקוֹל רָם	响	大声で	مرتفع	xiǎng
