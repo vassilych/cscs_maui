@@ -87,6 +87,9 @@
 <data name="No speech was recognized" xml:space="preserve">
   <value>Es wurde keine Rede erkannt</value>
 </data>
+<data name="You don't seem to have a microphone" xml:space="preserve">
+  <value>Sie scheinen kein Mikrofon zu haben</value>
+</data>
 <data name="Excellent!" xml:space="preserve">
   <value>Ausgezeichnet!</value>
 </data>
@@ -112,19 +115,22 @@
   <value>Text</value>
 </data>
 <data name="Language to learn:" xml:space="preserve">
-  <value>Sprache zu lernen:</value>
+  <value>Sprache zu lernen</value>
 </data>
 <data name="Translate to:" xml:space="preserve">
-  <value>Übersetzen in:</value>
+  <value>Meine Sprache</value>
+</data>
+<data name="Sound:" xml:space="preserve">
+  <value>Ton:</value>
 </data>
 <data name="Speech Rate:" xml:space="preserve">
   <value>Sprechgeschwindigkeit:</value>
 </data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>Verzögerung der Übersetzung:</value>
+</data>
 <data name="Play Rate:" xml:space="preserve">
   <value>Wiedergaberate:</value>
-</data>
-<data name="Sound:" xml:space="preserve">
-  <value>Ton:</value>
 </data>
 <data name="hello" xml:space="preserve">
   <value>Hallo</value>
@@ -227,6 +233,21 @@
 </data>
 <data name="flirting phrases" xml:space="preserve">
   <value>Phrasen zum Flirten</value>
+</data>
+<data name="custom category" xml:space="preserve">
+  <value>Ausgewählte Wörter</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>Es sind keine Wörter vorhanden. Wählen Sie Wörter aus anderen Kategorien aus, indem Sie auf die Schaltfläche Hinzufügen klicken.</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>Sie benötigen mindestens {0} Wörter für das Quiz</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>Das Wort wurde hinzugefügt</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>Das Wort wurde gelöscht</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Kategorie Auswählen</value>

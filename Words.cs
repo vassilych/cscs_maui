@@ -9,6 +9,7 @@ using System.Collections;
 using System.Reflection.PortableExecutable;
 using Microsoft.Maui.Storage;
 using ScriptingMaui;
+using System.Text;
 
 namespace ScriptingMaui
 {
@@ -119,6 +120,9 @@ namespace ScriptingMaui
                 return;
             }
             using StreamReader sr = new(resourceStream);*/
+            Categories.AddGetCategory(Categories.DefaultCategoryName);
+            Categories.AddGetCategory(Categories.CustomCategoryName);
+
             var lineNr = 0;
             var wordCounter = 0;
             var lines = fileData.Split('\n');
@@ -245,7 +249,7 @@ public class Category
     public int Index { get; set; }
     public string Name { get; private set; }
     public bool IsText { get; private set; }
-    public List<Word> Words { get; private set; } = new List<Word>();
+    public List<Word> CatWords { get; private set; } = new List<Word>();
     Dictionary<string, int> WordMap = new Dictionary<string, int>();
     List<int>? Indices { get; set; }
     List<int>? IndicesReverse { get; set; }
@@ -274,27 +278,67 @@ public class Category
             }
         }
     }
-    public void AddWord(Word word)
+    public bool AddWord(Word? word)
     {
-        if (Words.Contains(word))
+        if (word == null || CatWords.Contains(word))
         {
-            return;
+            return false;
         }
-        Words.Add(word);
-        WordMap[word.Name] = Words.Count - 1;
+        CatWords.Add(word);
+        WordMap[word.Name] = CatWords.Count - 1;
+        return true;
     }
-    public Word GetWord(int ind = 0)
+
+    public bool RemoveWord(Word word)
     {
-        if (ind >= Words.Count)
+        var ind = CatWords.IndexOf(word);
+        if (ind < 0)
+        {
+            return false;
+        }
+        bool removed = CatWords.Remove(word);
+        WordMap.Remove(word.Name);
+        for (int i = ind; i < CatWords.Count; i++)
+        {
+            WordMap[CatWords[i].Name] = i;
+        }
+        return removed;
+    }
+    public string GetAllWords()
+    {
+        StringBuilder sb = new StringBuilder();
+        foreach (var word in CatWords)
+        {
+            sb.Append(word.Name + "\t");
+        }
+        return sb.ToString();
+    }
+    public int InitFromWords(string words)
+    {
+        Words.LoadData();
+        CatWords.Clear();
+        WordMap.Clear();
+        var tokens = words.Split('\t', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+        int counter = 0;
+        foreach (var wordStr in tokens)
+        {
+            var word = Categories.DefaultCategory.GetWord(wordStr);
+            counter += AddWord(word) ? 1 : 0;
+        }
+        return counter;
+    }
+    public Word? GetWord(int ind = 0)
+    {
+        if (ind >= CatWords.Count)
         {
             ind = 0;
         }
         if (ind < 0)
         {
-            ind = Words.Count - 1;
+            ind = CatWords.Count - 1;
         }
-        var wordIndex = Indices == null ? ind : Indices[ind];
-        return Words[wordIndex];
+        var wordIndex = Indices == null || ind >= Indices.Count || ind < 0 ? ind : Indices[ind];
+        return wordIndex >= CatWords.Count || wordIndex < 0 ? null : CatWords[wordIndex];
     }
     public int GetIndex(Word word)
     {
@@ -305,36 +349,50 @@ public class Category
 
         return IndicesReverse == null ? index : IndicesReverse[index];
     }
+    public Word? GetWord(string name)
+    {
+        if (!WordMap.TryGetValue(name, out int index))
+        {
+            return null;
+        }
 
-    public Word GetNextWord()
+        return GetWord(Index);
+    }
+
+    public bool Exists(string name)
+    {
+        return GetWord(name) != null;
+    }
+
+    public Word? GetNextWord()
     {
         Index++;
-        if (Index >= Words.Count)
+        if (Index >= CatWords.Count)
         {
             Index = 0;
         }
-        var wordIndex = Indices == null ? Index : Indices[Index];
-        return Words[wordIndex];
+        return GetWord(Index);
     }
-    public Word GetPrevWord()
+    public Word? GetPrevWord()
     {
         Index--;
         if (Index < 0)
         {
-            Index = Words.Count - 1;
+            Index = CatWords.Count - 1;
         }
-        var wordIndex = Indices == null ? Index : Indices[Index];
-        return Words[wordIndex];
+        return GetWord(Index);
     }
     public int GetTotalWords()
     {
-        return Words.Count;
+        return CatWords.Count;
     }
 }
 public class Categories
 {
     public const string DefaultCategoryName = "all";
+    public const string CustomCategoryName = "custom";
     public static Category DefaultCategory = new Category(DefaultCategoryName);
+    public static Category CustomCategory = new Category(CustomCategoryName);
     public static Category CurrentCategory;
 
     public static List<string> CategoryList = new List<string>();
@@ -345,6 +403,8 @@ public class Categories
     {
         s_categMap[DefaultCategoryName] = DefaultCategory;
         CategoryList.Add(DefaultCategoryName);
+        s_categMap[CustomCategoryName] = CustomCategory;
+        CategoryList.Add(CustomCategoryName);
         CurrentCategory = DefaultCategory;
     }
 

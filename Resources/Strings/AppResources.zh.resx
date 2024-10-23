@@ -112,10 +112,10 @@
   <value>文本</value>
 </data>
 <data name="Language to learn:" xml:space="preserve">
-  <value>语言学习:</value>
+  <value>语言学习</value>
 </data>
 <data name="Translate to:" xml:space="preserve">
-  <value>我的语言:</value>
+  <value>我的语言</value>
 </data>
 <data name="Sound:" xml:space="preserve">
   <value>声音:</value>
@@ -125,6 +125,9 @@
 </data>
 <data name="Play Rate:" xml:space="preserve">
   <value>播放率:</value>
+</data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>翻译延迟率：</value>
 </data>
 <data name="Accent:" xml:space="preserve">
   <value>口音:</value>
@@ -227,6 +230,21 @@
 </data>
 <data name="flirting phrases" xml:space="preserve">
   <value>调情短语</value>
+</data>
+<data name="custom category" xml:space="preserve">
+  <value>选词</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>没有自定义单词。点击“添加”按钮从其他类别中选择单词。</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>测验至少需要 {0} 个单词</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>单词已添加</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>单词已删除</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>选择类别</value>

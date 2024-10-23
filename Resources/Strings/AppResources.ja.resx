@@ -87,6 +87,9 @@
 <data name="No speech was recognized" xml:space="preserve">
   <value>音声が認識されなかった</value>
 </data>
+<data name="You don't seem to have a microphone" xml:space="preserve">
+  <value>マイクを持っていないようだが</value>
+</data>
 <data name="Excellent!" xml:space="preserve">
   <value>優れた!</value>
 </data>
@@ -109,10 +112,10 @@
   <value>文章</value>
 </data>
 <data name="Language to learn:" xml:space="preserve">
-  <value>学習言語：</value>
+  <value>学習言語</value>
 </data>
 <data name="Translate to:" xml:space="preserve">
-  <value>私の言語：</value>
+  <value>私の言語</value>
 </data>
 <data name="Sound:" xml:space="preserve">
   <value>音：</value>
@@ -122,6 +125,9 @@
 </data>
 <data name="Play Rate:" xml:space="preserve">
   <value>再生率:</value>
+</data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>翻訳遅延率：</value>
 </data>
 <data name="Accent:" xml:space="preserve">
   <value>アクセント：</value>
@@ -225,6 +231,21 @@
 <data name="flirting phrases" xml:space="preserve">
   <value>フレーズいちゃつきます</value>
 </data>
+<data name="custom category" xml:space="preserve">
+  <value>選択語</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>カスタムワードはありません。四角の追加ボタンをクリックして単語を選択してください。</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>クイズに必要な最低{0}語</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>単語が追加されました</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>単語が削除されました</value>
+</data>s
 <data name="SelectCategory" xml:space="preserve">
   <value>カテゴリーを選択</value>
 </data>

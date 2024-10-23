@@ -9,8 +9,10 @@ using SplitAndMerge;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.ListView.Helpers;
 using Syncfusion.Maui.Picker;
-//using ObjCRuntime;
-//using static ObjCRuntime.Dlfcn;
+using System.Threading;
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
+using System.Configuration;
 
 namespace ScriptingMaui;
 
@@ -19,6 +21,10 @@ public partial class LearnPage : ContentPage
     const string CategorySet = "categoryLearn";
     const string WordSet = "wordLearn";
     const string CategoryWord = "word_";
+    const string CustomWords = "customWords";
+
+    const string AddWordIcon = "add_word.png";
+    const string DeleteWordIcon = "delete_word.png";
 
     int MaxSearchResults = 7;
     double m_trasnlationViewY = -1;
@@ -62,6 +68,7 @@ public partial class LearnPage : ContentPage
         SearchEntry.TextChanged += SearchEntry_TextChanged;
         SearchEntry.Completed += BackBut_Clicked;
         ButOk.Clicked += BackBut_Clicked;
+        ButAddDel.Clicked += ButAddDel_Clicked;
 
         TranslationView.ItemTapped += TranslationView_ItemTapped;
         ResultsView.ItemTapped += ResultsView_ItemTapped;
@@ -74,6 +81,37 @@ public partial class LearnPage : ContentPage
         //this.Loaded += LearnPage_Loaded;
     }
 
+    async void ButAddDel_Clicked(object? sender, EventArgs e)
+    {
+        var custom = Categories.GetCategory(Categories.CustomCategoryName);
+        if (custom.Exists(Context.Word.Name))
+        {
+            custom.RemoveWord(Context.Word);
+            ButAddDel.Source = AddWordIcon;
+            var toast = Toast.Make(AppResources.word_deleted, ToastDuration.Short);
+            await toast.Show();
+        }
+        else
+        {
+            custom.AddWord(Context.Word);
+            ButAddDel.Source = DeleteWordIcon;
+            var toast = Toast.Make(AppResources.word_added, ToastDuration.Short);
+            await toast.Show();
+        }
+        ButAddDelBorder.IsVisible = m_category == custom || !custom.Exists(Context.Word.Name);
+        Preferences.Set(CustomWords, custom.GetAllWords());
+    }
+
+    public void SetTranslation(string text)
+    {
+        TranslationBtn.Text = text;
+        TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
+    }
+    public void SetTranslationWait()
+    {
+        TranslationBtn.Text += ".";
+    }
+
     async void ResultsView_ItemTapped(object? sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
     {
         var item = e.DataItem as TranslationInfo;
@@ -82,7 +120,7 @@ public partial class LearnPage : ContentPage
             return;
         }
         var id = item.Id;
-        var word = Categories.DefaultCategory.Words[id];
+        var word = Categories.DefaultCategory.CatWords[id];
         //var word = Categories.DefaultCategory.GetWord(id);
         m_category = word.Category;
         SetMode(false);
@@ -171,7 +209,10 @@ public partial class LearnPage : ContentPage
     async void TranslationBtn_Clicked(object? sender, EventArgs e)
     {
         var trans = TranslationBtn.Text;
-        await TTS.Speak(trans, SettingsPage.MyVoice);
+        if(!string.IsNullOrWhiteSpace(trans) && !trans.StartsWith("."))
+        {
+            await TTS.Speak(trans, SettingsPage.MyVoice);
+        }
     }
 
     async void BackBut_Clicked(object? sender, EventArgs e)
@@ -226,7 +267,7 @@ public partial class LearnPage : ContentPage
         if (!m_words.TryGetValue(voice, out List<string>? words))
         {
             words = new List<string>();
-            var all = Categories.DefaultCategory.Words;
+            var all = Categories.DefaultCategory.CatWords;
             foreach (var word in all)
             {
                 var trans = word.GetTranslation(voice);
@@ -239,6 +280,10 @@ public partial class LearnPage : ContentPage
 
     public async Task Setup()
     {
+        var custom = Categories.GetCategory(Categories.CustomCategoryName);
+        var customWords = Preferences.Get(CustomWords, "");
+        custom.InitFromWords(customWords);
+
         await SetInitWord();
         SetMode();
     }
@@ -246,11 +291,15 @@ public partial class LearnPage : ContentPage
     {
         var index = Preferences.Get(WordSet, 0);
         var word = m_category.GetWord(index);
-        m_category = word.Category;
+        if (word == null)
+        {
+            m_category = Categories.DefaultCategory;
+            word = m_category.GetWord(0);
+        }
         await SetWord(word, false);
 
-        var categoryIndex = Categories.GetCategoryIndex(word.Category.Name);
-        CategoryPicker.SelectedIndex = categoryIndex;
+        //var categoryIndex = Categories.GetCategoryIndex(word.Category.Name);
+        //CategoryPicker.SelectedIndex = categoryIndex;
     }
 
     void SetMode(bool findMode = false, bool infoMode = false)
@@ -780,6 +829,10 @@ public partial class LearnPage : ContentPage
 
     async Task SetWord(Word word, bool speak = true)
     {
+        if (word == null)
+        {
+            return;
+        }
         for (int i = 0; i < 1; i++)
         {
             if (!m_settingWord)
@@ -793,7 +846,9 @@ public partial class LearnPage : ContentPage
 
         m_settingWord = true;
         Context.SetWord(word);
-        m_category = m_category == Categories.DefaultCategory ? m_category : word.Category;
+        var custom = Categories.GetCategory(Categories.CustomCategoryName);
+        m_category = m_category == Categories.DefaultCategory || m_category == custom ?
+            m_category : word.Category;
         var ind = Categories.GetCategoryIndex(m_category.Name);
         if (ind < 0)
         {
@@ -804,6 +859,9 @@ public partial class LearnPage : ContentPage
         Preferences.Set(WordSet, wordIndex);
         Preferences.Set(CategorySet, ind);
         Preferences.Set(CategoryWord + m_category.Name, wordIndex);
+
+        ButAddDel.Source = custom.Exists(word.Name) ? DeleteWordIcon : AddWordIcon;
+        ButAddDelBorder.IsVisible = m_category == custom || !custom.Exists(word.Name);
 
         CategoryPicker.SelectedIndex = ind;
         if (word.Category.IsText)
@@ -824,8 +882,6 @@ public partial class LearnPage : ContentPage
         WordId.Text = string.Format(AppResources.Word__0___1_, (m_category.Index+1), m_category.GetTotalWords());
 
         TranslationFlag.Source = Word.GetFlag(SettingsPage.MyVoice);
-        TranslationBtn.Text = word.GetTranslation(SettingsPage.MyVoice);
-        TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
         try
         {
             TranslationView.ScrollTo(m_trasnlationViewY);
@@ -876,7 +932,23 @@ public partial class LearnPage : ContentPage
         }
         Preferences.Set(CategorySet, chosen);
 
+        var prevCategory = m_category;
         m_category = Categories.SwitchCategory(chosen);
+        if (m_category.Name == Categories.CustomCategoryName)
+        {
+            if (m_category.CatWords.Count == 0)
+            {
+                await DisplayAlert(AppInfo.Current.Name, AppResources.select_words, "OK");
+                m_category = prevCategory;
+                var ind = Categories.GetCategoryIndex(prevCategory.Name);
+                if (ind == chosen)
+                {
+                    ind = 0;
+                }
+                CategoryPicker.SelectedIndex = ind;
+                return;
+            }
+        }
         //SetCategory(m_category, true);
 
         var index = Preferences.Get(CategoryWord + m_category.Name, 0);
@@ -945,6 +1017,9 @@ public class Context
 
     public string MainWord { get; set; } = "";
 
+    IDispatcherTimer? m_timer;
+    DateTime m_timerStart = DateTime.Now;
+
     public ObservableCollection<string> DataSourceCategories
     {
         get
@@ -962,6 +1037,7 @@ public class Context
         List<string> cat = new List<string>
         {
             AppResources.all,
+            AppResources.custom_category,
             AppResources.animal_world,
             AppResources.body_parts,
             AppResources.numbers_and_math,
@@ -1018,20 +1094,48 @@ public class Context
 
     internal void SetWord(Word word)
     {
-        GenerateTransInfo(word);
+        m_timer?.Stop();
+
         Word = word;
-        MainWord = word.GetTranslation(SettingsPage.VoiceLearn);
+        MainWord = Word.GetTranslation(SettingsPage.VoiceLearn);
+        transInfo.Clear();
+        if (SettingsPage.DelayRate <= 0)
+        {
+            SetTranslations();
+            return;
+        }
+        LearnPage.Instance.SetTranslation(".");
 
-        /*Variable data = new Variable(Variable.VarType.ARRAY);
-        data.Tuple.Add(new Variable("lol"));
-        data.Tuple.Add(new Variable("lala"));
+        m_timer = Application.Current?.Dispatcher.CreateTimer();
+        m_timer.Interval = TimeSpan.FromSeconds(0.5);
+        m_timer.Tick += (s, e) => OnDelayTimer();
+        m_timer.IsRepeating = true;
+        m_timerStart = DateTime.Now;
+        m_timer.Start();
+    }
 
-        MainPage.Instance.Scripting.UpdateValue(nameof(LearnPage.Context.TransInfo), data);*/
+    private void OnDelayTimer()
+    {
+        var diff = DateTime.Now - m_timerStart;
+        if (diff.TotalSeconds >= SettingsPage.DelayRate)
+        {
+            m_timer?.Stop();
+            SetTranslations();
+        }
+        else
+        {
+            LearnPage.Instance.SetTranslationWait();
+        }
+    }
+
+    internal void SetTranslations()
+    {
+        GenerateTransInfo(Word);
+        LearnPage.Instance.SetTranslation(Word.GetTranslation(SettingsPage.MyVoice));
     }
 
     internal void GenerateTransInfo(Word word)
     {
-        transInfo.Clear();
         var voiceOrder = Words.VoiceOrder;
 
         foreach (var voice in voiceOrder)

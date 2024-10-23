@@ -65,15 +65,15 @@
         <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "2,1"
                 Background="Transparent" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="0" >
         <Label x:Name="Gerund" Text="gerund" HorizontalTextAlignment="Start" HorizontalOptions="Start" Background="WhiteSmoke"
-            Margin = "2,0,2,0" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
+            Margin = "2,0,6,0" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
         </Border>
         <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle " Margin = "2,1"
                 Background="Transparent" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
         <Label x:Name="Participle" Text="participle" HorizontalTextAlignment="Start" HorizontalOptions="Start" Background="WhiteSmoke"
-            Margin = "2,0,2,0" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
+            Margin = "2,0,6,0" MaxLines="2" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" />
         </Border>
     </Grid>
-	<Grid x:Name="InfoPanel" Background="Transparent" Margin = "2,0,2,0" IsVisible = "False" >
+	<Grid x:Name="InfoPanel" Background="Transparent" Margin = "2,0,6,0" IsVisible = "False" >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -102,196 +102,196 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Border Stroke="Black" Grid.Row="0" Grid.Column="0" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH1" Text="Present" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" />
+        <Border Stroke="Black" Grid.Row="0" Grid.Column="0" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH1" Text="Present" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" />
         </Border>
-        <Border Stroke="Black" Grid.Row="0" Grid.Column="1" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH2" Text="Past" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Border Stroke="Black" Grid.Row="0" Grid.Column="1" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH2" Text="Past" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
         </Border>
-        <Border Stroke="Black" Grid.Row="0" Grid.Column="2" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH3" Text="Continuous" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Border Stroke="Black" Grid.Row="0" Grid.Column="2" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH3" Text="Continuous" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
         </Border>
-        <Border Stroke="Black" Grid.Row="1" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent"  HorizontalOptions="Center">
-            <Label x:Name="VerbInfo11" FontAttributes="Bold" TextColor="Black" Text="data11" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="1" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent"  HorizontalOptions="Center">
+            <Label x:Name="VerbInfo11" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data11" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="1" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo12" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data12" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="1" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo12" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data12" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="1" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent"  HorizontalOptions="Center">
-            <Label x:Name="VerbInfo13" FontAttributes="Bold" TextColor="Black" Text="data13" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="1" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent"  HorizontalOptions="Center">
+            <Label x:Name="VerbInfo13" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data13" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="2" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo21" FontAttributes="Bold" TextColor="Black" Text="data21" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="2" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo21" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data21" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="2" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo22" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data22" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="2" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo22" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data22" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="2" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo23" FontAttributes="Bold" TextColor="Black" Text="data23" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="2" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo23" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data23" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="3" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo31" FontAttributes="Bold" TextColor="Black" Text="data31" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="3" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo31" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="Él/Ella/Ud pertenecen" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="3" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo32" FontAttributes="Bold" TextColor="Black" Text="data32" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="3" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo32" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data32" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="3" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo33" FontAttributes="Bold" TextColor="Black" Text="data33" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="3" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo33" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data33" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="4" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo41" FontAttributes="Bold" TextColor="Black" Text="data41" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="4" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo41" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data41" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="4" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo42" FontAttributes="Bold" TextColor="Black" Text="data42" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="4" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo42" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data42" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="4" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo43" FontAttributes="Bold" TextColor="Black" Text="data43" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="4" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo43" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data43" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="5" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo51" FontAttributes="Bold" TextColor="Black" Text="data51" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="5" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo51" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data51" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="5" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo52" FontAttributes="Bold" TextColor="Black" Text="data52" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="5" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo52" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data52" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="5" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo53" FontAttributes="Bold" TextColor="Black" Text="data53" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="5" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo53" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data53" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
         <Border Stroke="Black" Grid.Row="6" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo61" FontAttributes="Bold" TextColor="Black" Text="data61" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+            <Label x:Name="VerbInfo61" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data61" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
         <Border Stroke="Black" Grid.Row="6" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo62" FontAttributes="Bold" TextColor="Black" Text="data62" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+            <Label x:Name="VerbInfo62" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data62" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
         <Border Stroke="Black" Grid.Row="6" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo63" FontAttributes="Bold" TextColor="Black" Text="data63" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+            <Label x:Name="VerbInfo63" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data63" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
 
-        <Border Stroke="Black" Grid.Row="7" Grid.Column="0" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH4" Text="Present" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" />
+        <Border Stroke="Black" Grid.Row="7" Grid.Column="0" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH4" Text="Present" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" />
         </Border>
-        <Border Stroke="Black" Grid.Row="7" Grid.Column="1" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH5"  Text="Past" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Border Stroke="Black" Grid.Row="7" Grid.Column="1" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH5"  Text="Past" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
         </Border>
-        <Border Stroke="Black" Grid.Row="7" Grid.Column="2" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH6"  Text="Continuous" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Border Stroke="Black" Grid.Row="7" Grid.Column="2" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH6"  Text="Continuous" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
         </Border>
-        <Border Stroke="Black" Grid.Row="8" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent"  HorizontalOptions="Center">
-            <Label x:Name="VerbInfo71" FontAttributes="Bold" TextColor="Black" Text="data11" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="8" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent"  HorizontalOptions="Center">
+            <Label x:Name="VerbInfo71" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data11" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="8" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo72" FontAttributes="Bold" TextColor="Black" Text="data12" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="8" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo72" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data12" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="8" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent"  HorizontalOptions="Center">
-            <Label x:Name="VerbInfo73" FontAttributes="Bold" TextColor="Black" Text="data13" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="8" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent"  HorizontalOptions="Center">
+            <Label x:Name="VerbInfo73" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data13" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="9" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo81" FontAttributes="Bold" TextColor="Black" Text="data21" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="9" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo81" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data21" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="9" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo82" FontAttributes="Bold" TextColor="Black" Text="data22" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="9" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo82" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data22" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="9" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo83" FontAttributes="Bold" TextColor="Black" Text="data23" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="9" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo83" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data23" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="10" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo91" FontAttributes="Bold" TextColor="Black" Text="data31" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="10" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo91" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data31" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="10" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo92" FontAttributes="Bold" TextColor="Black" Text="data32" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="10" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo92" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data32" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="10" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo93" FontAttributes="Bold" TextColor="Black" Text="data33" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="10" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo93" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data33" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="11" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo101" FontAttributes="Bold" TextColor="Black" Text="data41" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="11" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo101" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data41" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="11" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo102" FontAttributes="Bold" TextColor="Black" Text="data42" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="11" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo102" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data42" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="11" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo103" FontAttributes="Bold" TextColor="Black" Text="data43" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="11" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo103" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data43" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="12" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo111" FontAttributes="Bold" TextColor="Black" Text="data51" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="12" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo111" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data51" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="12" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo112" FontAttributes="Bold" TextColor="Black" Text="data52" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="12" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo112" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data52" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border Stroke="Black" Grid.Row="12" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo113" FontAttributes="Bold" TextColor="Black" Text="data53" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border Stroke="Black" Grid.Row="12" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo113" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data53" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
         <Border Stroke="Black" Grid.Row="13" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo121" FontAttributes="Bold" TextColor="Black" Text="data61" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+            <Label x:Name="VerbInfo121" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data61" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
         <Border Stroke="Black" Grid.Row="13" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo122" FontAttributes="Bold" TextColor="Black" Text="data62" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+            <Label x:Name="VerbInfo122" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data62" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
         <Border Stroke="Black" Grid.Row="13" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo123" FontAttributes="Bold" TextColor="Black" Text="data63" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+            <Label x:Name="VerbInfo123" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="data63" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
 
-        <Border x:Name="Border31" Stroke="Black" Grid.Row="14" Grid.Column="0" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH7" Text="" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" />
+        <Border x:Name="Border31" Stroke="Black" Grid.Row="14" Grid.Column="0" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH7" Text="" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" />
         </Border>
-        <Border x:Name="Border32" Stroke="Black" Grid.Row="14" Grid.Column="1" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH8"  Text="" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Border x:Name="Border32" Stroke="Black" Grid.Row="14" Grid.Column="1" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH8"  Text="" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
         </Border>
-        <Border x:Name="Border33" Stroke="Black" Grid.Row="14" Grid.Column="2" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="WhiteSmoke" HorizontalOptions="Center">
-            <Label x:Name="VerbInfoH9"  Text="" Margin = "2,0,2,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Border x:Name="Border33" Stroke="Black" Grid.Row="14" Grid.Column="2" StrokeThickness="{StaticResource InfoHeaderStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="WhiteSmoke" HorizontalOptions="Center">
+            <Label x:Name="VerbInfoH9"  Text="" Margin = "2,0,6,0" FontSize="{StaticResource InfoHeaderFontSize}" WidthRequest="{StaticResource InfoWidthSize}" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"/>
         </Border>
-        <Border x:Name="Border131" Stroke="Black" Grid.Row="15" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent"  HorizontalOptions="Center">
-            <Label x:Name="VerbInfo131" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border131" Stroke="Black" Grid.Row="15" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent"  HorizontalOptions="Center">
+            <Label x:Name="VerbInfo131" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border132" Stroke="Black" Grid.Row="15" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo132" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border132" Stroke="Black" Grid.Row="15" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo132" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border133" Stroke="Black" Grid.Row="15" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent"  HorizontalOptions="Center">
-            <Label x:Name="VerbInfo133" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border133" Stroke="Black" Grid.Row="15" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent"  HorizontalOptions="Center">
+            <Label x:Name="VerbInfo133" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border141" Stroke="Black" Grid.Row="16" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo141" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border141" Stroke="Black" Grid.Row="16" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo141" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border142" Stroke="Black" Grid.Row="16" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo142" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border142" Stroke="Black" Grid.Row="16" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo142" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border143" Stroke="Black" Grid.Row="16" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo143" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border143" Stroke="Black" Grid.Row="16" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo143" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border151" Stroke="Black" Grid.Row="17" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo151" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border151" Stroke="Black" Grid.Row="17" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo151" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border152" Stroke="Black" Grid.Row="17" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo152" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border152" Stroke="Black" Grid.Row="17" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo152" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border153" Stroke="Black" Grid.Row="17" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo153" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border153" Stroke="Black" Grid.Row="17" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo153" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border161" Stroke="Black" Grid.Row="18" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo161" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border161" Stroke="Black" Grid.Row="18" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo161" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border162" Stroke="Black" Grid.Row="18" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo162" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border162" Stroke="Black" Grid.Row="18" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo162" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border163" Stroke="Black" Grid.Row="18" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo163" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border163" Stroke="Black" Grid.Row="18" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo163" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border171" Stroke="Black" Grid.Row="19" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo171" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border171" Stroke="Black" Grid.Row="19" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo171" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border172" Stroke="Black" Grid.Row="19" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo172" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border172" Stroke="Black" Grid.Row="19" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo172" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border173" Stroke="Black" Grid.Row="19" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo173" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border173" Stroke="Black" Grid.Row="19" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo173" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border181" Stroke="Black" Grid.Row="20" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo181" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border181" Stroke="Black" Grid.Row="20" Grid.Column="0" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo181" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border182" Stroke="Black" Grid.Row="20" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo182" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border182" Stroke="Black" Grid.Row="20" Grid.Column="1" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo182" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
-        <Border x:Name="Border183" Stroke="Black" Grid.Row="20" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0"                Background="Transparent" HorizontalOptions="Center">
-            <Label x:Name="VerbInfo183" FontAttributes="Bold" TextColor="Black" Text="" Margin = "2,0,2,0" WidthRequest="{StaticResource InfoWidthSize}" />
+        <Border x:Name="Border183" Stroke="Black" Grid.Row="20" Grid.Column="2" StrokeThickness="{StaticResource InfoStroke}" StrokeShape= "RoundRectangle " Margin = "0,2"                Background="Transparent" HorizontalOptions="Center">
+            <Label x:Name="VerbInfo183" FontAttributes="Bold" TextColor="Black" MaxLines="2" Text="" Margin = "2,0,6,0" WidthRequest="{StaticResource InfoWidthSize}" />
         </Border>
 	</Grid>
 
@@ -304,11 +304,11 @@
         <ColumnDefinition  Width="15*" />
     </Grid.ColumnDefinitions>
         <Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1580" HorizontalTextAlignment="Start" HorizontalOptions="Start"
-            Margin = "2,0,2,0" WidthRequest="80" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />
+            Margin = "2,0,6,0" WidthRequest="80" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />
         <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
                 Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
             <Picker x:Name="CategoryPicker"  
-                Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
                 FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" TitleColor="Black" FontSize="Header">
             </Picker>
         </Border>
@@ -356,8 +356,12 @@
         </Grid.ColumnDefinitions>
         <ImageButton x:Name="TranslationFlag" Grid.Column="0" HorizontalOptions="Start" Source="es_mx"
          Margin="2,0,2,0" Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
-        <Button x:Name="TranslationBtn" Grid.Column="1" WidthRequest="320" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Grid.Column="1"  Margin = "{StaticResource ButtonsMargin}"
+            Background="White" HorizontalOptions="FillAndExpand">
+        <Button x:Name="TranslationBtn" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
           HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="{Binding FontSize}" />
+    </Border>
+        <ImageButton x:Name="ButSpeak" Margin = "2,0,2,0"  Grid.Column="2" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />
     </Grid>
 
   <HorizontalStackLayout x:Name="ButtonsPanel" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" >
@@ -370,9 +374,13 @@
       <ImageButton x:Name="FindBut" HeightRequest="30" WidthRequest="30" 
             Source="find.png" Margin = "4,4,4,4" Background="Transparent" />
     </Border>
-    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
+    <!--<Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
             Background="Transparent" HorizontalOptions="Start">
-    <ImageButton x:Name="ButSpeak" Margin = "4,4,4,4" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />
+    <ImageButton x:Name="ButSpeak0" Margin = "4,4,4,4" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />
+    </Border> -->
+    <Border Stroke="Black" x:Name="ButAddDelBorder" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
+            Background="Transparent" HorizontalOptions="Start">
+    <ImageButton x:Name="ButAddDel" Margin = "4,4,4,4" HorizontalOptions="End" Source="add_word.png" Background="Transparent" />
     </Border>
     <Border x:Name="ButInfoBorder" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
             Background="Transparent" HorizontalOptions="Start">
@@ -390,7 +398,7 @@
             <ColumnDefinition Width="0.2*" />
             <ColumnDefinition Width="0.8*" />
             </Grid.ColumnDefinitions>
-            <ImageButton Grid.Column="0" Margin = "2,0,2,0" HorizontalOptions="Start" Source="{Binding TransFlag}"
+            <ImageButton Grid.Column="0" Margin = "2,0,6,0" HorizontalOptions="Start" Source="{Binding TransFlag}"
                     Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
             <Label Grid.Column="1" Text="{Binding TransName}" HorizontalTextAlignment="Start"
                    VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{Binding FontSize}" />

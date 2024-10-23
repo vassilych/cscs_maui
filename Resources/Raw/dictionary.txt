@@ -489,6 +489,9 @@ food and beverage	sausage		die Wurst		сосиска	la salchicha		a linguiça	l
 food and beverage	chicken leg		die Hähnchenkeule	Pouletschenkel	куриная ножка	la pierna de pollo		a coxa de frango	la cuisse de poulet	la coscia di pollo	רגל עוף	鸡腿	鶏の足	فخذ الدجاج	jītuǐ
 food and beverage	spare ribs		die Spareribs, die Schweinerippchen		свиные рёбрышки	las costillas de cerdo		a costela de porco	le travers de porc	le costolette di maiale	צלעות רזרביות 	排骨	スペアリブ	فخذ الدجاج	Páigǔ
 food and beverage	prawn, shrimp	shrimp	die Garnele	Crevette	креветка	el camarón	la gamba	o camarão	la crevette	il gamberetto	סרטנים, שרימפס	虾	クルマエビ、エビ	الجمبري والروبيان	xiā
+food and beverage	lobster		der Hummer		омар, рак	la langosta		a lagosta	le homard, la langoustine	l'aragosta, l'astice	לוֹבּסטֶר 	龙虾	ロブスター	سرطان البحر 	Lóngxiā
+food and beverage	octopus		der Oktopus, der Krake, der Pulpo		осьминог	el pulpo		o polvo	le poulpe, La pieuvre	​il polpo	תָמְנוּן 	章鱼	タコ	 الأخطبوط 	Zhāngyú
+food and beverage	calamari, squid		der Tintenfisch, die Sepia		кальмар	el calamar, la sepia		a sépia	le calmar	il calamaro, la seppia	לוֹבּסטֶר 	龙虾	ロブスター	سرطان البحر 	Lóngxiā
 food and beverage	liver pate		die Leberpastete		печёнка	el paté de hígado		o patê de fígado	le patê de foie	il patè di fegato	פטה כבד	烤肝	レバーパテ	مورتديلا الكبد	kǎo gān
 food and beverage	goose liver		die Gänseleber		гусиная печёнка	el foie-gras		o fígado de ganso	le foie gras	il fegato d'oca	כבד אווז	鹅肝	ガチョウの肝臓	كبد الإوز	é gān
 food and beverage	cutlet		die Schnitzel		котлета	la chuleta		a bisteca	l'escalope	la cotoletta	שׁנִיצֶל	肉片	カツレツ	كستلاتة	ròupiàn
@@ -576,6 +579,7 @@ household	trash can	rubbish bin	der Mülleimer	Abfallchübel	мусорное в
 household	wastepaper basket		der Papierkorb		корзина для канцелярского мусора	la papelera	el cesto de papeles	o cesto de lixo	la corbeille à papier	il cestino della carta	סל פסולת	废纸篓	古紙バスケット	سلة مهملات	fèi zhǐ lǒu
 household	ashtray		der Aschenbecher		пепельница	el cenicero		o cinzeiro	le cendrier	il posacenere	מַאֲפֵרָה	烟灰缸	灰皿	طفاية (صحن السجائر)	yānhuī gāng
 household	apartment	flat	die Wohnung		квартира	el departamento	el piso	o apartamento	l'appartement	l'appartamento	דִירָה	公寓	アパート	شقة	gōngyù
+household	pot		der Topf		горшок	la maceta		o vaso de flores	l'pot	l'vaso di fiori	עציץ	花盆	植木鉢	وعاء الزهور	Huā pén
 household	building		das Gebäude		здание	el edificio		o edifício	le bâtiment	la costruzione	בִּניָן	建筑	建物	بناية	jiànzhú
 household	house		das Haus	Huus	дом	la casa		a casa	la maison	la casa	בַּיִת	房子	家	بيت	fángzi
 household	ground floor		das Erdgeschoss		нижний этаж (первый)	la planta baja		o térreo	le rez-de-chaussée	il pianoterreno	קוֹמַת קַרקַע	一楼	地下	الطابق الأرضي	yī lóu

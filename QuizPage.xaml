@@ -12,8 +12,8 @@
 
 	    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="110" />
         </Grid.RowDefinitions>
 
 	<VerticalStackLayout Grid.Row="0" >
@@ -105,7 +105,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-		<Grid Margin="0,-4">
+		<Grid Margin="0,0">
 			<Label x:Name="WordsLabel" Text="Quiz Words:" HorizontalTextAlignment="Start" HorizontalOptions="Start"
 				Margin="4" VerticalOptions="Center" FontAttributes="Bold" TextColor="Blue" FontSize="{StaticResource FontSize}" />
 			<Stepper x:Name="WordsStepper" HorizontalOptions="Center" VerticalOptions="Center"

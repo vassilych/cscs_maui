@@ -115,16 +115,19 @@
   <value>Text</value>
 </data>
 <data name="Language to learn:" xml:space="preserve">
-  <value>Language to learn:</value>
+  <value>Language to learn</value>
 </data>
 <data name="Translate to:" xml:space="preserve">
-  <value>My language:</value>
+  <value>My language</value>
 </data>
 <data name="Sound:" xml:space="preserve">
   <value>Sound:</value>
 </data>
 <data name="Speech Rate:" xml:space="preserve">
   <value>Speech Rate:</value>
+</data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>Translation Delay Rate:</value>
 </data>
 <data name="Play Rate:" xml:space="preserve">
   <value>Play Rate:</value>
@@ -230,6 +233,21 @@
 </data>
 <data name="flirting phrases" xml:space="preserve">
   <value>flirting phrases</value>
+</data>
+<data name="custom category" xml:space="preserve">
+  <value>custom words</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>There are no custom words. Select words by clicking on the Add square button.</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>Need minimum {0} words for the quiz</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>Word has been added</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>Word has been deleted</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Select Category</value>

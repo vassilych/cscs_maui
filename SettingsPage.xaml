@@ -23,37 +23,66 @@
 
 	<Grid Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="38*" />
-            <ColumnDefinition  Width="12*" />
-            <ColumnDefinition  Width="38*" />
-            <ColumnDefinition  Width="12*" />
+            <ColumnDefinition  Width="50*" />
+            <ColumnDefinition  Width="50*" />
         </Grid.ColumnDefinitions>
-        <Label x:Name="myLanguage" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="0" Text="My Language" FontAttributes="Bold" HorizontalOptions="End" />
-        <ImageButton x:Name="flagMy" Margin = "4,4,2,2" Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Start" Source="es_mx"
+        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2,8,0"
+                Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="0" >
+            <Picker x:Name="myLanguagePicker"  
+                Title="My Language" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="13"
+                FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" TitleColor="Black" >
+            </Picker>
+        </Border>
+        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "4,2"
+                Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
+            <Picker x:Name="learnLanguagePicker"  
+                Title="Language to Learn" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="13"
+                FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" TitleColor="Black" >
+            </Picker>
+        </Border>
+        <Grid Background="Transparent" Grid.Row="1" Grid.Column="0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="20*" />
+            <ColumnDefinition  Width="80*" />
+          </Grid.ColumnDefinitions>
+          <ImageButton x:Name="flagMy" Margin = "4,4,2,2" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"  VerticalOptions="Start" Source="de_ch"
             Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
-        <Label x:Name="toLearn" Margin = "4,6,8,10" FontSize="15" TextColor="Blue" Grid.Column="2" Text="Language to Learn"
-               FontAttributes="Bold" HorizontalOptions="Start" />
-        <ImageButton x:Name="flagLearn" Margin = "4,4,2,2" HorizontalOptions="End" VerticalOptions="Start" Source="en_us" Grid.Column="3"
+          <Label x:Name="myLanguage" FontSize="14" TextColor="Blue" Grid.Column="1" Text="Deutsch CH"
+                 FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
+         </Grid>
+        <Grid Background="Transparent" Grid.Row="1" Grid.Column="1">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="20*" />
+            <ColumnDefinition  Width="80*" />
+          </Grid.ColumnDefinitions>
+          <ImageButton x:Name="flagLearn" Margin = "4,4,2,2" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"  VerticalOptions="Start" Source="es_mx"
             Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
+          <Label x:Name="toLearn" FontSize="14" TextColor="Blue" Grid.Column="1" Text="Español MX"
+                 FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
+         </Grid>
 	</Grid>
 
-    <picker:SfPicker x:Name="LanguagePicker" HeightRequest="240" Background="Transparent" VerticalOptions="Start" />
-        <!-- 
-    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-    <Label x:Name="SpeechrateLab" Text="Speech Rate:" TextColor="Blue" WidthRequest="200" Margin = "10,20,0,0"
-            MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    <Slider x:Name="SpeechSlider" WidthRequest="200" Minimum="10" Maximum="100" Value= "50" Margin = "0,20,0,0"
-                HorizontalOptions="End" VerticalOptions="StartAndExpand" />
-    </StackLayout> -->
+    <!-- <picker:SfPicker x:Name="LanguagePicker" HeightRequest="240" Background="Transparent" VerticalOptions="Start" /> -->
+            <!-- 
+            -->
     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
     <Label x:Name="PlayrateLab" Text="Play Rate:" TextColor="Blue"  Margin = "4,20,0,0"
             WidthRequest="140" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    <Slider x:Name="PlaySlider" Margin = "-6,30,0,0" WidthRequest="180" Minimum="1" Maximum="6" Value= "3.5"
+    <Slider x:Name="PlaySlider" Margin = "-6,30,0,0" WidthRequest="180" Minimum="1" Maximum="15" Value= "3.5"
             HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
     <Label x:Name="PlayrateSec" Text="3.5s" TextColor="Blue"  Margin = "4,36,0,0"
+            WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+    <Label x:Name="DelayLab" Text="Translation Delay Rate:" TextColor="Blue" Margin = "10,20,0,0"
+            WidthRequest="140" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+    <Slider x:Name="DelaySlider" Margin = "-6,30,0,0" WidthRequest="180" Minimum="0" Maximum="10" Value= "0"
+            HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
+    <Label x:Name="DelaySec" Text="3.5s" TextColor="Blue"  Margin = "4,36,0,0"
             WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
     </StackLayout>
     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">

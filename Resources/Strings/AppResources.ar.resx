@@ -112,16 +112,19 @@
   <value>نص</value>
 </data>
 <data name="Language to learn:" xml:space="preserve">
-  <value>:اللغة المستهدفة</value>
+  <value>اللغة المستهدفة</value>
 </data>
 <data name="Translate to:" xml:space="preserve">
-  <value>:ترجم الى</value>
+  <value>ترجم الى</value>
 </data>
 <data name="Sound:" xml:space="preserve">
   <value>:صوت</value>
 </data>
 <data name="Speech Rate:" xml:space="preserve">
   <value>:سرعة الكلام</value>
+</data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>تأخير الترجمة:</value>
 </data>
 <data name="Play Rate:" xml:space="preserve">
   <value>:معدل سرعة اللعب</value>
@@ -227,6 +230,21 @@
 </data>
 <data name="flirting phrases" xml:space="preserve">
   <value>عبارات الغزل والغرام</value>
+</data>
+<data name="custom category" xml:space="preserve">
+  <value>كلمات مختارة</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>لا توجد كلمات مخصصة. حدد الكلمات بالنقر على زر إضافة مربع.</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>تحتاج إلى {0} كلمات على الأقل للاختبار</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>تمت إضافة كلمة</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>تم حذف كلمة</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>اختر الفئة</value>

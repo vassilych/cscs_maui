@@ -263,7 +263,67 @@ namespace ScriptingMaui.Resources.Strings {
                 return ResourceManager.GetString("flirting phrases", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string custom_category
+        {
+            get
+            {
+                return ResourceManager.GetString("custom category", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string select_words
+        {
+            get
+            {
+                return ResourceManager.GetString("select words", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string word_added
+        {
+            get
+            {
+                return ResourceManager.GetString("word added", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string Translation_Delay_Rate_
+        {
+            get
+            {
+                return ResourceManager.GetString("Translation Delay Rate:", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string word_deleted
+        {
+            get
+            {
+                return ResourceManager.GetString("word deleted", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string min_words
+        {
+            get
+            {
+                return ResourceManager.GetString("min words", resourceCulture);
+            }
+        }
         /// <summary>
         ///   Looks up a localized string similar to food and beverages.
         /// </summary>

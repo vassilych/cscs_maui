@@ -112,10 +112,10 @@
   <value>Texte</value>
 </data>
 <data name="Language to learn:" xml:space="preserve">
-  <value>Langue à apprendre:</value>
+  <value>Langue à apprendre</value>
 </data>
 <data name="Translate to:" xml:space="preserve">
-  <value>Ma langue:</value>
+  <value>Ma langue</value>
 </data>
 <data name="Speech Rate:" xml:space="preserve">
   <value>Vitesse d'élocution:</value>
@@ -125,6 +125,9 @@
 </data>
 <data name="Sound:" xml:space="preserve">
   <value>Son:</value>
+</data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>Taux de retard de traduction:</value>
 </data>
 <data name="Accent:" xml:space="preserve">
   <value>Accent:</value>
@@ -227,6 +230,21 @@
 </data>
 <data name="flirting phrases" xml:space="preserve">
   <value>phrases de drague</value>
+</data>
+<data name="custom category" xml:space="preserve">
+  <value>mots choisis</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>Il n'y a pas de mots personnalisés. Sélectionnez des mots dans d'autres catégories en cliquant sur le bouton Ajouter.</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>Il faut au moins {0} mots pour le quiz</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>Un mot a été ajouté</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>Un mot a été supprimé</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Sélectionnez une Catégorie</value>

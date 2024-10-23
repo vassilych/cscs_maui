@@ -126,6 +126,9 @@
 <data name="Speech Rate:" xml:space="preserve">
   <value>קצב דיבור:</value>
 </data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>שיעור עיכוב תרגום:</value>
+</data>
 <data name="Play Rate:" xml:space="preserve">
   <value>קצב משחק:</value>
 </data>
@@ -230,6 +233,21 @@
 </data>
 <data name="flirting phrases" xml:space="preserve">
   <value>ביטויים מפלרטטים</value>
+</data>
+<data name="custom category" xml:space="preserve">
+  <value>מילים נבחרות</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>אין מילים מותאמות אישית. בחר מילים מקטגוריות אחרות על ידי לחיצה על כפתור הוסף.</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>דרושות לפחות {0} מילים עבור החידון</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>המילה נוספה</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>המילה נמחקה</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>בחר קטגוריה</value>

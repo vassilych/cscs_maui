@@ -112,10 +112,10 @@
   <value>Texto</value>
 </data>
 <data name="Language to learn:" xml:space="preserve">
-  <value>Linguagem a aprender:</value>
+  <value>Linguagem a aprender</value>
 </data>
 <data name="Translate to:" xml:space="preserve">
-  <value>Meu idioma:</value>
+  <value>Meu idioma</value>
 </data>
 <data name="Speech Rate:" xml:space="preserve">
   <value>Taxa de voz:</value>
@@ -125,6 +125,9 @@
 </data>
 <data name="Sound:" xml:space="preserve">
   <value>Som:</value>
+</data>
+<data name="Translation Delay Rate:" xml:space="preserve">
+  <value>Taxa de atraso de tradução:</value>
 </data>
 <data name="Accent:" xml:space="preserve">
   <value>Acento:</value>
@@ -227,6 +230,21 @@
 </data>
 <data name="flirting phrases" xml:space="preserve">
   <value>frases para paquerar</value>
+</data>
+<data name="custom category" xml:space="preserve">
+  <value>palavras selecionadas</value>
+</data>
+<data name="select words" xml:space="preserve">
+  <value>Não há palavras personalizadas. Selecione palavras de outras categorias clicando no botão Add (Adicionar).</value>
+</data>
+<data name="min words" xml:space="preserve">
+  <value>É necessário um mínimo de {0} palavras para o teste</value>
+</data>
+<data name="word added" xml:space="preserve">
+  <value>A palavra foi adicionada</value>
+</data>
+<data name="word deleted" xml:space="preserve">
+  <value>A palavra foi excluída</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Selecione a Categoria</value>

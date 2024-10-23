@@ -14,10 +14,11 @@ public partial class SettingsPage : ContentPage
     const string DefaultLearnVoice = "es-MX";
     const string MyDefaultVoice = "en-US";
     const string DefaultCode = "en";
+
     const string MyVoiceSet = "myVoice";
     const string ToLearnSet = "toLearn";
     const string PlaySet = "playrate";
-    const string SpeechSet = "speechrate";
+    const string DelaySet = "delayrate";
     const string SoundSet = "sound";
     const string PlaySecFormat = "{0}s";
     readonly CultureInfo OrigCulture = CultureInfo.CurrentUICulture;
@@ -29,7 +30,7 @@ public partial class SettingsPage : ContentPage
     public static string LangCode { get; set; } = DefaultCode;
 
     public static double PlayRate { get; set; } = 3.0;
-    //public static double SpeechRate { get; set; } = 50;
+    public static double DelayRate { get; set; } = 0.0;
     public static bool Sound { get; set; } = true;
 
     PickerColumn m_col1;
@@ -42,7 +43,7 @@ public partial class SettingsPage : ContentPage
         var itemInfo = new SettingsInfo();
         //this.Picker.ItemTemplate = itemInfo.customView;
 
-        m_col1 = new PickerColumn()
+        /*m_col1 = new PickerColumn()
         {
             ItemsSource = itemInfo.DataSourceStudy,
             SelectedIndex = 0,
@@ -52,17 +53,54 @@ public partial class SettingsPage : ContentPage
             ItemsSource = itemInfo.MyDataSource,
             SelectedIndex = 0,
         };
-
         LanguagePicker.Columns.Add(m_col2);
         LanguagePicker.Columns.Add(m_col1);
-        LanguagePicker.SelectionChanged += My_SelectionChanged;
+        LanguagePicker.SelectionChanged += My_SelectionChanged;*/
+
+        myLanguagePicker.ItemsSource = itemInfo.MyDataSource;
+        learnLanguagePicker.ItemsSource = itemInfo.DataSourceStudy;
+        myLanguagePicker.SelectedIndexChanged += MyLanguagePicker_SelectedIndexChanged;
+        learnLanguagePicker.SelectedIndexChanged += LearnLanguagePicker_SelectedIndexChanged; ;
 
         PlaySlider.ValueChanged += PlaySlider_ValueChanged;
-        //SpeechSlider.ValueChanged += SpeechSlider_ValueChanged;
+        DelaySlider.ValueChanged += DelaySlider_ValueChanged;
         SoundCheck.CheckedChanged += SoundCheck_CheckedChanged;
         AboutBtn.Clicked += AboutBtn_Clicked;
 
         Setup();
+    }
+
+    private void LearnLanguagePicker_SelectedIndexChanged(object? sender, EventArgs e)
+    {
+        var chosen = learnLanguagePicker.SelectedIndex;
+        if (chosen < 0)
+        {
+            return;
+        }
+        VoiceLearn = Words.GetVoice(chosen);
+        MainPage.Instance?.SetBackground(chosen);
+        Preferences.Set(ToLearnSet, VoiceLearn);
+        flagLearn.Source = Words.GetFlag(VoiceLearn);
+        toLearn.Text = Words.Languages[chosen];
+
+        learnLanguagePicker.SelectedItem = AppResources.Language_to_learn_;
+    }
+
+    private void MyLanguagePicker_SelectedIndexChanged(object? sender, EventArgs e)
+    {
+        var chosen = myLanguagePicker.SelectedIndex;
+        if (chosen < 0)
+        {
+            return;
+        }
+        MyVoice = Words.GetVoice(chosen);
+        LangCode = Words.Codes[chosen];
+        MainPage.Instance?.SetLanguage(LangCode);
+        Preferences.Set(MyVoiceSet, MyVoice);
+        flagMy.Source = Words.GetFlag(MyVoice);
+        myLanguage.Text = Words.Languages[chosen];
+
+        myLanguagePicker.SelectedItem = AppResources.Translate_to_;
     }
 
     async void AboutBtn_Clicked(object? sender, EventArgs e)
@@ -144,8 +182,13 @@ public partial class SettingsPage : ContentPage
         }
         var indMine = Words.Voices.IndexOf(mine);
         var indLearn = Words.Voices.IndexOf(learn);
-        m_col1.SelectedIndex = indLearn;
-        m_col2.SelectedIndex = indMine;
+        //m_col1.SelectedIndex = indLearn;
+        //m_col2.SelectedIndex = indMine;
+        myLanguagePicker.SelectedIndex = indMine;
+        learnLanguagePicker.SelectedIndex = indLearn;
+
+        myLanguage.Text = Words.Languages[indMine];
+        toLearn.Text = Words.Languages[indLearn];
 
         flagLearn.Source = Words.GetFlag(VoiceLearn);
         flagMy.Source = Words.GetFlag(MyVoice);
@@ -154,11 +197,11 @@ public partial class SettingsPage : ContentPage
         LangCode = Words.Codes[indMine];
 
         PlayRate = Preferences.Get(PlaySet, PlayRate);
-        //SpeechRate = Preferences.Get(SpeechSet, SpeechRate);
+        DelayRate = Preferences.Get(DelaySet, DelayRate);
         Sound = Preferences.Get(SoundSet, true);
 
         PlaySlider.Value = PlayRate;
-        //SpeechSlider.Value = SpeechRate;
+        DelaySlider.Value = DelayRate;
         SoundCheck.IsChecked = Sound;
 
         VoiceLearn = learn;
@@ -168,14 +211,18 @@ public partial class SettingsPage : ContentPage
     }
     public void Localize()
     {
-        toLearn.Text = AppResources.Language_to_learn_;
-        myLanguage.Text = AppResources.Translate_to_;
-        m_col1.HeaderText = AppResources.Language_to_learn_;
-        m_col2.HeaderText = AppResources.Translate_to_;
+        //toLearn.Text = AppResources.Language_to_learn_;
+        //myLanguage.Text = AppResources.Translate_to_;
+        //m_col1.HeaderText = AppResources.Language_to_learn_;
+        //m_col2.HeaderText = AppResources.Translate_to_;
+        myLanguagePicker.Title = AppResources.Translate_to_;
+        learnLanguagePicker.Title = AppResources.Language_to_learn_;
+
         SoundLab.Text = AppResources.Sound_;
-        //SpeechrateLab.Text = AppResources.Speech_Rate_;
+        DelayLab.Text = AppResources.Translation_Delay_Rate_;
         PlayrateLab.Text = AppResources.Play_Rate_;
         PlayrateSec.Text = string.Format(PlaySecFormat, PlayRate);
+        DelaySec.Text = string.Format(PlaySecFormat, DelayRate);
         Title = AppResources.Settings;
     }
 
@@ -189,6 +236,12 @@ public partial class SettingsPage : ContentPage
         PlayRate = Math.Round(e.NewValue, 1);
         Preferences.Set(PlaySet, PlayRate);
         PlayrateSec.Text = string.Format(PlaySecFormat, PlayRate);
+    }
+    private void DelaySlider_ValueChanged(object? sender, ValueChangedEventArgs e)
+    {
+        DelayRate = Math.Round(e.NewValue, 1);
+        Preferences.Set(DelaySet, DelayRate);
+        DelaySec.Text = string.Format(PlaySecFormat, DelayRate);
     }
 
     public double GetPlayInterval()

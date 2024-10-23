@@ -104,6 +104,7 @@
 		<PackageReference Include="Syncfusion.Maui.ListView" Version="26.2.9" />
 		<PackageReference Include="Syncfusion.Maui.Core" Version="26.2.9" />
 		<PackageReference Include="Syncfusion.Maui.Buttons" Version="26.2.9" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -2048,6 +2049,19 @@
 	  <BundleResource Include="Resources\Images\to_offer.png" />
 	  <BundleResource Include="Resources\Images\to_deliver.png" />
 	  <BundleResource Include="Resources\Images\spare_ribs.png" />
+	  <BundleResource Include="Resources\Images\delete_word.png" />
+	  <BundleResource Include="Resources\Images\add_word.png" />
+	  <BundleResource Include="Resources\Images\pot.png" />
+	  <BundleResource Include="Resources\Images\octopus.png" />
+	  <BundleResource Include="Resources\Images\calamari__squid.png" />
+	  <BundleResource Include="Resources\Images\lobster.png" />
+	  <BundleResource Include="Resources\Images\delete_word.png" />
+	  <BundleResource Include="Resources\Images\add_word.png" />
+	  <BundleResource Include="Resources\Images\pot.png" />
+	  <BundleResource Include="Resources\Images\octopus.png" />
+	  <BundleResource Include="Resources\Images\calamari__squid.png" />
+	  <BundleResource Include="Resources\Images\lobster.png" />
+	  <BundleResource Include="Resources\Images\to_break.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2070,41 +2084,9 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>AppResources.it.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.de.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.de.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Strings\AppResources.es.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>AppResources.es.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.fr.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.fr.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.pt.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.pt.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.ar.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.ar.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.ja.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.ja.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.zh.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.zh.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.he.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.he.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	</ItemGroup>
 	<ItemGroup>
@@ -2114,14 +2096,8 @@
 	  <Compile Update="Resources\Strings\AppResources.ru-RU.Designer.cs">
 	    <DependentUpon>AppResources.ru.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Strings\AppResources.it.Designer.cs">
-	    <DependentUpon>AppResources.it.resx</DependentUpon>
-	  </Compile>
 	  <Compile Update="Resources\Strings\AppResources.de.Designer.cs">
 	    <DependentUpon>AppResources.de.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Strings\AppResources.es.Designer.cs">
-	    <DependentUpon>AppResources.es.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Strings\AppResources.fr.Designer.cs">
 	    <DependentUpon>AppResources.fr.resx</DependentUpon>
@@ -2129,20 +2105,8 @@
 	  <Compile Update="Resources\Strings\AppResources.pt.Designer.cs">
 	    <DependentUpon>AppResources.pt.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Strings\AppResources.ar.Designer.cs">
-	    <DependentUpon>AppResources.ar.resx</DependentUpon>
-	  </Compile>
 	  <Compile Update="Resources\Strings\AppResources.ja.Designer.cs">
 	    <DependentUpon>AppResources.ja.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Strings\AppResources.zh.Designer.cs">
-	    <DependentUpon>AppResources.zh.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Strings\AppResources.Designer.cs">
-	    <DependentUpon>AppResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Strings\AppResources.he.Designer.cs">
-	    <DependentUpon>AppResources.he.resx</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 	<ItemGroup>
@@ -2228,6 +2192,13 @@
 	  <None Remove="Resources\Images\to_be_in_a_hurry__to_hurry__to_rush.png" />
 	  <None Remove="Resources\Images\to_offer.png" />
 	  <None Remove="Resources\Images\spare_ribs.png" />
+	  <None Remove="Resources\Images\delete_word.png" />
+	  <None Remove="Resources\Images\add_word.png" />
+	  <None Remove="Resources\Images\pot.png" />
+	  <None Remove="Resources\Images\octopus.png" />
+	  <None Remove="Resources\Images\calamari__squid.png" />
+	  <None Remove="Resources\Images\lobster.png" />
+	  <None Remove="Resources\Images\to_break.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

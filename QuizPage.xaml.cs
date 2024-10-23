@@ -176,6 +176,14 @@ public partial class QuizPage : ContentPage
 
     private async void StartStopBtn_Clicked(object? sender, EventArgs e)
     {
+        m_totalWords = m_category.GetTotalWords();
+        if (!m_playing && m_totalWords < m_quizChoices)
+        {
+            await DisplayAlert(AppInfo.Current.Name,
+                string.Format(AppResources.min_words, m_quizChoices), "OK");
+            return;
+        }
+
         m_playing = !m_playing;
         StartStopBtn.Source = m_playing ? StopBtn : StartBtn;
 
@@ -186,7 +194,6 @@ public partial class QuizPage : ContentPage
 
         m_category = Categories.GetCategory(QuizCategoryPicker.SelectedIndex);
         m_quizWords = (int)WordsStepper.Value;
-        m_totalWords = m_category.GetTotalWords();
         m_usedWords.Clear();
         m_currentQuizQuestion = 0;
         m_correctInQuiz = 0;
@@ -282,7 +289,7 @@ public partial class QuizPage : ContentPage
     }
     void TestWords()
     {
-        var words = Categories.DefaultCategory.Words;
+        var words = Categories.DefaultCategory.CatWords;
         foreach (var w in words)
         {
             SetWord(w, 0);
