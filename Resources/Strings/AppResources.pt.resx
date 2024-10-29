@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>Taxa de atraso de tradução:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>Atrasar a nova palavra:</value>
+</data>
 <data name="Accent:" xml:space="preserve">
   <value>Acento:</value>
 </data>

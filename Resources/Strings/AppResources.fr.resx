@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>Taux de retard de traduction:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>Retarder le nouveau mot:</value>
+</data>
 <data name="Accent:" xml:space="preserve">
   <value>Accent:</value>
 </data>
@@ -232,7 +235,7 @@
   <value>phrases de drague</value>
 </data>
 <data name="custom category" xml:space="preserve">
-  <value>mots choisis</value>
+  <value>mots personnalisés</value>
 </data>
 <data name="select words" xml:space="preserve">
   <value>Il n'y a pas de mots personnalisés. Sélectionnez des mots dans d'autres catégories en cliquant sur le bouton Ajouter.</value>
@@ -241,10 +244,10 @@
   <value>Il faut au moins {0} mots pour le quiz</value>
 </data>
 <data name="word added" xml:space="preserve">
-  <value>Un mot a été ajouté</value>
+  <value>Le mot a été ajouté aux mots personnalisés</value>
 </data>
 <data name="word deleted" xml:space="preserve">
-  <value>Un mot a été supprimé</value>
+  <value>Le mot a été supprimé des mots personnalisés</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Sélectionnez une Catégorie</value>

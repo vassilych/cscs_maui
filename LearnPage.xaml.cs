@@ -13,6 +13,9 @@ using System.Threading;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using System.Configuration;
+using CommunityToolkit.Maui.Media;
+using System;
+using System.Globalization;
 
 namespace ScriptingMaui;
 
@@ -22,6 +25,7 @@ public partial class LearnPage : ContentPage
     const string WordSet = "wordLearn";
     const string CategoryWord = "word_";
     const string CustomWords = "customWords";
+    const string TrashWords = "trashWords";
 
     const string AddWordIcon = "add_word.png";
     const string DeleteWordIcon = "delete_word.png";
@@ -68,7 +72,8 @@ public partial class LearnPage : ContentPage
         SearchEntry.TextChanged += SearchEntry_TextChanged;
         SearchEntry.Completed += BackBut_Clicked;
         ButOk.Clicked += BackBut_Clicked;
-        ButAddDel.Clicked += ButAddDel_Clicked;
+        ButAdd.Clicked += ButAdd_Clicked;
+        ButDel.Clicked += ButDel_Clicked;
 
         TranslationView.ItemTapped += TranslationView_ItemTapped;
         ResultsView.ItemTapped += ResultsView_ItemTapped;
@@ -81,24 +86,43 @@ public partial class LearnPage : ContentPage
         //this.Loaded += LearnPage_Loaded;
     }
 
-    async void ButAddDel_Clicked(object? sender, EventArgs e)
+    async void ButDel_Clicked(object? sender, EventArgs e)
     {
-        var custom = Categories.GetCategory(Categories.CustomCategoryName);
-        if (custom.Exists(Context.Word.Name))
+        string toast = "";
+        if (m_category == Categories.CustomCategory)
         {
-            custom.RemoveWord(Context.Word);
-            ButAddDel.Source = AddWordIcon;
-            var toast = Toast.Make(AppResources.word_deleted, ToastDuration.Short);
-            await toast.Show();
+            m_category.RemoveWord(Context.Word);
+            toast = AppResources.word_deleted;
+            Preferences.Set(CustomWords, m_category.GetAllWords());
+        }
+        else if (m_category == Categories.TrashCategory)
+        {
+            m_category.RemoveWord(Context.Word);
+            Context.Word.Category.AddFromTrash(Context.Word);
+            toast = string.Format(AppResources.Word_AddedTo__0_, Context.Word.Category.Name);
+            Preferences.Set(TrashWords, m_category.GetAllWords());
         }
         else
         {
-            custom.AddWord(Context.Word);
-            ButAddDel.Source = DeleteWordIcon;
-            var toast = Toast.Make(AppResources.word_added, ToastDuration.Short);
-            await toast.Show();
+            Categories.TrashCategory.AddWord(Context.Word);
+            m_category.AddToTrash(Context.Word);
+            toast = string.Format(AppResources.Word_AddedTo__0_, AppResources.trash);
+            Preferences.Set(TrashWords, Categories.TrashCategory.GetAllWords());
         }
-        ButAddDelBorder.IsVisible = m_category == custom || !custom.Exists(Context.Word.Name);
+        ButDelBorder.IsVisible = false;
+        var word = m_category.GetWord(m_category.Index);
+        await SetWord(word);
+        await Toast.Make(toast, ToastDuration.Long).Show();
+    }
+    async void ButAdd_Clicked(object? sender, EventArgs e)
+    {
+        var custom = Categories.CustomCategory;
+        if (!custom.Exists(Context.Word.Name))
+        {
+            custom.AddWord(Context.Word);
+            ButAddBorder.IsVisible = false;
+            await Toast.Make(AppResources.word_added, ToastDuration.Short).Show();
+        }
         Preferences.Set(CustomWords, custom.GetAllWords());
     }
 
@@ -107,9 +131,37 @@ public partial class LearnPage : ContentPage
         TranslationBtn.Text = text;
         TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
     }
+    public void SetTranslationView()
+    {
+        try
+        {
+            if (m_trasnlationViewY > 0)
+            {
+                TranslationView.ScrollTo(m_trasnlationViewY);
+            }
+        }
+        catch (Exception) { }
+    }
     public void SetTranslationWait()
     {
         TranslationBtn.Text += ".";
+    }
+    public void SetTranslationOrigWait()
+    {
+        MainWordLabel.Text += ".";
+    }
+    public void SetOrigTranslation(string text)
+    {
+        if (Context.Word.Category.IsText)
+        {
+            MainImgTxt.Text = text;
+            MainImgTxt.FontSize = GetFontSize(text) + 2;
+            MainWordLabel.Text = "";
+        }
+        else
+        {
+            MainWordLabel.Text = text;
+        }
     }
 
     async void ResultsView_ItemTapped(object? sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
@@ -212,6 +264,7 @@ public partial class LearnPage : ContentPage
         if(!string.IsNullOrWhiteSpace(trans) && !trans.StartsWith("."))
         {
             await TTS.Speak(trans, SettingsPage.MyVoice);
+            //await TestSpeech();
         }
     }
 
@@ -284,6 +337,9 @@ public partial class LearnPage : ContentPage
         var customWords = Preferences.Get(CustomWords, "");
         custom.InitFromWords(customWords);
 
+        var trashWords = Preferences.Get(TrashWords, "");
+        Categories.TrashCategory.InitFromWords(trashWords);
+
         await SetInitWord();
         SetMode();
     }
@@ -302,6 +358,42 @@ public partial class LearnPage : ContentPage
         //CategoryPicker.SelectedIndex = categoryIndex;
     }
 
+    public async Task<string> _TestSpeech(string voice = "en-US")
+    {
+        var isGranted = await SpeechToText.Default.RequestPermissions();
+        if (!isGranted)
+        {
+            await Toast.Make("Permission not granted").Show(CancellationToken.None);
+            return "";
+        }
+        string RecognitionText = "";
+        SpeechToTextResult recognitionResult = null;
+        string error = "";
+        try
+        {
+            recognitionResult = await SpeechToText.Default.ListenAsync(
+                                        CultureInfo.GetCultureInfo(voice),
+                                        new Progress<string>(partialText =>
+                                        {
+                                            RecognitionText += partialText + " ";
+                                        }));
+            recognitionResult.EnsureSuccess();
+        }
+        catch(Exception exc)
+        {
+            error += exc.Message;
+        }
+        if (recognitionResult == null || !recognitionResult.IsSuccessful || !string.IsNullOrWhiteSpace(error))
+        {
+            await Toast.Make("Unable to recognize speech: " + error, ToastDuration.Long).Show();
+            return "";
+        }
+
+        RecognitionText = recognitionResult.Text;
+        await Toast.Make("Recognized: " + RecognitionText, ToastDuration.Long).Show();
+        return RecognitionText;
+    }
+
     void SetMode(bool findMode = false, bool infoMode = false)
     {
         SearchPanel.IsVisible = findMode || infoMode;
@@ -311,17 +403,16 @@ public partial class LearnPage : ContentPage
         WordName.IsVisible = infoMode;
         WordDetails.IsVisible = infoMode;
 
-        TopPanel.IsVisible = !findMode && !infoMode;
+        TopPanel.IsVisible = TopMainPanel.IsVisible = !findMode && !infoMode;
         TopMainPanel.IsVisible = !findMode && !infoMode;
         MainPanel.IsVisible = !findMode && !infoMode;
         ButtonsPanel.IsVisible = !findMode && !infoMode;
-        TranslationView.IsVisible = !findMode && !infoMode;
-        TranslationBtn.IsVisible = !findMode && !infoMode;
-        TranslationFlag.IsVisible = !findMode && !infoMode;
+        TranslationView.IsVisible = TranslationFlag.IsVisible = TranslationBtn.IsVisible = TranslationBtnBorder.IsVisible = !findMode && !infoMode;
+        ButSpeak.IsVisible = !findMode && !infoMode;
 
-        InfoPanel.IsVisible = infoMode;
-        VerbInfoH1.IsVisible = VerbInfoH2.IsVisible = VerbInfoH3.IsVisible = infoMode;
-        VerbInfo11.IsVisible = VerbInfo21.IsVisible = VerbInfo31.IsVisible = infoMode;
+        InfoPanelScroll.IsVisible = InfoPanel.IsVisible = infoMode;
+        //VerbInfoH1.IsVisible = VerbInfoH2.IsVisible = VerbInfoH3.IsVisible = infoMode;
+        //VerbInfo11.IsVisible = VerbInfo21.IsVisible = VerbInfo31.IsVisible = infoMode;
     }
 
     string GetWordData(string langPrefix, string candidate)
@@ -343,422 +434,6 @@ public partial class LearnPage : ContentPage
             }
         }
         return data;
-    }
-
-    async void InfoData_Clicked(object? sender, EventArgs e)
-    {
-        StopPlay();
-        var words = Context.Word.GetTranslation(SettingsPage.VoiceLearn);
-        var tok = words.Split(",", StringSplitOptions.TrimEntries);
-        m_conjVerbs = tok.ToList();
-        await Conjugate();
-    }
-
-    async Task<bool> Conjugate()
-    {
-        if (m_conjVerbs.Count == 0)
-        {
-            return true;
-        }
-        var prefix1 = SettingsPage.VoiceLearn.Substring(0, 2);
-        var prefix2 = SettingsPage.MyVoice.Substring(0, 2);
-
-        var verb = m_conjVerbs.First();
-        m_conjVerbs.RemoveAt(0);
-
-        var data = GetWordData(prefix1, verb);
-        if (string.IsNullOrWhiteSpace(data))
-        {
-            if (SettingsPage.VoiceLearn == "de-CH")
-            {
-                var words = Context.Word.GetTranslation("de-DE");
-                var t = words.Split(",", StringSplitOptions.TrimEntries);
-                data = GetWordData(prefix1, t.First());
-            }
-            if (string.IsNullOrWhiteSpace(data))
-            {
-                var c = verb.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-                var cand2 = c.First();
-                data = GetWordData(prefix1, cand2);
-            }
-            if (string.IsNullOrWhiteSpace(data))
-            {
-                await DisplayAlert(AppResources.verbs, string.Format(AppResources.Word_with__0__not_found, verb), "OK");
-                m_conjVerbs.Remove(verb);
-                return m_conjVerbs.Count == 0;
-            }
-        }
-        SetMode(false, true);
-        m_conjVerbs.Remove(verb);
-        var tokens = data.Trim().Split(new char[] { ',' }, (StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries));
-        if (prefix1.StartsWith("en"))
-        {
-            LoadEnVerbs(tokens);
-        }
-        else if (prefix1.StartsWith("es"))
-        {
-            LoadEsVerbs(tokens);
-        }
-        else if (prefix1.StartsWith("de"))
-        {
-            LoadDeVerbs(tokens);
-        }
-        else if (prefix1.StartsWith("ru"))
-        {
-            LoadRuVerbs(tokens);
-        }
-
-        SetSize(VerbInfoH1, true); SetSize(VerbInfoH2, true); SetSize(VerbInfoH3, true);
-        SetSize(VerbInfoH4, true); SetSize(VerbInfoH5, true); SetSize(VerbInfoH6, true);
-        SetSize(VerbInfoH7, true); SetSize(VerbInfoH8, true); SetSize(VerbInfoH9, true);
-
-        SetSize(VerbInfo11); SetSize(VerbInfo21); SetSize(VerbInfo31);
-        SetSize(VerbInfo12); SetSize(VerbInfo22); SetSize(VerbInfo32);
-        SetSize(VerbInfo13); SetSize(VerbInfo23); SetSize(VerbInfo33);
-        SetSize(VerbInfo41); SetSize(VerbInfo51); SetSize(VerbInfo61);
-        SetSize(VerbInfo42); SetSize(VerbInfo52); SetSize(VerbInfo62);
-        SetSize(VerbInfo43); SetSize(VerbInfo53); SetSize(VerbInfo63);
-
-        SetSize(VerbInfo71); SetSize(VerbInfo81); SetSize(VerbInfo91);
-        SetSize(VerbInfo72); SetSize(VerbInfo82); SetSize(VerbInfo92);
-        SetSize(VerbInfo73); SetSize(VerbInfo83); SetSize(VerbInfo93);
-        SetSize(VerbInfo101); SetSize(VerbInfo111); SetSize(VerbInfo121);
-        SetSize(VerbInfo102); SetSize(VerbInfo112); SetSize(VerbInfo122);
-        SetSize(VerbInfo103); SetSize(VerbInfo113); SetSize(VerbInfo123);
-
-        SetSize(VerbInfo131); SetSize(VerbInfo141); SetSize(VerbInfo151);
-        SetSize(VerbInfo132); SetSize(VerbInfo142); SetSize(VerbInfo152);
-        SetSize(VerbInfo133); SetSize(VerbInfo143); SetSize(VerbInfo153);
-        SetSize(VerbInfo161); SetSize(VerbInfo171); SetSize(VerbInfo181);
-        SetSize(VerbInfo162); SetSize(VerbInfo172); SetSize(VerbInfo182);
-        SetSize(VerbInfo163); SetSize(VerbInfo173); SetSize(VerbInfo183);
-
-        return false;
-    }
-    void LoadEnVerbs(string[] tokens)
-    {
-        WordName.Text = tokens[0];
-        Participle.Text = "Particip: " + tokens[2];
-        Gerund.Text = "Gerund: " + tokens[3];
-        // to be, be, been, being, am, are, is, was, were, was
-        VerbInfoH1.Text = "Present";
-        VerbInfo11.Text = "I " + tokens[4];
-        VerbInfo21.Text = "you " + tokens[5];
-        VerbInfo31.Text = "she " + tokens[6];
-        VerbInfo41.Text = "we " + tokens[5];
-        VerbInfo51.Text = "you " + tokens[5];
-        VerbInfo61.Text = "they " + tokens[5];
-
-        VerbInfoH2.Text = "Simple Past";
-        VerbInfo12.Text = "I " + tokens[7];
-        VerbInfo22.Text = "you " + tokens[8];
-        VerbInfo32.Text = "she " + tokens[9];
-        VerbInfo42.Text = "we " + tokens[7];
-        VerbInfo52.Text = "you " + tokens[7];
-        VerbInfo62.Text = "they " + tokens[7];
-
-        VerbInfoH3.Text = "Future";
-        VerbInfo13.Text = "I will " + tokens[1];
-        VerbInfo23.Text = "you will " + tokens[1];
-        VerbInfo33.Text = "she will " + tokens[1];
-        VerbInfo43.Text = "we will " + tokens[1];
-        VerbInfo53.Text = "you will " + tokens[1];
-        VerbInfo63.Text = "they will " + tokens[1];
-
-        VerbInfoH4.Text = "Pres. Cont.";
-        VerbInfo71.Text = "I'm " + tokens[3];
-        VerbInfo81.Text = "you're " + tokens[3];
-        VerbInfo91.Text = "she's " + tokens[3];
-        VerbInfo101.Text = "we're " + tokens[3];
-        VerbInfo111.Text = "you're " + tokens[3];
-        VerbInfo121.Text = "they're " + tokens[3];
-
-        VerbInfoH5.Text = "Pres. Perfect";
-        VerbInfo72.Text = "have " + tokens[2];
-        VerbInfo82.Text = "have " + tokens[2];
-        VerbInfo92.Text = "has " + tokens[2];
-        VerbInfo102.Text = VerbInfo112.Text = VerbInfo122.Text = "have " + tokens[2];
-
-        VerbInfoH6.Text = "Conditional";
-        VerbInfo73.Text = VerbInfo83.Text = VerbInfo93.Text =
-            VerbInfo103.Text = VerbInfo113.Text = VerbInfo123.Text = "would " + tokens[1];
-
-        ShowRow3(true);
-        VerbInfoH7.Text = "Past Cont.";
-        VerbInfo131.Text = "I was " + tokens[3];
-        VerbInfo141.Text = "you were " + tokens[3];
-        VerbInfo151.Text = "she was " + tokens[3];
-        VerbInfo161.Text = "we were " + tokens[3];
-        VerbInfo171.Text = "you were " + tokens[3];
-        VerbInfo181.Text = "they were " + tokens[3];
-
-        VerbInfoH8.Text = "Past Perfect";
-        VerbInfo132.Text = "had " + tokens[2];
-        VerbInfo142.Text = "had " + tokens[2];
-        VerbInfo152.Text = "had " + tokens[2];
-        VerbInfo162.Text = VerbInfo172.Text = VerbInfo182.Text = "had " + tokens[2];
-
-        VerbInfoH9.Text = "Pres. Emphatic";
-        VerbInfo133.Text = "do " + tokens[1];
-        VerbInfo143.Text = "do " + tokens[1];
-        VerbInfo153.Text = "does " + tokens[1];
-        VerbInfo163.Text = "do " + tokens[1];
-        VerbInfo173.Text = "do " + tokens[1];
-        VerbInfo183.Text = "do " + tokens[1];
-    }
-
-    void LoadEsVerbs(string[] tokens)
-    {
-        WordName.Text = tokens[0];
-        Participle.Text = "Participio: " + tokens[1];
-        Gerund.Text = "Gerundio: " + tokens[2];
-        /* hacer, hecho, haciendo, hago,haces,hace,hacemos,hacéis,hacen,  hacía,hacías,hacía,hacíamos,hacíais,hacían,
-         15 hice,hiciste,hizo,hicimos,hicisteis,hicieron, haré,harás,hará,haremos,haréis,harán,
-         27 hecho,haría,harías,haría,haríamos,haríais,harían */
-        VerbInfoH1.Text = "Presente";
-        VerbInfo11.Text = "Yo " + tokens[3];
-        VerbInfo21.Text = "Tú " + tokens[4];
-        VerbInfo31.Text = "Él/Ella/Ud " + tokens[5];
-        VerbInfo41.Text = "Nosotros " + tokens[6];
-        VerbInfo51.Text = "Vosotros " + tokens[7];
-        VerbInfo61.Text = "Ellas/Ustedes " + tokens[8];
-
-        VerbInfoH2.Text = "Pret Imperfecto";
-        VerbInfo12.Text = tokens[9];
-        VerbInfo22.Text = tokens[10];
-        VerbInfo32.Text = tokens[11];
-        VerbInfo42.Text = tokens[12];
-        VerbInfo52.Text = tokens[13];
-        VerbInfo62.Text = tokens[14];
-
-        VerbInfoH3.Text = "Pret Indefinido";
-        VerbInfo13.Text = tokens[15];
-        VerbInfo23.Text = tokens[16];
-        VerbInfo33.Text = tokens[17];
-        VerbInfo43.Text = tokens[18];
-        VerbInfo53.Text = tokens[19];
-        VerbInfo63.Text = tokens[20];
-
-        VerbInfoH4.Text = "Futuro";
-        VerbInfo71.Text = tokens[21];
-        VerbInfo81.Text = tokens[22];
-        VerbInfo91.Text = tokens[23];
-        VerbInfo101.Text = tokens[24];
-        VerbInfo111.Text = tokens[25];
-        VerbInfo121.Text = tokens[26];
-
-        VerbInfoH5.Text = "Pret Perfecto";
-        VerbInfo72.Text = "he " + tokens[1];
-        VerbInfo82.Text = "has " + tokens[1];
-        VerbInfo92.Text = "ha " + tokens[1];
-        VerbInfo102.Text = "hemos " + tokens[1];
-        VerbInfo112.Text = "habéis " + tokens[1];
-        VerbInfo122.Text = "han " + tokens[1];
-
-        VerbInfoH6.Text = "Condicional";
-        VerbInfo73.Text = tokens[27];
-        VerbInfo83.Text = tokens[28];
-        VerbInfo93.Text = tokens[29];
-        VerbInfo103.Text = tokens[30];
-        VerbInfo113.Text = tokens[31];
-        VerbInfo123.Text = tokens[32];
-
-        ShowRow3(true);
-        VerbInfoH7.Text = "Pluscuamperfecto";
-        VerbInfo131.Text = "había " + tokens[1];
-        VerbInfo141.Text = "habías " + tokens[1];
-        VerbInfo151.Text = "había " + tokens[1];
-        VerbInfo161.Text = "habíamos " + tokens[1];
-        VerbInfo171.Text = "habíais " + tokens[1];
-        VerbInfo181.Text = "habían " + tokens[1];
-
-        VerbInfoH8.Text = "Pres continuo";
-        VerbInfo132.Text = "estoy " + tokens[2];
-        VerbInfo142.Text = "estás " + tokens[2];
-        VerbInfo152.Text = "está " + tokens[2];
-        VerbInfo162.Text = "estamos " + tokens[2];
-        VerbInfo172.Text = "estáis " + tokens[2];
-        VerbInfo182.Text = "están " + tokens[2];
-
-        VerbInfoH9.Text = "Futuro próximo";
-        VerbInfo133.Text = "voy a " + tokens[0];
-        VerbInfo143.Text = "vas a " + tokens[0];
-        VerbInfo153.Text = "va a " + tokens[0];
-        VerbInfo163.Text = "vamos a " + tokens[0];
-        VerbInfo173.Text = "vais a " + tokens[0];
-        VerbInfo183.Text = "van a " + tokens[0];
-    }
-    void LoadDeVerbs(string[] tokens)
-    {
-        WordName.Text = tokens[0];
-        Participle.Text = "Partizip: " + tokens[1];
-        Gerund.Text = "Gerundium: " + tokens[2];
-        /* sein, gewesen, seiend, Präsens bin,bist,ist,sind,seid,sind,
-         * Perfekt 9 bin gewesen,bist gewesen,ist gewesen,sind gewesen,seid gewesen,sind gewesen,
-         * Plusquamperfekt 15 war gewesen,warst gewesen,war gewesen,waren gewesen,wart gewesen,waren gewesen,
-         * Präteritum 21 war,warst,war,waren,wart,waren,
-         * Präsens I 27 sei,seist,sei,seien,seiet,seien,
-         * Präteritum II 33 wäre,wärest,wäre,wären,wäret,wären,
-         * Imperative 39 Sei,Seien,Seid,Seien 
-         sein, gewesen, seiend, bin,bist,ist,sind,seid,sind,
-        bin gewesen,bist gewesen,ist gewesen,sind gewesen,seid gewesen,sind gewesen,
-        war gewesen,warst gewesen,war gewesen,waren gewesen,wart gewesen,waren gewesen,
-        war,warst,war,waren,wart,waren,
-        sei,seist,sei,seien,seiet,seien,
-        wäre,wärest,wäre,wären,wäret,wären,
-        Sei, Seien, Seid, Seien*/
-        VerbInfoH1.Text = "Präsens";
-        VerbInfo11.Text = "ich " + tokens[3];
-        VerbInfo21.Text = "du " + tokens[4];
-        VerbInfo31.Text = "er/sie/es " + tokens[5];
-        VerbInfo41.Text = "wir " + tokens[6];
-        VerbInfo51.Text = "ihr " + tokens[7];
-        VerbInfo61.Text = "sie/Sie " + tokens[8];
-
-        VerbInfoH2.Text = "Perfekt";
-        VerbInfo12.Text = tokens[9];
-        VerbInfo22.Text = tokens[10];
-        VerbInfo32.Text = tokens[11];
-        VerbInfo42.Text = tokens[12];
-        VerbInfo52.Text = tokens[13];
-        VerbInfo62.Text = tokens[14];
-                
-        VerbInfoH3.Text = "Präteritum";
-        VerbInfo13.Text = tokens[21];
-        VerbInfo23.Text = tokens[22];
-        VerbInfo33.Text = tokens[23];
-        VerbInfo43.Text = tokens[24];
-        VerbInfo53.Text = tokens[25];
-        VerbInfo63.Text = tokens[26];
-                
-        VerbInfoH4.Text = "Plusquamperfekt";
-        VerbInfo71.Text = tokens[15];
-        VerbInfo81.Text = tokens[16];
-        VerbInfo91.Text = tokens[17];
-        VerbInfo101.Text = tokens[18];
-        VerbInfo111.Text = tokens[19];
-        VerbInfo121.Text = tokens[20];
-
-        VerbInfoH5.Text = "Futur I";
-        VerbInfo72.Text = "werde " + tokens[1];
-        VerbInfo82.Text = "wirst " + tokens[1];
-        VerbInfo92.Text = "wird " + tokens[1];
-        VerbInfo102.Text = "werden " + tokens[1];
-        VerbInfo112.Text = "werdet " + tokens[1];
-        VerbInfo122.Text = "werden " + tokens[1];
-
-        VerbInfoH6.Text = "Imperativ";
-        VerbInfo73.Text = "";
-        VerbInfo83.Text = tokens[39].Contains(" du") || tokens[39] == "-" ? tokens[39] : tokens[39] + " (du)!";
-        VerbInfo93.Text = "";
-        VerbInfo103.Text = tokens[40].Contains(" wir") || tokens[40] == "-" ? tokens[40] : tokens[40] + " wir!";
-        VerbInfo113.Text = tokens[41].Contains(" ihr") || tokens[41] == "-" ? tokens[41] : tokens[41] + " ihr!";
-        VerbInfo123.Text = tokens[42].Contains(" Sie") || tokens[42] == "-" ? tokens[42] : tokens[42] + " Sie!";
-        ShowRow3(true);
-        VerbInfoH7.Text = "Konj Präsens I";
-        VerbInfo131.Text = "ich " + tokens[27];
-        VerbInfo141.Text = "du " + tokens[28];
-        VerbInfo151.Text = "er/sie/es " + tokens[29];
-        VerbInfo161.Text = "wir " + tokens[30];
-        VerbInfo171.Text = "ihr " + tokens[31];
-        VerbInfo181.Text = "sie/Sie " + tokens[32];
-
-        VerbInfoH8.Text = "Konj Präter II";
-        VerbInfo132.Text = tokens[33];
-        VerbInfo142.Text = tokens[34];
-        VerbInfo152.Text = tokens[35];
-        VerbInfo162.Text = tokens[36];
-        VerbInfo172.Text = tokens[37];
-        VerbInfo182.Text = tokens[38];
-
-        VerbInfoH9.Text = "Konj Futur II";
-        VerbInfo133.Text = "würde " + tokens[0];
-        VerbInfo143.Text = "würdest " + tokens[0];
-        VerbInfo153.Text = "würde " + tokens[0];
-        VerbInfo163.Text = "würden " + tokens[0];
-        VerbInfo173.Text = "würdet " + tokens[0];
-        VerbInfo183.Text = "würden " + tokens[0];
-    }
-
-    void LoadRuVerbs(string[] tokens)
-    {
-        WordName.Text = tokens[0];
-        Participle.Text = "Причастие: " + tokens[1];
-        Gerund.Text = "Деепричастие: " + tokens[2];
-        /* спорить, спорящий, споря, 
-         * НАСТ 3 спорю,споришь,спорит,спорим,спорите,спорят,
-         * ПРОШ 9 спорил/спорила,спорил/спорила,спорил/спорила,спорили,спорили,спорили, 
-         * БУД 15 буду спорить,будешь спорить,будет спорить,будем спорить,будете спорить,будут спорить, 
-         * УСЛ 21 бы спорил / спорила,бы спорил / спорила,бы спорил / спорила,бы спорили,бы спорили,бы спорили,
-         * ПОВ 27 спорь,спорьте
- */
-        VerbInfoH1.Text = "Настоящее время";
-        VerbInfo11.Text = "Я " + tokens[3];
-        VerbInfo21.Text = "Ты " + tokens[4];
-        VerbInfo31.Text = "Он/она " + tokens[5];
-        VerbInfo41.Text = "Мы " + tokens[6];
-        VerbInfo51.Text = "Вы " + tokens[7];
-        VerbInfo61.Text = "Они " + tokens[8];
-
-        VerbInfoH2.Text = "Прошедшее Муж.";
-        VerbInfo12.Text = tokens[9].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
-        VerbInfo22.Text = tokens[10].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
-        VerbInfo32.Text = tokens[11].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
-        VerbInfo42.Text = tokens[12].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
-        VerbInfo52.Text = tokens[13].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
-        VerbInfo62.Text = tokens[14].Split('/', StringSplitOptions.RemoveEmptyEntries).First().Trim();
-
-        VerbInfoH3.Text = "Прошедшее Жен.";
-        VerbInfo13.Text = tokens[9].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
-        VerbInfo23.Text = tokens[10].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
-        VerbInfo33.Text = tokens[11].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
-        VerbInfo43.Text = tokens[12].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
-        VerbInfo53.Text = tokens[13].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
-        VerbInfo63.Text = tokens[14].Split('/', StringSplitOptions.RemoveEmptyEntries).Last().Trim();
-
-        VerbInfoH4.Text = "Будущее время";
-        VerbInfo71.Text = "Я " + tokens[15];
-        VerbInfo81.Text = "Ты " + tokens[16];
-        VerbInfo91.Text = "Он/она " + tokens[17];
-        VerbInfo101.Text = "Мы " + tokens[18];
-        VerbInfo111.Text = "Вы " + tokens[19];
-        VerbInfo121.Text = "Они " + tokens[20];
-
-        VerbInfoH5.Text = "Сослагательное";
-        VerbInfo72.Text = tokens[21];
-        VerbInfo82.Text = tokens[22];
-        VerbInfo92.Text = tokens[23];
-        VerbInfo102.Text = tokens[24];
-        VerbInfo112.Text = tokens[25];
-        VerbInfo122.Text = tokens[26];
-
-        VerbInfoH6.Text = "Повелительное";
-        VerbInfo73.Text = "";
-        VerbInfo83.Text = tokens[27];
-        VerbInfo93.Text = "";
-        VerbInfo103.Text = "";
-        VerbInfo113.Text = tokens[28];
-        VerbInfo123.Text = "";
-        ShowRow3(false);
-    }
-
-    void ShowRow3(bool isVisible = true)
-    {
-        VerbInfoH7.IsVisible = VerbInfoH8.IsVisible = VerbInfoH9.IsVisible =
-            Border31.IsVisible = Border32.IsVisible = Border33.IsVisible = isVisible;
-        VerbInfo131.IsVisible = VerbInfo141.IsVisible = VerbInfo151.IsVisible = VerbInfo161.IsVisible = VerbInfo171.IsVisible = VerbInfo181.IsVisible = isVisible;
-        VerbInfo132.IsVisible = VerbInfo142.IsVisible = VerbInfo152.IsVisible = VerbInfo162.IsVisible = VerbInfo172.IsVisible = VerbInfo182.IsVisible = isVisible;
-        VerbInfo133.IsVisible = VerbInfo143.IsVisible = VerbInfo153.IsVisible = VerbInfo163.IsVisible = VerbInfo173.IsVisible = VerbInfo183.IsVisible = isVisible;
-        Border131.IsVisible = Border141.IsVisible = Border151.IsVisible = Border161.IsVisible = Border171.IsVisible = Border181.IsVisible = isVisible;
-        Border132.IsVisible = Border142.IsVisible = Border152.IsVisible = Border162.IsVisible = Border172.IsVisible = Border182.IsVisible = isVisible;
-        Border133.IsVisible = Border143.IsVisible = Border153.IsVisible = Border163.IsVisible = Border173.IsVisible = Border183.IsVisible = isVisible;
-        if (!isVisible)
-        {
-            VerbInfoH7.Text = VerbInfoH8.Text = VerbInfoH9.Text = "";
-            VerbInfo131.Text = VerbInfo141.Text = VerbInfo151.Text = VerbInfo161.Text = VerbInfo171.Text = VerbInfo181.Text = "";
-            VerbInfo132.Text = VerbInfo142.Text = VerbInfo152.Text = VerbInfo162.Text = VerbInfo172.Text = VerbInfo182.Text = "";
-            VerbInfo133.Text = VerbInfo143.Text = VerbInfo153.Text = VerbInfo163.Text = VerbInfo173.Text = VerbInfo183.Text = "";
-        }
     }
 
     public void Localize()
@@ -813,7 +488,7 @@ public partial class LearnPage : ContentPage
         });
     }
 
-    void SetCategory(Category cat, bool force = false)
+    void _SetCategory(Category cat, bool force = false)
     {
         if (!force && (m_category == Categories.DefaultCategory || cat == m_category))
         {
@@ -841,13 +516,14 @@ public partial class LearnPage : ContentPage
             }
             await Task.Delay(800);
         }
+        Context.CancelTimers();
+
         var v = TranslationView.GetScrollView();
-        m_trasnlationViewY = v.ScrollY;
+        m_trasnlationViewY = v.ScrollY < 0 ? m_trasnlationViewY : v.ScrollY;
 
         m_settingWord = true;
-        Context.SetWord(word);
-        var custom = Categories.GetCategory(Categories.CustomCategoryName);
-        m_category = m_category == Categories.DefaultCategory || m_category == custom ?
+        m_category = m_category == Categories.DefaultCategory || m_category == Categories.CustomCategory ||
+            m_category == Categories.TrashCategory ?
             m_category : word.Category;
         var ind = Categories.GetCategoryIndex(m_category.Name);
         if (ind < 0)
@@ -860,40 +536,49 @@ public partial class LearnPage : ContentPage
         Preferences.Set(CategorySet, ind);
         Preferences.Set(CategoryWord + m_category.Name, wordIndex);
 
-        ButAddDel.Source = custom.Exists(word.Name) ? DeleteWordIcon : AddWordIcon;
-        ButAddDelBorder.IsVisible = m_category == custom || !custom.Exists(word.Name);
-
         CategoryPicker.SelectedIndex = ind;
+
+        ButInfoBorder.IsVisible = ButInfo.IsVisible = (word.Category.Name == Categories.VerbCategoryName);
+        ButAddBorder.IsVisible = m_category != Categories.TrashCategory && !Categories.CustomCategory.Exists(word.Name);
+        ButDelBorder.IsVisible = true;
+
+        MainImgTxt.IsVisible = MainImgImg.IsVisible = false;
+        MainWordLabel.Text = MainImgTxt.Text = " ";
         if (word.Category.IsText)
         {
-            MainImgTxt.Text = Context.MainWord;
             MainImgTxt.IsVisible = true;
             MainImgImg.IsVisible = false;
-            MainImgTxt.FontSize = GetFontSize(Context.MainWord) + 2;
-            MainWordLabel.Text = "";
         }
         else
         {
             MainImgImg.Source = word.GetImage();
             MainImgImg.IsVisible = true;
             MainImgTxt.IsVisible = false;
-            MainWordLabel.Text = Context.MainWord;
         }
-        WordId.Text = string.Format(AppResources.Word__0___1_, (m_category.Index+1), m_category.GetTotalWords());
+
+        WordId.Text = string.Format(AppResources.Word__0___1_, (m_category.Index + 1), m_category.GetTotalWords());
+        if (SettingsPage.DelayRate > 0 && !SettingsPage.DelayOriginal)
+        { // Remove transation
+            SetTranslation(" ");
+            Context.ClearTranslations();
+        }
+        else
+        {
+            Context.SetTranslations(word);
+        }
+
+        if (speak && (SettingsPage.DelayRate <= 0 || !SettingsPage.DelayOriginal))
+        {
+            string current = word.GetTranslation(SettingsPage.VoiceLearn);
+            SetOrigTranslation(current);
+            await TTS.Speak(current, SettingsPage.VoiceLearn);
+        }
+
+        Context.SetWord(word, speak);
 
         TranslationFlag.Source = Word.GetFlag(SettingsPage.MyVoice);
-        try
-        {
-            TranslationView.ScrollTo(m_trasnlationViewY);
-        }
-        catch (Exception) { }
+        SetTranslationView();
 
-        ButInfoBorder.IsVisible = ButInfo.IsVisible = (word.Category.Name == "verbs");
-
-        if (speak)
-        {
-            await TTS.Speak(Context.MainWord, SettingsPage.VoiceLearn);
-        }
         m_settingWord = false;
     }
 
@@ -912,7 +597,7 @@ public partial class LearnPage : ContentPage
     private async void SpeakerClick(object? sender, EventArgs e)
     {
         await TTS.Speak(Context.MainWord, SettingsPage.VoiceLearn, true);
-        /*var categ = Categories.GetCategory("verbs");
+        /*var categ = Categories.GetCategory(Categories.VerbCategoryName);
         var words = categ.Words;
         foreach (var word in words)
         {
@@ -934,22 +619,25 @@ public partial class LearnPage : ContentPage
 
         var prevCategory = m_category;
         m_category = Categories.SwitchCategory(chosen);
-        if (m_category.Name == Categories.CustomCategoryName)
+        if (m_category.CatWords.Count == 0)
         {
-            if (m_category.CatWords.Count == 0)
+            if (m_category.Name == Categories.CustomCategoryName)
             {
                 await DisplayAlert(AppInfo.Current.Name, AppResources.select_words, "OK");
-                m_category = prevCategory;
-                var ind = Categories.GetCategoryIndex(prevCategory.Name);
-                if (ind == chosen)
-                {
-                    ind = 0;
-                }
-                CategoryPicker.SelectedIndex = ind;
-                return;
             }
+            else
+            {
+                await DisplayAlert(AppInfo.Current.Name, string.Format(AppResources.Folder__0__IsEmpty, m_category.Name), "OK");
+            }
+            m_category = prevCategory;
+            var ind = Categories.GetCategoryIndex(prevCategory.Name);
+            if (ind == chosen)
+            {
+                ind = 0;
+            }
+            CategoryPicker.SelectedIndex = ind;
+            return;
         }
-        //SetCategory(m_category, true);
 
         var index = Preferences.Get(CategoryWord + m_category.Name, 0);
         var word = m_category.GetWord(index);
@@ -1018,6 +706,7 @@ public class Context
     public string MainWord { get; set; } = "";
 
     IDispatcherTimer? m_timer;
+    IDispatcherTimer? m_timer2;
     DateTime m_timerStart = DateTime.Now;
 
     public ObservableCollection<string> DataSourceCategories
@@ -1067,7 +756,8 @@ public class Context
             AppResources.phrases_traveling,
             AppResources.phrases_in_hotel,
             AppResources.phrases_in_restaurant,
-            AppResources.flirting_phrases
+            AppResources.flirting_phrases,
+            AppResources.trash
         };
         return cat;
     }
@@ -1092,23 +782,46 @@ public class Context
         return ((TranslationInfo)transInfo[index]).TransVoice;
     }
 
-    internal void SetWord(Word word)
+    internal void CancelTimers()
     {
         m_timer?.Stop();
+        m_timer2?.Stop();
+    }
+    internal void ClearTranslations()
+    {
+        transInfo.Clear();
+    }
+
+    internal void SetWord(Word word, bool speak)
+    {
+        CancelTimers();
 
         Word = word;
         MainWord = Word.GetTranslation(SettingsPage.VoiceLearn);
-        transInfo.Clear();
+
         if (SettingsPage.DelayRate <= 0)
         {
-            SetTranslations();
+            SetTranslations(Word);
+            LearnPage.Instance.SetTranslationView();
+            LearnPage.Instance.SetOrigTranslation(MainWord);
             return;
         }
+
         LearnPage.Instance.SetTranslation(".");
 
         m_timer = Application.Current?.Dispatcher.CreateTimer();
         m_timer.Interval = TimeSpan.FromSeconds(0.5);
-        m_timer.Tick += (s, e) => OnDelayTimer();
+        if (SettingsPage.DelayOriginal)
+        {
+            SetTranslations(Word);
+            LearnPage.Instance.SetTranslationView();
+            m_timer.Tick += (s, e) => OnDelayOrigTimer(speak);
+        }
+        else
+        {
+            LearnPage.Instance.SetOrigTranslation(MainWord);
+            m_timer.Tick += (s, e) => OnDelayTimer();
+        }
         m_timer.IsRepeating = true;
         m_timerStart = DateTime.Now;
         m_timer.Start();
@@ -1120,23 +833,51 @@ public class Context
         if (diff.TotalSeconds >= SettingsPage.DelayRate)
         {
             m_timer?.Stop();
-            SetTranslations();
+            SetTranslations(Word);
+            m_timer2 = Application.Current?.Dispatcher.CreateTimer();
+            m_timer2.Interval = TimeSpan.FromSeconds(0.1);
+            m_timer2.Tick += (s, e) => OnDelayTimer2();
+            m_timer2.IsRepeating = false;
+            m_timer2.Start();
         }
         else
         {
             LearnPage.Instance.SetTranslationWait();
         }
     }
-
-    internal void SetTranslations()
+    private void OnDelayTimer2()
     {
-        GenerateTransInfo(Word);
-        LearnPage.Instance.SetTranslation(Word.GetTranslation(SettingsPage.MyVoice));
+        m_timer2?.Stop();
+        LearnPage.Instance.SetTranslationView();
+    }
+    async void OnDelayOrigTimer(bool speak)
+    {
+        var diff = DateTime.Now - m_timerStart;
+        if (diff.TotalSeconds >= SettingsPage.DelayRate)
+        {
+            m_timer?.Stop();
+            LearnPage.Instance.SetOrigTranslation(MainWord);
+            if (speak)
+            {
+                await TTS.Speak(MainWord, SettingsPage.VoiceLearn);
+            }
+        }
+        else
+        {
+            LearnPage.Instance.SetTranslationOrigWait();
+        }
+    }
+
+    internal void SetTranslations(Word word)
+    {
+        GenerateTransInfo(word);
+        LearnPage.Instance.SetTranslation(word.GetTranslation(SettingsPage.MyVoice));
     }
 
     internal void GenerateTransInfo(Word word)
     {
         var voiceOrder = Words.VoiceOrder;
+        transInfo.Clear();
 
         foreach (var voice in voiceOrder)
         {

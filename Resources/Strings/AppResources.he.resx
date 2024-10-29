@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>שיעור עיכוב תרגום:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>דחה מילה חדשה:</value>
+</data>
 <data name="Play Rate:" xml:space="preserve">
   <value>קצב משחק:</value>
 </data>

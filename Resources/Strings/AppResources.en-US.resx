@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>Translation Delay Rate:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>Delay New Word:</value>
+</data>
 <data name="Play Rate:" xml:space="preserve">
   <value>Play Rate:</value>
 </data>
@@ -244,12 +247,21 @@
   <value>Need minimum {0} words for the quiz</value>
 </data>
 <data name="word added" xml:space="preserve">
-  <value>Word has been added</value>
+  <value>Word has been added to custom words</value>
 </data>
 <data name="word deleted" xml:space="preserve">
-  <value>Word has been deleted</value>
+  <value>Word has been deleted from custom words</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Select Category</value>
+</data>
+<data name="trash" xml:space="preserve">
+  <value>trash</value>
+</data>
+<data name="WordAddedTo" xml:space="preserve">
+  <value>Word added to "{0}"</value>
+</data>
+<data name="FolderIsEmpty" xml:space="preserve">
+  <value>Folder "{0}" is empty</value>
 </data>
 </root>

@@ -19,7 +19,7 @@ animal world	centipede		der Tausendfüßer	Tuusigfüessler	сороконожк�
 animal world	cheetah		der Gepard	Gepard	гепард	el guepardo		o guepardo	le guépard	il ghepardo	בַּרדְלָס	猎豹	チーター	الفهد	lièbào
 animal world	cow		die Kuh	Chue	корова	la vaca		a vaca	la vache	la mucca	פָּרָה	奶牛	牛	بقرة	nǎiniú
 animal world	crocodile		das Krokodil	Krokodil	крокодил	el cocodrilo		o crocodilo	le crocodile	il coccodrillo	תַנִין	鳄鱼	ワニ	تمساح	èyú
-animal world	chicken	hen	das Huhn	Huen	курица	la gallina		a galinha	la poule	il pollo	עוֹף	鸡	鶏	دجاج	jī
+animal world	chicken	hen	das Huhn	Huen	курица	la gallina		a galinha	la poule	il pollo	תרנגולת	鸡	鶏	دجاج	jī
 animal world	cockroach		die Schabe	Schabe	таракан	la cucaracha		a barata	le cafard	lo scarafaggio	מַקָק	螳螂	ゴキブリ	صرصور	tángláng
 animal world	deer		der Hirsch	Hirsch	олень	el ciervo		o cervo	le cerf	il cervo	צְבִי	鹿	鹿	الغزال	lù
 animal world	dinosaur		der Dinosaurier	Dinosaurier	динозавр	el dinosaurio		o dinossauro	le dinosaure	il dinosauro	דינוזאור	恐龙	恐竜	ديناصور	kǒnglóng
@@ -27,11 +27,11 @@ animal world	dog		der Hund	Hund	собака	el perro		o cachorro	le chien	il ca
 animal world	dolphin		der Delfin	Delfin	дельфин	el delfín		o golfinho	le dauphin	il delfino	דוֹלפִין	海豚	イルカ	دلفين	hǎitún
 animal world	donkey		der Esel	Esel	осёл	el burro		o burro	l'âne	l'asino	חֲמוֹר	驴子	ロバ	الحمار	lǘzi
 animal world	dragonfly		die Libelle	Libälle	стрекоза	la libélula		a libélula	la libellule	la libellula	שַׁפִּירִית	蜻蜓	トンボ	اليعسوب	qīngtíng
-animal world	duck		die Ente	Änte	утка	el pato		o Pato	le canard	l'anatra	לְהִתְכּוֹפֵף	鸭子	アヒル	بط	yāzi
+animal world	duck		die Ente	Änte	утка	el pato		o Pato	le canard	l'anatra	ברווז	鸭子	アヒル	بط	yāzi
 animal world	eagle		der Adler	Adler	орёл	el águila		a Águia	l'aigle	l'aquila	נֶשֶׁר	鹰	ワシ	نسر	yīng
 animal world	elephant		der Elefant	Elefant	слон	el elefante		o elefante	l'éléphant	l'elefante	פִּיל	大象	象	فيل	dà xiàng
-animal world	elk		der Elch	Elch	лось	el alce		o Alce	l'élan	l'alce	דִישׁוֹן	麋鹿	ヘラジカ	ظبي	mílù
-animal world	falcon		der Falke	Falke	сокол	el halcón		o falcão	le faucon	il falco	בַּז	鹘	ハヤブサ	صقر	gǔ
+animal world	elk		der Elch	Elch	лось	el alce		o Alce	l'élan	l'alce	אייל	麋鹿	ヘラジカ	ظبي	mílù
+animal world	falcon		der Falke	Falke	сокол	el halcón		o falcão	le faucon	il falco	נץ	鹘	ハヤブサ	صقر	gǔ
 animal world	fly		die Fliege	Flüüge	муха	la mosca		a mosca	la mouche	la mosca	לָטוּס	苍蝇	ハエ	ذبابة	cāngyíng
 animal world	fox		der Fuchs	Fuchs	лиса	el zorro		a Raposa	le renard	la volpe	שׁוּעָל	狐狸	狐	ثعلب	húlí
 animal world	frog		der Frosch	Frosch	лягушка	la rana		a rã	la grenouille	la rana	צְפַרְדֵעַ	青蛙	カエル	ضفدع	qīngwā
@@ -45,7 +45,7 @@ animal world	hare		der Hase	Haas	заяц	la liebre		a lebre	le lièvre	la lepre
 animal world	hedgehog		der Igel	Igel	ёж	el erizo		o ouriço	le hérisson	il riccio	קִפּוֹד	刺猬	ハリネズミ	قنفذ	cìwèi
 animal world	horse		das Pferd	Ross	лошадь	el caballo		o cavalo	le cheval	il cavallo	סוּס	马	馬	حصان	mǎ
 animal world	jellyfish		die Qualle	Qualle	медуза	la medusa		a água-viva	la méduse	la medusa	מְדוּזָה	海蜇	クラゲ	قناديل البحر	Hǎizhē
-animal world	ladybug	ladybird	der Marienkäfer	Marichäfer	божья коровка	la catarina	la mariquita	a joaninha	la coccinelle	la coccinella	פָּרַת מֹשֶׁה רַבֵּנוּ	瓢虫	てんとう虫	دعسوقة ( خنفساء صغيرة)	piáo chóng
+animal world	ladybug	ladybird	der Marienkäfer	Marichäfer	божья коровка	la catarina	la mariquita	a joaninha	la coccinelle	la coccinella	 חיפושית 	瓢虫	てんとう虫	دعسوقة ( خنفساء صغيرة)	piáo chóng
 animal world	lion		der Löwe	Leu	лев	el león		o leão	le lion	il leone	אַריֵה	狮子	ライオン	أسد	shīzi
 animal world	lizard		die Eidechse		ящерица	el lagarto		o lagarto	le lézard	la lucertola	לְטָאָה	蜥蜴	トカゲ	سحلية	xīyì
 animal world	mole		der Maulwurf 	Muulwurf	крот	el topo		a toupeira	la taupe	la talpa	חֲפַרפֶּרֶת	痣	モグラ	الخلد	zhì
@@ -56,7 +56,7 @@ animal world	owl		die Eule	Üle	сова	el búho		a coruja	le hibou	il gufo	י�
 animal world	parrot		der Papagei	Papagei	попугай	el perico	el papagayo	o papagaio	le perroquet	il pappagallo	תוּכִּי	鹦鹉	オウム	ببغاء	yīngwǔ
 animal world	pig		das Schwein	Sau	свинья	el cerdo		o porco	le cochon	il maiale	חֲזִיר	猪	豚	خنزير	zhū
 animal world	pigeon		die Taube	Tuube	голубь	la paloma		o Pombo	le pigeon	il piccione	יוֹנָה	鸽子	鳩	حمامة	gēzi
-animal world	rat		die Ratte	Ratte	крыса	la rata		o rato	le rat	il ratto	לְהַלשִׁין	老鼠，卑鄙小人	ラット	فأر	lǎoshǔ, bēibǐ xiǎo rén
+animal world	rat		die Ratte	Ratte	крыса	la rata		o rato	le rat	il ratto	עַכְבָּר	老鼠，卑鄙小人	ラット	فأر	lǎoshǔ, bēibǐ xiǎo rén
 animal world	rooster	cock	der Hahn	Güggel	петух	el gallo		o galo	le coq	il gallo	תַרְנְגוֹל	公鸡	雄鶏	ديك	gōngjī
 animal world	rhino		das Nashorn	Nashorn	носорог	el rinoceronte		o rinoceronte	le rhinocéros	il rinoceronte	קַרנַף	犀牛	サイ	وحيد القرن	xīniú
 animal world	seagull		die Möwe	Möwe	чайка	la gaviota		a gaivota	la mouette	il gabbiano	שַׁחַף	海鸥	カモメ	نورس ( طائر مائي)	hǎi'ōu
@@ -77,15 +77,15 @@ animal world	wolf		der Wolf	Wolf	волк	el lobo		o Lobo	le loup	il lupo	זְא
 animal world	woodpecker		der Specht	Späächt	дятел	el pájaro carpintero		o Pica pau	le pivers	il picchio	נַקָר	啄木鸟	キツツキ	نقار الخشب	zhuómùniǎo
 animal world	worm		der Wurm	Wurm	червь	el gusano		a Minhoca	le ver	il verme	תוֹלַעַת	蠕虫	ミミズ	دودة	rúchóng
 animal world	zebra		das Zebra	Zebra	зебра	la cebra		a zebra	le zèbre	la zebra	זֶבּרָה	斑马	シマウマ	حمار الوحشي	bānmǎ
-body parts	abdomen, abs		das Abdomen, die Bauchmuskeln		пресс	el abdomen		o abdômen	l’abdomen	l'addome	בטן שרירי הבטן	腹部 腹肌	腹部腹筋	البطن والبطن	Fùbù fù jī
-body parts	belly		der Bauch	Buuch	живот	la panza, el vientre	la barriga	a barriga	le ventre	il ventre	כֶּרֶס	腹部	腹部	بطن	fùbù
-body parts	stomach		der Magen		желудок	el estómago		o estômago	l'estomac	lo stomaco	בֶּטֶן	胃	胃	معدة	wèi
+body parts	abdomen, abs		das Abdomen, die Bauchmuskeln		пресс	el abdomen		o abdômen	l’abdomen	l'addome	שרירי הבטן		腹部 腹肌	腹部腹筋	البطن والبطن	Fùbù fù jī
+body parts	belly		der Bauch	Buuch	живот	la panza, el vientre	la barriga	a barriga	le ventre	il ventre, la pancia	בטן 	腹部	腹部	بطن	fùbù
+body parts	stomach		der Magen		желудок	el estómago		o estômago	l'estomac	lo stomaco	קיבה	胃	胃	معدة	wèi
 body parts	belly button		der Bauchnabel	Buchnabel	пупок	el ombligo		o umbigo	le nombril	l'ombelico	טבור	肚脐	へそ	السرة	dùqí
 body parts	arm		der Arm		рука	el brazo		o braço	le bras	il braccio	זְרוֹעַ	手臂	腕	ذراع	shǒubì
-body parts	back		der Rücken	Rugge	спина	la espalda		as costas	le dos	la schiena	בְּחֲזָרָה	背	背中	ظهر	bèi
+body parts	back		der Rücken	Rugge	спина	la espalda		as costas	le dos	la schiena	גב	背	背中	ظهر	bèi
 body parts	beard		der Bart		борода	la barba		a barba	la barbe	la barba	זָקָן	胡子	髭	لحية	húzi
 body parts	body		der Körper		тело	el cuerpo		o corpo	le corps	il corpo	גוּף	身体	体	الجسم	shēntǐ
-body parts	braid	plait	der Zopf		коса	la trenza		a trança	la tresse	la treccia	לִקְלוֹעַ	辫子	三つ編み	جديلة	biànzi
+body parts	braid	plait	der Zopf		коса	la trenza		a trança	la tresse	la treccia	צמה	辫子	三つ編み	جديلة	biànzi
 body parts	breast		die Brust	Bruscht	грудь	el pecho		o peito	la poitrine	il seno	חָזֶה	胸部	胸	الصدر	xiōngbù
 body parts	cheek		die Wange	Backe	щека	la mejilla		a bochecha	la joue	la guancia	לֶחִי	脸颊	頬	الخد	liǎnjiá
 body parts	chin		das Kinn	Chüni	подбородок	la barbilla	el mentón	o queixo	le menton	il mento	סַנְטֵר	下巴	顎	ذقن	xiàbā
@@ -103,7 +103,7 @@ body parts	forehead		die Stirn		лоб	la frente		a testa	le front	la fronte	מ�
 body parts	freckle		die Sommersprosse		веснушка	la peca		as Sardas	la tache de rousseur	la lentiggine	נֶמֶשׁ	雀斑	そばかす	نمش	quèbān
 body parts	hair		die Haare		волосы	el pelo		o cabelo	les cheveux	i capelli	שֵׂעַר	头发	髪	شعر	tóufǎ
 body parts	hand		die Hand		кисть руки	la mano		a mão	la main	la mano	יָד	手	手	يد	shǒu
-body parts	wrist		das Handgelenk		запястье	la muñeca		o pulso	le poignet	il polso	שׁוֹרֶשׁ כַּף יָד	腕	手首	معصم	wàn
+body parts	wrist		das Handgelenk		запястье	la muñeca		o pulso	le poignet	il polso	 כַּף יָד	腕	手首	معصم	wàn
 body parts	head		der Kopf		голова	la cabeza		a cabeça	la tête	la testa	רֹאשׁ	头	頭	رأس	tóu
 body parts	knee		das Knie	Knü	колено	la rodilla		o joelho	le genou	il ginocchio	בֶּרֶך	膝盖	膝	ركبة	xīgài
 body parts	leg		das Bein	Bei	нога	la pierna		a perna	la jambe	la gamba	רֶגֶל	退	足	ساق	tuì
@@ -112,8 +112,8 @@ body parts	shin		das Schienbein		голень	la espinilla		a canela	le tibia	lo
 body parts	lips		die Lippe		губы	los labios		os lábios	les lèvres	le labbra	שפתיים	嘴唇	唇	شفاه	zuǐchún
 body parts	mouth		der Mund	Muul	рот	la boca		a boca	la bouche	la bocca	פֶּה	嘴巴	口	فم	zuǐbā
 body parts	mustache	moustache	der Schnurrbart		усы	el bigote		o bigode	la moustache	i baffi	שָׂפָם	胡子	口ひげ	شارب	húzi
-body parts	finger nail		der Fingernagel		ноготь	la uña		a unha 	l'ongle	l'unghia	ציפורן אצבע	指甲	指の爪	ظفر	zhǐjiǎ
-body parts	neck		der Hals		шея	el cuello		o pescoço	le cou	il collo	עוֹרֶף	脖子	首	العنق	bózi
+body parts	finger nail		der Fingernagel		ноготь	la uña		a unha 	l'ongle	l'unghia	ציפורן 	指甲	指の爪	ظفر	zhǐjiǎ
+body parts	neck		der Hals		шея	el cuello		o pescoço	le cou	il collo	צבאר	脖子	首	العنق	bózi
 body parts	nose		die Nase		нос	la nariz		o nariz	le nez	il naso	אַף	鼻子	鼻	أنف	bízi
 body parts	shoulder		die Schulter		плечо	el hombro		o ombro	l'épaule	la spalla	כָּתֵף	肩膀	肩	كتف	jiānbǎng
 body parts	skeleton		das Skelett		скелет	el esqueleto		o esqueleto	le squelette	lo scheletro	שֶׁלֶד	骨架	骨格	هيكل عظمى	gǔjià
@@ -125,7 +125,7 @@ body parts	jaw		der Kiefer		челюсть	la mandíbula		a mandíbula	la mâcho
 body parts	tooth		der Zahn	Zah	зуб	el diente		o dente	la dent	il dente	שֵׁן	牙齿	歯	السن	yáchǐ
 body parts	tongue		die Zunge		язык	la lengua		a língua	la langue	la lingua	לָשׁוֹן	舌头	舌	لسان	shétou
 body parts	waist		die Taille		талия	la cintura		a cintura	la taille	la vita	מוֹתֶן	腰部	ウエスト	الخصر	yāobù
-body parts	buttocks		der Hintern, der Po		попа, ягодицы	el trasero, las nalgas		as nádegas	les fesses	le natiche	עֲגָבַיִם	臀部	臀部	الاليتان	túnbù
+body parts	buttocks		der Hintern, der Po		попа, ягодицы	el trasero, las nalgas		as nádegas	les fesses	le natiche	אגן	臀部	臀部	الاليتان	túnbù
 body parts	wound		die Wunde		рана	la herida		a ferida	la plaie	la ferita	פֶּצַע	创伤	傷	جرح	chuāngshāng
 body parts	scar		die Narbe		шрам	la cicatriz		a cicatriz	la cicatrice	la cicatrice	צַלֶקֶת	疤痕	傷跡	ندبة	bāhén
 body parts	skin		die Haut	Huut	кожа	la piel		a pele	la peau	la pelle	עוֹר	皮	皮膚	بشرة	pí
@@ -139,7 +139,7 @@ body parts	brain		das Gehirn		мозг	el cerebro		o cérebro	le cerveau	il cerv
 body parts	sawdust		das Sägemehl		опилки	el serrín		a serragem	la sciure	la segatura	נְסוֹרֶת	木屑	…のぼろをさらけ出す	نشارة الخشب	mùxiè
 numbers and math	zero		null		ноль	cero		zero	zéro	zero	אֶפֶס	零	ゼロ	صفر	líng
 numbers and math	one		eins	eis	один	uno		um	un	uno	אֶחָד	一	一、壱	واحد	yī
-numbers and math	two		zwei	zwei	два	dos		dois	deux	due	דוּ	二	二	اثنان	èr
+numbers and math	two		zwei	zwei	два	dos		dois	deux	due	שתיים	二	二	اثنان	èr
 numbers and math	three		drei	drüü	три	tres		três	trois	tre	שְׁלוֹשָׁה	三	三	ثلاثة	sān
 numbers and math	four		vier	vier	четыре	cuatro		quatro	quatre	quattro	ארבע	四	四	أربعة	sì
 numbers and math	five		fünf	foif	пять	cinco		cinco	cinq	cinque	חָמֵשׁ	五	五	خمسة	wǔ
@@ -176,9 +176,9 @@ numbers and math	eighty		achtzig	achzg	восемьдесят	ochenta		oitenta	q
 numbers and math	ninety		neunzig	nünzg	девяносто	noventa		noventa	quatre-vingt-dix	novanta	תִשׁעִים	九十	九十	تسعون	jiǔ shí
 numbers and math	ninety-nine		neunundneunzig	nünenünzg	девяносто девять	noventa y nueve		noventa e nove	quatre-vingt-dix-neuf	novantanove	תשעים ותשע	九十九	九十九	تسعة وتسعون	jiǔ shí jiǔ
 numbers and math	hundred		hundert		сто	cien		cem	cent	cento	מֵאָה	一百	百	مائة	yī bǎi
-numbers and math	two hundred		zweihundert		двести	doscientos		duzentos	deux cents	duecento	ר	二百	二百	مائتين	Èrbǎi
-numbers and math	three hundred		dreihundert	drühundert	триста	trescientos		trezentos	trois cents	trecento	ש	三百	三百	ثلاثمائة	sānbǎi
-numbers and math	four hundred		vierhundert	vierhundert	четыреста	cuatrocientos		quatrocentos	quatre cents	quattrocento	ת	四百	四百	أربعمائة	sìbǎi
+numbers and math	two hundred		zweihundert		двести	doscientos		duzentos	deux cents	duecento	מאתיים	二百	二百	مائتين	Èrbǎi
+numbers and math	three hundred		dreihundert	drühundert	триста	trescientos		trezentos	trois cents	trecento	שלוש - מאות	三百	三百	ثلاثمائة	sānbǎi
+numbers and math	four hundred		vierhundert	vierhundert	четыреста	cuatrocientos		quatrocentos	quatre cents	quattrocento	ארבע- מאות	四百	四百	أربعمائة	sìbǎi
 numbers and math	five hundred		fünfhundert	foifhundert	пятьсот	quinientos		quinhentos	cinq cents	cinquecento	חמש מאות	五百	五百	خمسمائة	wǔbǎi
 numbers and math	six hundred		sechshundert		шестьсот	seiscientos		seiscentos	six cents	seicento	שש מאות	六百	六百	ستمائة	liùbǎi
 numbers and math	seven hundred		siebenhundert	sibehundert	семьсот	setecientos		setecentos	sept cents	settecento	שבע מאות	七百	七百	سبع مئة	qībǎi
@@ -217,7 +217,7 @@ calendar, time	year		das Jahr		год	el año		o ano	l'an, l'année	anno	שָׁ�
 calendar, time	month		der Monat		месяц	el mes		o mês	le mois	mese	חוֹדֶשׁ	月	月	شهر	yuè
 calendar, time	week		die Woche	Wuche	неделя	la semana		a semana	la semaine	settimana	שָׁבוּעַ	周	週	أسبوع	zhōu
 calendar, time	day		der Tag		день	el día		o dia	le jour	giorno	יְוֹם	天	日	يوم	tiān
-calendar, time	morning		der Morgen	Morge	утро	la mañana		a manhã	le matin	mattina	שַׁחַר	上午	朝	صباح	shàngwǔ
+calendar, time	morning		der Morgen	Morge	утро	la mañana		a manhã	le matin	mattina	בוקר	上午	朝	صباح	shàngwǔ
 calendar, time	evening		der Abend	Abig	вечер	la tarde, el anochecer		a tarde	le soir	sera	עֶרֶב	晚	夕方	اخر النهار	wǎn
 calendar, time	night		die Nacht		ночь	la noche		a noite	la nuit	notte	לַיְלָה	夜晚	夜	ليل	yèwǎn
 calendar, time	January		der Januar		январь	enero		janeiro	janvier	gennaio	יָנוּאָר	一月	1月	يناير	yī yuè
@@ -246,14 +246,14 @@ calendar, time	summer		der Sommer	Summer	лето	el verano		o verão	l'été	l'
 calendar, time	fall	autumn	der Herbst	Herbst	осень	el otoño		o outono	l'automne	l'autunno	סתָיו	秋	秋	الخريف	qiū
 calendar, time	time		die Zeit	Ziit	время	el tiempo		o tempo	le temps	il tempo	זְמַן	时间	時間	الزمن	shíjiān
 calendar, time	two o'clock		zwei Uhr	zwei (Uhr)	два часа	las dos (en punto)		duas horas (em ponto)	deux heures	le due	השעה שתיים	两点钟	二時	الساعة الثانية	liǎng diǎn zhōng
-calendar, time	five past two		fünf nach zwei	foif ab zwei	пять минут третьего	las dos y cinco		duas e cinco	deux heures cinq	le due e cinque	חמש על שתיים	二点五	二時五分	الساعة الثانية و خمس دقائق	èr diǎn wǔ
+calendar, time	five past two		fünf nach zwei	foif ab zwei	пять минут третьего	las dos y cinco		duas e cinco	deux heures cinq	le due e cinque	 שתיים וחמישה	二点五	二時五分	الساعة الثانية و خمس دقائق	èr diǎn wǔ
 calendar, time	quarter past two		viertel nach zwei	viertel ab zwei	четверть третьего	las dos y cuarto		duas  e quinze	deux heures et quart	le due e un quarto	שתיים ורבע	二点一刻	二時十五分	الثانية وربع	èr diǎn yī kè
-calendar, time	twenty-five past two		fünfundzwanzig nach zwei	foif und zwanzg ab zwei	два двадцать пять	las dos y veinticinco		duas vinte e cinco	deux heures vingt-cinq	le due e venticinque	עשרים וחמש ושתיים	二点二十五	二時二十五分	الساعة الثانية  و خمس و عشرون دقيقة	èr diǎn èrshíwǔ
+calendar, time	twenty-five past two		fünfundzwanzig nach zwei	foif und zwanzg ab zwei	два двадцать пять	las dos y veinticinco		duas vinte e cinco	deux heures vingt-cinq	le due e venticinque	 שתיים עשרים וחמש	二点二十五	二時二十五分	الساعة الثانية  و خمس و عشرون دقيقة	èr diǎn èrshíwǔ
 calendar, time	half past two		halb drei	halb drüü	полтретьего	las dos y media		duas e meia	deux heures et demie	le due e mezzo	שתיים וחצי	两点半	二時半	الثانية والنصف	liǎng diǎn bàn
-calendar, time	twenty to three		zwanzig vor drei	zwanzg vor drüü	без двадцати три	veinte para las tres		Vinte para as três	trois heures moins vingt	le tre meno venti	עשרים עד שלוש	二时四十	三時二十分前	الثالثة الا عشرون	èr shí sì shí
+calendar, time	twenty to three		zwanzig vor drei	zwanzg vor drüü	без двадцати три	veinte para las tres		Vinte para as três	trois heures moins vingt	le tre meno venti	עשרים לשלוש	二时四十	三時二十分前	الثالثة الا عشرون	èr shí sì shí
 calendar, time	quarter to three		viertel vor drei	viertel vor drüü	без четверти три	un cuarto para las tres		Quinze para as três	trois heures moins le quart	le tre meno un quarto	רבע לשלוש	二点四十五	三時十五分前	الثالثة إلا ربع	èr diǎn sì shí wǔ
-calendar, time	ten to three		zehn vor drei	zää vor drüü	без десяти три	diez para las tres		Dez para as três	trois heures moins dix	le tre meno dieci	עשר עד שלוש	二时五十	三時十分前	الثالثة الا عشرة	èr shí wǔ shí
-calendar, time	five to three		fünf vor drei	foif vor drüü	без пяти три	cinco para las tres		cinco para as três	trois heures moins cinq	le tre meno cinque	חמש עד שלוש	二点五十五	三時五分前	الثالثة الا خمسة	èr diǎn wǔ shí wǔ
+calendar, time	ten to three		zehn vor drei	zää vor drüü	без десяти три	diez para las tres		Dez para as três	trois heures moins dix	le tre meno dieci	עשרה לשלוש	二时五十	三時十分前	الثالثة الا عشرة	èr shí wǔ shí
+calendar, time	five to three		fünf vor drei	foif vor drüü	без пяти три	cinco para las tres		cinco para as três	trois heures moins cinq	le tre meno cinque	חמשה  לשלוש	二点五十五	三時五分前	الثالثة الا خمسة	èr diǎn wǔ shí wǔ
 calendar, time	three o'clock		drei Uhr	drüü (Uhr)	три часа	las tres (en punto)		três horas (em ponto)	trois heures	le tre	השעה שלוש	三点钟	三時	الساعة الثالثة	sān diǎn zhōng
 calendar, time	midnight		die Mitternacht		полночь	la medianoche		a meia-noite	minuit	la mezzanotte	חֲצוֹת	半夜	真夜中、深夜	منتصف الليل	bànyè
 calendar, time	midday, noon		der Mittag		полдень	el mediodía		o meio-dia 	midi	il mezzogiorno	בצהריים, בצהריים	中午	正午、昼	منتصف النهار، ظهر	zhōngwǔ
@@ -268,8 +268,8 @@ transport	spoke		die Radspeiche		спица	el rayo de rueda		a espora	le rayon	
 transport	bus		der Bus		автобус	el autobús		o ônibus	le bus	l'autobus	אוֹטוֹבּוּס	公共汽车	バス	حافلة	gōnggòng qìchē
 transport	bus stop		die Haltestelle		остановка	la parada		o ponto de ônibus	l'arrêt	la fermata dell'autobus	תַחֲנַת אוֹטוֹבּוּס	公交站	バス停	موقف الباص	gōngjiāo zhàn
 transport	cable car		die Seilbahn		фуникулёр	el teleférico		o teleférico	le téléphérique	la funivia	רכבל	缆车	ケーブルカー	عربة قطار	lǎnchē
-transport	horse-drawn carriage		die Kutsche		карета	la carroza		a carruagem	le carrosse	la carrozza trainata da cavalli	כרכרה רתומה לסוס	马车	馬車	عربة تجرها الخيول	mǎchē
-transport	passenger car	(train) carriage	der Wagen		вагон	el vagón de tren		o vagão do trem	le wagon	la carrozza del treno	מכונית נוסעים	客车	乗用車	سيارة الركاب	kèchē
+transport	horse-drawn carriage		die Kutsche		карета	la carroza		a carruagem	le carrosse	la carrozza trainata da cavalli	כירכרה 	马车	馬車	عربة تجرها الخيول	mǎchē
+transport	passenger car	(train) carriage	der Wagen		вагон	el vagón de tren		o vagão do trem	le wagon	la carrozza del treno	קרון	客车	乗用車	سيارة الركاب	kèchē
 transport	helicopter		der Hubschrauber	Helikopter	вертолёт	el helicóptero		o helicóptero	l'hélicoptère	l'elicottero	מַסוֹק	直升机	ヘリコプター	هليكوبتر	zhíshēngjī
 transport	motorcycle		das Motorrad	Töff	мотоцикл	la moto		a motocicleta	la moto	la motocicletta	אוֹפנוֹעַ	摩托车	オートバイ	دراجة نارية	mótuōchē
 transport	scooter		der Roller	Töffli	мотороллер	el scooter		a lambreta	la patinette	lo scooter, il monopattino	קַטנוֹעַ	摩托车	スクーター	سكوتر	mótuō chē
@@ -296,24 +296,24 @@ transport	wheel		das Rad		колесо	la rueda		a roda	la roue	la ruota	גַל�
 transport	tire	tyre	der Reifen	Pneu	шина	la llanta	el neumático	o pneu	le pneu	il pneumatico	צְמִיג	轮胎	タイヤ	إطار العجلة	lúntāi
 transport	wheel rim		die Felge		обод колеса	la llanta, el rin		o aro da roda	la jante	il cerchione	חישוק גלגל	轮辋	車輪リム	الجنط	lúnwǎng
 transport	headlight		das Fahrlicht		фара	el faro		o farol	le phare	il faro	פָּנָס קִדמִי	车灯	ヘッドライト	مصباح أمامي	chē dēng
-transport	windshield wiper	windscreen wiper	der Scheibenwischer	Schiibewüscher	дворники	el limpiaparabrisas		o limpador de pára-brisa	l'essuie-glace	il tergicristallo	מגב שמשות	刮水器	ワイパー	مساحة الزجاج الأمامي	guā shuǐ qì
+transport	windshield wiper	windscreen wiper	der Scheibenwischer	Schiibewüscher	дворники	el limpiaparabrisas		o limpador de pára-brisa	l'essuie-glace	il tergicristallo	מגב שמשות "וישר"	刮水器	ワイパー	مساحة الزجاج الأمامي	guā shuǐ qì
 transport	car trunk	car boot	der Kofferraum	Kofferruum	багажник	la cajuela		a mala do carro	le coffre 	il bagagliaio	תא המטען של המכונית	汽车后备箱	車のトランク	صندوق السيارة	qìchē hòubèi xiāng
 transport	engine hood	engine bonnet	die Motorhaube	Motorhuube	капот	el capot	el capó del coche	o capô do carro	le capot	il cofano	מכסה מנוע	车罩	エンジンフード	غطاء المحرك	chē zhào
-transport	car engine	motor	der Motor		двигатель	el motor		o motor 	le moteur	il motore	מנוע מכונית	发动机	車のエンジン	محرك السيارة	fādòngjī
+transport	car engine	motor	der Motor		двигатель	el motor		o motor 	le moteur	il motore	מנוע 	发动机	車のエンジン	محرك السيارة	fādòngjī
 transport	road		die Straße		дорога	la carretera		a estrada	la route	la strada	כְּבִישׁ	公路	道路	طريق	gōnglù
 transport	freeway	motorway	die Autobahn		автострада	la autopista		a autopista	l'autoroute	l'autostrada senza pedaggio	כְּבִישׁ מָהִיר	高速公路	高速道路	طريق سريع	gāosù gōnglù
 transport	crossroad, intersection	crossroads, crossing, intersection	die Kreuzung		перекрёсток	el cruce, la intersección		o cruzamento	le carrefour	l'incorcio	צומת דרכים, צומת	十字路口	交差点	مفترق طرق، تقاطع	shízìlù kǒu
-transport	traffic circle	roundabout	der Kreisel		круговое движение	la glorieta	la rotonda, el óvalo	a rotatória	le rond-point	la rotonda	מעגל תנועה	交通圈	環状交差点	صينية , دوران	jiāotōng quān
+transport	traffic circle	roundabout	der Kreisel		круговое движение	la glorieta	la rotonda, el óvalo	a rotatória	le rond-point	la rotonda	קיקר תנועה	交通圈	環状交差点	صينية , دوران	jiāotōng quān
 transport	traffic jam	tailback	der Stau		затор, пробка	el tráfico		o engarrafamento	le trafic, la circulation	il traffico, la circolazione stradale	פְּקַק תְנוּעָה	交通	交通渋滞	ازدحام المرور	jiāotōng
 transport	U-turn		die Kehrtwende		разворот	la vuelta en U, el retorno		o retorno	le demi-tour	l'inversione ad U	פניית פרסה	掉头	Uターン	منعطف	diàotóu
 transport	gas station	petrol station	die Tankstelle		заправка	la gasolinera		o posto de gasolina	la station-service	la stazione di servizio	תַחֲנַת דֶלֶק	加油站	ガソリンスタンド	محطة غاز	jiāyóu zhàn
-transport	gasoline, gas	petrol	das Benzin		бензин	la gasolina		a gasolina	l'essence	la benzina	בנזין, גז	汽油	ガソリン、ガス	البنزين والغاز	qìyóu
+transport	gasoline, gas	petrol	das Benzin		бензин	la gasolina		a gasolina	l'essence	la benzina	בנזין - דלק	汽油	ガソリン、ガス	البنزين والغاز	qìyóu
 transport	diesel		der Diesel		дизель	el diésel		o diesel	le gazole	il gasolio	דִיזֶל	柴油机	ディーゼル	ديزل	cháiyóujī
 transport	car accident		der Unfall	Umfall	авария	el accidente		o acidente de carro	l'accident de la route	l'incidente stradale	תאונת דרכים	车祸	車の事故	حادث سيارة	chēhuò
 transport	breakdown		die Panne		поломка машины	la avería		a demolição	la panne	l'avaria	הִתמוֹטְטוּת	击穿	故障	انفصال	jí chuān
 transport	road sign		das Verkehrszeichen		дорожный знак	la señal de tráfico		a placa de trânsito	les panneaux de signalisation 	il segnale stradale	תַמרוּר	路标	道路標識	إشارة المرور	lùbiāo
 transport	traffic light		die Ampel	Ample	светофор	el semáforo		o semáforo	le feu rouge	il semaforo	רמזור	红绿灯	交通信号	إشارة مرور	hónglǜdēng
-transport	dead-end		die Sackgasse		тупик	el callejón sin salida	vía muerta	o fim da linha	le cul-de-sac	strada senza uscita, vicolo cieco	מבוי סתום	死路	デッドエンド、行き止まり	طريق مسدود	sǐlù
+transport	dead-end		die Sackgasse		тупик	el callejón sin salida	vía muerta	o fim da linha	le cul-de-sac	strada senza uscita, vicolo cieco	דרך ללא מוצא	死路	デッドエンド、行き止まり	طريق مسدود	sǐlù
 transport	driver's license	driving licence	der Führerschein	Führerausweis	водительские права	la licencia para conducir	el carnet de conducir	a carteira de motorista	le permis de conduire	la patente	רישיון נהיגה	驾照	運転免許証	رخصة السائق	jiàzhào
 transport	yacht		die Jacht		яхта	el yate		o iate	le yacht	lo yacht	יָאכטָה	乘游艇	ヨット	يخت	chéng yóutǐng
 transport	left		links		налево	a la izquierda		a esquerda	à gauche	a sinistra	שְׁמֹאל	向左	左	اليسار	xiàng zuǒ
@@ -322,16 +322,16 @@ transport	straight		gerade		прямо	derecho		direto	tout droit	sempre diritto
 sport	archery		das Bogenschießen		стрельба из лука	el tiro con arco		o tiro com arco	le tir à l'arc	il tiro con l'arco	קַשׁתוּת	箭术	アーチェリー	الرماية	jiànshù
 sport	beach volleyball		der Beachvolleyball		пляжный волейбол	el voleibol de playa		o vôlei de praia	le beach-volley	Il beach volley	כדורעף חופים	沙滩排球	ビーチバレー	الكرة الطائرة الشاطئية	shātān páiqiú
 sport	boxing		das Boxen		бокс	el boxeo		o boxe	la boxe	la boxe	אִגרוּף	拳击	ボクシング	ملاكمة	quánjí
-sport	cross-country skiing		der Langlauf		беговые лыжи	el esquí de fondo		o esqui	le ski de fond	lo sci di fondo	סקי קרוס קאנטרי	越野滑雪	クロスカントリースキー	التزلج الريفي	yuèyě huáxuě
+sport	cross-country skiing		der Langlauf		беговые лыжи	el esquí de fondo		o esqui	le ski de fond	lo sci di fondo	סקי	越野滑雪	クロスカントリースキー	التزلج الريفي	yuèyě huáxuě
 sport	cycling		der Radsport	Velofahre	велоспорт	el ciclismo		o ciclismo	le cyclisme	il ciclismo	רכיבה על אופניים	骑脚踏车	サイクリング	ركوب الدراجات	qí jiǎotàchē
 sport	diving		das Wasserspringen		прыжки в воду	el clavado	el salto	o mergulho	la plongée	l'immersione	צְלִילָה	跳水	ダイビング	غوص	tiàoshuǐ
-sport	equestrian		das Reiten	Riite	конный спорт	el deporte hípico		o hipismo	l'équitation	lo sport equestre	פָּרָשִׁי	骑马者	馬術の、騎手	فارس	qímǎ zhě
+sport	equestrian		das Reiten	Riite	конный спорт	el deporte hípico		o hipismo	l'équitation	lo sport equestre	פָּרָשִׁ	骑马者	馬術の、騎手	فارس	qímǎ zhě
 sport	fencing		das Fechten		фехтование	la esgrima		a esgrima	l'escrime	la scherma	סִיוּף	剑术	フェンシング	سياج	jiàn shù
 sport	figure skating		der Eiskunstlauf	Schliffschüenle	фигурное катание	el patinaje artístico		a patinação artística	le patinage artistique	il pattinaggio artistico	החלקה אמנותית	花式溜冰	フィギュアスケート	التزلج الفني على الجليد	huā shì liūbīng
 sport	gymnastics		das Turnen		гимнастика	la gimnasia		a ginástica	la gymnastique	la ginnastica	הִתעַמְלוּת	体操	体操	رياضة بدنية	tǐcāo
 sport	high jump		der Hochsprung		прыжок в высоту	el salto de altura		o salto em altura	le saut en hauteur	il salto in alto	קְפִיצָה לָגוֹבָה	跳高	高跳び	قفزة عالية	tiàogāo
-sport	hockey		das Eishockey	Iishockey	хоккей с шайбой	el hockey sobre hielo		o hóquei	le hockey sur glace	l'hockey su ghiaccio	הוֹקֵי	曲棍球	ホッケー	الهوكي	qūgùnqiú
-sport	hurdling		der Hürdenlauf		бег с барьерами	la carrera de vallas		a corrida com obstáculos	la course de haies	la corsa ad ostacoli	מכשולים	跨栏	ハードル競技	تخطي الحواجز	kuàlán
+sport	hockey		das Eishockey	Iishockey	хоккей с шайбой	el hockey sobre hielo		o hóquei	le hockey sur glace	l'hockey su ghiaccio	הוֹקֵי קרח	曲棍球	ホッケー	الهوكي	qūgùnqiú
+sport	hurdling		der Hürdenlauf		бег с барьерами	la carrera de vallas		a corrida com obstáculos	la course de haies	la corsa ad ostacoli	מרוץ מכשולים	跨栏	ハードル競技	تخطي الحواجز	kuàlán
 sport	javelin throw		der Speerwurf		метание копья	el lanzamiento de jabalina		o lançamento de dardo	le lancer du javelot	il lancio del giavellotto	הטלת כידון	掷标枪	やり投げ	رمي الرمح	Zhí biāoqiāng
 sport	long jump		der Weitsprung	Wiitsprung	прыжок в длину	el salto de longitud		o salto a distância	le saut en longueur	il salto in lungo	קפיצה לרוחק	跳远	走り幅跳び	القفز العالي	tiàoyuǎn
 sport	alpine skiing		der Abfahrtsski	Skifahren	горные лыжи	el esquí alpino		o esqui na neve	le ski alpin	lo sci alpino	סקי אלפיני	高山滑雪	アルペンスキー	التزلج على جبال الألب	gāoshān huáxuě
@@ -341,12 +341,12 @@ sport	relay race		die Stafette		эстафета	la carrera de relevos		a corrid
 sport	rock climbing		das Klettern	Chlettere 	скалолазание	la escalada		a escalada	l'escalade	l'arrampicata	טיפוס צוקים	攀岩	ロック・クライミング	تسلق الجبال	pānyán
 sport	rowing		das Rudern	Ruedere	гребля	el remo		o remo	l'aviron	il canottaggio	חֲתִירָה	划船，赛艇	ローイング、漕艇	رياضة التجديف	huáchuán, sài tǐng
 sport	running		der Lauf		бег	la carrera		a corrida	la course	la corsa	רִיצָה	跑步	ランニング	جري	pǎobù
-sport	sailing		der Segelsport		парусный спорт	la vela (deporte)		a vela	la voile	la vela	שַׁיִט	航海	セーリング	الملاحة الشراعية	hánghǎi
+sport	sailing		der Segelsport		парусный спорт	la vela (deporte)		a vela	la voile	la vela	שַׁייִט	航海	セーリング	الملاحة الشراعية	hánghǎi
 sport	clay pigeon shooting 		das Wurfscheibenschießen		стендовая стрельба	el tiro al plato		o tiro ao prato	le ball-trap	il tiro a volo	ירי ביונת חימר	飞碟射击	クレー射撃	رماية الاطباق الطائرة	fēidié shèjí
 sport	soccer	football	das Fußball	Fuessball	футбол	el fútbol		o futebol	le football	il calcio	כַּדוּרֶגֶל	足球	サッカー	كرة القدم	zúqiú
-sport	speed skating		der Eisschnelllauf		конькобежный спорт	el patinaje		a patinação de velocidade no gelo	le patinage	il pattinaggio di velocità	החלקה מהירה	速度滑冰	スピードスケート	التزلج السريع	sùdù huábīng
+sport	speed skating		der Eisschnelllauf		конькобежный спорт	el patinaje		a patinação de velocidade no gelo	le patinage	il pattinaggio di velocità	החלקה	速度滑冰	スピードスケート	التزلج السريع	sùdù huábīng
 sport	swimming		das Schwimmen	Schwüme 	плавание	la natación		a natação	la natation	il nuoto	שְׂחִיָה	游泳	水泳	رياضة السباحة	yóuyǒng
-sport	synchronized swimming	synchronised swimming	das Synchronschwimmen	Synchronschwüme	синхронное плавание	el nado sincronizado	la natación sincronizada	o nado sincronizado	la natation synchronisée	il nuoto sincronizzato	שחייה מסונכרנת	花样游泳	シンクロナイズドスイミング	السباحة المتزامنة	huāyàng yóuyǒng
+sport	synchronized swimming	synchronised swimming	das Synchronschwimmen	Synchronschwüme	синхронное плавание	el nado sincronizado	la natación sincronizada	o nado sincronizado	la natation synchronisée	il nuoto sincronizzato	שחייה אומנותית	花样游泳	シンクロナイズドスイミング	السباحة المتزامنة	huāyàng yóuyǒng
 sport	table tennis		das Tischtennis	Ping Pong	настольный теннис	el ping-pong	el tenis de mesa	o tênis de mesa	le tennis de table	il ping pong	טֶנִיס שׁוּלְחָן	乒乓球	卓球	تنس الطاولة	pīngpāng qiú
 sport	water polo		der Wasserball		водное поло	el waterpolo		o pólo aquático	le water-polo	la pallanuoto	פולו מים	水球	水球	كرة الماء	shuǐqiú
 sport	water ski		der Wasserski		водные лыжи	el esquí acuático		o wakeboard, o esqui aquático	le ski nautique	lo sci nautico	סקי מים	滑水	水上スキー	تزلج على الماء	huá shuǐ
@@ -357,16 +357,16 @@ sport	birdie	shuttlecock	der Federball		волан	el volante de bádminton		o p
 sport	badminton		​das Badminton		бадминтон	el bádminton		o badminton	le badminton	​il badminton	בַּדמִינטוֹן	羽毛球	バドミントン	تنس الريشة	Yǔmáoqiú
 sport	tennis		​das Tennis		теннис	el tenis		o tênis	le tennis	​il tennis	טֶנִיס	网球	テニス	التنس 	Wǎngqiú
 sport	racket		der Schläger		ракетка	la raqueta		a raquete	la raquette	la racchetta	מַחבֵּט	球拍	ラケット	مضرب تنس	qiúpāi
-sport	goal		das Fußballtor		ворота	la portería		o objetivo	le but	il goal	יַעַד	球门	ゴール	هدف	qiúmén
+sport	goal		das Fußballtor		ворота	la portería		o objetivo	le but	il goal	שער	球门	ゴール	هدف	qiúmén
 sport	basketball hoop		der Basketballkorb		баскетбольное кольцо	la canasta de basquet	el aro de baloncesto	a cesta de basquete	le panier de basket	il canestro	חישוק כדורסל	篮球筐	バスケットボールフープ	طوق كرة السلة	lánqiú kuāng
 sport	hockey stick		der Eishockeyschläger		(хоккейная) клюшка	el palo de hockey		o taco de hóquei	le bâton de hockey 	la mazza da hockey	מקל הוקי	曲棍球球棍	ホッケースティック	عصا الهوكي	qūgùnqiú qiú gùn
 sport	puck		die Eishockeyscheibe		шайба	el disco de hockey		o disco	le palet	il disco, puck	דִיסקוּס	冰球	パック	قرص الهوكي	bīngqiú
 sport	golf club		der Golfschläger		клюшка для гольфа	el palo de golf		o clube de golf	la crosse de golf	il club di golf	מועדון גולף	高尔夫球棒，高尔夫俱乐部	ゴルフクラブ	نادي الغولف	gāo'ěrfū qiú bàng, gāo'ěrfū jùlèbù
 sport	world champion		der Weltmeister		чемпион мира	el campeón del mundo		o campeão mundial	le champion du monde	il campione del mondo	אלוף עולם	世界冠军	世界チャンピオン	بطل العالم	shìjiè guànjūn
 sport	victory		der Sieg		победа	la victoria		a vitória	la victoire	la vittoria	נִצָחוֹן	胜利	勝利	فوز	shènglì
-sport	defeat		die Niederlage		поражение	la derrota		a derrota	la défaite	la sconfitta	לִהַבִיס	败	敗北	هزيمة	bài
-sport	draw		das Unentschieden		ничья	el empate		o empate	le match nul	il pareggio	לִמְשׁוֹך	平局	ドロー、引き分け	تعادل	píngjú
-sport	player		der Spieler, die Spielerin		игрок	el jugador, la jugadora		o jogador, a jogadora	le joueur, la joueuse	il giocatore, la giocatrice	נַגָן	玩家	プレーヤー	لاعب	Wánjiā
+sport	defeat		die Niederlage		поражение	la derrota		a derrota	la défaite	la sconfitta	תבוסה	败	敗北	هزيمة	bài
+sport	draw		das Unentschieden		ничья	el empate		o empate	le match nul	il pareggio	תיקו	平局	ドロー、引き分け	تعادل	píngjú
+sport	player		der Spieler, die Spielerin		игрок	el jugador, la jugadora		o jogador, a jogadora	le joueur, la joueuse	il giocatore, la giocatrice	שחקן	玩家	プレーヤー	لاعب	Wánjiā
 sport	pull-up		der Klimmzug, die Klimmzüge		подтягивание	la pullup, la dominada	la dominada	о flexão, o pull-up	la traction	la trazione alla sbarra	משיכה	拉起	引き上げ	العقلة	lā qǐ
 sport	push-up	press-up	der Liegestütz		отжимание	las lagartijas	la flexión de brazos 	a flexão	la pompe	il piegamento, la flessione	שכיבות סמיכה	俯卧撑	押し上げる	تمرين الضغط	fǔwòchēng
 sport	bench press		das Bankdrücken		жим лёжа	еl press de banca	 	o supino	le développé couché	la distensione su panca	לחיצת ספסל	卧推	ベンチプレス	اللاعب	Wò tuī
@@ -767,7 +767,7 @@ school and office	classroom		das Klassenzimmer		классная комната	
 school and office	school bench		die Schulbank		парта	el banco escolar	el pupitre	o banco da escola	le bureau	il banco di scuola	ספסל בית ספר	学校的长椅	学校の鐘	مقعد التلميذ	xuéxiào de cháng yǐ
 school and office	class		die Klasse		класс	la clase		a aula	la classe	la classe	מַחלָקָה	班级	クラス、授業	الفصل	bānjí
 school and office	library		die Bibliothek		библиотека	la biblioteca		a biblioteca	la bibliothèque	la biblioteca, la libreria	סִפְרִיָה	图书馆	図書館	مكتبة	túshū guǎn
-school and office	pen		der Kugelschreiber	Chugelschriber	ручка	la pluma		a caneta	le stylo	la penna	עֵט	钢笔	ペン	قلم	gāngbǐ
+school and office	pen		der Kugelschreiber	Chugelschriber	ручка	la pluma	el bolígrafo	a caneta	le stylo	la penna	עֵט	钢笔	ペン	قلم	gāngbǐ
 school and office	pencil		der Bleistift		карандаш	el lápiz		o lápis	le crayon à papier	la matita	עִפָּרוֹן	铅笔	鉛筆	قلم رصاص	qiānbǐ
 school and office	pencil case		das Federmäppchen	Etui	пенал	la lapicera	el estuche de lápices	o estojo	la trousse	l'astuccio	קלמר	铅笔盒	ペンケース、筆入れ	مقلمة	qiānbǐ hé
 school and office	pencil sharpener		der Spitzer		точилка	el sacapuntas		o apontador 	le taille-crayon	Il temperamatite	מחדד עפרונות	卷笔刀	鉛筆削り	المبراة	juàn bǐ dāo
@@ -1228,11 +1228,11 @@ verbs	to ask		fragen		спрашивать	preguntar		perguntar	poser une questi
 verbs	to bark		bellen		лаять	ladrar		latir	aboyer	abbaiare	לנבוח	狗吠	吠える	ينبح	gǒu fèi
 verbs	to be		sein		быть	ser		ser	être	essere	לִהיוֹת	是	有る	يكون	Shì
 verbs	to exist		existieren		существовать	existir		existir	exister	esistere	לְהִתְקַיֵם	存在	存在する	يخرج	Cúnzài
-verbs	to stay, to be		sich befinden, sein		быть, находиться	estar		situar-se, estar	situar-se	se sentir, être situé	trovarsi, essere	להיות, להישאר	找到自己	なれ	أن تكون، تبقى	Zhǎodào zìjǐ
+verbs	to stay, to be		sich befinden, sein		быть, находиться	estar		situar-se, estar	être situé	trovarsi, essere	להיות, להישאר	找到自己	なれ	أن تكون، تبقى	Zhǎodào zìjǐ
 verbs	to become		werden		стать, становиться	convertirse en, hacerse		tornar-se	devenir	diventare	להפוך,לִהיוֹת	成为	なる	لتصبح	Chéngwéi
 verbs	to be born		auf die Welt kommen	uf dWelt cho	родиться	nacer		nascer	naître	nascere	להיוולד	出生	生まれる	يولد	chūshēng
 verbs	to beg		bitten		просить	pedir		implorar	demander	supplicare	לבקש	请求	物乞いする	يتسول	qǐngqiú
-verbs	to break		brechen, zerbrechen		сломать	romper		romper	rompre	rompre	רומפר	连身衣	ロンパース	رومبير	Lián shēn yī
+verbs	to break		brechen, zerbrechen		сломать	romper		romper	rompre	rompere	רומפר	连身衣	ロンパース	رومبير	Lián shēn yī
 verbs	to believe		glauben		верить	creer		acreditar	croire	credere	להאמין	相信	信じる	يعتقد	xiāngxìn
 verbs	to build		bauen	baue	строить	construir		construir	construire	costruire	לבנות	建造	建てる	يبني	jiànzào
 verbs	to buy		kaufen	chaufe	купить	comprar		comprar	acheter	acquistare	לקנות	购买	買う	يشتري	gòumǎi
@@ -1240,9 +1240,9 @@ verbs	to sell		verkaufen	verchaufe	продать	vender		vender	vendre	vendere	
 verbs	to calculate		rechnen		считать, вычислять	calcular		calcular	calculer	calcolare	לחשב	算	計算する	يحسب	suàn
 verbs	to call		anrufen	aalüte	звонить	llamar		chamar	téléphoner, appeler	telefonare	להתקשר	打电话	呼び出す	يتصل	dǎ diànhuà
 verbs	to carry		tragen		нести, тaщить	llevar		carregar	porter	trasportare	לשנות	携带	運ぶ	يحمل	xiédài
-verbs	to catch		fangen		поймать, ловить	cachar, atrapar	coger	pegar	attraper	raggiunge, acchiappare	לתפוס	抓住	捕まえる	يمسك	zhuā zhù
+verbs	to catch		fangen		поймать, ловить	cachar, atrapar	coger	pegar	attraper, prendre	prendere, acchiappare	לתפוס	抓住	捕まえる	يمسك	zhuā zhù
 verbs	to change		sich verändern		измениться, переодеваться	cambiarse		mudar	se changer	cambiare	לשנות	改变	変わる	يغير	gǎibiàn
-verbs	to chat		schwatzen, quatschen		болтать	chatear	charlar	conversar	tchatcher, bavarder	cianciare, chiacchierare	לשוחח	聊天	喋る、チャットする	يدردش	liáotiān
+verbs	to chat		schwatzen, quatschen		болтать	chatear	charlar	conversar	bavarder	cianciare, chiacchierare	לשוחח	聊天	喋る、チャットする	يدردش	liáotiān
 verbs	to chop		hauen, hacken		рубить	talar		picar	trancher	tagliare a pezzi	לקצוץ	砍、劈	切り刻む	يقطع	kǎn, pī
 verbs	to clean		putzen		убираться	limpiar		limpar	nettoyer	pulire	לנקות	打扫，清洁	きれいにする	ينظف	dǎsǎo, qīngjié
 verbs	to climb		klettern	chlettere	лазить, перелезать	escalar		escalar	grimper, escalader	scalare	לטפס	爬	登る	يتسلق	pá
@@ -1318,10 +1318,10 @@ verbs	to sing		singen		петь	cantar		cantar	chanter	cantare	לשיר	唱	歌�
 verbs	to sit		sitzen		сидеть	estar sentado		sentar	être assis	sedere	לשבת	坐	座っている	يجلس	zuò
 verbs	to sit down		sich setzen	anesitze	садиться	sentarse		sentar-se, se sentar	s'asseoir	sedersi	לשבת	坐下	座る	يقعد	zuò xià
 verbs	to sleep		schlafen		спать	dormir		dormir	dormir	dormire	לישון	睡觉	眠る	ينام	shuìjiào
-verbs	to smile		lächeln		улыбаться	sonreír		sorrir	sourir	sorridere	לחייך	微笑	微笑む	يبتسم	wéixiào
+verbs	to smile		lächeln		улыбаться	sonreír		sorrir	sourire	sorridere	לחייך	微笑	微笑む	يبتسم	wéixiào
 verbs	to sow		säen		сеять	sembrar		semear	semer	seminare	לזרוע	种	～をまく	يزرع	zhǒng
 verbs	to squint		schielen	schiile	косить	bizquear		froçar a vista, apertar	loucher	essere strabico	לפזול	眯	横目で見る	حول	mī
-verbs	to stand		stehen	stah	стоять	estar parado	estar de pie	ficar parado	se tenir debout	stare in piedi	לעמוד	站	立つ	يقف	zhàn
+verbs	to stand		stehen	stah	стоять	estar parado	estar de pie	ficar parado	se tenir debout, être debout	stare in piedi	לעמוד	站	立つ	يقف	zhàn
 verbs	to stroke		streicheln		гладить	acariciar		acariciar, alisar 	caresser	accarezzare	ללטף	敲打	なでる	يمسد	qiāodǎ
 verbs	to sunbathe		sonnenbaden, sich bräunen	sünnele	загорать	tomar el sol, broncearse		tomar sol	Prendre un bain de soleil, bronzer	prendere il sole	להשתזף	晒太阳	日光浴をする	يسفع	shài tàiyáng
 verbs	to take		nehmen	näh	брать	tomar		pegar	prendre	prendere	לקחת	打猎，搜索	取る、持ち出す	يأخذ	dǎliè, sōusuǒ
@@ -1341,14 +1341,14 @@ verbs	to wash		waschen		мыть	lavar		lavar	laver	lavare, pulire	לשטוף	�
 verbs	to watch TV		fernsehen		смотреть телевизор	ver la tele		assistir TV	regarder la télévision	guardare la tv	לצפות בטלוויזיה	看电视	テレビを見る	يشاهذ التلفاز	kàn diànshì
 verbs	to work		arbeiten	schaffe	работать	trabajar		trabalhar	travailler	lavorare	לעבודה	工作	仕事する	يعمل	gōngzuò
 verbs	to yawn		gähnen		зевать	bostezar		Bocejar	bâiller	sbadigliare	לפהק	打哈欠	あくびする	يتثاؤب	dǎ hāqian
-verbs	to maintain		pflegen		поддерживать	mantener		manter	mantenere	maintenir	לשמור	维持	維持する	للحفاظ على	dǎ hāqian
+verbs	to maintain		pflegen		поддерживать	mantener		manter	maintenir	mantenere	לשמור	维持	維持する	للحفاظ على	dǎ hāqian
 verbs	to dive		tauchen		нырять	bucear		mergulhar	plonger	immergersi	לצלול	潜水	ダイビングする	للغوص	dǎ hāqian
-verbs	to creep		kriechen		ползать	arrastrarse		ramper	bâiller	strisciare	לזחול	爬行	忍び寄る	للزحف	dǎ hāqian
+verbs	to creep		kriechen		ползать	arrastrarse		arrastar-se	bâiller	strisciare	לזחול	爬行	忍び寄る	للزحف	dǎ hāqian
 verbs	to cross		überqueren		пересекать	cruzar		atravessar	traverser	attraversare	לחצות	叉	交差する	لعبور	dǎ hāqian
 verbs	to leave, to abandon		verlassen		покидать	abandonar, dejar		deixar	partir	lasciare	לעזוב, לנטוש	离开	去る	للمغادرة	dǎ hāqian
-verbs	to take down, to pick up		abhängen, abholen		снять, подобрать	descolgar		décrocher	pour abattre	per togliere	להוריד, להרים	取下	倒す	أنزل	dǎ hāqian
+verbs	to take down, to pick up		abhängen, abholen		снять, подобрать	descolgar		desenganchar, abaixar	décrocher, pour abattre	per togliere	להוריד, להרים	取下	倒す	أنزل	dǎ hāqian
 verbs	to take out		etwas herausnehmen		вынимать, доставать	sacar		remover, extrair	retirer	estrarre, portare fuori	להוציא	取出	取り出す	أخرج	Qǔchū
-verbs	to hang up		aufhängen, auflegen		вешатъ	colgar		pendurar	appendere	riagganciare	לנתק	挂	電話を切る	علّق	dǎ hāqian
+verbs	to hang up		aufhängen, auflegen		вешатъ	colgar		pendurar	accrocher	appendere, riagganciare	לנתק	挂	電話を切る	علّق	dǎ hāqian
 verbs	to escape		entkommen		сбежать, убежать	escapar		escapar	échapper	scappare	לברוח	使摆脱	逃げる	يفر	dǎ hāqian
 verbs	to flow		fließen		течь	fluir		fluir	couler	scorrere	לזרום	流动	流れる	للتدفق	dǎ hāqian
 verbs	to arrive		ankommen		приехать, прибыть	llegar		chegar	arriver	arrivare	להגיע	到达	到达	يصل	dǎ hāqian
@@ -1372,7 +1372,7 @@ verbs	to try		versuchen		пытаться	intentar, probar		tentar	tenter	provar
 verbs	to be in a hurry, to hurry, to rush		in Eile sein, eilen		торопиться, спешить	tener prisa, apresurarse		estar com pressa	être pressé	avere fretta	למהר	着急	急いでいる	كن في عجلة من امرنا	dǎ hāqian
 verbs	to return, to come back		zurückkommen, zurückkehren		вернуться	volver, regresar		regressar	rentrer	ritornare	לחזור, לחזור	返回	戻る	يعود	dǎ hāqian
 verbs	to get		bekommen, erreichen		получить, достигать	conseguir, obtener		conseguir	obtenir	conseguire	להשיג	获得、得到	得る	يحقق	dǎ hāqian
-verbs	to create		erstellen, schaffen		творить, создавать	crear		criar	créer	creare, construire	לִיצוֹר	创造	作成する	يخلق	Chuàngzào
+verbs	to create		erstellen, schaffen		творить, создавать	crear		criar	créer	creare	לִיצוֹר	创造	作成する	يخلق	Chuàngzào
 verbs	to understand		verstehen		понимать	entender		entender	comprendre	comprendere	להבין	懂、明白	理解する	يفهم	dǎ hāqian
 prepositions	above		über		над, вне	arriba, encima de		acima	au-dessus de	sopra	מֵעַל	多于	その上	فوق	Duō yú
 prepositions	below		unten		ниже, под	abajo de	debajo de	abaixo de	ci-dessous	sotto, giù	לְהַלָן	以下	下に	أقل	Yǐxià
@@ -1385,7 +1385,7 @@ prepositions	on		auf		на, над	sobre		sobre, em	sur, dans	a, su	עַל	在	�
 prepositions	through		durch		через, сквозь	a través de, por		através	à travers	attraverso	בְּאֶמצָעוּת	通过	を通して	غضبان	Tōngguò
 prepositions	under		unter		под	bajo, debajo de		sob	sous	sotto	לְפִי	在下面	下	تحت	Zài xiàmiàn
 prepositions	near, next to, by		neben, nächst, bei		рядом, около	junto a, al lado de		ao lado de, próximo de	près de, à côté de	accanto a, adiacente a	לְיַד	旁边	の隣に	بجوار	Pángbiān
-prepositions	between		dazwischen		между	entre		enter	entre	tra, fra, nel mezzo	בֵּין	之间	間	بين	Zhī jiān
+prepositions	between		dazwischen		между	entre		esenter	entre	tra, fra, nel mezzo	בֵּין	之间	間	بين	Zhī jiān
 prepositions	among	amongst	inmitten, zwischen, bei		среди	en medio de, entre		no meio de, entre	parmi, entre	tra, fra, in mezzo 	בֵּין	之中	の間で	ضمن	Zhī zhōng
 prepositions	around		herum, um		вокруг	alrededor de		ao redor	autour	attorno a, intorno a	סְבִיב	大约	その周り	حول	Dàyuē
 prepositions	towards		entgegen, am		в сторону, по направлению	hacia		em direção a, para	en direction de, vers	in direzione, verso	לִקרַאת	向	に向かって	تجاه	Xiàng

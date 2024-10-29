@@ -2062,6 +2062,9 @@
 	  <BundleResource Include="Resources\Images\calamari__squid.png" />
 	  <BundleResource Include="Resources\Images\lobster.png" />
 	  <BundleResource Include="Resources\Images\to_break.png" />
+	  <BundleResource Include="Resources\Raw\it_verbs.txt" />
+	  <BundleResource Include="Resources\Raw\fr_verbs.txt" />
+	  <BundleResource Include="Resources\Raw\pt_verbs.txt" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2079,14 +2082,6 @@
 	  <EmbeddedResource Update="Resources\Strings\AppResources.ru-RU.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>AppResources.ru.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.it.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.it.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Strings\AppResources.es.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>AppResources.es.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	</ItemGroup>
 	<ItemGroup>
@@ -2199,6 +2194,9 @@
 	  <None Remove="Resources\Images\calamari__squid.png" />
 	  <None Remove="Resources\Images\lobster.png" />
 	  <None Remove="Resources\Images\to_break.png" />
+	  <None Remove="Resources\Raw\it_verbs.txt" />
+	  <None Remove="Resources\Raw\fr_verbs.txt" />
+	  <None Remove="Resources\Raw\pt_verbs.txt" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

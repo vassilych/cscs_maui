@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>Retraso en la traducción:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>Retrasar nueva palabra:</value>
+</data>
 <data name="Accent:" xml:space="preserve">
   <value>Acento:</value>
 </data>
@@ -235,16 +238,16 @@
   <value>palabras seleccionadas</value>
 </data>
 <data name="select words" xml:space="preserve">
-  <value>No hay palabras selecionadas. Selecciona palabras de otras categorías haciendo clic en el botón Añadir.</value>
+  <value>No hay palabras selecionadas. Selecciona palabras de otras categorías haciendo el clic en el botón Añadir.</value>
 </data>
 <data name="min words" xml:space="preserve">
   <value>Se necesita un mínimo de {0} palabras para el quiz</value>
 </data>
 <data name="word added" xml:space="preserve">
-  <value>Palabra añadida</value>
+  <value>Palabra añadida a las palabras seleccionadas</value>
 </data>
 <data name="word deleted" xml:space="preserve">
-  <value>Palabra eliminada</value>
+  <value>Palabra eliminada de las palabras seleccionadas</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Seleccionar Categoría</value>

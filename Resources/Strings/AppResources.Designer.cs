@@ -307,6 +307,16 @@ namespace ScriptingMaui.Resources.Strings {
         /// <summary>
         ///   Looks up a localized string similar to flirting phrases.
         /// </summary>
+        internal static string Delay_New_Word_
+        {
+            get
+            {
+                return ResourceManager.GetString("Delay New Word:", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
         internal static string word_deleted
         {
             get
@@ -322,6 +332,36 @@ namespace ScriptingMaui.Resources.Strings {
             get
             {
                 return ResourceManager.GetString("min words", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string trash
+        {
+            get
+            {
+                return ResourceManager.GetString("trash", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string Word_AddedTo__0_
+        {
+            get
+            {
+                return ResourceManager.GetString("WordAddedTo", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string Folder__0__IsEmpty
+        {
+            get
+            {
+                return ResourceManager.GetString("FolderIsEmpty", resourceCulture);
             }
         }
         /// <summary>

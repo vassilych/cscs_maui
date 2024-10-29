@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>Velocità di ritardo della traduzione:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>Ritardo della nuova parola:</value>
+</data>
 <data name="Accent:" xml:space="preserve">
   <value>Accento:</value>
 </data>
@@ -241,10 +244,10 @@
   <value>Necessario un minimo di {0} parole per il quiz</value>
 </data>
 <data name="word added" xml:space="preserve">
-  <value>La parola è stata aggiunta</value>
+  <value>La parola è stata aggiunta alle parole selezionate</value>
 </data>
 <data name="word deleted" xml:space="preserve">
-  <value>La parola è stata cancellata</value>
+  <value>La parola è stata eliminata dalle parole selezionate</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Seleziona la Categoria</value>

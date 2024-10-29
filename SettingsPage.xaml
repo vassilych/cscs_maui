@@ -69,27 +69,40 @@
     <!-- <picker:SfPicker x:Name="LanguagePicker" HeightRequest="240" Background="Transparent" VerticalOptions="Start" /> -->
             <!-- 
             -->
-    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-    <Label x:Name="PlayrateLab" Text="Play Rate:" TextColor="Blue"  Margin = "4,20,0,0"
-            WidthRequest="140" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    <Slider x:Name="PlaySlider" Margin = "-6,30,0,0" WidthRequest="180" Minimum="1" Maximum="15" Value= "3.5"
-            HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
-    <Label x:Name="PlayrateSec" Text="3.5s" TextColor="Blue"  Margin = "4,36,0,0"
-            WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-    <Label x:Name="DelayLab" Text="Translation Delay Rate:" TextColor="Blue" Margin = "10,20,0,0"
-            WidthRequest="140" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    <Slider x:Name="DelaySlider" Margin = "-6,30,0,0" WidthRequest="180" Minimum="0" Maximum="10" Value= "0"
-            HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
-    <Label x:Name="DelaySec" Text="3.5s" TextColor="Blue"  Margin = "4,36,0,0"
-            WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-    <Label x:Name="SoundLab" Text="Sound:" TextColor="Blue"  Margin = "10,-10,0,0" WidthRequest="180"
-        HorizontalTextAlignment="Start"  HorizontalOptions="Start" VerticalOptions="Center"/>
-    <CheckBox x:Name="SoundCheck" Margin = "30,-10,0,0" IsChecked="true" HorizontalOptions="End" VerticalOptions="Center" />
-    </StackLayout>
+	<Grid Background="Transparent">
+        <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="30*" />
+            <ColumnDefinition  Width="60*" />
+            <ColumnDefinition  Width="10*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="PlayrateLab" Grid.Row="0" Grid.Column="0" Text="Play Rate:" TextColor="Blue"  Margin = "2,36,0,0"
+                WidthRequest="130" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+        <Slider x:Name="PlaySlider" Grid.Row="0" Grid.Column="1"  Margin = "0,36,0,0" WidthRequest="160" Minimum="1" Maximum="15" Value= "3.5"
+                HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
+        <Label x:Name="PlayrateSec" Grid.Row="0" Grid.Column="2" Text="3.5s" TextColor="Blue"  Margin = "2,40,0,0"
+                WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+        <Label x:Name="DelayLab" Grid.Row="1" Grid.Column="0" Text="Translation Delay Rate:" TextColor="Blue" Margin = "2,-10,0,0"
+                WidthRequest="130" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+        <Slider x:Name="DelaySlider" Grid.Row="1" Grid.Column="1" Margin = "0,10,0,0" WidthRequest="160" Minimum="0" Maximum="10" Value= "0"
+                HorizontalOptions="End" VerticalOptions="StartAndExpand"/>
+        <Label x:Name="DelaySec" Grid.Row="1" Grid.Column="2" Text="3.5s" TextColor="Blue"  Margin = "4,16,0,0"
+                WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+        <Label x:Name="SoundLab"  Grid.Row="2" Grid.Column="0" Text="Sound:" TextColor="Blue"
+            Margin = "2,10,0,0" WidthRequest="130" HorizontalTextAlignment="Start"  HorizontalOptions="Start" VerticalOptions="Center"/>
+        <CheckBox x:Name="SoundCheck"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin = "10,0,0,0" IsChecked="true"  VerticalOptions="Center" />
+
+        <Label x:Name="DelayOrigLab"  Grid.Row="3" Grid.Column="0" Text="Delay Original Language:" MaxLines="2" LineBreakMode="WordWrap" TextColor="Blue"
+            Margin = "2,10,0,0" WidthRequest="130" HorizontalTextAlignment="Start"  HorizontalOptions="Start" VerticalOptions="Center"/>
+        <CheckBox x:Name="DelayOrigCheck"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin = "10,0,0,0" IsChecked="true"  VerticalOptions="Center" />
+    </Grid>
 
   </VerticalStackLayout>
     <VerticalStackLayout Grid.Row="1" VerticalOptions="End" HorizontalOptions="End" >

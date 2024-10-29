@@ -19,6 +19,7 @@ public partial class SettingsPage : ContentPage
     const string ToLearnSet = "toLearn";
     const string PlaySet = "playrate";
     const string DelaySet = "delayrate";
+    const string DelayOrigSet = "delayorigrate";
     const string SoundSet = "sound";
     const string PlaySecFormat = "{0}s";
     readonly CultureInfo OrigCulture = CultureInfo.CurrentUICulture;
@@ -32,6 +33,7 @@ public partial class SettingsPage : ContentPage
     public static double PlayRate { get; set; } = 3.0;
     public static double DelayRate { get; set; } = 0.0;
     public static bool Sound { get; set; } = true;
+    public static bool DelayOriginal { get; set; } = true;
 
     PickerColumn m_col1;
     PickerColumn m_col2;
@@ -65,6 +67,7 @@ public partial class SettingsPage : ContentPage
         PlaySlider.ValueChanged += PlaySlider_ValueChanged;
         DelaySlider.ValueChanged += DelaySlider_ValueChanged;
         SoundCheck.CheckedChanged += SoundCheck_CheckedChanged;
+        DelayOrigCheck.CheckedChanged += DelayOrigCheck_CheckedChanged;
         AboutBtn.Clicked += AboutBtn_Clicked;
 
         Setup();
@@ -198,11 +201,15 @@ public partial class SettingsPage : ContentPage
 
         PlayRate = Preferences.Get(PlaySet, PlayRate);
         DelayRate = Preferences.Get(DelaySet, DelayRate);
+        DelayOriginal = Preferences.Get(DelayOrigSet, DelayOriginal);
+        DelayOrigLab.IsVisible = DelayOrigCheck.IsVisible = DelayRate > 0;
+
         Sound = Preferences.Get(SoundSet, true);
 
         PlaySlider.Value = PlayRate;
         DelaySlider.Value = DelayRate;
         SoundCheck.IsChecked = Sound;
+        DelayOrigCheck.IsChecked = DelayOriginal;
 
         VoiceLearn = learn;
         MyVoice = mine;
@@ -220,6 +227,7 @@ public partial class SettingsPage : ContentPage
 
         SoundLab.Text = AppResources.Sound_;
         DelayLab.Text = AppResources.Translation_Delay_Rate_;
+        DelayOrigLab.Text = AppResources.Delay_New_Word_;
         PlayrateLab.Text = AppResources.Play_Rate_;
         PlayrateSec.Text = string.Format(PlaySecFormat, PlayRate);
         DelaySec.Text = string.Format(PlaySecFormat, DelayRate);
@@ -242,6 +250,8 @@ public partial class SettingsPage : ContentPage
         DelayRate = Math.Round(e.NewValue, 1);
         Preferences.Set(DelaySet, DelayRate);
         DelaySec.Text = string.Format(PlaySecFormat, DelayRate);
+
+        DelayOrigLab.IsVisible = DelayOrigCheck.IsVisible = DelayRate > 0;
     }
 
     public double GetPlayInterval()
@@ -255,6 +265,11 @@ public partial class SettingsPage : ContentPage
     {
         Sound = e.Value;
         Preferences.Set(SoundSet, Sound);
+    }
+    private void DelayOrigCheck_CheckedChanged(object? sender, CheckedChangedEventArgs e)
+    {
+        DelayOriginal = e.Value;
+        Preferences.Set(DelayOrigSet, DelayOriginal);
     }
 
     void My_SelectionChanged(object? sender, PickerSelectionChangedEventArgs e)

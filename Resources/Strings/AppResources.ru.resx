@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>Задержка перевода:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>Задержка нового слова:</value>
+</data>
 <data name="Accent:" xml:space="preserve">
   <value>Произношение:</value>
 </data>
@@ -232,7 +235,7 @@
   <value>фразы для флирта</value>
 </data>
 <data name="custom category" xml:space="preserve">
-  <value>выбранные слова</value>
+  <value>слова пользователя</value>
 </data>
 <data name="select words" xml:space="preserve">
   <value>Пока нет добавленных из других категорий слов. Выберайте слова, нажимая на квадратную кнопку Добавить.</value>
@@ -241,10 +244,10 @@
   <value>Требуется минимум {0} слов для теста</value>
 </data>
 <data name="word added" xml:space="preserve">
-  <value>Слово добавлено</value>
+  <value>Слово добавлено в слова пользователя</value>
 </data>
 <data name="word deleted" xml:space="preserve">
-  <value>Слово удалено</value>
+  <value>Слово удалено из слов пользователя</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Выберите категорию</value>

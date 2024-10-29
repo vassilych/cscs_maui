@@ -89,7 +89,7 @@ namespace ScriptingMaui
                 var tokens = line?.Trim().Split(',');
                 if (tokens == null || tokens.Length < 5)
                 {
-                    return;
+                    break;
                 }
                 Verbs[lang + "_" + tokens[0]] = line;
             }
@@ -104,6 +104,9 @@ namespace ScriptingMaui
             LoadWords();
             LoadVerbs("en", "en_verbs.txt");
             LoadVerbs("es", "es_verbs.txt");
+            LoadVerbs("it", "it_verbs.txt");
+            LoadVerbs("fr", "fr_verbs.txt");
+            LoadVerbs("pt", "pt_verbs.txt");
             LoadVerbs("de", "de_verbs.txt");
             LoadVerbs("ru", "ru_verbs.txt");
         }
@@ -120,8 +123,8 @@ namespace ScriptingMaui
                 return;
             }
             using StreamReader sr = new(resourceStream);*/
-            Categories.AddGetCategory(Categories.DefaultCategoryName);
-            Categories.AddGetCategory(Categories.CustomCategoryName);
+            Categories.DefaultCategory = Categories.AddGetCategory(Categories.DefaultCategoryName);
+            Categories.CustomCategory = Categories.AddGetCategory(Categories.CustomCategoryName);
 
             var lineNr = 0;
             var wordCounter = 0;
@@ -129,9 +132,6 @@ namespace ScriptingMaui
 
             foreach(var line in lines)
             {
-            /*while (sr.Peek() >= 0)
-            {
-                var line = sr.ReadLine();*/
                 lineNr++;
                 var tokens = line?.Trim().Split('\t');
                 if (tokens == null || tokens.Length < 2)
@@ -183,6 +183,8 @@ namespace ScriptingMaui
 
             var randomWords = QuizPage.GetRandom(Categories.DefaultCategory.GetTotalWords(), Categories.DefaultCategory.GetTotalWords());
             Categories.DefaultCategory.SetIndices(randomWords);
+
+            Categories.TrashCategory = Categories.AddGetCategory(Categories.TrashCategoryName);
         }
     }
 }
@@ -193,7 +195,9 @@ public class Word
     public static Word? Default { get;
         set; }
     public int Id { get; set; }
+    public int OriginalId { get; set; }
     public string Name { get; set; }
+    public bool IsTrash { get; set; }
     public Category Category { get; set; }
     public Dictionary<string, string> Translation = new Dictionary<string, string>();
 
@@ -246,13 +250,12 @@ public class Word
 }
 public class Category
 {
-    public int Index { get; set; }
+    public int Index { get;
+        set; }
     public string Name { get; private set; }
     public bool IsText { get; private set; }
     public List<Word> CatWords { get; private set; } = new List<Word>();
     Dictionary<string, int> WordMap = new Dictionary<string, int>();
-    List<int>? Indices { get; set; }
-    List<int>? IndicesReverse { get; set; }
 
     public Category(string _id)
     {
@@ -261,21 +264,13 @@ public class Category
     }
     public void SetIndices(List<int> indices)
     {
-        Indices = indices;
-        IndicesReverse = Enumerable.Range(0, indices.Count).ToList();//new List<int>(indices.Count);
+        Word[] words = new Word[CatWords.Count];
+        CatWords.CopyTo(words);
+        CatWords.Clear();
         for (int i = 0; i < indices.Count; i++)
         {
-            if (indices[i] == 0 && i != 0)
-            { // must be the first word
-                indices[i] = indices[0];
-                IndicesReverse[indices[0]] = indices[i];
-                indices[0] = 0;
-                IndicesReverse[0] = 0;
-            }
-            else
-            {
-                IndicesReverse[indices[i]] = i;
-            }
+            var word = i < words.Length ? words[indices[i]] : null;
+            AddWord(word);
         }
     }
     public bool AddWord(Word? word)
@@ -324,8 +319,44 @@ public class Category
         {
             var word = Categories.DefaultCategory.GetWord(wordStr);
             counter += AddWord(word) ? 1 : 0;
+            if (this == Categories.TrashCategory)
+            { // also delete from the word's category
+                word?.Category.AddToTrash(word);
+            }
         }
         return counter;
+    }
+    public void AddToTrash(Word word)
+    {
+        word.IsTrash = true;
+        RemoveWord(word);
+    }
+    public void AddFromTrash(Word word)
+    {
+        word.IsTrash = false;
+        if (CatWords.Contains(word))
+        {
+            return;
+        }
+        bool inserted = false; ;
+        for (int i = 0; i < CatWords.Count; i++)
+        {
+            var current = CatWords[i];
+            if (word.Id < current.Id)
+            {
+                CatWords.Insert(i, word);
+                for (int j = i; j < CatWords.Count; j++)
+                {
+                    WordMap[CatWords[j].Name] = j;
+                }
+                inserted = true;
+                break;
+            }
+        }
+        if (!inserted)
+        {
+            AddWord(word);
+        }
     }
     public Word? GetWord(int ind = 0)
     {
@@ -337,8 +368,7 @@ public class Category
         {
             ind = CatWords.Count - 1;
         }
-        var wordIndex = Indices == null || ind >= Indices.Count || ind < 0 ? ind : Indices[ind];
-        return wordIndex >= CatWords.Count || wordIndex < 0 ? null : CatWords[wordIndex];
+        return ind >= CatWords.Count || ind < 0 ? null : CatWords[ind];
     }
     public int GetIndex(Word word)
     {
@@ -346,17 +376,16 @@ public class Category
         {
             return -1;
         }
-
-        return IndicesReverse == null ? index : IndicesReverse[index];
+        return index;
     }
     public Word? GetWord(string name)
     {
-        if (!WordMap.TryGetValue(name, out int index))
+        if (!WordMap.TryGetValue(name, out int index) || index < 0 || index >= CatWords.Count)
         {
             return null;
         }
 
-        return GetWord(Index);
+        return CatWords[index];
     }
 
     public bool Exists(string name)
@@ -391,8 +420,11 @@ public class Categories
 {
     public const string DefaultCategoryName = "all";
     public const string CustomCategoryName = "custom";
-    public static Category DefaultCategory = new Category(DefaultCategoryName);
-    public static Category CustomCategory = new Category(CustomCategoryName);
+    public const string TrashCategoryName = "trash";
+    public const string VerbCategoryName = "verbs";
+    public static Category DefaultCategory;
+    public static Category CustomCategory;
+    public static Category TrashCategory;
     public static Category CurrentCategory;
 
     public static List<string> CategoryList = new List<string>();
@@ -401,10 +433,6 @@ public class Categories
 
     public Categories()
     {
-        s_categMap[DefaultCategoryName] = DefaultCategory;
-        CategoryList.Add(DefaultCategoryName);
-        s_categMap[CustomCategoryName] = CustomCategory;
-        CategoryList.Add(CustomCategoryName);
         CurrentCategory = DefaultCategory;
     }
 

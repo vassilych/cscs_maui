@@ -129,6 +129,9 @@
 <data name="Translation Delay Rate:" xml:space="preserve">
   <value>Verzögerung der Übersetzung:</value>
 </data>
+<data name="Delay New Word:" xml:space="preserve">
+  <value>Neues Wort verzögern:</value>
+</data>
 <data name="Play Rate:" xml:space="preserve">
   <value>Wiedergaberate:</value>
 </data>
@@ -235,19 +238,19 @@
   <value>Phrasen zum Flirten</value>
 </data>
 <data name="custom category" xml:space="preserve">
-  <value>Ausgewählte Wörter</value>
+  <value>Benutzerdefinierte Wörter</value>
 </data>
 <data name="select words" xml:space="preserve">
-  <value>Es sind keine Wörter vorhanden. Wählen Sie Wörter aus anderen Kategorien aus, indem Sie auf die Schaltfläche Hinzufügen klicken.</value>
+  <value>Es sind keine benutzerdefinierte Wörter vorhanden. Wählen Sie Wörter aus anderen Kategorien aus, indem Sie auf die Schaltfläche Hinzufügen klicken.</value>
 </data>
 <data name="min words" xml:space="preserve">
   <value>Sie benötigen mindestens {0} Wörter für das Quiz</value>
 </data>
 <data name="word added" xml:space="preserve">
-  <value>Das Wort wurde hinzugefügt</value>
+  <value>Das Wort wurde zu den benutzerdefinierten Wörtern hinzugefügt</value>
 </data>
 <data name="word deleted" xml:space="preserve">
-  <value>Das Wort wurde gelöscht</value>
+  <value>Das Wort wurde aus benutzerdefinierten Wörtern gelöscht</value>
 </data>
 <data name="SelectCategory" xml:space="preserve">
   <value>Kategorie Auswählen</value>
