@@ -259,9 +259,12 @@
   <value>trash</value>
 </data>
 <data name="WordAddedTo" xml:space="preserve">
-  <value>Word added to "{0}"</value>
+  <value>Word added to [{0}]</value>
 </data>
 <data name="FolderIsEmpty" xml:space="preserve">
-  <value>Folder "{0}" is empty</value>
+  <value>Folder [{0}] is empty</value>
+</data>
+<data name="PutBackAllWords" xml:space="preserve">
+  <value>Do you want to put back all words to their categories?</value>
 </data>
 </root>

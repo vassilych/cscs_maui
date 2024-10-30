@@ -96,7 +96,7 @@ body parts	eyebrow		die Augenbraue		бровь	la ceja		a sobrancelha	le sourcil
 body parts	face		das Gesicht	Gsicht	лицо	la cara		o rosto	le visage	la faccia	פָּנִים	脸	顔	وجه	liǎn
 body parts	finger		der Finger		палец	el dedo		o dedo	le doigt	il dito	אֶצבַּע	手指	指	اصبع اليد	shǒuzhǐ
 body parts	fist		die Faust	Fuscht	кулак	el puño		o punho	le poing	il pugno	אֶגְרוֹף	拳头	拳	قبضة	quántóu
-body parts	foot		der Fuß	Fuess	ступня	el pie		o pé	le pied	il piede	רֶגֶל	脚	足	قدم	jiǎo
+body parts	foot		der Fuß	Fuess	ступня, стопа	el pie		o pé	le pied	il piede	רֶגֶל	脚	足	قدم	jiǎo
 body parts	toe		der Zeh		палец ноги	el dedo del pie		o dedo do pé	l'orteil	il dito del piede	אֶצבַּע	脚趾	つま先	اصبع القدم	jiǎozhǐ
 body parts	ankle		der Knöchel		щиколотка	el tobillo		o tornozelo	la cheville	la caviglia	קַרסוֹל	脚踝	足首	الكاحل	jiǎohuái
 body parts	forehead		die Stirn		лоб	la frente		a testa	le front	la fronte	מֵצַח	前额	額	جبهة الرأس	qián'é

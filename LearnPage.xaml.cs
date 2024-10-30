@@ -55,12 +55,12 @@ public partial class LearnPage : ContentPage
         Context = Context == null ? new Context() : Context;
 
         CategoryPicker.ItemsSource = Context.DataSourceCategories;
-        int index = Preferences.Get(CategorySet, 0);
-        CategoryPicker.SelectedIndex = index;
+        int catIndex = Preferences.Get(CategorySet, 0);
+        m_category = Categories.GetCategory(catIndex);
+
+        CategoryPicker.SelectedIndex = catIndex;
         CategoryPicker.SelectedIndexChanged += CategorySelectionChanged;
 
-        m_category = Categories.GetCategory(index);
-        //SetCategory(m_category, true);
         PrevImg.Clicked += PrevImgClick;
         NextImg.Clicked += NextImgClick;
         MainImgImg.Clicked += NextImgClick;
@@ -99,7 +99,7 @@ public partial class LearnPage : ContentPage
         {
             m_category.RemoveWord(Context.Word);
             Context.Word.Category.AddFromTrash(Context.Word);
-            toast = string.Format(AppResources.Word_AddedTo__0_, Context.Word.Category.Name);
+            toast = string.Format(AppResources.Word_AddedTo__0_, Context.TranslateCategory(Context.Word.Category));
             Preferences.Set(TrashWords, m_category.GetAllWords());
         }
         else
@@ -110,20 +110,56 @@ public partial class LearnPage : ContentPage
             Preferences.Set(TrashWords, Categories.TrashCategory.GetAllWords());
         }
         ButDelBorder.IsVisible = false;
+
         var word = m_category.GetWord(m_category.Index);
-        await SetWord(word);
+        if (word == null)
+        {
+            await SetInitWord();
+        }
+        else
+        {
+            await SetWord(word);
+        }
+
         await Toast.Make(toast, ToastDuration.Long).Show();
     }
     async void ButAdd_Clicked(object? sender, EventArgs e)
     {
         var custom = Categories.CustomCategory;
-        if (!custom.Exists(Context.Word.Name))
+        if (m_category == Categories.CustomCategory || m_category == Categories.TrashCategory)
+        {
+            var ok = await DisplayAlert(AppInfo.Current.Name, AppResources.Put_back_all_words_, "OK", "Cancel");
+            if (!ok)
+            {
+                return;
+            }
+            var words = m_category.CatWords.ToArray();
+            foreach (var word in words)
+            {
+                m_category.RemoveWord(word);
+                if (m_category == Categories.TrashCategory)
+                {
+                    word.Category.AddFromTrash(word);
+                }
+            }
+            await SetInitWord();
+        }
+        else if (!custom.Exists(Context.Word.Name))
         {
             custom.AddWord(Context.Word);
             ButAddBorder.IsVisible = false;
             await Toast.Make(AppResources.word_added, ToastDuration.Short).Show();
+            Preferences.Set(CustomWords, custom.GetAllWords());
         }
-        Preferences.Set(CustomWords, custom.GetAllWords());
+
+        if (m_category == Categories.TrashCategory)
+        {
+            Preferences.Set(TrashWords, m_category.GetAllWords());
+        }
+        else if (m_category == Categories.CustomCategory)
+        {
+            Preferences.Set(CustomWords, m_category.GetAllWords());
+        }
     }
 
     public void SetTranslation(string text)
@@ -173,7 +209,6 @@ public partial class LearnPage : ContentPage
         }
         var id = item.Id;
         var word = Categories.DefaultCategory.CatWords[id];
-        //var word = Categories.DefaultCategory.GetWord(id);
         m_category = word.Category;
         SetMode(false);
         await SetWord(word);
@@ -345,6 +380,9 @@ public partial class LearnPage : ContentPage
     }
     async Task SetInitWord()
     {
+        int catIndex = Preferences.Get(CategorySet, 0);
+        m_category = Categories.GetCategory(catIndex);
+
         var index = Preferences.Get(WordSet, 0);
         var word = m_category.GetWord(index);
         if (word == null)
@@ -539,8 +577,11 @@ public partial class LearnPage : ContentPage
         CategoryPicker.SelectedIndex = ind;
 
         ButInfoBorder.IsVisible = ButInfo.IsVisible = (word.Category.Name == Categories.VerbCategoryName);
-        ButAddBorder.IsVisible = m_category != Categories.TrashCategory && !Categories.CustomCategory.Exists(word.Name);
-        ButDelBorder.IsVisible = true;
+        ButAddBorder.IsVisible = m_category == Categories.TrashCategory || m_category == Categories.CustomCategory ||
+                                 !Categories.CustomCategory.Exists(word.Name);
+        ButDelBorder.IsVisible = m_category != Categories.DefaultCategory;
+        ButAdd.Source = m_category == Categories.CustomCategory || m_category == Categories.TrashCategory ?
+            "empty_folder.png" : "add_word.png";
 
         MainImgTxt.IsVisible = MainImgImg.IsVisible = false;
         MainWordLabel.Text = MainImgTxt.Text = " ";
@@ -701,6 +742,7 @@ public class Context
     private ObservableCollection<string> categоries = new ObservableCollection<string>();
     private ObservableCollection<object> transInfo = new ObservableCollection<object>();
     private ObservableCollection<object> resultsInfo = new ObservableCollection<object>();
+
     public Word Word { get; set; }
 
     public string MainWord { get; set; } = "";
@@ -721,6 +763,12 @@ public class Context
             categоries = value;
         }
     }
+    public static string TranslateCategory(Category cat)
+    {
+        var index = Categories.GetCategoryIndex(cat.Name);
+        return TranslatedCategories()[index];
+    }
+
     public static List<string> TranslatedCategories()
     {
         List<string> cat = new List<string>

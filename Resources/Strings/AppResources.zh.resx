@@ -252,4 +252,16 @@
 <data name="SelectCategory" xml:space="preserve">
   <value>选择类别</value>
 </data>
+<data name="trash" xml:space="preserve">
+  <value>垃圾</value>
+</data>
+<data name="WordAddedTo" xml:space="preserve">
+  <value>添加到[{0}]的字词</value>
+</data>
+<data name="FolderIsEmpty" xml:space="preserve">
+  <value>文件夹 [{0}] 为空</value>
+</data>
+<data name="PutBackAllWords" xml:space="preserve">
+  <value>您是否要将所有单词放回其类别？</value>
+</data>
 </root>

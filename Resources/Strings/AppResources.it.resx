@@ -252,4 +252,16 @@
 <data name="SelectCategory" xml:space="preserve">
   <value>Seleziona la Categoria</value>
 </data>
+<data name="trash" xml:space="preserve">
+  <value>cartella dei rifiuti</value>
+</data>
+<data name="WordAddedTo" xml:space="preserve">
+  <value>Parola aggiunta a [{0}]</value>
+</data>
+<data name="FolderIsEmpty" xml:space="preserve">
+  <value>La cartella [{0}] è vuota</value>
+</data>
+<data name="PutBackAllWords" xml:space="preserve">
+  <value>Vuoi riportare tutte le parole nelle loro categorie?</value>
+</data>
 </root>

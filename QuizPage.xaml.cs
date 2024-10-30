@@ -19,7 +19,7 @@ public partial class QuizPage : ContentPage
     List<string> m_shown = new List<string>();
     List<Word> m_words = new List<Word>();
     const int m_timeoutms = 250;
-    const int m_quizChoices = 6;
+    int m_quizChoices = 6;
 
     bool m_playing;
     Category m_category = Categories.DefaultCategory;
@@ -197,9 +197,10 @@ public partial class QuizPage : ContentPage
         m_usedWords.Clear();
         m_currentQuizQuestion = 0;
         m_correctInQuiz = 0;
+        m_quizChoices = SettingsPage.Quiz6 ? 6 : 4;
 
-        speak1.IsVisible = speak2.IsVisible = speak3.IsVisible = true;
-        speak4.IsVisible = speak5.IsVisible = speak6.IsVisible = true;
+        speak1.IsVisible = speak2.IsVisible = speak3.IsVisible = speak4.IsVisible = true;
+        ShowHide();
 
         await GetNewWords();
         m_startQuiz = DateTime.Now;
@@ -211,12 +212,22 @@ public partial class QuizPage : ContentPage
         m_timer.Start();
     }
 
+    void ShowHide(bool show = true)
+    {
+        //Border1.IsVisible = ImgBtn1.IsVisible = Lab1.IsVisible = speak1.IsVisible = show;
+        //Border2.IsVisible = ImgBtn2.IsVisible = Lab2.IsVisible = speak2.IsVisible = show;
+        //Border3.IsVisible = ImgBtn3.IsVisible = Lab3.IsVisible = speak3.IsVisible = show;
+        //Border4.IsVisible = ImgBtn4.IsVisible = Lab4.IsVisible = speak4.IsVisible = show;
+        Border5.IsVisible = ImgBtn5.IsVisible = Lab5.IsVisible = speak5.IsVisible = m_quizChoices > 4 && show;
+        Border6.IsVisible = ImgBtn6.IsVisible = Lab6.IsVisible = speak6.IsVisible = m_quizChoices > 4 && show;
+    }
+
     void SetupRecords(double newScore = 0.0, double newTime = 0.0)
     {
         m_category = Categories.GetCategory(QuizCategoryPicker.SelectedIndex);
         m_quizWords = (int)WordsStepper.Value;
-        var keyScore = string.Format("Record_{0}_{1}_{2}",
-            m_category.Name, m_quizWords, SettingsPage.VoiceLearn);
+        var keyScore = string.Format("Record_{0}_{1}_{2}_{3}",
+            m_category.Name, m_quizWords, m_quizChoices, SettingsPage.VoiceLearn);
         var keyDate = keyScore + "_dt";
         var keyTime = keyScore + "_tm";
 

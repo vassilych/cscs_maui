@@ -252,4 +252,16 @@
 <data name="SelectCategory" xml:space="preserve">
   <value>カテゴリーを選択</value>
 </data>
+<data name="trash" xml:space="preserve">
+  <value>ゴミ</value>
+</data>
+<data name="WordAddedTo" xml:space="preserve">
+  <value>[{0}]に追加された単語</value>
+</data>
+<data name="FolderIsEmpty" xml:space="preserve">
+  <value>フォルダ[{0}]は空です</value>
+</data>
+<data name="PutBackAllWords" xml:space="preserve">
+  <value>すべての単語をカテゴリに戻しますか？</value>
+</data>
 </root>

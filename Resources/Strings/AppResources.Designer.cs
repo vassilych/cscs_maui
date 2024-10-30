@@ -365,6 +365,16 @@ namespace ScriptingMaui.Resources.Strings {
             }
         }
         /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string Put_back_all_words_
+        {
+            get
+            {
+                return ResourceManager.GetString("PutBackAllWords", resourceCulture);
+            }
+        }
+        /// <summary>
         ///   Looks up a localized string similar to food and beverages.
         /// </summary>
         internal static string food_and_beverage {

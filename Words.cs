@@ -182,6 +182,8 @@ namespace ScriptingMaui
             Console.WriteLine("Loaded {0} words and {1} categories.", wordCounter, Categories.GetTotal());
 
             var randomWords = QuizPage.GetRandom(Categories.DefaultCategory.GetTotalWords(), Categories.DefaultCategory.GetTotalWords());
+            randomWords.Remove(0); // let's have first element aways at position 0:
+            randomWords.Insert(0, 0);
             Categories.DefaultCategory.SetIndices(randomWords);
 
             Categories.TrashCategory = Categories.AddGetCategory(Categories.TrashCategoryName);

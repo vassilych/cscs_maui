@@ -264,5 +264,8 @@
 <data name="FolderIsEmpty" xml:space="preserve">
   <value>Folder {0} is empty</value>
 </data>
+<data name="PutBackAllWords" xml:space="preserve">
+  <value>Put back all words?</value>
+</data>
 </root>
 

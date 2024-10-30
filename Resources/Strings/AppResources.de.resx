@@ -255,4 +255,16 @@
 <data name="SelectCategory" xml:space="preserve">
   <value>Kategorie Auswählen</value>
 </data>
+<data name="trash" xml:space="preserve">
+  <value>Papierkorb</value>
+</data>
+<data name="WordAddedTo" xml:space="preserve">
+  <value>Wort hinzugefügt zu [{0}]</value>
+</data>
+<data name="FolderIsEmpty" xml:space="preserve">
+  <value>Ordner [{0}] ist leer</value>
+</data>
+<data name="PutBackAllWords" xml:space="preserve">
+  <value>Möchten Sie alle Wörter zurückstellen?</value>
+</data>
 </root>

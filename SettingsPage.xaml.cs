@@ -21,6 +21,7 @@ public partial class SettingsPage : ContentPage
     const string DelaySet = "delayrate";
     const string DelayOrigSet = "delayorigrate";
     const string SoundSet = "sound";
+    const string QuizSet = "quiz46";
     const string PlaySecFormat = "{0}s";
     readonly CultureInfo OrigCulture = CultureInfo.CurrentUICulture;
 
@@ -34,6 +35,7 @@ public partial class SettingsPage : ContentPage
     public static double DelayRate { get; set; } = 0.0;
     public static bool Sound { get; set; } = true;
     public static bool DelayOriginal { get; set; } = true;
+    public static bool Quiz6 { get; set; } = true;
 
     PickerColumn m_col1;
     PickerColumn m_col2;
@@ -68,9 +70,17 @@ public partial class SettingsPage : ContentPage
         DelaySlider.ValueChanged += DelaySlider_ValueChanged;
         SoundCheck.CheckedChanged += SoundCheck_CheckedChanged;
         DelayOrigCheck.CheckedChanged += DelayOrigCheck_CheckedChanged;
+        QuizSwitch.Toggled += QuizSwitch_Toggled;
         AboutBtn.Clicked += AboutBtn_Clicked;
 
         Setup();
+    }
+
+    private void QuizSwitch_Toggled(object? sender, ToggledEventArgs e)
+    {
+        Quiz6 = e.Value;
+        Quiz46.Text = QuizSwitch.IsToggled ? "6" : "4";
+        Preferences.Set(QuizSet, Quiz6);
     }
 
     private void LearnLanguagePicker_SelectedIndexChanged(object? sender, EventArgs e)
@@ -161,6 +171,9 @@ public partial class SettingsPage : ContentPage
     {
         var mine = Preferences.Get(MyVoiceSet, "");
         var learn = Preferences.Get(ToLearnSet, "");
+        Quiz6 = Preferences.Get(QuizSet, Quiz6);
+        QuizSwitch.IsToggled = Quiz6;
+        Quiz46.Text = QuizSwitch.IsToggled ? "6" : "4";
         var current = CultureInfo.CurrentUICulture;
         var lang2 = current.TwoLetterISOLanguageName;
         var code = current.Name;
@@ -231,6 +244,7 @@ public partial class SettingsPage : ContentPage
         PlayrateLab.Text = AppResources.Play_Rate_;
         PlayrateSec.Text = string.Format(PlaySecFormat, PlayRate);
         DelaySec.Text = string.Format(PlaySecFormat, DelayRate);
+        QuizLab.Text = AppResources.Quiz_Words_;
         Title = AppResources.Settings;
     }
 
