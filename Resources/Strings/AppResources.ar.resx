@@ -21,6 +21,12 @@
 <data name="Settings" xml:space="preserve">
   <value>اعدادات</value>
 </data>
+<data name="Search" xml:space="preserve">
+  <value>بحث</value>
+</data>
+<data name="EnterText" xml:space="preserve">
+  <value>أدخل النص</value>
+</data>
 <data name="Learn_wide" xml:space="preserve">
   <value>تعلم</value>
 </data>

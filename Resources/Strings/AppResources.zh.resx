@@ -24,6 +24,12 @@
 <data name="Learn_wide" xml:space="preserve">
   <value>学习</value>
 </data>
+<data name="Search" xml:space="preserve">
+  <value>搜索</value>
+</data>
+<data name="EnterText" xml:space="preserve">
+  <value>输入文本</value>
+</data>
 <data name="Quiz_wide" xml:space="preserve">
   <value>测试</value>
 </data>

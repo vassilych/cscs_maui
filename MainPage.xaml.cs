@@ -62,6 +62,11 @@ public partial class MainPage : TabbedPage
         await Scripting.StartAsync();
     }
 
+    public void SetPage(Page page)
+    {
+        CurrentPage = page;
+    }
+
     public void SetupLanguage()
     {
         var current = CultureInfo.CurrentUICulture;
@@ -111,6 +116,10 @@ public partial class MainPage : TabbedPage
             else if (page is QuizPage)
             {
                 (page as QuizPage).Localize();
+            }
+            else if (page is SearchPage)
+            {
+                (page as SearchPage).Localize();
             }
             else if (page is SettingsPage)
             {

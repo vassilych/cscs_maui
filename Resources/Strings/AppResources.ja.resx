@@ -21,6 +21,12 @@
 <data name="Settings" xml:space="preserve">
   <value>設定</value>
 </data>
+<data name="Search" xml:space="preserve">
+  <value>検索</value>
+</data>
+<data name="EnterText" xml:space="preserve">
+  <value>テキストを入力</value>
+</data>
 <data name="Learn_wide" xml:space="preserve">
   <value>学ぶ</value>
 </data>

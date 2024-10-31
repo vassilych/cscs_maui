@@ -375,6 +375,26 @@ namespace ScriptingMaui.Resources.Strings {
             }
         }
         /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string Search
+        {
+            get
+            {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to flirting phrases.
+        /// </summary>
+        internal static string Enter_text
+        {
+            get
+            {
+                return ResourceManager.GetString("EnterText", resourceCulture);
+            }
+        }
+        /// <summary>
         ///   Looks up a localized string similar to food and beverages.
         /// </summary>
         internal static string food_and_beverage {

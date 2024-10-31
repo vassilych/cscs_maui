@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sflist="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:local="clr-namespace:ScriptingMaui" x:Name="SearchTabPage"
+             x:Class="ScriptingMaui.SearchPage"
+             IconImageSource="search_icon.png" Title="Search">
+
+    <ContentPage.BindingContext>
+        <local:SearchContext />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <x:Double x:Key="TransSize">42</x:Double>
+    </ContentPage.Resources>
+
+  <ScrollView Margin="5" VerticalScrollBarVisibility="Default">
+    <VerticalStackLayout>
+        <Entry x:Name="SearchEntry" Margin = "0,0,10,0"  Placeholder="Enter text" PlaceholderColor="Blue" />
+    <sflist:SfListView x:Name="ResultsView" HeightRequest="600"
+                   ItemsSource="{Binding ResultsInfo}"
+                   ItemSize="{StaticResource TransSize}">
+    <sflist:SfListView.ItemTemplate>
+        <DataTemplate>
+        <Grid Padding="4">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton Grid.Column="0" HorizontalOptions="Start" Source="{Binding TransFlag}"
+                    Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
+            <Label Grid.Column="1" Text="{Binding TransName}" HorizontalTextAlignment="Center"
+                   VerticalOptions="Center" FontAttributes="Bold" TextColor="Teal" FontSize="{Binding FontSize}" />
+        </Grid>
+        </DataTemplate>
+    </sflist:SfListView.ItemTemplate>
+    </sflist:SfListView>
+</VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

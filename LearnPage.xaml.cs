@@ -68,15 +68,11 @@ public partial class LearnPage : ContentPage
         ButSpeak.Clicked += SpeakerClick;
         ButPlay.Clicked += PlayClick;
 
-        FindBut.Clicked += FindBut_Clicked;
-        SearchEntry.TextChanged += SearchEntry_TextChanged;
-        SearchEntry.Completed += BackBut_Clicked;
         ButOk.Clicked += BackBut_Clicked;
         ButAdd.Clicked += ButAdd_Clicked;
         ButDel.Clicked += ButDel_Clicked;
 
         TranslationView.ItemTapped += TranslationView_ItemTapped;
-        ResultsView.ItemTapped += ResultsView_ItemTapped;
 
         TranslationBtn.Clicked += TranslationBtn_Clicked;
         TranslationFlag.Clicked += TranslationBtn_Clicked;
@@ -311,60 +307,6 @@ public partial class LearnPage : ContentPage
             SetMode(false);
         }
     }
-    private void FindBut_Clicked(object? sender, EventArgs e)
-    {
-        StopPlay();
-        SearchEntry.Text = string.Empty;
-        Context.ResultsInfo.Clear();
-        SetMode(true);
-        SearchEntry.Focus();
-    }
-
-    private void SearchEntry_TextChanged(object? sender, TextChangedEventArgs e)
-    {
-        var current = SearchEntry.Text;
-        if (string.IsNullOrWhiteSpace(current))
-        {
-            Context.ResultsInfo.Clear();
-            return;            
-        }
-
-        var words1 = GetWords(SettingsPage.VoiceLearn);
-        var words2 = GetWords(SettingsPage.MyVoice);
-        List<WordHint> results1 = new List<WordHint>();
-        List<WordHint> results2 = new List<WordHint>();
-
-        Trie search1 = new Trie(words1);
-        search1.Search(current, MaxSearchResults, results1);
-
-        Trie search2 = new Trie(words2);
-        search2.Search(current, MaxSearchResults, results2);
-
-        if (results1.Count == 0 && results2.Count == 0)
-        {
-            ResultsView.IsVisible = false;
-            return;
-        }
-        ResultsView.IsVisible = true;
-        Context.GenerateSearchInfo(results1, SettingsPage.VoiceLearn);
-        Context.GenerateSearchInfo(results2, SettingsPage.MyVoice, false);
-    }
-
-    List<string> GetWords(string voice)
-    {
-        if (!m_words.TryGetValue(voice, out List<string>? words))
-        {
-            words = new List<string>();
-            var all = Categories.DefaultCategory.CatWords;
-            foreach (var word in all)
-            {
-                var trans = word.GetTranslation(voice);
-                words.Add(trans);
-            }
-            m_words[voice] = words;
-        }
-        return words;
-    }
 
     public async Task Setup()
     {
@@ -436,8 +378,6 @@ public partial class LearnPage : ContentPage
     {
         SearchPanel.IsVisible = findMode || infoMode;
         ButOk.IsVisible = findMode || infoMode;
-        ResultsView.IsVisible = findMode && !infoMode;
-        SearchEntry.IsEnabled = SearchEntry.IsVisible = findMode;
         WordName.IsVisible = infoMode;
         WordDetails.IsVisible = infoMode;
 
@@ -540,7 +480,7 @@ public partial class LearnPage : ContentPage
         }
     }
 
-    async Task SetWord(Word word, bool speak = true)
+    public async Task SetWord(Word word, bool speak = true)
     {
         if (word == null)
         {

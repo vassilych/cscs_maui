@@ -1207,7 +1207,7 @@ environment	lawn		der Rasen	Rase	газон	el pasto, el prado	el césped	a gram
 environment	field		das Feld		поле	el campo		o campo	le terrain, le champ	il campo	שָׂדֶה	场	原野	حقل، مجال	chǎng
 environment	puddle		die Pfütze		лужа	el charco		a poça	la flaque d'eau	la pozza	שְׁלוּלִית	水坑	水たまり	وحل	shuǐ kēng
 environment	rain		der Regen		дождь	la lluvia		a chuva	la pluie	la pioggia	גֶשֶׁם	雨	雨	مطر	yǔ
-environment	lightning		der Blitz		молния	el rayo		o relâmpago, o raio	l'éclair, la  foudre	il bliz, il fulmine	בָּרָק	闪电	稲妻	صاعقة	shǎndiàn
+environment	lightning		der Blitz		молния	el rayo		o relâmpago, o raio	l'éclair, la foudre	il bliz, il fulmine	בָּרָק	闪电	稲妻	صاعقة	shǎndiàn
 environment	storm, hurricane		der Sturm, der Orkan		шторм, ураган	la tormenta, el huracán		a tempestade, o furacão	la tempête, l'ouragan	la tempesta, l'uragano	סערה, הוריקן	风暴，飓风	嵐、ハリケーン	عاصفة، إعصار	fēngbào, jùfēng
 environment	flood, high tide		die Überschwemmung, die Flut		наводнение, прилив	la inundación, la marea alta		Inundação, maré alta	le flux, la marée haute	l'alluvione, l'alta marea	שיטפון, גאות	洪水	洪水、高潮	الفيضانات، وارتفاع المد والجزر	hóngshuǐ
 environment	ebb, low tide		die Ebbe, der Tidefall		отлив	el reflujo, la marea baja		a maré baixa	le reflux, la marée basse	il reflusso, la bassa marea	שפל, שפל	落潮	引き潮、干潮	الجزر	luòcháo

@@ -2066,6 +2066,7 @@
 	  <BundleResource Include="Resources\Raw\fr_verbs.txt" />
 	  <BundleResource Include="Resources\Raw\pt_verbs.txt" />
 	  <BundleResource Include="Resources\Images\empty_folder.png" />
+	  <BundleResource Include="Resources\Images\search_icon.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2199,6 +2200,7 @@
 	  <None Remove="Resources\Raw\fr_verbs.txt" />
 	  <None Remove="Resources\Raw\pt_verbs.txt" />
 	  <None Remove="Resources\Images\empty_folder.png" />
+	  <None Remove="Resources\Images\search_icon.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

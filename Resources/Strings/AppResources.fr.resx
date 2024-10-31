@@ -21,6 +21,12 @@
 <data name="Settings" xml:space="preserve">
   <value>Réglages</value>
 </data>
+<data name="Search" xml:space="preserve">
+  <value>Recherche</value>
+</data>
+<data name="EnterText" xml:space="preserve">
+  <value>Saisir le texte</value>
+</data>
 <data name="Learn_wide" xml:space="preserve">
   <value>Apprends</value>
 </data>
