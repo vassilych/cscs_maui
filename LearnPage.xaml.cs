@@ -16,6 +16,7 @@ using System.Configuration;
 using CommunityToolkit.Maui.Media;
 using System;
 using System.Globalization;
+using System.Threading.Tasks;
 
 namespace ScriptingMaui;
 
@@ -26,6 +27,7 @@ public partial class LearnPage : ContentPage
     const string CategoryWord = "word_";
     const string CustomWords = "customWords";
     const string TrashWords = "trashWords";
+    const string LearnedWords = "learnedhWords";
 
     const string AddWordIcon = "add_word.png";
     const string DeleteWordIcon = "delete_word.png";
@@ -65,12 +67,14 @@ public partial class LearnPage : ContentPage
         NextImg.Clicked += NextImgClick;
         MainImgImg.Clicked += NextImgClick;
         MainImgTxt.Clicked += NextImgClick;
-        ButSpeak.Clicked += SpeakerClick;
+        //ButSpeak.Clicked += SpeakerClick;
+        MainWordText.Clicked += SpeakerClick;
         ButPlay.Clicked += PlayClick;
 
         ButOk.Clicked += BackBut_Clicked;
         ButAdd.Clicked += ButAdd_Clicked;
         ButDel.Clicked += ButDel_Clicked;
+        ButLearned.Clicked += ButLearned_Clicked;
 
         TranslationView.ItemTapped += TranslationView_ItemTapped;
 
@@ -82,47 +86,70 @@ public partial class LearnPage : ContentPage
         //this.Loaded += LearnPage_Loaded;
     }
 
+    async void ButLearned_Clicked(object? sender, EventArgs e)
+    {
+        Categories.LearnedCategory.AddWord(Context.Word);
+        Context.Word.Category.MoveToSpecialCategory(Context.Word);
+        Preferences.Set(LearnedWords, Categories.LearnedCategory.GetAllWords());
+
+        ButLearnedBorder.IsVisible = false;
+        await SetSomeWord(true);
+        await Toast.Make(string.Format(AppResources.Word_AddedTo__0_, AppResources.learned_words), ToastDuration.Long).Show();
+    }
+
     async void ButDel_Clicked(object? sender, EventArgs e)
     {
         string toast = "";
+        var lastCat = Context.Word.Category;
         if (m_category == Categories.CustomCategory)
         {
             m_category.RemoveWord(Context.Word);
             toast = AppResources.word_deleted;
             Preferences.Set(CustomWords, m_category.GetAllWords());
         }
-        else if (m_category == Categories.TrashCategory)
+        else if (m_category == Categories.TrashCategory || m_category == Categories.LearnedCategory)
         {
             m_category.RemoveWord(Context.Word);
-            Context.Word.Category.AddFromTrash(Context.Word);
+            Context.Word.Category.AddFromSpecialCategory(Context.Word);
             toast = string.Format(AppResources.Word_AddedTo__0_, Context.TranslateCategory(Context.Word.Category));
-            Preferences.Set(TrashWords, m_category.GetAllWords());
+            var pref = m_category == Categories.TrashCategory ? TrashWords : LearnedWords;
+            Preferences.Set(pref, m_category.GetAllWords());
         }
         else
         {
             Categories.TrashCategory.AddWord(Context.Word);
-            m_category.AddToTrash(Context.Word);
+            Context.Word.Category.MoveToSpecialCategory(Context.Word);
             toast = string.Format(AppResources.Word_AddedTo__0_, AppResources.trash);
             Preferences.Set(TrashWords, Categories.TrashCategory.GetAllWords());
         }
         ButDelBorder.IsVisible = false;
 
-        var word = m_category.GetWord(m_category.Index);
-        if (word == null)
-        {
-            await SetInitWord();
-        }
-        else
+        await SetSomeWord(true);
+        await Toast.Make(toast, ToastDuration.Long).Show();
+    }
+
+    async Task SetSomeWord(bool moveNext = false)
+    {
+        var word = moveNext? m_category.GetNextWord() : m_category.GetWord(m_category.Index);
+        if (word != null)
         {
             await SetWord(word);
         }
-
-        await Toast.Make(toast, ToastDuration.Long).Show();
+        else if (Context?.Word != null)
+        {
+            m_category = Context.Word.Category;
+            await SetWord(Context.Word);
+        }
+        else
+        {
+            await SetInitWord();
+        }
     }
+
     async void ButAdd_Clicked(object? sender, EventArgs e)
     {
-        var custom = Categories.CustomCategory;
-        if (m_category == Categories.CustomCategory || m_category == Categories.TrashCategory)
+        if (m_category == Categories.CustomCategory || m_category == Categories.TrashCategory ||
+            m_category == Categories.LearnedCategory)
         {
             var ok = await DisplayAlert(AppInfo.Current.Name, AppResources.Put_back_all_words_, "OK", "Cancel");
             if (!ok)
@@ -133,28 +160,22 @@ public partial class LearnPage : ContentPage
             foreach (var word in words)
             {
                 m_category.RemoveWord(word);
-                if (m_category == Categories.TrashCategory)
+                if (m_category == Categories.TrashCategory || m_category == Categories.LearnedCategory)
                 {
-                    word.Category.AddFromTrash(word);
+                    word.Category.AddFromSpecialCategory(word);
                 }
             }
-            await SetInitWord();
+            var pref = m_category == Categories.TrashCategory ? TrashWords :
+                       m_category == Categories.CustomCategory ? CustomWords : LearnedWords;
+            Preferences.Set(pref, m_category.GetAllWords());
+            await SetSomeWord(true);
         }
-        else if (!custom.Exists(Context.Word.Name))
+        else if (!Categories.CustomCategory.Exists(Context.Word.Name))
         {
-            custom.AddWord(Context.Word);
+            Categories.CustomCategory.AddWord(Context.Word);
             ButAddBorder.IsVisible = false;
             await Toast.Make(AppResources.word_added, ToastDuration.Short).Show();
-            Preferences.Set(CustomWords, custom.GetAllWords());
-        }
-
-        if (m_category == Categories.TrashCategory)
-        {
-            Preferences.Set(TrashWords, m_category.GetAllWords());
-        }
-        else if (m_category == Categories.CustomCategory)
-        {
-            Preferences.Set(CustomWords, m_category.GetAllWords());
+            Preferences.Set(CustomWords, Categories.CustomCategory.GetAllWords());
         }
     }
 
@@ -180,19 +201,19 @@ public partial class LearnPage : ContentPage
     }
     public void SetTranslationOrigWait()
     {
-        MainWordLabel.Text += ".";
+        MainWordText.Text += ".";
     }
-    public void SetOrigTranslation(string text)
+    public void SetOrigTranslation(Word word, string text)
     {
-        if (Context.Word.Category.IsText)
+        if (word.Category.IsText)
         {
             MainImgTxt.Text = text;
             MainImgTxt.FontSize = GetFontSize(text) + 2;
-            MainWordLabel.Text = "";
+            MainWordText.Text = "";
         }
         else
         {
-            MainWordLabel.Text = text;
+            MainWordText.Text = text;
         }
     }
 
@@ -310,12 +331,14 @@ public partial class LearnPage : ContentPage
 
     public async Task Setup()
     {
-        var custom = Categories.GetCategory(Categories.CustomCategoryName);
         var customWords = Preferences.Get(CustomWords, "");
-        custom.InitFromWords(customWords);
+        Categories.CustomCategory.InitFromWords(customWords);
 
         var trashWords = Preferences.Get(TrashWords, "");
         Categories.TrashCategory.InitFromWords(trashWords);
+
+        var learnedWords = Preferences.Get(LearnedWords, "");
+        Categories.LearnedCategory.InitFromWords(learnedWords);
 
         await SetInitWord();
         SetMode();
@@ -385,8 +408,10 @@ public partial class LearnPage : ContentPage
         TopMainPanel.IsVisible = !findMode && !infoMode;
         MainPanel.IsVisible = !findMode && !infoMode;
         ButtonsPanel.IsVisible = !findMode && !infoMode;
-        TranslationView.IsVisible = TranslationFlag.IsVisible = TranslationBtn.IsVisible = TranslationBtnBorder.IsVisible = !findMode && !infoMode;
-        ButSpeak.IsVisible = !findMode && !infoMode;
+        TranslationView.IsVisible = TranslationFlag.IsVisible = TranslationBtn.IsVisible =
+            TranslationBtnBorder.IsVisible = !findMode && !infoMode;
+        //ButSpeak.IsVisible = !findMode && !infoMode;
+        MainWordBorder.IsVisible = !findMode && !infoMode;
 
         InfoPanelScroll.IsVisible = InfoPanel.IsVisible = infoMode;
         //VerbInfoH1.IsVisible = VerbInfoH2.IsVisible = VerbInfoH3.IsVisible = infoMode;
@@ -501,7 +526,7 @@ public partial class LearnPage : ContentPage
 
         m_settingWord = true;
         m_category = m_category == Categories.DefaultCategory || m_category == Categories.CustomCategory ||
-            m_category == Categories.TrashCategory ?
+            m_category == Categories.TrashCategory || m_category == Categories.LearnedCategory ?
             m_category : word.Category;
         var ind = Categories.GetCategoryIndex(m_category.Name);
         if (ind < 0)
@@ -518,13 +543,18 @@ public partial class LearnPage : ContentPage
 
         ButInfoBorder.IsVisible = ButInfo.IsVisible = (word.Category.Name == Categories.VerbCategoryName);
         ButAddBorder.IsVisible = m_category == Categories.TrashCategory || m_category == Categories.CustomCategory ||
-                                 !Categories.CustomCategory.Exists(word.Name);
-        ButDelBorder.IsVisible = m_category != Categories.DefaultCategory;
-        ButAdd.Source = m_category == Categories.CustomCategory || m_category == Categories.TrashCategory ?
+                    m_category == Categories.LearnedCategory || !Categories.CustomCategory.Exists(word.Name);
+        //ButDelBorder.IsVisible = m_category != Categories.DefaultCategory;
+        ButDelBorder.IsVisible = m_category != Categories.DefaultCategory || !Categories.TrashCategory.Exists(word.Name);
+        ButLearnedBorder.IsVisible = //m_category != Categories.DefaultCategory && m_category != Categories.LearnedCategory &&
+            m_category != Categories.TrashCategory && !Categories.LearnedCategory.Exists(word.Name);// && m_category != Categories.CustomCategory;
+        ButAdd.Source = m_category == Categories.CustomCategory || m_category == Categories.TrashCategory ||
+            m_category == Categories.LearnedCategory ?
             "empty_folder.png" : "add_word.png";
 
         MainImgTxt.IsVisible = MainImgImg.IsVisible = false;
-        MainWordLabel.Text = MainImgTxt.Text = " ";
+        MainWordBorder.IsVisible = !word.Category.IsText;
+        MainWordText.Text = MainImgTxt.Text = " ";
         if (word.Category.IsText)
         {
             MainImgTxt.IsVisible = true;
@@ -538,7 +568,9 @@ public partial class LearnPage : ContentPage
         }
 
         WordId.Text = string.Format(AppResources.Word__0___1_, (m_category.Index + 1), m_category.GetTotalWords());
-        if (SettingsPage.DelayRate > 0 && !SettingsPage.DelayOriginal)
+        bool setOriginal = SettingsPage.DelayRate <= 0 || !SettingsPage.DelayOriginal;
+        bool setTransl = SettingsPage.DelayRate == 0 || SettingsPage.DelayOriginal;
+        if (!setTransl)
         { // Remove transation
             SetTranslation(" ");
             Context.ClearTranslations();
@@ -548,11 +580,14 @@ public partial class LearnPage : ContentPage
             Context.SetTranslations(word);
         }
 
-        if (speak && (SettingsPage.DelayRate <= 0 || !SettingsPage.DelayOriginal))
+        if (setOriginal)
         {
             string current = word.GetTranslation(SettingsPage.VoiceLearn);
-            SetOrigTranslation(current);
-            await TTS.Speak(current, SettingsPage.VoiceLearn);
+            SetOrigTranslation(word, current);
+            if (speak)
+            {
+                await TTS.Speak(current, SettingsPage.VoiceLearn);
+            }
         }
 
         Context.SetWord(word, speak);
@@ -602,13 +637,15 @@ public partial class LearnPage : ContentPage
         m_category = Categories.SwitchCategory(chosen);
         if (m_category.CatWords.Count == 0)
         {
-            if (m_category.Name == Categories.CustomCategoryName)
+            if (m_category == Categories.CustomCategory)
             {
                 await DisplayAlert(AppInfo.Current.Name, AppResources.select_words, "OK");
             }
             else
             {
-                await DisplayAlert(AppInfo.Current.Name, string.Format(AppResources.Folder__0__IsEmpty, m_category.Name), "OK");
+
+                await DisplayAlert(AppInfo.Current.Name, string.Format(AppResources.Folder__0__IsEmpty,
+                    Context.TranslateCategory(m_category)), "OK");
             }
             m_category = prevCategory;
             var ind = Categories.GetCategoryIndex(prevCategory.Name);
@@ -745,6 +782,7 @@ public class Context
             AppResources.phrases_in_hotel,
             AppResources.phrases_in_restaurant,
             AppResources.flirting_phrases,
+            AppResources.learned_words,
             AppResources.trash
         };
         return cat;
@@ -791,7 +829,7 @@ public class Context
         {
             SetTranslations(Word);
             LearnPage.Instance.SetTranslationView();
-            LearnPage.Instance.SetOrigTranslation(MainWord);
+            LearnPage.Instance.SetOrigTranslation(Word, MainWord);
             return;
         }
 
@@ -807,7 +845,7 @@ public class Context
         }
         else
         {
-            LearnPage.Instance.SetOrigTranslation(MainWord);
+            LearnPage.Instance.SetOrigTranslation(Word, MainWord);
             m_timer.Tick += (s, e) => OnDelayTimer();
         }
         m_timer.IsRepeating = true;
@@ -844,7 +882,7 @@ public class Context
         if (diff.TotalSeconds >= SettingsPage.DelayRate)
         {
             m_timer?.Stop();
-            LearnPage.Instance.SetOrigTranslation(MainWord);
+            LearnPage.Instance.SetOrigTranslation(this.Word, MainWord);
             if (speak)
             {
                 await TTS.Speak(MainWord, SettingsPage.VoiceLearn);

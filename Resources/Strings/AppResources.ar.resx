@@ -261,6 +261,9 @@
 <data name="trash" xml:space="preserve">
   <value>مهملات</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>الكلمات المستفادة</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>كلمة مضافة إلى [{0}]</value>
 </data>

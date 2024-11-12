@@ -261,6 +261,9 @@
 <data name="trash" xml:space="preserve">
   <value>垃圾</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>学到的单词</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>添加到[{0}]的字词</value>
 </data>

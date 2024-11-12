@@ -162,3 +162,4 @@ to study, study,  studied, studying, study,study,studies, studied,studied,studie
 to try, try,  tried, trying, try,try,tries, tried,tried,tried
 to hurry, hurry,  hurried, hurrying, hurry,hurry,hurries, hurried,hurried,hurried
 to rush, rush,  rushed, rushing, rush,rush,rushes, rushed,rushed,rushed
+to recover, recover,  recovered, recovering, recover,recover,recovers, recovered,recovered,recovered

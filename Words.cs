@@ -186,6 +186,7 @@ namespace ScriptingMaui
             randomWords.Insert(0, 0);
             Categories.DefaultCategory.SetIndices(randomWords);
 
+            Categories.LearnedCategory = Categories.AddGetCategory(Categories.LearnedCategoryName);
             Categories.TrashCategory = Categories.AddGetCategory(Categories.TrashCategoryName);
         }
     }
@@ -199,7 +200,6 @@ public class Word
     public int Id { get; set; }
     public int OriginalId { get; set; }
     public string Name { get; set; }
-    public bool IsTrash { get; set; }
     public Category Category { get; set; }
     public Dictionary<string, string> Translation = new Dictionary<string, string>();
 
@@ -239,7 +239,7 @@ public class Word
     {
         var name = Name.ToLower();
         // special cases word files not permitted on Android:
-        if (name == "class" || name == "short" || name == "turkey")
+        if (name == "class" || name == "short" || name == "switch" || name == "case" || name == "turkey" || name == "new")
         { //"a__case.png"
             return "a__" + name + ".png";
         }
@@ -321,21 +321,19 @@ public class Category
         {
             var word = Categories.DefaultCategory.GetWord(wordStr);
             counter += AddWord(word) ? 1 : 0;
-            if (this == Categories.TrashCategory)
+            if (this == Categories.TrashCategory || this == Categories.LearnedCategory)
             { // also delete from the word's category
-                word?.Category.AddToTrash(word);
+                word?.Category.MoveToSpecialCategory(word);
             }
         }
         return counter;
     }
-    public void AddToTrash(Word word)
+    public void MoveToSpecialCategory(Word word)
     {
-        word.IsTrash = true;
         RemoveWord(word);
     }
-    public void AddFromTrash(Word word)
+    public void AddFromSpecialCategory(Word word)
     {
-        word.IsTrash = false;
         if (CatWords.Contains(word))
         {
             return;
@@ -423,10 +421,12 @@ public class Categories
     public const string DefaultCategoryName = "all";
     public const string CustomCategoryName = "custom";
     public const string TrashCategoryName = "trash";
+    public const string LearnedCategoryName = "learned";
     public const string VerbCategoryName = "verbs";
     public static Category DefaultCategory;
     public static Category CustomCategory;
     public static Category TrashCategory;
+    public static Category LearnedCategory;
     public static Category CurrentCategory;
 
     public static List<string> CategoryList = new List<string>();

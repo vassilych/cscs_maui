@@ -264,6 +264,9 @@
 <data name="trash" xml:space="preserve">
   <value>תיקיית האשפה</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>מילים נלמדות</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>מילה נוספה ל-[{0}]</value>
 </data>

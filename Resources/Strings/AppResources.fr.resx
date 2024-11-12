@@ -261,6 +261,9 @@
 <data name="trash" xml:space="preserve">
   <value>dossier poubelle</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>mots appris</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>Mot ajouté à [{0}]</value>
 </data>

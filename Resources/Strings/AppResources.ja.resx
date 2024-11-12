@@ -261,6 +261,9 @@
 <data name="trash" xml:space="preserve">
   <value>ゴミ</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>学んだ言葉</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>[{0}]に追加された単語</value>
 </data>

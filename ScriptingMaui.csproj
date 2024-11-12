@@ -1331,7 +1331,7 @@
 	  <BundleResource Include="Resources\Images\bun.png" />
 	  <BundleResource Include="Resources\Images\bulb.png" />
 	  <BundleResource Include="Resources\Images\building.png" />
-	  <BundleResource Include="Resources\Images\bug.png" />
+	  <BundleResource Include="Resources\Images\bug__beetle.png" />
 	  <BundleResource Include="Resources\Images\bucket.png" />
 	  <BundleResource Include="Resources\Images\brown.png" />
 	  <BundleResource Include="Resources\Images\brother.png" />
@@ -2067,6 +2067,21 @@
 	  <BundleResource Include="Resources\Raw\pt_verbs.txt" />
 	  <BundleResource Include="Resources\Images\empty_folder.png" />
 	  <BundleResource Include="Resources\Images\search_icon.png" />
+	  <BundleResource Include="Resources\Images\abortion.png" />
+	  <BundleResource Include="Resources\Images\check_ok.png" />
+	  <BundleResource Include="Resources\Images\to_recover__to_get_well.png" />
+	  <BundleResource Include="Resources\Images\to_get_sick.png" />
+	  <BundleResource Include="Resources\Images\dirty.png" />
+	  <BundleResource Include="Resources\Images\clean.png" />
+	  <BundleResource Include="Resources\Images\a__new.png" />
+	  <BundleResource Include="Resources\Images\unpalatable__tasteless.png" />
+	  <BundleResource Include="Resources\Images\tasty__delicious.png" />
+	  <BundleResource Include="Resources\Images\sober.png" />
+	  <BundleResource Include="Resources\Images\modern.png" />
+	  <BundleResource Include="Resources\Images\athletic__sporty.png" />
+	  <BundleResource Include="Resources\Images\honest.png" />
+	  <BundleResource Include="Resources\Images\embarrassed.png" />
+	  <BundleResource Include="Resources\Images\dishonest__crooked.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2201,6 +2216,21 @@
 	  <None Remove="Resources\Raw\pt_verbs.txt" />
 	  <None Remove="Resources\Images\empty_folder.png" />
 	  <None Remove="Resources\Images\search_icon.png" />
+	  <None Remove="Resources\Images\abort.png" />
+	  <None Remove="Resources\Images\check_ok.png" />
+	  <None Remove="Resources\Images\to_recover__to_get_well.png" />
+	  <None Remove="Resources\Images\to_get_sick.png" />
+	  <None Remove="Resources\Images\dirty.png" />
+	  <None Remove="Resources\Images\clean.png" />
+	  <None Remove="Resources\Images\new.png" />
+	  <None Remove="Resources\Images\unpalatable__tasteless.png" />
+	  <None Remove="Resources\Images\tasty__delicious.png" />
+	  <None Remove="Resources\Images\sober.png" />
+	  <None Remove="Resources\Images\modern.png" />
+	  <None Remove="Resources\Images\athletic.png" />
+	  <None Remove="Resources\Images\honest.png" />
+	  <None Remove="Resources\Images\embarrassed.png" />
+	  <None Remove="Resources\Images\dishonest__crooked.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

@@ -261,6 +261,9 @@
 <data name="trash" xml:space="preserve">
   <value>мусорная корзина</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>выученные слова</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>Слово добавлено в [{0}]</value>
 </data>

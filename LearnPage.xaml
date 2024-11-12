@@ -308,7 +308,7 @@
         <ColumnDefinition  Width="15*" />
     </Grid.ColumnDefinitions>
         <Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1580" HorizontalTextAlignment="Start" HorizontalOptions="Start"
-            Margin = "2,0,6,0" WidthRequest="80" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />
+            Margin = "2,4,6,0" MaxLines="2" LineBreakMode="WordWrap" WidthRequest="60" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />
         <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
                 Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
             <Picker x:Name="CategoryPicker"  
@@ -323,12 +323,18 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="20*" />
-            <ColumnDefinition  Width="60*" />
-            <ColumnDefinition  Width="20*" />
+            <ColumnDefinition  Width="5*" />
+            <ColumnDefinition  Width="87*" />
+            <ColumnDefinition  Width="8*" />
         </Grid.ColumnDefinitions>
-        <Label x:Name="MainWordLabel" Grid.Column="1" Text="{Binding MainWord}" HorizontalTextAlignment="Center"
-                  VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22" />
+    <Border x:Name="MainWordBorder" Grid.Column="0" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "{StaticResource ButtonsMargin}"
+            Background="White" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand">
+        <Button x:Name="MainWordText" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
+          HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="{Binding FontSize}" />
+    </Border>
+      <!--  <Label x:Name="MainWordLabel" Grid.Column="1" Text="{Binding MainWord}" HorizontalTextAlignment="Center"
+                  VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="22" /> 
+        <ImageButton x:Name="ButSpeak" Grid.Column="2" Margin = "4,4,4,4" HorizontalOptions="FillAndExpand" Source="speaker2.png" Background="Transparent" /> -->
 	</Grid>
 
 	<Grid x:Name="MainPanel" Background="Transparent" Margin = "0,2,0,0" >
@@ -352,7 +358,7 @@
             Grid.Column="2" Margin = "4,4,1,4" Background="Transparent" />
 	</Grid>
 
-    <Grid Padding="0">
+    <Grid Padding="0" x:Name="TopTranslationPanel">
         <Grid.ColumnDefinitions>
         <ColumnDefinition Width="0.1*" />
         <ColumnDefinition Width="0.8*" />
@@ -360,10 +366,11 @@
         </Grid.ColumnDefinitions>
         <ImageButton x:Name="TranslationFlag" Grid.Column="0" HorizontalOptions="Start" Source="es_mx"
          Margin="2,0,2,0" Background="Transparent" WidthRequest="{StaticResource TransSize}" HeightRequest="{StaticResource TransSize}" />
-    <Border x:Name="TranslationBtnBorder" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Grid.Column="1"  Margin = "{StaticResource ButtonsMargin}"
-            Background="White" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
+    <Border x:Name="TranslationBtnBorder" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Grid.Column="1"
+            Margin = "16,4,10,2"
+            Background="LightSkyBlue" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
         <Button x:Name="TranslationBtn" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
-          HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="{Binding FontSize}" />
+          HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="White" FontSize="{Binding FontSize}" />
     </Border>
         <!--<ImageButton x:Name="ButSpeak" Margin = "2,0,2,0"  Grid.Column="2" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />-->
     </Grid>
@@ -373,9 +380,13 @@
             Background="Transparent" HorizontalOptions="Start">
         <ImageButton x:Name="ButPlay"  Source="play_but.png" Margin = "4,4,4,4" Background="Transparent"/>
     </Border>
-    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
+    <!--<Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
             Background="Transparent" HorizontalOptions="Start">
     <ImageButton x:Name="ButSpeak" Margin = "4,4,4,4" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />
+    </Border>-->
+    <Border Stroke="Black" x:Name="ButLearnedBorder" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
+            Background="Transparent" HorizontalOptions="Start">
+        <ImageButton x:Name="ButLearned" Margin = "4,4,4,4" HorizontalOptions="End" Source="check_ok.png" Background="Transparent" />
     </Border>
     <Border Stroke="Black" x:Name="ButAddBorder" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"  Margin = "{StaticResource ButtonsMargin}"
             Background="Transparent" HorizontalOptions="Start">

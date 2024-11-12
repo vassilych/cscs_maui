@@ -11,7 +11,7 @@ animal world	bee		die Biene	Bienli	пчела	la abeja		a abelha	l'abeille	l'ape
 animal world	blackbird		die Schwarzdrossel	Schwarzdrossel	чёрный дрозд	el mirlo		o melro-preto	le merle	il merlo	שַׁחֲרוּר	黑鸟	クロウタドリ	شحرور	Hēi niǎo
 animal world	bunny	rabbit	das Kaninchen	Chüngel	кролик	el conejo		o coelho	le lapin	il coniglietto	אַרנֶבֶת	小兔子	バニー、兎	أرنب	Xiǎo tùzǐ
 animal world	butterfly		der Schmetterling	Schmetterling	бабочка	la mariposa		a borboleta	le papillon	la farfalla	פַּרְפַּר	蝴蝶	蝶	فراشة	Húdié
-animal world	bug		der Käfer	Käfer	жук	el insecto	el escarabajo	o inseto	l'insecte	l'insetto	חֶרֶק	飞虫	虫	بق	Fēi chóng
+animal world	bug, beetle	scarab, beetle	der Käfer	Käfer	жук	el insecto	el escarabajo, el insecto	o inseto	l'insecte	l'insetto	חֶרֶק	飞虫	虫	بق	Fēi chóng
 animal world	camel		das Kamel	Kamel	верблюд	el camello		o camelo	le chameau	il cammello	גָמָל	骆驼	ラクダ	جمل	Luòtuó
 animal world	cat		die Katze	Chatz	кошка	el gato		o gato	le chat	il gatto	חָתוּל	猫	猫	قط	Māo
 animal world	caterpillar		die Raupe	Raupe	гусеница	la oruga		a lagarta	la chenille	il bruco	זַחַל	毛虫	毛虫	يرقة	máochóng
@@ -654,7 +654,7 @@ tools and appliances	vacuum cleaner		der Staubsauger	Staubsuuger	пылесос	
 tools and appliances	washing machine		die Waschmaschine	Wöschmaschine	стиральная машина	la lavadora		a máquina de lavar	la machine à laver	la lavatrice	מְכוֹנַת כְּבִיסָה	洗衣机	洗濯機	غسالة	xǐyījī
 tools and appliances	socket		die Steckdose		розетка	el enchufe		o sóquete	le prise de courant	la presa di corrente	שֶׁקַע	插座	ソケット	قابس كهرباء	chāzuò
 tools and appliances	light switch		der Schalter		выключатель	el apagador	el interruptor	o interruptor	l'interrupteur	l'interruttore della luce	מתג אור	开关	電気のスイッチ	مفتاح الضوء	kāiguān
-tools and appliances	power plug		der Stecker		штепсель	el macho de enchufe		a tomada	le prise mâle	la spina	תקע חשמל	电源插头	電源プラグ	قابس الطاقة	diànyuán chātóu
+tools and appliances	power plug		der Stecker		вилка, штепсель	el macho de enchufe		a tomada	le prise mâle	la spina	תקע חשמל	电源插头	電源プラグ	قابس الطاقة	diànyuán chātóu
 tools and appliances	power strip	extension lead	das Verlängerungskabel		удлинитель	la extensión	el cable alargador	o cabo de extensão 	la ralonge	la ciabatta	פס חשמל	延长线	電源コード	موصل التيار	yáncháng xiàn
 tools and appliances	TV	TV set	der Fernseher		телевизор	la tele		a televisão	la télé	la tv	טֵלֶוִיזִיָה	电视	テレビ	التلفزيون	diànshì
 tools and appliances	hammer		der Hammer		молоток	el martillo		o martelo	le marteau	il martello	פַּטִישׁ	铁锤	ハンマー	المطرقة	tiě chuí
@@ -881,6 +881,7 @@ accesories	eyeglasses	spectacles	die Brille	Brüle	очки	los lentes	las gafas
 accesories	sunglasses		die Sonnenbrille	Sunnebrüle	солнцезащитные очки	los lentes de sol	las gafas de sol	o óculos de sol	les lunettes de soleil	gli occhiali da sole	מִשְׁקפֵי שֶׁמֶשׁ	太阳镜	サングラス	نظارات شمسية	tàiyángjìng
 family and kids	wedding		die Hochzeit	Hochziit	свадьба	la boda		o casamento	le mariage	il matrimonio	חֲתוּנָה	婚礼	結婚式	حفل زواج	hūnlǐ
 family and kids	pregnant		schwanger		беременная	embarazada		grávida	enceinte	essere incinta	בְּהֵרָיוֹן	怀孕的	妊娠	حامل	huáiyùn de
+family and kids	abortion		die Abtreibung		аборт	el aborto		o aborto	l'avortement	l'aborto	הַפָּלָה	流产	妊娠中絶	الإجهاض	Liúchǎn
 family and kids	baby		der Säugling		младенец	el bebé		o bebê	le bébé	il bambino	תִינוֹק	婴儿	赤ちゃん	رضيع	Yīng'ér
 family and kids	twins		die Zwillinge		близнецы	los gemelos		os gêmeos	les jumeaux, jumelles	i fratelli gemelli	תְאוּמִים	双胞胎	双子	توأم	shuāngbāotāi
 family and kids	father		der Vater		отец	el padre		o pai	le père	il padre	אַבָּא	爸爸，父亲	父、お父さん	الآب	bàba, fùqīn
@@ -1374,6 +1375,8 @@ verbs	to return, to come back		zurückkommen, zurückkehren		вернуться	
 verbs	to get		bekommen, erreichen		получить, достигать	conseguir, obtener		conseguir	obtenir	conseguire	להשיג	获得、得到	得る	يحقق	dǎ hāqian
 verbs	to create		erstellen, schaffen		творить, создавать	crear		criar	créer	creare	לִיצוֹר	创造	作成する	يخلق	Chuàngzào
 verbs	to understand		verstehen		понимать	entender		entender	comprendre	comprendere	להבין	懂、明白	理解する	يفهم	dǎ hāqian
+verbs	to get sick	to fall ill	krank werden, erkranken		заболеть	enfermarse		adoecer	tomber malade	ammalarsi	לחלות	生病	病気になる	السقوط مريضًا	Shēngbìng
+verbs	to recover, to get well		sich erholen		выздороветь	recuperarse, ponerse bien		recuperar-se	se rétablir, guérir	recuperare	לשלם	痊愈	立ち直る	التعافي	Quányù
 prepositions	above		über		над, вне	arriba, encima de		acima	au-dessus de	sopra	מֵעַל	多于	その上	فوق	Duō yú
 prepositions	below		unten		ниже, под	abajo de	debajo de	abaixo de	ci-dessous	sotto, giù	לְהַלָן	以下	下に	أقل	Yǐxià
 prepositions	at		an, bei		у, в, на	a, en		no, em	à, de	a, in	בְּ-	在	で	في	Zài
@@ -1393,7 +1396,7 @@ prepositions	up		nach oben, hinauf		вверх	arriba		acima	en haut	su	לְמַ
 prepositions	down		unten, herunter		вниз	abajo		abaixo	en bas, vers le bas	giù	לְמַטָה	向下	下	تحت	Xiàng xià
 prepositions	over		vorüber, herüber		над, свыше	encima, por encima		por cima, superior	sur, par-dessus	su, sopra	מֵעַל	超过	以上	زيادة	Chāoguò
 prepositions	across		darüber, quer durch		через, поперёк	a través, al otro lado de		através de, sobre	à travers, au-dessus de	attraverso	לְרוֹחָב	穿过	横切って	عير	Chuānguò
-prepositions	along		entlang		вдоль	a lo largo de, al lado de, junto		ao longo, junto	le long de, dans	lungo, nel, attraverso	לְאוֹרֶך	沿着	平行	على امتداد	Yánzhe
+prepositions	along		entlang		вдоль	a lo largo de, al lado de		ao longo, junto	le long de, dans	lungo, nel, attraverso	לְאוֹרֶך	沿着	平行	على امتداد	Yánzhe
 prepositions	into		in etwas		в, к	a, hacia		em, dentro	en, dans, dedans	in, dentro	לְתוֹך	进入	の中へ	داخل	Jìnrù
 prepositions	out of		aus etwas		из	fuera de		fora de	hors de	fuori da	מִתוֹך	出	から	خارج من	Zài Chū
 adjectives	angry		ärgerlich, wütend		сердитый	enojado, furioso		chateado	furieux	arrabbiato	כּוֹעֵס	愤怒	怒って	خلال	fènnù
@@ -1453,6 +1456,17 @@ adjectives	broken		kaputt, zerbrochen		сломанный	roto		quebrado	cassé	
 adjectives	blind		blind		слепой	ciego		cego	aveugle	cieco	לְסַמֵא	盲的	目の見えない	أعمى/ضرير	máng de
 adjectives	deaf		taub		глухой	sordo		surdo	sourd	sordo	חֵרֵשׁ	聋的	耳の聞こえない	أصم	lóng de
 adjectives	mute		stumm		немой	mudo		mudo	muet	muto	לְהַשְׁתִיק	哑的	無言の	أخرس	yǎ de
+adjectives	embarrassed	ashamed	peinlich		смущённый	apenado, avergonzado	avergonzado		envergonhado	gêné, embarrassé	imbarazzato	נבוך	尴尬	恥ずかしい	محرج	Gāngà
+adjectives	honest		ehrlich		честный	honesto, sincero		honesto	honnête, sincère	sincero	יָשָׁר	诚实的	誠実	الصدق	Chéngshí de
+adjectives	dishonest, crooked		unehrlich, betrügerisch		нечестный, жульнический	deshonesto, corrupto		desonesto, corrupto	malhonnête, corrompu	disonesto, corrotto	לֹא יָשָׁר	不诚实	不正直	غير شريف	Bù chéngshí
+adjectives	athletic, sporty		athletisch, sportlich		спортивный, атлетичный	atlético, deportivo		atlético, esportivo	athlétique, sportif	atletico, sportivo	אַתלֵטִי	运动	アスレチック	رياضي	Yùndòng
+adjectives	modern		modern		современный	moderno		moderno	moderne	moderno	מוֹדֶרנִי	现代的	モダン	حديثة	Xiàndài de
+adjectives	sober		nüchtern		трезвый	sobrio		sóbrio	sobre	sobrio	פִּכֵּחַ	清醒	地味	الرصين	Qīngxǐng
+adjectives	tasty, delicious		köstlich		вкусный	sabroso, delicioso, rico	sabroso, delicioso	saboroso, delicioso	savoureux, délicieux	gustoso, delizioso	טעים, טעים	美味，美味	おいしい、おいしい	لذيذ ولذيذ	Měiwèi, měiwèi
+adjectives	unpalatable, tasteless	unpalatable, unpleasant	geschmacklos		невкусный	desagradable, asqueroso, guácala	desagradable, sin sabor	desagradável, sem gosto	désagréable	sgradevole, insapore	לא טעים, חסר טעם	难吃的, 无味的	味気ない	غير مستساغ، لا طعم له	Nán chī de, wúwèi de
+adjectives	new		neu		новый	nuevo		novo	nouveau	nuovo	חָדָשׁ	新的	新しい	جديد	Xīn de
+adjectives	clean		sauber		чистый	limpio		limpo	propre	pulito	לְנַקוֹת	干净的	クリーン	نظيفة	Gānjìng de
+adjectives	dirty		schmutzig, dreckig		грязный	sucio		sujo	sale	sporco, sudicio	מְלוּכלָך	脏	汚い	قذرة	Zàng
 phrases greetings	Hello		Hallo	Hoi	Привет!	¡Hola!		Olá	Salut!	Ciao!	שלום	你好	こんにちは	مرحبا	nǐ hǎo
 phrases greetings	Hi! What's Up!	Hi, how are you?	Hallo, wie geht's?	Hoi, wie gahts?	Привет, как дела?	Hola, ¿qué onda?	Hola, ¿cómo estás?	Oi, como vai?	Salut, comment vas tu?	Ciao, come stai?	היי! מה קורה!	你好吗	やあ、元気？	أهلا كيف حالك؟	nǐ hǎo ma
 phrases greetings	I am fine, thanks, and you?		Danke, gut. Und selbst?	Danke, guet. Und dier?	Спасибо, хорошо, а ты как?	¿Bien, gracias, y tu?		Estou bem, obrigado. E você?	Bien merci et toi?	Io sto bene grazie e tu?	אני בסדר, תודה, ואתה?	还不错，谢谢，你呢？	私は元気です。あなたはどう？	أنا بخير، شكرا، وأنت؟	hái bùcuò, xièxiè, nǐ ne?

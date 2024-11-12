@@ -106,7 +106,7 @@
 
         <Label x:Name="QuizLab" Grid.Row="4" Grid.Column="0" Text="Quiz:" TextColor="Blue" Margin = "2,10,0,0"
                 WidthRequest="130" HeightRequest="72" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>
-        <Switch x:Name="QuizSwitch" Grid.Row="4" Grid.Column="1" Margin = "40,10,10,0" 
+        <Switch x:Name="QuizSwitch" Grid.Row="4" Grid.Column="1" Margin = "50,10,10,0" 
                   HorizontalOptions="Center" VerticalOptions="StartAndExpand"/>
         <Label x:Name="Quiz46" Grid.Row="4" Grid.Column="2" Text="6" TextColor="Blue"  Margin = "4,20,0,0"
                 WidthRequest="140" HeightRequest="70" MaxLines="2" LineBreakMode="WordWrap" HorizontalOptions="Start" VerticalOptions="Center"/>

@@ -264,6 +264,9 @@
 <data name="trash" xml:space="preserve">
   <value>trash</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>learned words</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>Word added to {0}</value>
 </data>

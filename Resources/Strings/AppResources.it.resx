@@ -261,6 +261,9 @@
 <data name="trash" xml:space="preserve">
   <value>cartella dei rifiuti</value>
 </data>
+<data name="learned words" xml:space="preserve">
+  <value>parole apprese</value>
+</data>
 <data name="WordAddedTo" xml:space="preserve">
   <value>Parola aggiunta a [{0}]</value>
 </data>
