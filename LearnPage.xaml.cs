@@ -17,6 +17,7 @@ using CommunityToolkit.Maui.Media;
 using System;
 using System.Globalization;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace ScriptingMaui;
 
@@ -63,6 +64,8 @@ public partial class LearnPage : ContentPage
         CategoryPicker.SelectedIndex = catIndex;
         CategoryPicker.SelectedIndexChanged += CategorySelectionChanged;
 
+        WordId.Clicked += WordId_Clicked;
+
         PrevImg.Clicked += PrevImgClick;
         NextImg.Clicked += NextImgClick;
         MainImgImg.Clicked += NextImgClick;
@@ -84,6 +87,16 @@ public partial class LearnPage : ContentPage
         ButInfo.Clicked += InfoData_Clicked;
         SetMode();
         //this.Loaded += LearnPage_Loaded;
+    }
+
+    async void WordId_Clicked(object? sender, EventArgs e)
+    {
+        if (m_category == null || m_category.CatWords.Count == 0)
+        {
+            m_category = Categories.DefaultCategory;
+        }
+        var word = m_category.GetWord(0);
+        await SetWord(word);
     }
 
     async void ButLearned_Clicked(object? sender, EventArgs e)
@@ -505,7 +518,7 @@ public partial class LearnPage : ContentPage
         }
     }
 
-    public async Task SetWord(Word word, bool speak = true)
+    public async Task SetWord(Word word, bool speak = true, bool forceChangeCategory = false)
     {
         if (word == null)
         {
@@ -525,7 +538,8 @@ public partial class LearnPage : ContentPage
         m_trasnlationViewY = v.ScrollY < 0 ? m_trasnlationViewY : v.ScrollY;
 
         m_settingWord = true;
-        m_category = m_category == Categories.DefaultCategory || m_category == Categories.CustomCategory ||
+        m_category = forceChangeCategory ? word.Category :
+            m_category == Categories.DefaultCategory || m_category == Categories.CustomCategory ||
             m_category == Categories.TrashCategory || m_category == Categories.LearnedCategory ?
             m_category : word.Category;
         var ind = Categories.GetCategoryIndex(m_category.Name);

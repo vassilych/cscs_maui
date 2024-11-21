@@ -86,7 +86,9 @@ body parts	back		der Rücken	Rugge	спина	la espalda		as costas	le dos	la sc
 body parts	beard		der Bart		борода	la barba		a barba	la barbe	la barba	זָקָן	胡子	髭	لحية	húzi
 body parts	body		der Körper		тело	el cuerpo		o corpo	le corps	il corpo	גוּף	身体	体	الجسم	shēntǐ
 body parts	braid	plait	der Zopf		коса	la trenza		a trança	la tresse	la treccia	צמה	辫子	三つ編み	جديلة	biànzi
-body parts	breast		die Brust	Bruscht	грудь	el pecho		o peito	la poitrine	il seno	חָזֶה	胸部	胸	الصدر	xiōngbù
+body parts	breast		die Brust	Bruscht	грудь	el seno, la teta, el pecho		o seio, a mama, o peito	la poitrine	il petto	שד, ציצי	乳房	乳房	الثدي	Rǔfáng
+body parts	chest		der Brustkorb, die Brust		грудная клетка, грудь	el pecho		o peito	la poitrine, le sein	il seno	חָזֶה	胸部	胸部	الصدر	xiōngbù
+body parts	nipple		der Nippel		сосок	el pezón, la mamila	el pezón	o o mamilo	le mamelon	il capezzolo	פִּטמָה	乳头	乳首	الحلمة	rǔtóu
 body parts	cheek		die Wange	Backe	щека	la mejilla		a bochecha	la joue	la guancia	לֶחִי	脸颊	頬	الخد	liǎnjiá
 body parts	chin		das Kinn	Chüni	подбородок	la barbilla	el mentón	o queixo	le menton	il mento	סַנְטֵר	下巴	顎	ذقن	xiàbā
 body parts	ear		das Ohr		ухо	la oreja		a orelha	l'oreille	l'orecchio	אֹזֶן	耳朵	耳	أذن	ěrduǒ
@@ -125,7 +127,7 @@ body parts	jaw		der Kiefer		челюсть	la mandíbula		a mandíbula	la mâcho
 body parts	tooth		der Zahn	Zah	зуб	el diente		o dente	la dent	il dente	שֵׁן	牙齿	歯	السن	yáchǐ
 body parts	tongue		die Zunge		язык	la lengua		a língua	la langue	la lingua	לָשׁוֹן	舌头	舌	لسان	shétou
 body parts	waist		die Taille		талия	la cintura		a cintura	la taille	la vita	מוֹתֶן	腰部	ウエスト	الخصر	yāobù
-body parts	buttocks		der Hintern, der Po		попа, ягодицы	el trasero, las nalgas		as nádegas	les fesses	le natiche	אגן	臀部	臀部	الاليتان	túnbù
+body parts	butt, rear	buttocks, rear	der Hintern, der Po		попа, ягодицы	el trasero, las nalgas		as nádegas	les fesses	le natiche	אגן	臀部	臀部	الاليتان	túnbù
 body parts	wound		die Wunde		рана	la herida		a ferida	la plaie	la ferita	פֶּצַע	创伤	傷	جرح	chuāngshāng
 body parts	scar		die Narbe		шрам	la cicatriz		a cicatriz	la cicatrice	la cicatrice	צַלֶקֶת	疤痕	傷跡	ندبة	bāhén
 body parts	skin		die Haut	Huut	кожа	la piel		a pele	la peau	la pelle	עוֹר	皮	皮膚	بشرة	pí

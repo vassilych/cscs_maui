@@ -1317,7 +1317,7 @@
 	  <BundleResource Include="Resources\Images\cable_car.png" />
 	  <BundleResource Include="Resources\Images\cabbage.png" />
 	  <BundleResource Include="Resources\Images\button.png" />
-	  <BundleResource Include="Resources\Images\buttocks.png" />
+	  <BundleResource Include="Resources\Images\butt__rear.png" />
 	  <BundleResource Include="Resources\Images\butterfly.png" />
 	  <BundleResource Include="Resources\Images\butter.png" />
 	  <BundleResource Include="Resources\Images\butcher.png" />
@@ -2082,6 +2082,8 @@
 	  <BundleResource Include="Resources\Images\honest.png" />
 	  <BundleResource Include="Resources\Images\embarrassed.png" />
 	  <BundleResource Include="Resources\Images\dishonest__crooked.png" />
+	  <BundleResource Include="Resources\Images\chest.png" />
+	  <BundleResource Include="Resources\Images\chest.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2231,6 +2233,7 @@
 	  <None Remove="Resources\Images\honest.png" />
 	  <None Remove="Resources\Images\embarrassed.png" />
 	  <None Remove="Resources\Images\dishonest__crooked.png" />
+	  <None Remove="Resources\Images\chest.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">

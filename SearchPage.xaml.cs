@@ -104,7 +104,7 @@ public partial class SearchPage : ContentPage
         MainPage.Instance?.SetPage(LearnPage.Instance);
         //TabbedPage tp = MainPage.Instance as TabbedPage;
         //tp.SelectedItem = this;
-        await LearnPage.Instance.SetWord(word);
+        await LearnPage.Instance.SetWord(word, true, true);
     }
 
     static string Normalize(string word)

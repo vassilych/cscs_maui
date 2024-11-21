@@ -301,21 +301,26 @@
     </ScrollView>
     <!-- <picker:SfPicker x:Name="Picker" HeightRequest="200" Background="Transparent" VerticalOptions="Start" /> -->
 
-    <Grid x:Name="TopPanel" Margin = "0,4">
+    <Grid x:Name="TopPanel" Margin = "0,1">
     <Grid.ColumnDefinitions>    
         <ColumnDefinition  Width="15*" />
         <ColumnDefinition  Width="70*" />
         <ColumnDefinition  Width="15*" />
     </Grid.ColumnDefinitions>
-        <Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1580" HorizontalTextAlignment="Start" HorizontalOptions="Start"
-            Margin = "2,4,6,0" MaxLines="2" LineBreakMode="WordWrap" WidthRequest="60" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />
-        <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
-                Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
-            <Picker x:Name="CategoryPicker"  
-                Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
-                FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" TitleColor="Black" FontSize="Header">
-            </Picker>
-        </Border>
+    <Border x:Name="WordIdBtnBorder" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 6,6,6,6" Grid.Column="0"
+             Background="LightSkyBlue" HorizontalOptions="StartAndExpand" WidthRequest="75">
+        <Button Margin="0" Padding="0" x:Name="WordId" Text="Palabra 1234/1680" Background="Transparent" LineBreakMode="WordWrap"
+          HorizontalOptions="FillAndExpand" VerticalOptions="Center" FontAttributes="Bold" TextColor="DarkGreen" FontSize="10" />
+    </Border>
+        <!--<Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1580" HorizontalTextAlignment="Start" HorizontalOptions="Start"
+            Margin = "2,4,6,0" MaxLines="2" LineBreakMode="WordWrap" WidthRequest="60" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />-->
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
+            Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
+        <Picker x:Name="CategoryPicker"  
+            Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+            FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" TitleColor="Black" FontSize="Header">
+        </Picker>
+    </Border>
     </Grid>
 
     <Grid x:Name="TopMainPanel" Background="Transparent" Margin = "0,0,0,0" >
@@ -370,7 +375,7 @@
             Margin = "16,4,10,2"
             Background="LightSkyBlue" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
         <Button x:Name="TranslationBtn" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
-          HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="White" FontSize="{Binding FontSize}" />
+          HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="DarkGreen" FontSize="{Binding FontSize}" />
     </Border>
         <!--<ImageButton x:Name="ButSpeak" Margin = "2,0,2,0"  Grid.Column="2" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />-->
     </Grid>
