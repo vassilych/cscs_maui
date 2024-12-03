@@ -301,21 +301,21 @@
     </ScrollView>
     <!-- <picker:SfPicker x:Name="Picker" HeightRequest="200" Background="Transparent" VerticalOptions="Start" /> -->
 
-    <Grid x:Name="TopPanel" Margin = "0,1">
+    <Grid x:Name="TopPanel" Margin = "0,0">
     <Grid.ColumnDefinitions>    
         <ColumnDefinition  Width="15*" />
         <ColumnDefinition  Width="70*" />
         <ColumnDefinition  Width="15*" />
     </Grid.ColumnDefinitions>
     <Border x:Name="WordIdBtnBorder" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 6,6,6,6" Grid.Column="0"
-             Background="LightSkyBlue" HorizontalOptions="StartAndExpand" WidthRequest="75">
+        Margin = "4,0" Background="LightSkyBlue" HorizontalOptions="StartAndExpand" WidthRequest="75" HeightRequest="48">
         <Button Margin="0" Padding="0" x:Name="WordId" Text="Palabra 1234/1680" Background="Transparent" LineBreakMode="WordWrap"
           HorizontalOptions="FillAndExpand" VerticalOptions="Center" FontAttributes="Bold" TextColor="DarkGreen" FontSize="10" />
     </Border>
         <!--<Label x:Name="WordId" Grid.Column="0" Text="Palabra 1234/1580" HorizontalTextAlignment="Start" HorizontalOptions="Start"
             Margin = "2,4,6,0" MaxLines="2" LineBreakMode="WordWrap" WidthRequest="60" VerticalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="10" />-->
-    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"
-            Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" >
+    <Border Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "0,2"  HeightRequest="48"
+            Background="WhiteSmoke" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" Grid.ColumnSpan="2" >
         <Picker x:Name="CategoryPicker"  
             Title="Select Category" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
             FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" TitleColor="Black" FontSize="Header">
@@ -328,12 +328,12 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="5*" />
-            <ColumnDefinition  Width="87*" />
-            <ColumnDefinition  Width="8*" />
+            <ColumnDefinition  Width="2*" />
+            <ColumnDefinition  Width="96*" />
+            <ColumnDefinition  Width="2*" />
         </Grid.ColumnDefinitions>
-    <Border x:Name="MainWordBorder" Grid.Column="0" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Margin = "{StaticResource ButtonsMargin}"
-            Background="White" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand">
+    <Border x:Name="MainWordBorder" Grid.Column="0" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8"
+            Margin = "4" Background="White" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand">
         <Button x:Name="MainWordText" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
           HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="{Binding FontSize}" />
     </Border>
@@ -374,8 +374,8 @@
     <Border x:Name="TranslationBtnBorder" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Grid.Column="1"
             Margin = "16,4,10,2"
             Background="LightSkyBlue" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
-        <Button x:Name="TranslationBtn" Text="enojado" Background="Transparent" LineBreakMode="WordWrap"
-          HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="DarkGreen" FontSize="{Binding FontSize}" />
+        <Button Margin="0" Padding="0" x:Name="TranslationBtn" Text="Word to learn" Background="Transparent" LineBreakMode="WordWrap"
+          HorizontalOptions="FillAndExpand" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="{Binding FontSize}" />
     </Border>
         <!--<ImageButton x:Name="ButSpeak" Margin = "2,0,2,0"  Grid.Column="2" HorizontalOptions="End" Source="speaker.png" Background="Transparent" />-->
     </Grid>

@@ -124,7 +124,6 @@ namespace ScriptingMaui
             }
             using StreamReader sr = new(resourceStream);*/
             Categories.DefaultCategory = Categories.AddGetCategory(Categories.DefaultCategoryName);
-            Categories.CustomCategory = Categories.AddGetCategory(Categories.CustomCategoryName);
 
             var lineNr = 0;
             var wordCounter = 0;
@@ -186,6 +185,7 @@ namespace ScriptingMaui
             randomWords.Insert(0, 0);
             Categories.DefaultCategory.SetIndices(randomWords);
 
+            Categories.CustomCategory = Categories.AddGetCategory(Categories.CustomCategoryName);
             Categories.LearnedCategory = Categories.AddGetCategory(Categories.LearnedCategoryName);
             Categories.TrashCategory = Categories.AddGetCategory(Categories.TrashCategoryName);
         }

@@ -109,6 +109,7 @@ public partial class QuizPage : ContentPage
         speak1.IsVisible = speak2.IsVisible = speak3.IsVisible = false;
         speak4.IsVisible = speak5.IsVisible = speak6.IsVisible = false;
         QuizWordId.Clicked += QuizWordId_Clicked;
+        QuizWordIdBorder.IsVisible = false;
         Reset();
     }
 
@@ -177,6 +178,7 @@ public partial class QuizPage : ContentPage
     private async void StartStopBtn_Clicked(object? sender, EventArgs e)
     {
         m_totalWords = m_category.GetTotalWords();
+        m_quizChoices = SettingsPage.Quiz6 ? 6 : 4;
         if (!m_playing && m_totalWords < m_quizChoices)
         {
             await DisplayAlert(AppInfo.Current.Name,
@@ -197,9 +199,9 @@ public partial class QuizPage : ContentPage
         m_usedWords.Clear();
         m_currentQuizQuestion = 0;
         m_correctInQuiz = 0;
-        m_quizChoices = SettingsPage.Quiz6 ? 6 : 4;
 
         speak1.IsVisible = speak2.IsVisible = speak3.IsVisible = speak4.IsVisible = true;
+        QuizWordIdBorder.IsVisible = true;
         ShowHide();
 
         await GetNewWords();
@@ -337,6 +339,7 @@ public partial class QuizPage : ContentPage
         }
 
         QuizWordId.Text = m_correctWord.GetTranslation(SettingsPage.VoiceLearn);
+        QuizWordId.FontSize = LearnPage.GetFontSize(QuizWordId.Text) + 1;
         m_currentQuizQuestion++;
         if (speak)
         {

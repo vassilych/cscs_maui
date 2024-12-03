@@ -195,7 +195,7 @@ public partial class LearnPage : ContentPage
     public void SetTranslation(string text)
     {
         TranslationBtn.Text = text;
-        TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) - 1;
+        TranslationBtn.FontSize = GetFontSize(TranslationBtn.Text) + 1;
     }
     public void SetTranslationView()
     {
@@ -765,7 +765,6 @@ public class Context
         List<string> cat = new List<string>
         {
             AppResources.all,
-            AppResources.custom_category,
             AppResources.animal_world,
             AppResources.body_parts,
             AppResources.numbers_and_math,
@@ -796,6 +795,7 @@ public class Context
             AppResources.phrases_in_hotel,
             AppResources.phrases_in_restaurant,
             AppResources.flirting_phrases,
+            AppResources.custom_category,
             AppResources.learned_words,
             AppResources.trash
         };

@@ -95,8 +95,14 @@
             <ImageButton x:Name="speak6" Margin="8" Grid.Row="2" Grid.Column="3" HorizontalOptions="FillAndExpand" Source="speaker.png" Background="Transparent" />
 		</Grid>
 
-    <Button x:Name="QuizWordId" Text="" HorizontalOptions="Center" Background="Transparent"
-            VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="18" />
+    <Border x:Name="QuizWordIdBorder" Stroke="Black" StrokeThickness="1" StrokeShape= "RoundRectangle 8,8,8,8" Grid.Column="1"
+            Margin = "16,4,10,2"
+            Background="LightSkyBlue" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
+        <Button Margin="0" Padding="0" x:Name="QuizWordId" Text="" Background="Transparent" LineBreakMode="WordWrap"
+          HorizontalOptions="FillAndExpand" VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="{Binding FontSize}" />
+    </Border>
+    <!-- <Button x:Name="QuizWordId" Text="" HorizontalOptions="Center" Background="Transparent"
+            VerticalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="18" /> -->
 
 	</VerticalStackLayout>
 	<Grid  Grid.Row="1" VerticalOptions="Center" Background="Transparent">

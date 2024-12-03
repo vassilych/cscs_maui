@@ -95,6 +95,7 @@ body parts	ear		das Ohr		ухо	la oreja		a orelha	l'oreille	l'orecchio	אֹזֶ
 body parts	elbow		der Ellbogen		локоть	el codo		o cotovelo	le coude	il gomito	מַרְפֵּק	肘部	肘	كوع	zhǒu bù
 body parts	eye		das Auge		глаз	el ojo		o olho	l'œil	l'occhio	עַיִן	眼睛	目	عين	yǎnjīng
 body parts	eyebrow		die Augenbraue		бровь	la ceja		a sobrancelha	le sourcil	il sopracciglio	גַבָּה	眉毛	眉	حاجب العين	méimáo
+body parts	eyelash		die Wimper		ресница	la pestaña		a pestana, o cílio	le cil	il ciglio	רִיס	睫毛	アイラッシュ	الرموش	Jiémáo
 body parts	face		das Gesicht	Gsicht	лицо	la cara		o rosto	le visage	la faccia	פָּנִים	脸	顔	وجه	liǎn
 body parts	finger		der Finger		палец	el dedo		o dedo	le doigt	il dito	אֶצבַּע	手指	指	اصبع اليد	shǒuzhǐ
 body parts	fist		die Faust	Fuscht	кулак	el puño		o punho	le poing	il pugno	אֶגְרוֹף	拳头	拳	قبضة	quántóu
@@ -116,6 +117,7 @@ body parts	mouth		der Mund	Muul	рот	la boca		a boca	la bouche	la bocca	פֶּ
 body parts	mustache	moustache	der Schnurrbart		усы	el bigote		o bigode	la moustache	i baffi	שָׂפָם	胡子	口ひげ	شارب	húzi
 body parts	finger nail		der Fingernagel		ноготь	la uña		a unha 	l'ongle	l'unghia	ציפורן 	指甲	指の爪	ظفر	zhǐjiǎ
 body parts	neck		der Hals		шея	el cuello		o pescoço	le cou	il collo	צבאר	脖子	首	العنق	bózi
+body parts	Adam's apple		der Adamsapfel		кадык	la manzana de Adán	la nuez, el bocado de Adán	o pomo de adão	la pomme d'Adam	il pomo d'Adamo	התפוח של אדם	喉结	アダムのリンゴ	تفاحة آدم	Hóujié
 body parts	nose		die Nase		нос	la nariz		o nariz	le nez	il naso	אַף	鼻子	鼻	أنف	bízi
 body parts	shoulder		die Schulter		плечо	el hombro		o ombro	l'épaule	la spalla	כָּתֵף	肩膀	肩	كتف	jiānbǎng
 body parts	skeleton		das Skelett		скелет	el esqueleto		o esqueleto	le squelette	lo scheletro	שֶׁלֶד	骨架	骨格	هيكل عظمى	gǔjià
@@ -678,6 +680,7 @@ tools and appliances	board		das Brett		доска	la tabla		o quadro 	la planche
 tools and appliances	paintbrush		der Pinsel		кисть	la brocha		o pincel	le pinceau	il pennello	מִכחוֹל	画笔，漆刷	絵筆	فرشاة الرسم	huàbǐ, qī shuā
 tools and appliances	measuring tape		das Maßband		рулетка	la cinta métrica		a fita métrica	le mêtre 	il nastro di misurazione	סרט מדידה	卷尺	巻き尺	شريط قياس	juǎnchǐ
 tools and appliances	battery		die Batterie		батарейка	la pila		a bateria	la pile	la batteria	סוֹלְלָה	电池	バッテリー、電池	بطارية	diànchí
+tools and appliances	fuse		die Schmelzsicherung		предохранитель, пробка	el fusible		o fusível	​le fusible	il fusibile	נתיך חשמלי	电保险丝	ヒューズ	المصهر	Diàn bǎoxiǎnsī
 tools and appliances	connection cable		der Leitungsdraht		провод	el cable conductor		o cabo de conexão	le fil conducteur	il cavo di collegamento	כבל חיבור	接线电缆	接続ケーブル	كابل توصيل	jiēxiàn diànlǎn
 tools and appliances	charger		das Ladegerät		зарядка	el cargador		o carregador	le chargeur	il caricabatteria	מַטעֵן	充电器	充電器	شاحن	chōngdiàn qì
 tools and appliances	box		die Schachtel	Schachtle 	коробка	la caja		a caixa	la boîte	la scatola	קוּפסָה	盒子	箱	صندوق	hézi
@@ -881,6 +884,9 @@ accesories	suitcase		der Koffer		чемодан	la maleta		a mala de viagem	la v
 accesories	headphones		der Kopfhörer		наушники	los audífonos	los auriculares	o fone de ouvido	les écouteurs	le cuffie	אוזניות	耳机	ヘッドフォン	سماعات الرأس	ěrjī
 accesories	eyeglasses	spectacles	die Brille	Brüle	очки	los lentes	las gafas	o óculos	les lunettes	gli occhiali	מִשׁקָפַיִם	眼镜	眼鏡	نظارة	yǎnjìng
 accesories	sunglasses		die Sonnenbrille	Sunnebrüle	солнцезащитные очки	los lentes de sol	las gafas de sol	o óculos de sol	les lunettes de soleil	gli occhiali da sole	מִשְׁקפֵי שֶׁמֶשׁ	太阳镜	サングラス	نظارات شمسية	tàiyángjìng
+accesories	rifle		das Gewehr		ружьё, автомат	el rifle		o rifle	le fusil	il fucile	רוֹבֶה	步枪	ライフル	بندقية 	Bùqiāng
+accesories	shotgun		die Schrotflinte		дробовик	la escopeta		a espingarda	le  fusil de chasse	il fucile da caccia, la carabina	רוֹבֵה צַיִד	霰弹枪	散弾銃	بندقية صيد 	xiàndàn qiāng
+accesories	gun		die Pistole		пистолет	la pistola		a pistola	le pistolet	la pistola	אֶקְדָח	枪	ピストル	بندقية، مدفع، مدفع رشاش 	qiāng
 family and kids	wedding		die Hochzeit	Hochziit	свадьба	la boda		o casamento	le mariage	il matrimonio	חֲתוּנָה	婚礼	結婚式	حفل زواج	hūnlǐ
 family and kids	pregnant		schwanger		беременная	embarazada		grávida	enceinte	essere incinta	בְּהֵרָיוֹן	怀孕的	妊娠	حامل	huáiyùn de
 family and kids	abortion		die Abtreibung		аборт	el aborto		o aborto	l'avortement	l'aborto	הַפָּלָה	流产	妊娠中絶	الإجهاض	Liúchǎn
@@ -1221,6 +1227,8 @@ environment	fire		das Feuer		огонь	el fuego		o fogo	le feu	il fuoco	אֵש�
 environment	sunrise		der Sonnenaufgang	Sunneufgang	восход солнца	la salida del sol		o nascer do sol	le lever du soleil	l'alba, la levata del sole	זְרִיחָה	日出	日の出	شروق الشمس	rì chū
 environment	sunset		der Sonnenuntergang	Sunneuntergang	заход солнца	la puesta del sol		o pôr do sol	le coucher du soleil	Il tramonto del sole	שְׁקִיעַת הַשֶׁמֶשׁ	日落	日没	غروب الشمس	rì luò
 environment	snow		der Schnee		снег	la nieve		a neve	la neige	la neve	שֶׁלֶג	雪	雪	ثلج	xuě
+environment	sand		der Sand		песок	la arena		a areia	le sable	la sabbia	חוֹל	沙	砂	الرمال	Shā
+environment	beach		der Strand		пляж	la playa		a praia	la plage	la spiaggia	חוֹף	滩	ビーチ	الشاطئ	tān
 environment	desert		die Wüste	Wüeschti	пустыня	el desierto		o deserto	le désert	il deserto	מִדבָּר	沙漠	砂漠	صحراء	shāmò
 environment	city		die Stadt		город	la ciudad		a cidade	la ville	la città	עִיר	城市	街	المدينة	chéngshì
 environment	village		das Dorf		деревня	el pueblo		a aldeia	le village	il villaggio	כְּפָר	村	村	قرية	cūn

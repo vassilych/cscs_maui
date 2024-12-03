@@ -2084,6 +2084,15 @@
 	  <BundleResource Include="Resources\Images\dishonest__crooked.png" />
 	  <BundleResource Include="Resources\Images\chest.png" />
 	  <BundleResource Include="Resources\Images\chest.png" />
+	  <BundleResource Include="Resources\Images\butt__rear.png" />
+	  <BundleResource Include="Resources\Images\gun.png" />
+	  <BundleResource Include="Resources\Images\rifle.png" />
+	  <BundleResource Include="Resources\Images\shotgun.png" />
+	  <BundleResource Include="Resources\Images\sand.png" />
+	  <BundleResource Include="Resources\Images\beach.png" />
+	  <BundleResource Include="Resources\Images\fuse.png" />
+	  <BundleResource Include="Resources\Images\eyelash.png" />
+	  <BundleResource Include="Resources\Images\adam_s_apple.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2234,6 +2243,15 @@
 	  <None Remove="Resources\Images\embarrassed.png" />
 	  <None Remove="Resources\Images\dishonest__crooked.png" />
 	  <None Remove="Resources\Images\chest.png" />
+	  <None Remove="Resources\Images\butt__rear.png" />
+	  <None Remove="Resources\Images\gun.png" />
+	  <None Remove="Resources\Images\rifle.png" />
+	  <None Remove="Resources\Images\shotgun.png" />
+	  <None Remove="Resources\Images\sand.png" />
+	  <None Remove="Resources\Images\beach.png" />
+	  <None Remove="Resources\Images\fuse.png" />
+	  <None Remove="Resources\Images\eyelash.png" />
+	  <None Remove="Resources\Images\adam_s_apple.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">
