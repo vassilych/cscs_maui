@@ -77,70 +77,76 @@ animal world	wolf		der Wolf	Wolf	волк	el lobo		o Lobo	le loup	il lupo	זְא
 animal world	woodpecker		der Specht	Späächt	дятел	el pájaro carpintero		o Pica pau	le pivers	il picchio	נַקָר	啄木鸟	キツツキ	نقار الخشب	zhuómùniǎo
 animal world	worm		der Wurm	Wurm	червь	el gusano		a Minhoca	le ver	il verme	תוֹלַעַת	蠕虫	ミミズ	دودة	rúchóng
 animal world	zebra		das Zebra	Zebra	зебра	la cebra		a zebra	le zèbre	la zebra	זֶבּרָה	斑马	シマウマ	حمار الوحشي	bānmǎ
+body parts	body		der Körper		тело	el cuerpo		o corpo	le corps	il corpo	גוּף	身体	体	الجسم	shēntǐ
+body parts	head		der Kopf		голова	la cabeza		a cabeça	la tête	la testa	רֹאשׁ	头	頭	رأس	tóu
+body parts	forehead		die Stirn		лоб	la frente		a testa	le front	la fronte	מֵצַח	前额	額	جبهة الرأس	qián'é
+body parts	occiput, back of the head		der Hinterkopf		затылок	el cogote, el occipucio		o cangote	l'occiput	la nuca, l'occipite	האחורי של הראש	后脑勺	こうとう	قذيفة	Hòunǎosháo
+body parts	brain		das Gehirn		мозг	el cerebro		o cérebro	le cerveau	il cervello	מוֹחַ	头脑	脳	دماغ	tóunǎo
+body parts	hair		die Haare		волосы	el pelo		o cabelo	les cheveux	i capelli	שֵׂעַר	头发	髪	شعر	tóufǎ
+body parts	face		das Gesicht	Gsicht	лицо	la cara		o rosto	le visage	la faccia	פָּנִים	脸	顔	وجه	liǎn
+body parts	beard		der Bart		борода	la barba		a barba	la barbe	la barba	זָקָן	胡须	髭	لحية	Húxū
+body parts	mustache	moustache	der Schnurrbart		усы	el bigote		o bigode	la moustache	i baffi	שָׂפָם	胡子	無精ひげ	شارب	Húzǐ
+body parts	stubble	five o'clock shadow	die Bartstoppeln		щетина	la barba de varios días	la barba incipiente	a barba espetada	la barbe de trois jours	i baffi	זִיף	鬃	口ひげ	شعيرات	Zōng
+body parts	braid	plait	der Zopf		коса	la trenza		a trança	la tresse	la treccia	צמה	辫子	三つ編み	جديلة	biànzi
+body parts	ear		das Ohr		ухо	la oreja		a orelha	l'oreille	l'orecchio	אֹזֶן	耳朵	耳	أذن	ěrduǒ
+body parts	eye		das Auge		глаз	el ojo		o olho	l'œil	l'occhio	עַיִן	眼睛	目	عين	yǎnjīng
+body parts	eyebrow		die Augenbraue		бровь	la ceja		a sobrancelha	le sourcil	il sopracciglio	גַבָּה	眉毛	眉	حاجب العين	méimáo
+body parts	eyelash		die Wimper		ресница	la pestaña		a pestana, o cílio	le cil	il ciglio	רִיס	睫毛	アイラッシュ	الرموش	Jiémáo
+body parts	cheek		die Wange	Backe	щека	la mejilla		a bochecha	la joue	la guancia	לֶחִי	脸颊	頬	الخد	liǎnjiá
+body parts	freckle		die Sommersprosse		веснушка	la peca		as Sardas	la tache de rousseur	la lentiggine	נֶמֶשׁ	雀斑	そばかす	نمش	quèbān
+body parts	nose		die Nase		нос	la nariz		o nariz	le nez	il naso	אַף	鼻子	鼻	أنف	bízi
+body parts	lips		die Lippe		губы	los labios		os lábios	les lèvres	le labbra	שפתיים	嘴唇	唇	شفاه	zuǐchún
+body parts	mouth		der Mund	Muul	рот	la boca		a boca	la bouche	la bocca	פֶּה	嘴巴	口	فم	zuǐbā
+body parts	jaw		der Kiefer		челюсть	la mandíbula		a mandíbula	la mâchoire	la mascella	לֶסֶת	颚	顎	الفك	è
+body parts	tooth		der Zahn	Zah	зуб	el diente		o dente	la dent	il dente	שֵׁן	牙齿	歯	السن	yáchǐ
+body parts	tongue		die Zunge		язык	la lengua		a língua	la langue	la lingua	לָשׁוֹן	舌头	舌	لسان	shétou
+body parts	chin		das Kinn	Chüni	подбородок	la barbilla	el mentón	o queixo	le menton	il mento	סַנְטֵר	下巴	顎	ذقن	xiàbā
+body parts	neck		der Hals		шея	el cuello		o pescoço	le cou	il collo	צבאר	脖子	首	العنق	bózi
+body parts	Adam's apple		der Adamsapfel		кадык	la manzana de Adán	la nuez, el bocado de Adán	o pomo de adão	la pomme d'Adam	il pomo d'Adamo	התפוח של אדם	喉结	アダムのリンゴ	تفاحة آدم	Hóujié
+body parts	shoulder		die Schulter		плечо	el hombro		o ombro	l'épaule	la spalla	כָּתֵף	肩膀	肩	كتف	jiānbǎng
+body parts	scapula, shoulder blade		das Schulterblatt		лопатка	el omóplato, la espaldilla	el omóplato, la escápula	a omoplata, a lâmina do ombro	l'omoplate	la scapola	עֶצֶם הַשֶׁכֶם	肩胛骨	肩甲骨	نصل الكتف	Jiānjiǎgǔ
+body parts	spine, backbone		die Wirbelsäule		позвоночник	la columna vertebral, la espina dorsal		a coluna vertebral	la colonne vertébrale, l'épine dorsale	la colonna vertebrale, la spina dorsale	עמוד שדרה, עמוד שדרה	脊柱	バックボーン	العمود الفقري	jǐzhù
+body parts	rib		die Rippe		ребро	la costilla		a costela	la côte	la costola	צֵלָע	肋骨	リブ	الضلع	lèigǔ
+body parts	breast		die Brust	Bruscht	грудь	el seno, la teta, el pecho		o seio, a mama, o peito	la poitrine	il petto	שד, ציצי	乳房	乳房	الثدي	Rǔfáng
+body parts	chest		der Brustkorb, die Brust		грудная клетка, грудь	el pecho		o peito	la poitrine, le sein	il seno	חָזֶה	胸部	胸部	الصدر	xiōngbù
+body parts	nipple		der Nippel		сосок	el pezón, la mamila	el pezón	o o mamilo	le mamelon	il capezzolo	פִּטמָה	乳头	乳首	الحلمة	rǔtóu
+body parts	heart		das Herz		сердце	el corazón		o coração	le cœur	il cuore	לֵב	心脏	心臓	قلب	xīnzàng
+body parts	lungs		die Lunge		лёгкие	los pulmones		os pulmões	le poumon	i polmoni	ריאות	肺	肺	الرئتين	fèi
+body parts	waist		die Taille		талия	la cintura		a cintura	la taille	la vita	מוֹתֶן	腰部	ウエスト	الخصر	yāobù
 body parts	abdomen, abs		das Abdomen, die Bauchmuskeln		пресс	el abdomen		o abdômen	l’abdomen	l'addome	שרירי הבטן		腹部 腹肌	腹部腹筋	البطن والبطن	Fùbù fù jī
 body parts	belly		der Bauch	Buuch	живот	la panza, el vientre	la barriga	a barriga	le ventre	il ventre, la pancia	בטן 	腹部	腹部	بطن	fùbù
 body parts	stomach		der Magen		желудок	el estómago		o estômago	l'estomac	lo stomaco	קיבה	胃	胃	معدة	wèi
 body parts	belly button		der Bauchnabel	Buchnabel	пупок	el ombligo		o umbigo	le nombril	l'ombelico	טבור	肚脐	へそ	السرة	dùqí
 body parts	arm		der Arm		рука	el brazo		o braço	le bras	il braccio	זְרוֹעַ	手臂	腕	ذراع	shǒubì
-body parts	back		der Rücken	Rugge	спина	la espalda		as costas	le dos	la schiena	גב	背	背中	ظهر	bèi
-body parts	beard		der Bart		борода	la barba		a barba	la barbe	la barba	זָקָן	胡子	髭	لحية	húzi
-body parts	body		der Körper		тело	el cuerpo		o corpo	le corps	il corpo	גוּף	身体	体	الجسم	shēntǐ
-body parts	braid	plait	der Zopf		коса	la trenza		a trança	la tresse	la treccia	צמה	辫子	三つ編み	جديلة	biànzi
-body parts	breast		die Brust	Bruscht	грудь	el seno, la teta, el pecho		o seio, a mama, o peito	la poitrine	il petto	שד, ציצי	乳房	乳房	الثدي	Rǔfáng
-body parts	chest		der Brustkorb, die Brust		грудная клетка, грудь	el pecho		o peito	la poitrine, le sein	il seno	חָזֶה	胸部	胸部	الصدر	xiōngbù
-body parts	nipple		der Nippel		сосок	el pezón, la mamila	el pezón	o o mamilo	le mamelon	il capezzolo	פִּטמָה	乳头	乳首	الحلمة	rǔtóu
-body parts	cheek		die Wange	Backe	щека	la mejilla		a bochecha	la joue	la guancia	לֶחִי	脸颊	頬	الخد	liǎnjiá
-body parts	chin		das Kinn	Chüni	подбородок	la barbilla	el mentón	o queixo	le menton	il mento	סַנְטֵר	下巴	顎	ذقن	xiàbā
-body parts	ear		das Ohr		ухо	la oreja		a orelha	l'oreille	l'orecchio	אֹזֶן	耳朵	耳	أذن	ěrduǒ
+body parts	hand		die Hand		кисть руки	la mano		a mão	la main	la mano	יָד	手	手	يد	shǒu
 body parts	elbow		der Ellbogen		локоть	el codo		o cotovelo	le coude	il gomito	מַרְפֵּק	肘部	肘	كوع	zhǒu bù
-body parts	eye		das Auge		глаз	el ojo		o olho	l'œil	l'occhio	עַיִן	眼睛	目	عين	yǎnjīng
-body parts	eyebrow		die Augenbraue		бровь	la ceja		a sobrancelha	le sourcil	il sopracciglio	גַבָּה	眉毛	眉	حاجب العين	méimáo
-body parts	eyelash		die Wimper		ресница	la pestaña		a pestana, o cílio	le cil	il ciglio	רִיס	睫毛	アイラッシュ	الرموش	Jiémáo
-body parts	face		das Gesicht	Gsicht	лицо	la cara		o rosto	le visage	la faccia	פָּנִים	脸	顔	وجه	liǎn
+body parts	wrist		das Handgelenk		запястье	la muñeca		o pulso	le poignet	il polso	 כַּף יָד	腕	手首	معصم	wàn
 body parts	finger		der Finger		палец	el dedo		o dedo	le doigt	il dito	אֶצבַּע	手指	指	اصبع اليد	shǒuzhǐ
 body parts	fist		die Faust	Fuscht	кулак	el puño		o punho	le poing	il pugno	אֶגְרוֹף	拳头	拳	قبضة	quántóu
-body parts	foot		der Fuß	Fuess	ступня, стопа	el pie		o pé	le pied	il piede	רֶגֶל	脚	足	قدم	jiǎo
-body parts	toe		der Zeh		палец ноги	el dedo del pie		o dedo do pé	l'orteil	il dito del piede	אֶצבַּע	脚趾	つま先	اصبع القدم	jiǎozhǐ
-body parts	ankle		der Knöchel		щиколотка	el tobillo		o tornozelo	la cheville	la caviglia	קַרסוֹל	脚踝	足首	الكاحل	jiǎohuái
-body parts	forehead		die Stirn		лоб	la frente		a testa	le front	la fronte	מֵצַח	前额	額	جبهة الرأس	qián'é
-body parts	freckle		die Sommersprosse		веснушка	la peca		as Sardas	la tache de rousseur	la lentiggine	נֶמֶשׁ	雀斑	そばかす	نمش	quèbān
-body parts	hair		die Haare		волосы	el pelo		o cabelo	les cheveux	i capelli	שֵׂעַר	头发	髪	شعر	tóufǎ
-body parts	hand		die Hand		кисть руки	la mano		a mão	la main	la mano	יָד	手	手	يد	shǒu
-body parts	wrist		das Handgelenk		запястье	la muñeca		o pulso	le poignet	il polso	 כַּף יָד	腕	手首	معصم	wàn
-body parts	head		der Kopf		голова	la cabeza		a cabeça	la tête	la testa	רֹאשׁ	头	頭	رأس	tóu
-body parts	knee		das Knie	Knü	колено	la rodilla		o joelho	le genou	il ginocchio	בֶּרֶך	膝盖	膝	ركبة	xīgài
+body parts	finger nail		der Fingernagel		ноготь	la uña		a unha 	l'ongle	l'unghia	ציפורן 	指甲	指の爪	ظفر	zhǐjiǎ
+body parts	biceps		der Bizeps		бицепс	el bíceps		os bíceps	le biceps	il bicipite	שְׁרִיר הַזְרוֹעַ	二头肌	上腕二頭筋	العضلة ذات الرأسين	èr tóu jī
+body parts	triceps		der Trizeps		трицепс	el tríceps		os Tríceps	le triceps	il tricipite	תלת ראשי	三头肌	上腕三頭筋	عضلة ثلاثية الرؤوس	sān tóu jī
+body parts	kidney		die Niere		почка	el riñón		o rim	le rein	il rene	כִּליָה	肾	腎臓	الكلى	Shèn
+body parts	liver		die Leber		печень	el hígado		o fígado	le foie	il fegato	כָּבֵד	肝脏	肝臓	كبد	gānzàng
+body parts	back		der Rücken	Rugge	спина	la espalda		as costas	le dos	la schiena	גב	背	背中	ظهر	bèi
+body parts	lower back		das Kreuz, unterer Rücken		поясница	la espalda baja, la zona lumbar		a lombar, a parte inferior das costas	le bas du dos	la zona lombare, la parte bassa della schiena	קטן מהגב	后背小	腰	أسفل الظهر	Hòu bèi xiǎo
+body parts	hip		die Hüfte		бедро, бок	la cadera		o quadril, a cadeira	la hanche	l'anca	מוֹתֶן,יָרֵך	时髦的	ヒップ	الورك	Shímáo de
+body parts	butt, rear	buttocks, rear	der Hintern, der Po		попа, ягодицы	el trasero, las nalgas		as nádegas	les fesses	le natiche	אגן	臀部	臀部	الاليتان	túnbù
 body parts	leg		das Bein	Bei	нога	la pierna		a perna	la jambe	la gamba	רֶגֶל	退	足	ساق	tuì
 body parts	thigh		der Oberschenkel		бедро, ляжка	el muslo		a coxa	la cuisse	la coscia	יָרֵך	大腿	もも	فخذ	dàtuǐ
 body parts	shin		das Schienbein		голень	la espinilla		a canela	le tibia	lo stinco	שׁוּקָה	胫	すね	قصبة	jìng
-body parts	lips		die Lippe		губы	los labios		os lábios	les lèvres	le labbra	שפתיים	嘴唇	唇	شفاه	zuǐchún
-body parts	mouth		der Mund	Muul	рот	la boca		a boca	la bouche	la bocca	פֶּה	嘴巴	口	فم	zuǐbā
-body parts	mustache	moustache	der Schnurrbart		усы	el bigote		o bigode	la moustache	i baffi	שָׂפָם	胡子	口ひげ	شارب	húzi
-body parts	finger nail		der Fingernagel		ноготь	la uña		a unha 	l'ongle	l'unghia	ציפורן 	指甲	指の爪	ظفر	zhǐjiǎ
-body parts	neck		der Hals		шея	el cuello		o pescoço	le cou	il collo	צבאר	脖子	首	العنق	bózi
-body parts	Adam's apple		der Adamsapfel		кадык	la manzana de Adán	la nuez, el bocado de Adán	o pomo de adão	la pomme d'Adam	il pomo d'Adamo	התפוח של אדם	喉结	アダムのリンゴ	تفاحة آدم	Hóujié
-body parts	nose		die Nase		нос	la nariz		o nariz	le nez	il naso	אַף	鼻子	鼻	أنف	bízi
-body parts	shoulder		die Schulter		плечо	el hombro		o ombro	l'épaule	la spalla	כָּתֵף	肩膀	肩	كتف	jiānbǎng
+body parts	knee		das Knie	Knü	колено	la rodilla		o joelho	le genou	il ginocchio	בֶּרֶך	膝盖	膝	ركبة	xīgài
+body parts	calf, calf muscle		die Wade, der Wadenmuskel		икра, икроножная мышца	el chamorro, la pantorrilla, el músculo de la pantorrilla	la pantorrilla, el músculo de la pantorrilla	a panturrilha, o músculo da panturrilha	le mollet, le muscle du mollet	il polpaccio, il muscolo del polpaccio	שריר השוקיים	小腿肌肉	ひふく	عضلة ربلة الساق	Xiǎotuǐ jīròu
+body parts	ankle		der Knöchel		щиколотка	el tobillo		o tornozelo	la cheville	la caviglia	קַרסוֹל	脚踝	足首	الكاحل	jiǎohuái
+body parts	foot		der Fuß	Fuess	ступня, стопа	el pie		o pé	le pied	il piede	רֶגֶל	脚	足	قدم	jiǎo
+body parts	toe		der Zeh		палец ноги	el dedo del pie		o dedo do pé	l'orteil	il dito del piede	אֶצבַּע	脚趾	つま先	اصبع القدم	jiǎozhǐ
 body parts	skeleton		das Skelett		скелет	el esqueleto		o esqueleto	le squelette	lo scheletro	שֶׁלֶד	骨架	骨格	هيكل عظمى	gǔjià
-body parts	spine, backbone		die Wirbelsäule		позвоночник	la columna vertebral, la espina dorsal		a coluna vertebral	la colonne vertébrale, l'épine dorsale	la colonna vertebrale, la spina dorsale	עמוד שדרה, עמוד שדרה	脊柱	バックボーン	العمود الفقري	jǐzhù
 body parts	skull		der Schädel		череп	el cráneo		o crânio	le crâne	il cranio	גוּלגוֹלֶת	头骨	頭蓋骨	الجمجمة	tóugǔ
-body parts	rib		die Rippe		ребро	la costilla		a costela	la côte	la costola	צֵלָע	肋骨	リブ	الضلع	lèigǔ
 body parts	bone		der Knochen		кость	el hueso		o osso	l'os	l'osso	עֶצֶם	骨	骨	العظم	gǔ
-body parts	jaw		der Kiefer		челюсть	la mandíbula		a mandíbula	la mâchoire	la mascella	לֶסֶת	颚	顎	الفك	è
-body parts	tooth		der Zahn	Zah	зуб	el diente		o dente	la dent	il dente	שֵׁן	牙齿	歯	السن	yáchǐ
-body parts	tongue		die Zunge		язык	la lengua		a língua	la langue	la lingua	לָשׁוֹן	舌头	舌	لسان	shétou
-body parts	waist		die Taille		талия	la cintura		a cintura	la taille	la vita	מוֹתֶן	腰部	ウエスト	الخصر	yāobù
-body parts	butt, rear	buttocks, rear	der Hintern, der Po		попа, ягодицы	el trasero, las nalgas		as nádegas	les fesses	le natiche	אגן	臀部	臀部	الاليتان	túnbù
 body parts	wound		die Wunde		рана	la herida		a ferida	la plaie	la ferita	פֶּצַע	创伤	傷	جرح	chuāngshāng
 body parts	scar		die Narbe		шрам	la cicatriz		a cicatriz	la cicatrice	la cicatrice	צַלֶקֶת	疤痕	傷跡	ندبة	bāhén
 body parts	skin		die Haut	Huut	кожа	la piel		a pele	la peau	la pelle	עוֹר	皮	皮膚	بشرة	pí
-body parts	biceps		der Bizeps		бицепс	el bíceps		os bíceps	le biceps	il bicipite	שְׁרִיר הַזְרוֹעַ	二头肌	上腕二頭筋	العضلة ذات الرأسين	èr tóu jī
-body parts	triceps		der Trizeps		трицепс	el tríceps		os Tríceps	le triceps	il tricipite	תלת ראשי	三头肌	上腕三頭筋	عضلة ثلاثية الرؤوس	sān tóu jī
 body parts	blood		das Blut	Bluet	кровь	la sangre		o sangue	le sang	il sangue	דָם	血液	血、血液	دم	xiěyè
-body parts	heart		das Herz		сердце	el corazón		o coração	le cœur	il cuore	לֵב	心脏	心臓	قلب	xīnzàng
-body parts	lungs		die Lunge		лёгкие	los pulmones		os pulmões	le poumon	i polmoni	ריאות	肺	肺	الرئتين	fèi
-body parts	liver		die Leber		печень	el hígado		o fígado	le foie	il fegato	כָּבֵד	肝脏	肝臓	كبد	gānzàng
-body parts	brain		das Gehirn		мозг	el cerebro		o cérebro	le cerveau	il cervello	מוֹחַ	头脑	脳	دماغ	tóunǎo
-body parts	sawdust		das Sägemehl		опилки	el serrín		a serragem	la sciure	la segatura	נְסוֹרֶת	木屑	…のぼろをさらけ出す	نشارة الخشب	mùxiè
 numbers and math	zero		null		ноль	cero		zero	zéro	zero	אֶפֶס	零	ゼロ	صفر	líng
 numbers and math	one		eins	eis	один	uno		um	un	uno	אֶחָד	一	一、壱	واحد	yī
 numbers and math	two		zwei	zwei	два	dos		dois	deux	due	שתיים	二	二	اثنان	èr
@@ -357,7 +363,7 @@ sport	water ski		der Wasserski		водные лыжи	el esquí acuático		o wak
 sport	weightlifting		das Gewichtheben		тяжёлая атлетика	el levantamiento de pesas		o levantamento de peso	l'haltérophilie	il sollevamento pesi	הרמת משקולות	举重	重量挙げ	رفع الاثقال	jǔzhòng
 sport	wrestling		der Ringkampf		борьба	la lucha		a luta livre	la lutte	la lotta	הַאָבְקוּת	摔跤	レスリング	مصارعة	shuāijiāo
 sport	ball		der Ball	Bölle	мяч	la pelota		a bola	le ballon	la palla	כַּדוּר	球类运动	球技	كرة	qiú lèi yùndòng
-sport	birdie	shuttlecock	der Federball		волан	el volante de bádminton		o passarinho	le volant de badminton	l'uccellino	צִפּוֹרָה	毽子	バドミントンの羽根	طثة	jiànzi
+sport	birdie, shuttle	shuttlecock	der Federball		волан	el gallito	el volante, la pluma	o passarinho	le volant de badminton	l'uccellino	צִפּוֹרָה	毽子	バドミントンの羽根	طثة	jiànzi
 sport	badminton		​das Badminton		бадминтон	el bádminton		o badminton	le badminton	​il badminton	בַּדמִינטוֹן	羽毛球	バドミントン	تنس الريشة	Yǔmáoqiú
 sport	tennis		​das Tennis		теннис	el tenis		o tênis	le tennis	​il tennis	טֶנִיס	网球	テニス	التنس 	Wǎngqiú
 sport	racket		der Schläger		ракетка	la raqueta		a raquete	la raquette	la racchetta	מַחבֵּט	球拍	ラケット	مضرب تنس	qiúpāi
@@ -422,23 +428,32 @@ fruits and vegetables	banana		die Banane		банан	el plátano		a banana	la ba
 fruits and vegetables	beet	beetroot	die rote Beete		свекла	la betabel	la remolacha	a beterraba	la betterave	la barbabietola	סֶלֶק	甜菜	カブ	بنجر	tiáncài
 fruits and vegetables	cabbage		der Kohl	Chohl	капуста	el col		o repolho	le chou	il cavolo	כְּרוּב	卷心菜	キャベツ	الكرنب	juǎnxīncài
 fruits and vegetables	carrot		die Karotte	Rüebli	морковь	la zanahoria		a cenoura	la carotte	la carota	גֶזֶר	胡萝卜	ニンジン	جزر	húluóbo
+fruits and vegetables	spinach		der Spinat		шпинат	la espinaca		o espinafre	l'épinard	gli spinaci	תֶרֶד	菠菜	ほうれん草	السبانخ	Bōcài
+fruits and vegetables	lettuce		der Kopfsalat		салат (кочан)	la lechuga		o alface	la laitue	la lattuga	חַסָה	莴苣	レタス	الخس	wōjù
+fruits and vegetables	lamb's lettuce	mache	der Nüsslisalat, der Feldsalat		полевой салат	los canónigos		os canônigos	la mâche	la valerianella, il formentino	חסה טלה 	野莴苣	ラムレタス	خس الضأن	Yě wōjù
+fruits and vegetables	chicory		die Zichorie, die Chicorée	die Chicorée	цикорий	la chicoria		a chicória	la chicorée	la cicoria	עוֹלֶשׁ	菊苣	チコリ	الهندباء	Jújù
+fruits and vegetables	arugula	rocket plant	die Rucola		руккола	la rúcola		a rucola	la roquette	la rucola	ארוגולה	芝麻菜	ルッコラ	جرجير	Zhīma cài
+fruits and vegetables	cilantro	coriander	der Koriander		киндза, кориандр	el cilantro		o coentro	la coriandre	il coriandolo	כוסברה	香菜	コリアンダー	الكزبرة	Xiāngcài
 fruits and vegetables	cauliflower		der Blumenkohl	Bluemechohl	цветная капуста	la coliflor		o couve-flor	le chou-fleur	il cavolfiore	כְּרוּבִית	花椰菜	カリフラワー	قرنبيط	huāyēcài
 fruits and vegetables	broccoli		der Brokkoli		брокколи	el brócoli		os brócolis	le brocoli	il broccolo	בְּרוֹקוֹלִי	西兰花	ブロッコリー	بروكلي	Xī lánhuā
+fruits and vegetables	Brussels sprouts		der Rosenkohl		Брюссельская капуста	las coles de Bruselas		a couve-de-bruxelas	les choux de Bruxelles	i cavoletti di Bruxelles	נבטי בריסל	球芽甘蓝	芽キャベツ	براعم بروكسل	Qiú yá gānlán
+fruits and vegetables	artichoke		die Artischocke		артишок	la alcachofa		a alcachofra	l'artichaut	il carciofo	אַרטִישׁוֹק	朝鲜蓟	アーティチョーク	الخرشوف	Cháoxiǎn jì
+fruits and vegetables	eggplant	aubergine	die Aubergine		баклажан	la berenjena		a berinjela	l'aubergine	la melanzana	חָצִיל	茄子	ナス	الباذنجان	qiézi
+fruits and vegetables	zucchini	courgette	die Zucchini	die Zucchetti	кабачок	la calabacita	el calabacín	a abobrinha	la courgette	lo zucchino	קִשׁוּא	绿皮西葫芦	ズッキーニ	كوسة	lǜ pí xīhúlu
 fruits and vegetables	cherry		die Kirsche	Chriesi	вишня	la cereza		a cereja	la cerise	la ciliegia	דוּבדְבָן	樱桃	チェリー	الكرز	yīngtáo
 fruits and vegetables	chestnut		die Kastanie	Marone	каштан	la castaña		a castanha	la châtaigne	la castagna	עַרמוֹן	板栗	栗	كستناء	bǎnlì
 fruits and vegetables	coconut		die Kokosnuss		кокосовый орех	el coco		o coco	la noix de coco	la noce di cocco	קוֹקוּס	椰子	ココナッツ	جوزة الهند	yēzi
 fruits and vegetables	coffee bean		die Kaffeebohne	Kafibohne	кофейное зерно	el grano de café		o grão de café	le grain de café	il chicco di caffè	פולי קפה	咖啡豆	コー​​ヒー豆	حبوب القهوة	kāfēi dòu
 fruits and vegetables	corn	maize	der Mais		кукуруза	el elote	el maíz	o milho	le maïs	il mais	תִירָס	玉米	トウモロコシ	حبوب ذرة	yùmǐ
 fruits and vegetables	cucumber		die Gurke		огурец	el pepino		o pepino	le concombre	il cetriolo	מְלָפְפוֹן	黄瓜	キュウリ	خيار	huángguā
-fruits and vegetables	eggplant	aubergine	die Aubergine		баклажан	la berenjena		a berinjela	l'aubergine	la melanzana	חָצִיל	茄子	ナス	الباذنجان	qiézi
 fruits and vegetables	garlic		der Knoblauch		чеснок	el ajo		o alho	l'ail	l'aglio	שׁוּם	大蒜	ニンニク	ثوم	dàsuàn
 fruits and vegetables	grapefruit		die Grapefruit		грейпфрут	la toronja	el pomelo	a toranja	le pamplemousse	il pompelmo	אֶשׁכּוֹלִיוֹת	葡萄柚	グレープフルーツ	جريب فروت	pútáo yòu
 fruits and vegetables	pomegranate		der Granatapfel		гранат	la granada		a romã	la grenade	la melagrana	רִמוֹן	石榴	ザクロ	 رمان	Shíliú
 fruits and vegetables	grapes		die Traube	Truube	виноград	la uva		as uvas	le raisin	l'uva	ענבים	葡萄	葡萄	عنب	pútáo
 fruits and vegetables	hazelnut		die Haselnuss		фундук, лесной орех	la avellana		a avelã	la noisette	la nocciola	אֱגוֹזֵי לוּז	榛子	ヘーゼルナッツ	بندق	zhēnzi
 fruits and vegetables	kidney bean		die Kidney Bohne	roti Bohne	фасоль	el frijol		o Feijão	l'haricot rouge	il fagiolone	שעועית כליות	四季豆	インゲン豆	فاصوليا ذات الشكل الكلوي	sìjì dòu
-fruits and vegetables	lemon		die Zitrone		лимон	el limón		o limão	le citron	il limone	לִימוֹן	柠檬	レモン	ليمون	níngméng
-fruits and vegetables	lettuce		der Kopfsalat		салат (кочан)	la lechuga		o alface	la laitue	la lattuga	חַסָה	莴苣	レタス	الخس	wōjù
+fruits and vegetables	lemon		die Zitrone, die Limone		лимон	el limón		o limão	le citron	il limone	לִימוֹן	柠檬	レモン	ليمون	níngméng
+fruits and vegetables	lime		die Limette, die Limone		лайм	la lima, el limón verde		o limão-taiti, lima	le citron vert	la limetta, il lime	סִיד	酸橙	ライム	الجير	Suān chéng
 fruits and vegetables	melon		die Melone		дыня	el melón		o melão	le melon	il melone	מֵלוֹן	蜜瓜	メロン	شمام	mì guā
 fruits and vegetables	mushroom		der Pilz		гриб	el hongo	la seta, el champiñón	o cogumelo	le champignon	il fungo	פִּטרִיָה	蘑菇	キノコ	فطر	mógū
 fruits and vegetables	onion		die Zwiebel	Zwible, Böle	лук	la cebolla		a cebola	l'oignon	la cipolla	בָּצָל	洋葱	タマネギ	بصل	yángcōng
@@ -461,6 +476,7 @@ fruits and vegetables	blackberry		die Brombeere 		ежевика	​la zarzamora
 fruits and vegetables	black currant		die Schwarze Johannisbeere 		чёрная смородина	​la grosella negra		a groselha preta, o cassis	le cassis	il ribes nero	דומדמניות שחורות	黑醋栗	ブラックカラント	الكشمش الأسود	Hēi cù lì
 fruits and vegetables	redberry, red currant		die Johannisbeere		красная смородина	​la grosella roja		a groselha vermelha	​la groseille rouge	​il ribes rosso	דומדמניות אדומות	红醋栗	レッドカラント	الكشمش الأحمر	Hóng cù lì
 fruits and vegetables	gooseberry		die Stachelbeere		крыжовник	la uva crespa	la uva espina	a groselha	la groseille à maquereau	l'uva spina	דוּמדְמָנִית	醋栗	グーズベリー	عنب الثعلب	Cù lì
+fruits and vegetables	cranberry		die Moosbeere, die Cranberry		клюква	el arándano rojo	el arándano agrio	o oxicoco	la canneberge	​il mirtillo rosso	חֲמוּצִית	蔓越莓	クランベリー	التوت البري 	Màn yuè méi
 fruits and vegetables	sea buckthorn		der Sanddorn		облепиха	el espino amarillo		o espinheiro-marítimo	l'argousier 	il olivello spinoso	אשחר ים	沙棘	シーバックソーン	نبق البحر	Shājí
 fruits and vegetables	date (fruit)		die Dattel		финик	el dátil		​a tâmara	la datte	​il dattero	פרי תמר	枣	(果実) ナツメヤシ、デーツ 名		تمر 	zǎo
 fruits and vegetables	fig		die Feige		инжир	el higo		o figo	la figue	il fico	תְאֵנָה	如图	イチジク	تين	Rú tú
@@ -468,9 +484,6 @@ fruits and vegetables	sweet pepper		der Paprika	Pepperoni	сладкий пер�
 fruits and vegetables	tomato		die Tomate		помидор	el jitomate	el tomate	o tomate	la tomate	il pomodoro	עַגְבָנִיָה	西红柿，番茄	トマト	طماطم	xīhóngshì, fānqié
 fruits and vegetables	walnut		die Walnuss		грецкий орех	la nuez		a noz	la noix	la noce	אֱגוֹז	核桃	クルミ	الجوز	hétáo
 fruits and vegetables	watermelon		die Wassermelone		арбуз	la sandía		a melancia	la pastèque	l'anguria	אֲבַטִיחַ	西瓜	スイカ	بطيخ	xīguā
-fruits and vegetables	zucchini	courgette	die Zucchini		кабачок	la calabacita	el calabacín	a abobrinha	la courgette	lo zucchino	קִשׁוּא	绿皮西葫芦	ズッキーニ	كوسة	lǜ pí xīhúlu
-fruits and vegetables	arugula	rocket plant	die Rucola		руккола	la rúcola		a rucola	la roquette	la rucola	ארוגולה	芝麻菜	ルッコラ	جرجير	Zhīma cài
-fruits and vegetables	cilantro	coriander	der Koriander		киндза, кориандр	el cilantro		o coentro	la coriandre	il coriandolo	כוסברה	香菜	コリアンダー	الكزبرة	Xiāngcài
 food and beverage	salad		der Gartensalat		салат	la ensalada		a salada	la salade	l'insalata	סָלָט	沙拉	サラダ	سلطة	shālā
 food and beverage	butter		die Butter		масло	la mantequilla		a manteiga	le beurre	il burro	חֶמאָה	黄油	バター	زبدة	huángyóu
 food and beverage	bread		das Brot		хлеб	el pan		o pão	le pain	il pane	לֶחֶם	面包	パン	خبز	miànbāo
@@ -486,6 +499,7 @@ food and beverage	chips	crisps	die Kartoffelchips		чипсы	chips, las papas f
 food and beverage	hash browns		die Bratkartoffeln	Rösti	жареная картошка	las papas fritas	las patatas fritas	Hash brown; batata frita, batata frita tipo hash brown	les pommes de terre sautées	la patata fritta	חום חשיש	土豆煎饼	ハッシュブラウン	عجة بطاطا مبشورة	tǔdòu jiānbing
 food and beverage	mashed potato		das Kartoffelpüree	Herföpfelstock	картофельное пюре	el puré de papas	el puré de patatas	o purê de batata	la purée	il purè	פירה	土豆泥	マッシュポテト	بطاطا مهروسة	tǔdòu ní
 food and beverage	pickles	gherkin	die Essiggurke		соленый огурец	el pepinillo	el pepinillo encurtido	o picles	le cornichon	i sottaceti	חֲמוּצִים	咸菜，泡菜	ピクルス	مخللات	xiáncài, pàocài
+food and beverage	marinade, brine		die Marinade, der Pökel		маринад, рассол	el escabeche		a marinada, а salmoura	la marinade, la saumure, l'escabèche 	la marinata, la salamoia	מרינדה, מי מלח	腌料，盐水	マリネ、塩水	ماء مالح، محلول ملحي	Yān liào, yánshuǐ
 food and beverage	ham		der Schinken		ветчина	el jamón		o presunto	le jambon	il prosciutto	בְּשַׂר חֲזִיר	火腿	ハム	لحم خنزير	huǒtuǐ
 food and beverage	smoked ham		der Rohschinken		прошутто, копчёный окорок	el jamón serrano		o presunto defumado	le jambon cru	il prosciutto crudo	חזיר מעושן	熏火腿	薫製ハム	لحم خنزير مدخن	xūn huǒtuǐ
 food and beverage	bologna		die Fleischkäse	Lyoner	варёная колбаса	la mortadela		a mortadela	la saucisse de Lyon	la mortadella	בולוניה	意式肉肠	モルタデッラ	صلصة بولونيا	yì shì ròu cháng
@@ -604,6 +618,7 @@ household	fire extinguisher		der Feuerlöscher		огнетушитель	el exti
 household	mailbox	letter box	der Briefkasten		почтовый ящик	el buzón de correo		a caixa de correio	la boîte aux lettres	la cassetta postale	תיבת דואר	信箱	メールボックス、郵便受け	صندوق بريد	xìnxiāng
 household	ladder		die Leiter		лестница стремянка	la escalera doble		a escada	l'échelle double	la scala a pioli	סוּלָם	梯子	はしご	سلم	tīzi
 household	rope		der Strick	Seil	верёвка	la cuerda		a corda	la corde	la corda	חֶבֶל	绳	ロープ	حبل	shéng
+household	sawdust		das Sägemehl		опилки	el serrín		a serragem	la sciure	la segatura	נְסוֹרֶת	木屑	…のぼろをさらけ出す	نشارة الخشب	mùxiè
 household	ghost		der Gespenst		привидение	la fantasma		o fantasma	le fantôme	il fantasma	רוּחַ	鬼	ゴースト	طيف	guǐ
 bed and bath	bedroom		das Schlafzimmer		спальня	la recámara	el dormitorio	o quarto	la chambre	la camera da letto	חדר שינה	卧室	ベッドルーム、寝室	غرفة نوم	wòshì
 bed and bath	bed		das Bett		кровать	la cama		a cama	le lit	il letto	מיטה	床	ベッド	سرير	chuáng
@@ -970,7 +985,7 @@ profession	climber		der Bergsteiger	Bergstiiger	альпинист	el alpinista	
 profession	businessman		der Geschäftsmann	Gschäftsma	бизнесмен	el empresario	el hombre de negocios	o empresário	le commerçant	l'uomo d'affari	אִישׁ עַסָקִים	商人	ビジネスマン	رجل اعمال	shāngrén
 profession	politician		der Politiker		политик	el político		o político	le politicien	il politico	פּוֹלִיטִיקָאִי	政客	政治家	سياسي	zhèngkè
 profession	president		der Präsident		президент	el presidente		o presidente	le président	il presidente	נָשִׂיא	总统	大統領	رئيس	zǒngtǒng
-profession	bodyguard		der Leibwächter	Bodyguard	телохранитель	el guardaespaldas		o guarda costas 	le garde du corps	la guardia del corpo	שׁוֹמֵר רֹאשׁ	保镖	ボディーガード	حارس شخصي	bǎobiāo
+profession	bodyguard		der Leibwächter	Bodyguard	телохранитель	el guardaespaldas, el guarura	el guardaespaldas, el escolta	o guarda costas 	le garde du corps	la guardia del corpo	שׁוֹמֵר רֹאשׁ	保镖	ボディーガード	حارس شخصي	bǎobiāo
 profession	security guard		der Wachmann		охранник	el vigilante	el guarda jurado	 o vigía	le security guard	la guardia di sicurezza	מאבטח	警卫	警備員	عامل امن	jǐngwèi
 profession	salesman		der Verkäufer		продавец	el vendedor		o vendedor	le vendeur	il commesso	מוֹכֵר	销售	セールスマン	بائع	xiāoshòu
 profession	accountant		der Buchhalter		бухгалтер	el contador	el contable	o contador	le comptable	il ragioniere	חֶשׁבּוֹנַאי	会计	会計士	محاسب	kuàijì

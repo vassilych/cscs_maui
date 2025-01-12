@@ -42,12 +42,12 @@
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
-	  <CodesignProvision>Automatic</CodesignProvision>
-	  <CodesignKey>iPhone Developer</CodesignKey>
+	  <CodesignProvision>iLanguageDistrProvisioning</CodesignProvision>
+	  <CodesignKey>Apple Distribution: Vassili Kaplan (TSJNANF679)</CodesignKey>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
-	  <CodesignProvision>iLanguageDistrAppStoreNew</CodesignProvision>
+	  <CodesignProvision>Automatic</CodesignProvision>
 	  <CodesignKey>Apple Distribution: Vassili Kaplan (TSJNANF679)</CodesignKey>
 	  <BuildIpa>true</BuildIpa>
 	  <MtouchDebug>true</MtouchDebug>
@@ -72,6 +72,9 @@
 	  <AndroidSigningKeyAlias>maui</AndroidSigningKeyAlias>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-maccatalyst|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
@@ -1391,7 +1394,7 @@
 	  <BundleResource Include="Resources\Images\bitcoin_portrait.png" />
 	  <BundleResource Include="Resources\Images\bitcoin_landscape.png" />
 	  <BundleResource Include="Resources\Images\bishop.png" />
-	  <BundleResource Include="Resources\Images\birdie.png" />
+	  <BundleResource Include="Resources\Images\birdie__shuttle.png" />
 	  <BundleResource Include="Resources\Images\billion.png" />
 	  <BundleResource Include="Resources\Images\bill.png" />
 	  <BundleResource Include="Resources\Images\big.png" />
@@ -2093,6 +2096,21 @@
 	  <BundleResource Include="Resources\Images\fuse.png" />
 	  <BundleResource Include="Resources\Images\eyelash.png" />
 	  <BundleResource Include="Resources\Images\adam_s_apple.png" />
+	  <BundleResource Include="Resources\Images\calf__calf_muscle.png" />
+	  <BundleResource Include="Resources\Images\hip.png" />
+	  <BundleResource Include="Resources\Images\stubble.png" />
+	  <BundleResource Include="Resources\Images\occiput__back_of_the_head.png" />
+	  <BundleResource Include="Resources\Images\lower_back.png" />
+	  <BundleResource Include="Resources\Images\scapula__shoulder_blade.png" />
+	  <BundleResource Include="Resources\Images\kidney.png" />
+	  <BundleResource Include="Resources\Images\marinade__brine.png" />
+	  <BundleResource Include="Resources\Images\birdie__shuttle.png" />
+	  <BundleResource Include="Resources\Images\lime.png" />
+	  <BundleResource Include="Resources\Images\artichoke.png" />
+	  <BundleResource Include="Resources\Images\cranberry.png" />
+	  <BundleResource Include="Resources\Images\chicory.png" />
+	  <BundleResource Include="Resources\Images\lamb_s_lettuce.png" />
+	  <BundleResource Include="Resources\Images\spinach.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2252,6 +2270,22 @@
 	  <None Remove="Resources\Images\fuse.png" />
 	  <None Remove="Resources\Images\eyelash.png" />
 	  <None Remove="Resources\Images\adam_s_apple.png" />
+	  <None Remove="Resources\Images\calf__calf_muscle.png" />
+	  <None Remove="Resources\Images\hip.png" />
+	  <None Remove="Resources\Images\stubble.png" />
+	  <None Remove="Resources\Images\occiput__back_of_the_head.png" />
+	  <None Remove="Resources\Images\lower_back.png" />
+	  <None Remove="Resources\Images\scapula__shoulder_blade.png" />
+	  <None Remove="Resources\Images\kidney.png" />
+	  <None Remove="Resources\Images\marinade__brine.png" />
+	  <None Remove="Resources\Images\birdie__shuttle.png" />
+	  <None Remove="Resources\Images\lime.png" />
+	  <None Remove="Resources\Images\artichoke.png" />
+	  <None Remove="Resources\Images\Brussels_sprouts.png" />
+	  <None Remove="Resources\Images\cranberry.png" />
+	  <None Remove="Resources\Images\chicory.png" />
+	  <None Remove="Resources\Images\lambs__lettuce.png" />
+	  <None Remove="Resources\Images\spinach.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">
