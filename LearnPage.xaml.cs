@@ -445,7 +445,16 @@ public partial class LearnPage : ContentPage
                 var newKey2 = langPrefix + "_" + ww[0].Substring(0, ww[0].Length - 2);
                 if (!Words.Verbs.TryGetValue(newKey2, out data) || string.IsNullOrWhiteSpace(data))
                 {
-                    return "";
+                    var newKey3 = langPrefix + "_" + ww[0];
+                    if (!Words.Verbs.TryGetValue(newKey3, out data) || string.IsNullOrWhiteSpace(data) &&
+                        ww.Length > 1)
+                    {
+                        var newKey4 = langPrefix + "_" + ww[0] + " " + ww[1];
+                        if (!Words.Verbs.TryGetValue(newKey4, out data) || string.IsNullOrWhiteSpace(data))
+                        {
+                            return "";
+                        }
+                    }
                 }
             }
         }

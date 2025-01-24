@@ -445,6 +445,7 @@ fruits and vegetables	chestnut		die Kastanie	Marone	каштан	la castaña		a 
 fruits and vegetables	coconut		die Kokosnuss		кокосовый орех	el coco		o coco	la noix de coco	la noce di cocco	קוֹקוּס	椰子	ココナッツ	جوزة الهند	yēzi
 fruits and vegetables	coffee bean		die Kaffeebohne	Kafibohne	кофейное зерно	el grano de café		o grão de café	le grain de café	il chicco di caffè	פולי קפה	咖啡豆	コー​​ヒー豆	حبوب القهوة	kāfēi dòu
 fruits and vegetables	corn	maize	der Mais		кукуруза	el elote	el maíz	o milho	le maïs	il mais	תִירָס	玉米	トウモロコシ	حبوب ذرة	yùmǐ
+fruits and vegetables	sunflower seeds		der Sonnenblumenkern		семечки	las semillas de girasol	las pipas de girasol	a semente de girassol	la graine de tournesol	il seme di girasole	גרעיני חמניות	葵花籽	ひまわりの種	بذور عباد الشمس 	Kuíhuā zǐ
 fruits and vegetables	cucumber		die Gurke		огурец	el pepino		o pepino	le concombre	il cetriolo	מְלָפְפוֹן	黄瓜	キュウリ	خيار	huángguā
 fruits and vegetables	garlic		der Knoblauch		чеснок	el ajo		o alho	l'ail	l'aglio	שׁוּם	大蒜	ニンニク	ثوم	dàsuàn
 fruits and vegetables	grapefruit		die Grapefruit		грейпфрут	la toronja	el pomelo	a toranja	le pamplemousse	il pompelmo	אֶשׁכּוֹלִיוֹת	葡萄柚	グレープフルーツ	جريب فروت	pútáo yòu
@@ -518,6 +519,7 @@ food and beverage	roasted beef		das gebratene Fleisch	Brate	жареная го�
 food and beverage	skewer		der Bratspieß		шашлык, шампур	la broqueta		o espeto	la broche	il spiedo	לְשַׁפֵּד	串	串	سيخ	chuàn
 food and beverage	fish and fries	fish and chips	die Fisch und Chips		рыба с картошкой	el pescado con papas	el pescado con patatas	o Peixe com fritas	le poisson avec des frites	il pesce e le patatine fritte	דגים וצ'יפס	炸鱼和薯条	魚とフライドポテト	السمك والبطاطا المقلية	zhà yú hé shǔ tiáo
 food and beverage	fish sticks	fish fingers	das Fischstäbchen		рыбные палочки	los palitos de pescado		os palitos de peixe	le bâtonnet de poisson	il bastoncino di pesce	מקלות דגים	鱼条	フィッシュスティック	أعواد السمك	Yú tiáo
+food and beverage	salmon filet	salmon fillet	das Lachsfilet		филе лосося	el filete de salmón		o filé de salmão	le filet de saumon	il filetto di salmone	פילה סלמון	三文鱼片	サーモン・フィレ	 فيليه السلمون	Sānwènyú piàn
 food and beverage	meatball		das Hackfleischbällchen	Hackfleischbölle	фрикаделька	la albóndiga		a almôndega	la boulette de viande	la polpetta	כַּדוּר בָּשָׂר	肉球	ミートボール	كرة لحم	ròu qiú
 food and beverage	dumplings		die Ravioli		пельмени	los ravioles		a guioza	les raviolis	i ravioli	כופתאות	饺子	餃子	الزلابية	jiǎozi
 food and beverage	rice		der Reis		рис	el arroz		o arroz	le riz	il riso	אוֹרֶז	米饭	米	الأرز	mǐfàn
@@ -525,10 +527,11 @@ food and beverage	ketchup		der Ketschup		кетчуп	el catsup	el ketchup	o ket
 food and beverage	mustard		der Senf		горчица	la mostaza		a mostarda	la moutarde	la senape	חַרדָל	芥末酱	マスタード	خردل	jièmò jiàng
 food and beverage	horseradish		der Meerrettich		хрен	el rábano picante		a raiz-forte	le raifort	il rafano	חֲזֶרֶת	山葵	セイヨウワサビ	فجل حار	shānkuí
 food and beverage	hot sauce		die scharfe Soße		острый соус	la salsa picante		o molho picante	la sauce piquante	la salsa piccante	רוטב חריף	辣椒酱	ホットソース	الصلصة الحارة	làjiāo jiàng
-food and beverage	sour cream		der Sauerrahm		сметана	la crema agria		o creme azedo; a nata azeda	la crème fraîche	la panna acida	שמנת חמוצה	酸奶油，酸乳脂	サワークリーム	الكريمة الحامضة	suānnǎi yóu, suān rǔzhī
+food and beverage	sour cream		der Sauerrahm	Crème fraîche	сметана	la crema agria		o creme azedo; a nata azeda	la crème fraîche	la panna acida	שמנת חמוצה	酸奶油，酸乳脂	サワークリーム	الكريمة الحامضة	suānnǎi yóu, suān rǔzhī
+food and beverage	whipped cream		der Schlagrahm		взбитые сливки	la crema batida	la nata montada	o creme de chantili	la crème fouettée	la panna montata	קַצֶפֶת	奶油	ホイップクリーム	كريمة مخفوقة	Nǎiyóu
 food and beverage	cheese		der Käse	Chäs	сыр	el queso		o queijo	le fromage	il formaggio	גְבִינָה	奶酪，芝士	チーズ	جبن	nǎilào, zhīshì
 food and beverage	cottage cheese		der Hüttenkäse	Hüttechäs	творог	el queso cottage		o queijo tipo cottage	le fromage blanc	i fiocchi di latte	גבינת קוטג'	白干酪	カッテージチーズ	جبن قريش	bái gānlào
-food and beverage	oatmeal	porridge	der Brei		каша	la harina de avena		a aveia	les flocons d'avoine	i fiocchi d'avena	קְוֵקֶר	粥，麦片粥	オートミール	دقيق الشوفان	zhōu, màipiàn zhōu
+food and beverage	oatmeal	porridge	der Brei		овсяная каша	la harina de avena		a aveia	les flocons d'avoine	i fiocchi d'avena	קְוֵקֶר	粥，麦片粥	オートミール	دقيق الشوفان	zhōu, màipiàn zhōu
 food and beverage	dough		der Teig		тесто	la masa		a massa	la pâte	la pasta	בָּצֵק	生面团	（パンなどの）生地	عجينة	shēng miàntuán
 food and beverage	cake		der Kuchen	Chueche	торт	el pastel		o bolo	le gâteau	la torta	עוּגָה	蛋糕	ケーキ	كعكة	dàngāo
 food and beverage	cookie	biscuit	der Keks		печенье	la galleta		o biscoito	le biscuit	il biscotto	עוּגִיָה	曲奇饼	クッキー	بسكوت	qū qí bǐng
@@ -543,11 +546,14 @@ food and beverage	sugar		der Zucker		сахар	el azúcar		o açúcar	le sucre	
 food and beverage	salt		das Salz		соль	el salero		o sal	le sel	il sale	מֶלַח	食盐	塩	ملح	shíyán
 food and beverage	pepper		der Pfeffer		перец	la pimienta		a pimenta	le poivre	il pepe	פִּלְפֵּל	胡椒	コショウ	فلفل	hújiāo
 food and beverage	olive oil		das Olivenöl		оливковое масло	el aceite de oliva		o azeite de oliva	l'huile d'olive	l'olio d'oliva	שֶׁמֶן זַיִת	橄榄油	オリーブオイル	زيت الزيتون	gǎnlǎn yóu
+food and beverage	sunflower oil		das Sonnenblumenöl		подсолнечное масло	el aceite de girasol		o óleo de girassol	l'huile de tournesol	l'olio girasole	שמן חמניות 	葵花籽油	ひまわり油	زيت دوار الشمس 	Kuíhuā zǐ yóu
+food and beverage	rapeseed oil	rape oil	das Rapsöl		рапсовое масло	el aceite de colza		o óleo de colza	l'huile de colza	l'olio di colza	 שמן לפתית 	菜籽油	菜種油	زيت بذور اللفت   	Cài zǐ yóu
 food and beverage	vinegar		der Essig		уксус	​el vinagre		o vinagre	​le vinaigre	​il aceto	​חוֹמֶץ	醋	酢	خل 	Cù
 food and beverage	water		das Wasser		вода	el agua		a água	l'eau	l'acqua	מַיִם	水	水	ماء	shuǐ
 food and beverage	sparkling water		das Mineralwasser, das Wasser mit Kohlensäure		газированная вода	el agua con gas		a água com gás, l'eau gazeuse	l'eau gazeuse, l'eau pétillante	l'acqua minerale gassata	מַיִם מוּגָזים	苏打水	スパークリングウォーター	ماء فوار	sūdǎ shuǐ
 food and beverage	juice		der Saft		сок	el jugo	el zumo	o suco	le jus	il succo	מִיץ	果汁	ジュース	عصير	guǒzhī
 food and beverage	milk		die Milch		молоко	la leche		o leite	le lait	il latte	חָלָב	牛奶	ミルク	حليب	niúnǎi
+food and beverage	(milk) cream		der Rahm		сливки	la crema de leche		a nata	la crème	la panna	קרֶם	奶油	クリーム	القشدة	Nǎiyóu
 food and beverage	tea		der Tee		чай	el té		o chá	le thé	il tè	תֵה	茶	お茶	شاي	chá
 food and beverage	coffee		der Kaffee	Kafi	кофе	el café		o café	le café	il caffè	קָפֶה	咖啡	コー​​​​ヒー	قهوة	kāfēi
 food and beverage	sparkling wine		der Schaumwein, der Sekt	Cüpli (Sektglass)	игристое вино, шампанское	el vino espumoso, el cava		o espumante	le vin mousseux, le champagne 	lo spumante, il prosecco	יַיִן תוֹסֵס	起泡酒，香槟	スパークリングワイン	نبيذ فوار	qǐ pào jiǔ, xiāngbīn
@@ -941,7 +947,7 @@ profession	housewife		die Hausfrau	Huusfrau	домохозяйка	la ama de cas
 profession	air-traffic controller		der Fluglotse		авиадиспетчер	el controlador aéreo		o controlador de tráfego aéreo	le aiguilleur du ciel	il controllore di volo	בקר תנועה אווירית	航空交通管理员	航空管制官	مراقب الحركة الجوية	hángkōng jiāotōng guǎnlǐ yuán
 profession	astronaut		der Astronaut		космонавт	el astronauta		o astronauta	le cosmonaute	l'astronauta	אַסטרוֹנָאוּט	宇航员	宇宙飛行士	رائد فضاء	yǔháng yuán
 profession	pilot		der Pilot		пилот	el piloto		o piloto	le pilote	il pilota	טַיָס	飞行员	パイロット	طيار	fēixíngyuán
-profession	flight attendant		die Flugbegleiterin		стюардесса	la aeromoza	la azafata	a comissária de bordo	l'hôtesse de l'air	l'assistente di volo	דיילת	空中服务人员	客室乗務員	مضيفة طيران	kōngzhōng fúwù rényuán
+profession	flight attendant		die Flugbegleiterin		стюардесса	la aeromoza, la sobrecargo	la asistente de vuelo, la azafata	a comissária de bordo	l'hôtesse de l'air	l'assistente di volo	דיילת	空中服务人员	客室乗務員	مضيفة طيران	kōngzhōng fúwù rényuán
 profession	carpenter		der Schreiner	Schriiner 	плотник	el carpintero		o carpinteiro	le menuisier	il falegname	נַגָר	木匠	大工	النجار	mùjiàng
 profession	plumber		der Klempner		водопроводчик	el plomero	el fontanero	o encanador	le plombier	l'idraulico	שְׁרַברָב	水管工	配管工	سمكري	shuǐguǎn gōng
 profession	house-painter		der Streicher		маляр	el pintor artistíco		o pintor de casas	le peintre (en bâtiment)	l'imbianchino	צייר-בית	房屋油漆工	ペンキ屋	دهان	fángwū yóuqī gōng
@@ -1289,11 +1295,13 @@ verbs	to draw		zeichnen		рисовать	dibujar		desenhar	dessiner	disegnare, 
 verbs	to dream		träumen		мечтать	soñar		sonhar	rêver	sognare	לחלום	做梦	夢見る	يحلم	zuòmèng
 verbs	to drink		trinken	trinkche, suufe	пить	beber		beber	boire	bere	לשתות	喝	飲む	يشرب	hē
 verbs	to eat		essen	ässe	есть	comer		comer	manger	mangiare	לאכול	吃	食べる	يأكل	chī
+verbs	to err, to make mistake		sich irren		ошибиться	errar, equivocarse		errar	se tromper	sbagliare	לטעות	犯错	あやまりをおかす	ارتكب خطأ	Fàncuò
 verbs	to evolve		sich entwickeln		развиваться, эволюционировать	desarrollarse, evolucionar		evoluir	évoluer	sviluppare	להתפתח	（使）逐步发展	進化する	يتطور	(shǐ) zhúbù fāzhǎn
 verbs	to exchange		umtauschen	umtuusche	меняться	intercambiar		trocar	échanger	scambiare	להחליף	交换	交換する	يتبادل	jiāohuàn
 verbs	to fall down		fallen	gheie	падать	caer		cair	tomber	cadere	ליפול	跌倒，掉下	落下する	يسقط	diédǎo, diào xià
 verbs	to fight		kämpfen	chämpfe	драться	pelearse, luchar		lutar	se battre	combattere	להילחם	打架，斗争	戦う	يحارب	dǎjià, dòuzhēng
 verbs	to fly		fliegen	flüüge 	летать	volar		voar	voler	volare	לעוף	飞	飛ぶ	يطير	fēi
+verbs	to forget		vergessen	 	забыть	olvidar		esquecer	oublier	dimenticare	לשכוח	忘记	忘れる	ينسى	Wàngjì
 verbs	to frighten		erschrecken		пугать	asustar		assustar	effrayer	atterrire	להפחיד	吓唬	怖がらせる	يرعب	xiàhǔ
 verbs	to give		geben	gäh	дать	dar		dar	donner	dare	לתת	给	与える	يعطي	gěi
 verbs	to deliver		etwas zustellen		доставить	entregar		entregar	distribuer	consegnare	למסור	传递	届ける	لتسليم	Chuándì
@@ -1340,6 +1348,7 @@ verbs	to see		sehen	luege, gseh	смотреть	mirar		ver	regarder	vedere	לר
 verbs	to shake hands		die Hände schütteln	Händ schüttle	пожать руки	estrecharse las manos		apertar as mãos	serrer la main	stringere la mano	ללחוץ ידיים	握手	握手する	يصافح	wòshǒu
 verbs	to share		teilen		делить, разделить	compartir		compartilhar	partager	condividere	לשתף	分享	共有する	يشارك	fēnxiǎng
 verbs	to show		zeigen		показывать	mostrar		mostrar	montrer	mostrare	להראות	展示	見せる	يشاهد	zhǎnshì
+verbs	to shoot		schießen		стрелять	disparar		disparar	tirer (au pistolet)	sparare	לירות	射击	シュート	يطلق الرصاص	Shèjí
 verbs	to sing		singen		петь	cantar		cantar	chanter	cantare	לשיר	唱	歌う	يغني	chàng
 verbs	to sit		sitzen		сидеть	estar sentado		sentar	être assis	sedere	לשבת	坐	座っている	يجلس	zuò
 verbs	to sit down		sich setzen	anesitze	садиться	sentarse		sentar-se, se sentar	s'asseoir	sedersi	לשבת	坐下	座る	يقعد	zuò xià

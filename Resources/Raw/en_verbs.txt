@@ -163,3 +163,6 @@ to try, try,  tried, trying, try,try,tries, tried,tried,tried
 to hurry, hurry,  hurried, hurrying, hurry,hurry,hurries, hurried,hurried,hurried
 to rush, rush,  rushed, rushing, rush,rush,rushes, rushed,rushed,rushed
 to recover, recover,  recovered, recovering, recover,recover,recovers, recovered,recovered,recovered
+to err, err,  erred, erring, err,err,errs, erred,erred,erred
+to forget, forget,  forgot/forgotten, forgetting, forget,forget,forgets, forgot,forgot,forgot
+to shoot, shoot,  shot, shooting, shoot,shoot,shoots, shot,shot,shot

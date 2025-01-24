@@ -2111,6 +2111,15 @@
 	  <BundleResource Include="Resources\Images\chicory.png" />
 	  <BundleResource Include="Resources\Images\lamb_s_lettuce.png" />
 	  <BundleResource Include="Resources\Images\spinach.png" />
+	  <BundleResource Include="Resources\Images\to_err__to_make_mistake.png" />
+	  <BundleResource Include="Resources\Images\to_forget.png" />
+	  <BundleResource Include="Resources\Images\to_shoot.png" />
+	  <BundleResource Include="Resources\Images\salmon_filet.png" />
+	  <BundleResource Include="Resources\Images\milk__cream.png" />
+	  <BundleResource Include="Resources\Images\whipped_cream.png" />
+	  <BundleResource Include="Resources\Images\sunflower_seeds.png" />
+	  <BundleResource Include="Resources\Images\rapeseed_oil.png" />
+	  <BundleResource Include="Resources\Images\sunflower_oil.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2286,6 +2295,15 @@
 	  <None Remove="Resources\Images\chicory.png" />
 	  <None Remove="Resources\Images\lambs__lettuce.png" />
 	  <None Remove="Resources\Images\spinach.png" />
+	  <None Remove="Resources\Images\to_err__to_make_mistake.png" />
+	  <None Remove="Resources\Images\forget.png" />
+	  <None Remove="Resources\Images\to_shoot.png" />
+	  <None Remove="Resources\Images\salmon_filet.png" />
+	  <None Remove="Resources\Images\_milk__cream.png" />
+	  <None Remove="Resources\Images\whipped_cream.png" />
+	  <None Remove="Resources\Images\sunflower_seeds.png" />
+	  <None Remove="Resources\Images\rapeseed_oil.png" />
+	  <None Remove="Resources\Images\sunflower_oil.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">
