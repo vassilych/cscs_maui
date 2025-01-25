@@ -511,6 +511,7 @@ food and beverage	prawn, shrimp	shrimp	die Garnele	Crevette	креветка	el 
 food and beverage	lobster		der Hummer		омар, рак	la langosta		a lagosta	le homard, la langoustine	l'aragosta, l'astice	לוֹבּסטֶר 	龙虾	ロブスター	سرطان البحر 	Lóngxiā
 food and beverage	octopus		der Oktopus, der Krake, der Pulpo		осьминог	el pulpo		o polvo	le poulpe, La pieuvre	​il polpo	תָמְנוּן 	章鱼	タコ	 الأخطبوط 	Zhāngyú
 food and beverage	calamari, squid		der Tintenfisch, die Sepia		кальмар	el calamar, la sepia		a sépia	le calmar	il calamaro, la seppia	לוֹבּסטֶר 	龙虾	ロブスター	سرطان البحر 	Lóngxiā
+food and beverage	herring		der Hering, der Rollmops		селёдка	el arenque		o arenque	le hareng, rollmops	l'aringa	דָג מָלוּחַ 	鲱鱼	ニシン	الرنجة 	Fēiyú
 food and beverage	liver pate		die Leberpastete		печёнка	el paté de hígado		o patê de fígado	le patê de foie	il patè di fegato	פטה כבד	烤肝	レバーパテ	مورتديلا الكبد	kǎo gān
 food and beverage	goose liver		die Gänseleber		гусиная печёнка	el foie-gras		o fígado de ganso	le foie gras	il fegato d'oca	כבד אווז	鹅肝	ガチョウの肝臓	كبد الإوز	é gān
 food and beverage	cutlet		die Schnitzel		котлета	la chuleta		a bisteca	l'escalope	la cotoletta	שׁנִיצֶל	肉片	カツレツ	كستلاتة	ròupiàn
@@ -958,6 +959,8 @@ profession	auto mechanic		der Automechaniker		автомеханик	el mecánic
 profession	hairdresser		die Frisörin		парикмахер	la estilista	la peluquera	o cabeleireiro	la coiffeuse	il parrucchiere	סַפָּר	美发师	美容師	حلاق	měifǎ shī
 profession	cashier		die Kassiererin		кассир	la cajera		o caixa	la caissière	il cassiere	קוּפַּאִי	出纳员	キャッシャー	صراف	chūnà yuán
 profession	soldier		der Soldat		солдат	el soldado		o soldado	le soldat	il soldato	לוֹחֶם	士兵	兵士	جندي	shìbīng
+profession	army officer		der Offizier		офицер	el oficial militar		o oficial do exército	l'officier	l'ufficiale dell'esercito	קצין צבא	军官	陸軍士官	ضابط في الجيش	Jūnguān
+profession	sailor		der Seemann, der Segler		моряк	el marinero		o marinheiro	le marin	il marinaio	מַלָח	水手	船員	بحار	Shuǐshǒu
 profession	doctor		die Ärztin	Dokter	врач	el médico		o médico	le médecin	il medico	דוֹקטוֹר	医生	医師	طبيب	yīshēng
 profession	surgeon		der Chirurg		хирург	el cirujano		o cirurgião	le chirurgien	il medico chirurgo	מְנַתֵחַ	外科医师	外科医	طبيب جراح	wàikē yīshī
 profession	dentist		der Zahnarzt		зубной врач	el dentista		o dentista	le dentiste	il dentista	רופא שיניים	牙医	歯科医	جراح اسنان	yáyī
@@ -996,6 +999,7 @@ profession	security guard		der Wachmann		охранник	el vigilante	el guarda
 profession	salesman		der Verkäufer		продавец	el vendedor		o vendedor	le vendeur	il commesso	מוֹכֵר	销售	セールスマン	بائع	xiāoshòu
 profession	accountant		der Buchhalter		бухгалтер	el contador	el contable	o contador	le comptable	il ragioniere	חֶשׁבּוֹנַאי	会计	会計士	محاسب	kuàijì
 profession	software developer		der Softwareentwickler		программист	el desarrollador de software		o desenvolvedor de software	le développeur de logiciels	lo sviluppatore di software	מפתח תוכנה	软件开发者	ソフトウェア開発者	مطور برامج	ruǎnjiàn kāifā zhě
+profession	artificial intelligence engineer		der Ingenieur für künstliche Intelligenz		инженер по искусственному интеллекту	el ingeniero en inteligencia artificial		o engenheiro de inteligência artificial	l'ingénieur en intelligence artificielle	l'ingegnere dell'intelligenza artificiale	מהנדס בינה מלאכותית	人工智能工程师	人工知能エンジニア	مهندس ذكاء اصطناعي	Réngōng zhìnéng gōngchéngshī
 profession	teacher		der Lehrer 		учитель	el maestro		o professor	le professeur	l'insegnante	מוֹרֶה	老师	先生	مدرس	lǎoshī
 profession	CEO, Chief Executive Officer		der Geschäftsführer		генеральный директор	el director ejecutivo		o diretor executivo	PDG, Président-Directeur Général	il direttore amministrativo	מנכ""ל, מנכ""ל	首席执行官	最高経営責任者、最高経営責任者	الرئيس التنفيذي، الرئيس التنفيذي	shǒuxí zhíxíng guān
 profession	composer		der Komponist		композитор	el compositor		o compositor	le compositeur	il compositore	מַלחִין	百词斩	作曲家	مؤلف موسيقي	bǎi cí zhǎn
@@ -1254,6 +1258,8 @@ environment	desert		die Wüste	Wüeschti	пустыня	el desierto		o deserto	l
 environment	city		die Stadt		город	la ciudad		a cidade	la ville	la città	עִיר	城市	街	المدينة	chéngshì
 environment	village		das Dorf		деревня	el pueblo		a aldeia	le village	il villaggio	כְּפָר	村	村	قرية	cūn
 environment	trash, garbage	rubbish	der Abfall, der Müll		мусор	la basura		o lixo	les ordures, les poubelles	i rifiuti	זבל, זבל	垃圾	ごみ、ごみ	القمامة، والقمامة	lèsè
+environment	sewage		das Abwasser		сточные воды	las aguas residuales		o esgoto	les eaux usées	​il liquame, la acque da scolo	שְׁפָכִים	污水	汚水 	المجاري	Wūshuǐ
+environment	sewerage		die Kanalisation		канализация	el alcantarillado		a canalização	la canalisation, l'égout	la canalizzazione, la fognatura	בִּיוּב	下水道	げすい	الصرف الصحي	Xiàshuǐdào
 verbs	to argue, to quarrel		streiten, argumentieren	striite	спорить, ругаться	discutir, pelearse		discutir, brigar	se disputer, arguer	litigare, argomentare	להתווכח, לריב	争论	口喧嘩する	يجادل	zhēnglùn
 verbs	to discuss, to talk over		diskutieren, besprechen		обсуждать, дискутировать	discutir, hablar de		discutir, conversar	discuter, débattre	discutere di, parlare di	לדון, לדבר	讨论	話し合う	يناقش	tǎolùn
 verbs	to ask		fragen		спрашивать	preguntar		perguntar	poser une question 	chiedere	לשאול	问，告诉	訊ねる	يسأل	wèn, gàosù

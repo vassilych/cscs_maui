@@ -2120,6 +2120,16 @@
 	  <BundleResource Include="Resources\Images\sunflower_seeds.png" />
 	  <BundleResource Include="Resources\Images\rapeseed_oil.png" />
 	  <BundleResource Include="Resources\Images\sunflower_oil.png" />
+	  <BundleResource Include="Resources\Images\to_forget.png" />
+	  <BundleResource Include="Resources\Images\brussels_sprouts.png" />
+	  <BundleResource Include="Resources\Images\lamb_s_lettuce.png" />
+	  <BundleResource Include="Resources\Images\milk__cream.png" />
+	  <BundleResource Include="Resources\Images\army_officer.png" />
+	  <BundleResource Include="Resources\Images\sailor.png" />
+	  <BundleResource Include="Resources\Images\artificial_intelligence_engineer.png" />
+	  <BundleResource Include="Resources\Images\sewage.png" />
+	  <BundleResource Include="Resources\Images\sewerage.png" />
+	  <BundleResource Include="Resources\Images\herring.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\cscs\cscs\cscs.csproj" />
@@ -2304,6 +2314,16 @@
 	  <None Remove="Resources\Images\sunflower_seeds.png" />
 	  <None Remove="Resources\Images\rapeseed_oil.png" />
 	  <None Remove="Resources\Images\sunflower_oil.png" />
+	  <None Remove="Resources\Images\to_forget.png" />
+	  <None Remove="Resources\Images\brussels_sprouts.png" />
+	  <None Remove="Resources\Images\lamb_s_lettuce.png" />
+	  <None Remove="Resources\Images\milk__cream.png" />
+	  <None Remove="Resources\Images\army_officer.png" />
+	  <None Remove="Resources\Images\sailor.png" />
+	  <None Remove="Resources\Images\artificial_intelligence_engineer.png" />
+	  <None Remove="Resources\Images\sewage.png" />
+	  <None Remove="Resources\Images\sewerage.png" />
+	  <None Remove="Resources\Images\herring.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Update="Resources\Raw\test.cscs">
