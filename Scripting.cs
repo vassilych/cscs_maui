@@ -4,9 +4,12 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.SqlTypes;
 using System.Diagnostics;
+using System.IO;
 using System.Reflection;
+using System.Reflection.PortableExecutable;
 using CSCS.InterpreterManager;
 using CSCSMath;
+using Microsoft.Maui.Storage;
 using SplitAndMerge;
 
 namespace ScriptingMaui;
@@ -74,17 +77,24 @@ public class Scripting
     public async Task StartAsync(string filename = "start.cscs")
     {
         using var resourceStream = await FileSystem.OpenAppPackageFileAsync(filename);
+#if IOS
         var fs = resourceStream as FileStream;
         if (fs != null)
         {
             string path = fs.Name;
             RunFile(path);
         }
+#else
+        using StreamReader reader = new StreamReader(resourceStream);
+        var script = reader.ReadToEnd();
+        CurrentInstance.Run(script);
+#endif
+
     }
 
     public void Init(List<ContentPage> pages)
     {
-        foreach(var page in pages)
+        foreach (var page in pages)
         {
             if (!string.IsNullOrWhiteSpace(page.StyleId))
             {
@@ -278,7 +288,7 @@ public class Scripting
     {
         if (string.IsNullOrWhiteSpace(script))
         {
-            script = Utils.GetFileContents(filename);
+            script = ImportFileFunction.GetFileContents(filename);
         }
         string data = Utils.ConvertToScript(InterpreterInstance, script, out Dictionary<int, int> char2Line, filename);
         ParsingScript toParse = new ParsingScript(InterpreterInstance, data, 0, char2Line);
@@ -419,7 +429,7 @@ public class Scripting
             }
             //data.SetValue(newdata);
         }
-        else if (thetype.ToString().Contains("List" ))
+        else if (thetype.ToString().Contains("List"))
         {
             if (newValue.Type != Variable.VarType.ARRAY || newValue.Tuple == null)
             {
@@ -469,10 +479,32 @@ class ImportFileFunction : ParserFunction
 
         string filename = args[0].AsString();
 
-        string fileContents = Utils.GetFileText(filename);
+        string fileContents = GetFileContents(filename);
 
         Variable result = RunScriptFunction.Execute(fileContents, filename);
         return result;
+    }
+    public static string GetFileContents(string filename)
+    {
+        string fileContents = string.Empty;
+#if IOS
+        fileContents = File.ReadAllText(filename);
+#else
+        using var rs =  FileSystem.OpenAppPackageFileAsync(filename);
+        rs.Wait();
+        var resourceStream = rs.Result;
+        if (resourceStream != null)
+        {
+            using StreamReader reader = new StreamReader(resourceStream);
+            fileContents = reader.ReadToEnd();
+        }
+#endif
+        if (string.IsNullOrWhiteSpace(fileContents))
+        {
+            throw new ArgumentException("Couldn't read file [" + filename +
+                                        "] from disk.");
+        }
+        return fileContents;
     }
 }
 
